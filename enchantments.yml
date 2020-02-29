@@ -439,6 +439,7 @@
 #    %attacker has enchantment in hand of <enchant>% - returns "true/false", checks if player has enchantment on their item
 #    %attacker time%/%victim time% - get player world time
 #    %health percentage% - get player's health percentage
+#    %potion effect level <potion name>% - get level of applied potion effect, remember that potion amplifiers are counted from 0, so level 1 = 0
 #
 # PLACHOLDERAPI SUPPORT FOR CONDITIONS:
 #    E.g: '%victim player_level% > 10 : %stop%', player_level is a PlaceholderAPI condition %player_level%. You can use %player <condition>%, %attacker <condition>% and %victim <condition>%.
@@ -459,7 +460,29 @@
 #    disable-in-enchanter: true # Players can no longer obtain enchantment from Enchanter
 #    disabled-worlds: # List worlds in which enchantment will not work (cAsE sEnSiTiVe)
 #      - 'My_World'
-
+jellylegs:
+  display: '%group-color%Jelly Legs'
+  description: "Chance to negate fall damage."
+  applies-to: 'Boots'
+  type: 'FALL_DAMAGE'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      chance: 40
+      effects:
+        - 'STOP_ATTACK'
+        - 'MESSAGE:&b&l*** &f&lNegated Fall Damage &b&l***'
+    2:
+      chance: 80
+      effects:
+        - 'STOP_ATTACK'
+        - 'MESSAGE:&b&l*** &f&lNegated Fall Damage &b&l***'
+    3:
+      effects:
+        - 'STOP_ATTACK'
+        - 'MESSAGE:&b&l*** &f&lNegated Fall Damage &b&l***'
 restore:
   display: '%group-color%Restore'
   description: "Upon breaking, item has a chance\nto lose this enchantment and repair\nhalf of it's durability"
