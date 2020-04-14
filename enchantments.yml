@@ -7,7 +7,8 @@
 #  group: 'COMMON'    <-- Enchantment group (For enchanter and right-click random books)
 #  settings:
 #    required-enchants:
-#      - 'springs'
+#      - 'springs:1' # Can require specific level
+#      - 'gears'
 #    not-applyable-with:
 #      - 'frozen'
 #  applies:    <-- List of items that it applies
@@ -263,7 +264,11 @@
 #         * Usᴇᴅ Wɪᴛʜ: ATTACK, DEFENSE, BOW
 
 #       - INCREASE_DAMAGE:(integer)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Increase damage by number
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Increase damage by percent in attacks
+#         * Usᴇᴅ Wɪᴛʜ: ATTACK, DEFENSE, BOW
+
+#       - DECREASE_DAMAGE:(integer)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Increase damage by percent in attacks
 #         * Usᴇᴅ Wɪᴛʜ: ATTACK, DEFENSE, BOW
 
 #       - FIREBALL
@@ -439,6 +444,7 @@
 #    %attacker has enchantment in hand of <enchant>% - returns "true/false", checks if player has enchantment on their item
 #    %attacker time%/%victim time% - get player world time
 #    %health percentage% - get player's health percentage
+#    %victim/attacker custom name% - get mob's name
 #    %potion effect level <potion name>% - get level of applied potion effect, remember that potion amplifiers are counted from 0, so level 1 = 0
 #
 # PLACHOLDERAPI SUPPORT FOR CONDITIONS:
@@ -3995,40 +4001,6 @@ inversion:
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HEALTH:<random number>1-5</random number> %victim%'
-killaura:
-  display: '%group-color%Kill Aura'
-  description: "Chance to kill multiple monsters in a stack each death event."
-  applies-to: 'Swords'
-  type: 'KILL_MOB'
-  group: 'LEGENDARY'
-  applies:
-    - ALL_SWORD
-  levels:
-    1:
-      chance: 20
-      cooldown: 4
-      effects:
-        - 'KILL_STACK'
-    2:
-      chance: 40
-      cooldown: 4
-      effects:
-        - 'KILL_STACK'
-    3:
-      chance: 60
-      cooldown: 4
-      effects:
-        - 'KILL_STACK'
-    4:
-      chance: 80
-      cooldown: 4
-      effects:
-        - 'KILL_STACK'
-    5:
-      chance: 80
-      cooldown: 4
-      effects:
-        - 'KILL_STACK'
 lifesteal:
   display: '%group-color%Lifesteal'
   description: "A chance to regain health when\nattacking."
@@ -4967,7 +4939,7 @@ godlyoverload:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'overload'
+      - 'overload:3'
     removed-enchants:
       - 'overload'
     removeable: false
@@ -5024,7 +4996,7 @@ masterinquisitive:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'inquisitive'
+      - 'inquisitive:4'
     removed-enchants:
       - 'inquisitive'
     removeable: false
@@ -5059,7 +5031,7 @@ planetarydeathbringer:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'deathbringer'
+      - 'deathbringer:3'
     removed-enchants:
       - 'deathbringer'
     removeable: false
@@ -5089,7 +5061,7 @@ divineenlighted:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'enlighted'
+      - 'enlighted:3'
     removed-enchants:
       - 'enlighted'
     removeable: false
@@ -5119,7 +5091,7 @@ lethalsniper:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'sniper'
+      - 'sniper:5'
     removed-enchants:
       - 'sniper'
     removeable: false
@@ -5169,7 +5141,7 @@ atomicdetonate:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'detonate'
+      - 'detonate:9'
     removed-enchants:
       - 'detonate'
     removeable: false
@@ -5281,7 +5253,7 @@ masterblacksmith:
     - ALL_AXE
   settings:
     required-enchants:
-      - 'blacksmith'
+      - 'blacksmith:5'
     removed-enchants:
       - 'blacksmith'
     removeable: false
@@ -5331,7 +5303,7 @@ vengefuldiminish:
     - ALL_CHESTPLATE
   settings:
     required-enchants:
-      - 'diminish'
+      - 'diminish:4'
     removed-enchants:
       - 'diminish'
     removeable: false
@@ -5383,7 +5355,7 @@ alienimplants:
     - ALL_HELMET
   settings:
     required-enchants:
-      - 'implants'
+      - 'implants:3'
     removed-enchants:
       - 'implants'
     removeable: false
@@ -5416,7 +5388,7 @@ etherealdodge:
     - ALL_ARMOR
   settings:
     required-enchants:
-      - 'dodge'
+      - 'dodge:5'
     removed-enchants:
       - 'dodge'
     removeable: false
@@ -5471,7 +5443,7 @@ paladinarmored:
     - ALL_ARMOR
   settings:
     required-enchants:
-      - 'armored'
+      - 'armored:4'
     removed-enchants:
       - 'armored'
     removeable: false
@@ -5510,7 +5482,7 @@ demoniclifesteal:
     - ALL_SWORD
   settings:
     required-enchants:
-      - 'lifesteal'
+      - 'lifesteal:5'
     removed-enchants:
       - 'lifesteal'
     removeable: false
@@ -5553,7 +5525,7 @@ deepbleed:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'bleed'
+      - 'bleed:6'
     removed-enchants:
       - 'bleed'
     removeable: false
@@ -5624,7 +5596,7 @@ shadowassassin:
   group: 'HEROIC'
   settings:
     required-enchants:
-      - 'assassin'
+      - 'assassin:5'
     removed-enchants:
       - 'assassin'
     removeable: false
@@ -6078,7 +6050,7 @@ chainlifesteal:
         - 'MESSAGE:&4&l** CHAIN LIFESTEAL ** &7(-5 &cHP&7) <aoe> radius=6 target=damageable </aoe>'
 poltergeist:
   display: '%group-color%Poltergeist'
-  description: "Immune to Nature's Wrath snare\nAlso negates all fall damage."
+  description: "Immune to Nature's Wrath snare."
   applies-to: Boots
   type: DEFENSE;FALL_DAMAGE
   group: MASTERY
@@ -6091,21 +6063,21 @@ poltergeist:
       effects:
         - 'CURE:SLOW %victim%'
         - 'MESSAGE:&4&l** POLTERGEIST ** %victim%'
-        - 'PARTICLE:CLOUD:200'
+        - 'PARTICLE:CLOUD:200:3'
     '2':
       chance: 10
       cooldown: 120
       effects:
         - 'CURE:SLOW %victim%'
         - 'MESSAGE:&4&l** POLTERGEIST ** %victim%'
-        - 'PARTICLE:CLOUD:200'
+        - 'PARTICLE:CLOUD:200:3'
     '3':
       chance: 15
       cooldown: 120
       effects:
         - 'CURE:SLOW %victim%'
         - 'MESSAGE:&4&l** POLTERGEIST ** %victim%'
-        - 'PARTICLE:CLOUD:200'
+        - 'PARTICLE:CLOUD:200:3'
 feigndeath:
   display: '%group-color%Feign Death'
   description: "Chance to fake death and vanish for up to 6 seconds\nor until you have damaged a player (levelx) times"
@@ -6206,3 +6178,15 @@ deathpact:
       effects:
         - 'NEGATE_DAMAGE:15 %victim%'
         - 'INCREASE_DAMAGE:-15 %victim%'
+webwalker:
+  display: '%group-color%Web Walker'
+  description: "Depth Strider, but for Spider Webs."
+  applies-to: 'Boots'
+  type: 'EFFECT_STATIC'
+  group: 'MASTERY'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      effects:
+        - 'WEB_WALKER'
