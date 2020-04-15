@@ -2457,6 +2457,57 @@ hijack:
       cooldown: 5
       effects:
         - 'STEAL_GUARD'
+cleave:
+  display: '%group-color%Cleave'
+  description: "Damages players within a radius\nthat increases with the level of enchant."
+  applies-to: 'Axes'
+  type: 'ATTACK'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_AXE
+  levels:
+    1:
+      chance: 4
+      cooldown: 8
+      effects:
+        - 'ADD_HARM:<random number>1-3</random number> <aoe> radius=1 target=damageable </aoe>'
+        - 'MESSAGE:&e&l** CLEAVE &7(%attacker name%)&e&l ** <aoe> radius=1 target=damageable </aoe>'
+    2:
+      chance: 5
+      cooldown: 8
+      effects:
+        - 'ADD_HARM:<random number>1-3</random number> <aoe> radius=2 target=damageable </aoe>'
+        - 'MESSAGE:&e&l** CLEAVE &7(%attacker name%)&e&l ** <aoe> radius=2 target=damageable </aoe>'
+    3:
+      chance: 6
+      cooldown: 9
+      effects:
+        - 'ADD_HARM:<random number>1-3</random number> <aoe> radius=3 target=damageable </aoe>'
+        - 'MESSAGE:&e&l** CLEAVE &7(%attacker name%)&e&l ** <aoe> radius=3 target=damageable </aoe>'
+    4:
+      chance: 7
+      cooldown: 9
+      effects:
+        - 'ADD_HARM:<random number>1-3</random number> <aoe> radius=4 target=damageable </aoe>'
+        - 'MESSAGE:&e&l** CLEAVE &7(%attacker name%)&e&l ** <aoe> radius=4 target=damageable </aoe>'
+    5:
+      chance: 9
+      cooldown: 10
+      effects:
+        - 'ADD_HARM:<random number>2-3</random number> <aoe> radius=5 target=damageable </aoe>'
+        - 'MESSAGE:&e&l** CLEAVE &7(%attacker name%)&e&l ** <aoe> radius=5 target=damageable </aoe>'
+    6:
+      chance: 12
+      cooldown: 12
+      effects:
+        - 'ADD_HARM:<random number>2-3</random number> <aoe> radius=6 target=damageable </aoe>'
+        - 'MESSAGE:&e&l** CLEAVE &7(%attacker name%)&e&l ** <aoe> radius=6 target=damageable </aoe>'
+    7:
+      chance: 15
+      cooldown: 14
+      effects:
+        - 'ADD_HARM:<random number>2-3</random number> <aoe> radius=7 target=damageable </aoe>'
+        - 'MESSAGE:&e&l** CLEAVE &7(%attacker name%)&e&l ** <aoe> radius=7 target=damageable </aoe>'
 angelic:
   display: '%group-color%Angelic'
   description: "Heals health over time whenever damaged"
@@ -4655,6 +4706,45 @@ destruction:
         - 'POTION:POISON:0:60 <aoe> radius=5 target=damageable </aoe>'
         - 'POTION:WEAKNESS:0:60 <aoe> radius=5 target=damageable </aoe>'
         - 'MESSAGE:&6&l** PARADOX &7(%victim name%) ** <aoe> radius=5 target=damageable </aoe>'
+mightycleave:
+  display: '%group-color%Mighty Cleave'
+  description: "Deals up to 8 damage in up to a 4 block radius."
+  applies-to: 'Axes'
+  type: 'ATTACK'
+  group: 'HEROIC'
+  applies:
+    - ALL_AXE
+  levels:
+    1:
+      chance: 4
+      cooldown: 12
+      effects:
+        - 'ADD_HARM:<random number>1-8</random number> <aoe> radius=1 target=damageable </aoe>'
+        - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=1 target=damageable </aoe>'
+    2:
+      chance: 5
+      cooldown: 13
+      effects:
+        - 'ADD_HARM:<random number>2-8</random number> <aoe> radius=2 target=damageable </aoe>'
+        - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=2 target=damageable </aoe>'
+    3:
+      chance: 7
+      cooldown: 14
+      effects:
+        - 'ADD_HARM:<random number>3-8</random number> <aoe> radius=2 target=damageable </aoe>'
+        - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=3 target=damageable </aoe>'
+    4:
+      chance: 9
+      cooldown: 15
+      effects:
+        - 'ADD_HARM:<random number>5-8</random number> <aoe> radius=3 target=damageable </aoe>'
+        - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=4 target=damageable </aoe>'
+    5:
+      chance: 9
+      cooldown: 10
+      effects:
+        - 'ADD_HARM:<random number>6-8</random number> <aoe> radius=4 target=damageable </aoe>'
+        - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=5 target=damageable </aoe>'
 mightycactus:
   display: '%group-color%Mighty Cactus'
   description: "Heroic Enchantment. Injures your attacker but does not\naffect your durability."
