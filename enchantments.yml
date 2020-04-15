@@ -4725,25 +4725,25 @@ mightycleave:
       chance: 5
       cooldown: 13
       effects:
-        - 'ADD_HARM:<random number>3-8</random number> <aoe> radius=2 target=damageable </aoe>'
+        - 'ADD_HARM:<random number>2-8</random number> <aoe> radius=2 target=damageable </aoe>'
         - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=2 target=damageable </aoe>'
     3:
       chance: 7
       cooldown: 14
       effects:
-        - 'ADD_HARM:<random number>5-8</random number> <aoe> radius=2 target=damageable </aoe>'
+        - 'ADD_HARM:<random number>3-8</random number> <aoe> radius=2 target=damageable </aoe>'
         - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=3 target=damageable </aoe>'
     4:
       chance: 9
       cooldown: 15
       effects:
-        - 'ADD_HARM:<random number>6-8</random number> <aoe> radius=3 target=damageable </aoe>'
+        - 'ADD_HARM:<random number>5-8</random number> <aoe> radius=3 target=damageable </aoe>'
         - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=4 target=damageable </aoe>'
     5:
       chance: 9
       cooldown: 10
       effects:
-        - 'ADD_HARM:<random number>2-3</random number> <aoe> radius=4 target=damageable </aoe>'
+        - 'ADD_HARM:<random number>6-8</random number> <aoe> radius=4 target=damageable </aoe>'
         - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=5 target=damageable </aoe>'
 mightycactus:
   display: '%group-color%Mighty Cactus'
