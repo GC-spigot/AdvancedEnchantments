@@ -4400,6 +4400,20 @@ blacksmith:
         - 'ADD_DURABILITY:-2'
         - 'HALF_DAMAGE'
         - 'MESSAGE:&6&l** BLACKSMITH ** %attacker%'
+abiding:
+  display: '%group-color%Abiding'
+  description: "Tools with this enchant become unbreakable"
+  applies-to: 'Tools'
+  type: 'MINING;ATTACK;ATTACK_MOB'
+  group: 'LEGENDARY'
+  applies:
+    - ALL_PICKAXE
+    - ALL_SPADE
+    - ALL_AXE
+  levels:
+    1:
+      effects:
+        - 'REPAIR'
 devour:
   display: '%group-color%Devour'
   description: "Multiplies damage dealt to\nplayers with active bleed stacks."
