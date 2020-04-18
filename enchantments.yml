@@ -4720,6 +4720,40 @@ destruction:
         - 'POTION:POISON:0:60 <aoe> radius=5 target=damageable </aoe>'
         - 'POTION:WEAKNESS:0:60 <aoe> radius=5 target=damageable </aoe>'
         - 'MESSAGE:&6&l** PARADOX &7(%victim name%) ** <aoe> radius=5 target=damageable </aoe>'
+megaheavy:
+  display: '%group-color%Mega Heavy'
+  description: "Decreases Damage from enemy bows\nby 10% plus an additional 2%\nper level."
+  applies-to: 'Armor'
+  type: 'DEFENSE_BOW'
+  group: 'HEROIC'
+  applies:
+    - ALL_ARMOR
+  levels:
+    1:
+      chance: 4
+      cooldown: 6
+      effects:
+        - 'DECREASE_DAMAGE:12'
+    2:
+      chance: 7
+      cooldown: 7
+      effects:
+        - 'DECREASE_DAMAGE:14'
+    3:
+      chance: 8
+      cooldown: 7
+      effects:
+        - 'DECREASE_DAMAGE:16'
+    4:
+      chance: 10
+      cooldown: 7
+      effects:
+        - 'DECREASE_DAMAGE:18'
+    5:
+      chance: 12
+      cooldown: 9
+      effects:
+        - 'DECREASE_DAMAGE:20'
 mightycleave:
   display: '%group-color%Mighty Cleave'
   description: "Deals up to 8 damage in up to a 4 block radius."
