@@ -761,3 +761,13 @@ settings:
     - 'STONE' # Example item
   # Amount of souls given per kill
   souls-per-kill: 1
+  # TRENCH optimization system configuration
+  trench-optimization:
+    # Should player automatically detect what protection plugins are used and work from there
+    #   Explanation of how this works: Currently AE can support either WorldGuard only checks
+    #   or Universal which will support all protection plugins but this may sometimes result in
+    #   poor performance (depending on what protection plugins server is running). Recommended to
+    #   leave this setting as 'true' if you are using other land plugins (ie. Factions, Skyblock, etc)
+    # Setting this to FALSE will only make the plugin work with WorldGuard
+    # Setting this to TRUE will let plugin choose between WG-only or Universal method, may cause performance loss
+    automaticallyDetect: true
