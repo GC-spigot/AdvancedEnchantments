@@ -920,32 +920,32 @@ lifebloom:
       chance: 20
       cooldown: 10
       effects:
-        - 'ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
+        - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
+        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     2:
       chance: 30
       cooldown: 10
       effects:
-        - 'ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
+        - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
+        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     3:
       chance: 40
       cooldown: 10
       effects:
-        - 'ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
+        - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
+        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     4:
       chance: 50
       cooldown: 15
       effects:
-        - 'ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
+        - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
+        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     5:
       chance: 50
       cooldown: 15
       effects:
-        - 'ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) ADD_HEALTH:40 <aoe> radius=3 target=undamageable </aoe>'
+        - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
+        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
 berserk:
   display: '%group-color%Berserk'
   description: "A chance of strength\nand mining fatigue."
