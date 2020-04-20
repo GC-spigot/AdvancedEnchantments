@@ -910,7 +910,7 @@ epicness:
 lifebloom:
   display: '%group-color%Lifebloom'
   description: "Completely heals allies\nand truces on your death\nin 10 block radius."
-  applies-to: 'Pants'
+  applies-to: 'Leggings'
   type: 'DEATH'
   group: 'UNIQUE'
   applies:
@@ -4762,7 +4762,7 @@ destruction:
 extremeinsanity:
   display: '%group-color%Insanity'
   description: "You swing your sword like an extreme maniac.\nMultiplies damage against players\nwho are wielding a SWORD at\nthe time they are hit."
-  applies-to: 'Axe'
+  applies-to: 'Axes'
   type: 'ATTACK'
   settings:
     required-enchants:
@@ -4775,49 +4775,49 @@ extremeinsanity:
     - ALL_AXE
   levels:
     1:
-      chance: 15
+      chance: 4
       cooldown: 4
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     2:
-      chance: 30
+      chance: 8
       cooldown: 4
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     3:
-      chance: 45
+      chance: 12
       cooldown: 5
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     4:
-      chance: 60
+      chance: 14
       cooldown: 5
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     5:
-      chance: 70
+      chance: 16
       cooldown: 5
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     6:
-      chance: 85
+      chance: 19
       cooldown: 6
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     7:
-      chance: 95
+      chance: 22
       cooldown: 7
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     8:
-      chance: 100
+      chance: 25
       cooldown: 8
       condition: '%victim is holding% contains SWORD : %allow%'
       effects:
@@ -4893,19 +4893,19 @@ mightycleave:
       chance: 7
       cooldown: 14
       effects:
-        - 'ADD_HARM:<random number>3-8</random number> <aoe> radius=2 target=damageable </aoe>'
+        - 'ADD_HARM:<random number>3-8</random number> <aoe> radius=3 target=damageable </aoe>'
         - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=3 target=damageable </aoe>'
     4:
       chance: 9
       cooldown: 15
       effects:
-        - 'ADD_HARM:<random number>5-8</random number> <aoe> radius=3 target=damageable </aoe>'
+        - 'ADD_HARM:<random number>5-8</random number> <aoe> radius=4 target=damageable </aoe>'
         - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=4 target=damageable </aoe>'
     5:
       chance: 9
       cooldown: 10
       effects:
-        - 'ADD_HARM:<random number>6-8</random number> <aoe> radius=4 target=damageable </aoe>'
+        - 'ADD_HARM:<random number>6-8</random number> <aoe> radius=5 target=damageable </aoe>'
         - 'MESSAGE:&d&l** MIGHTY CLEAVE &7(%attacker name%)&d&l ** <aoe> radius=5 target=damageable </aoe>'
 mightycactus:
   display: '%group-color%Mighty Cactus'
