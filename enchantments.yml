@@ -3800,6 +3800,55 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
+fat:
+  display: '%group-color%Fat'
+  description: "Wearer receives increased damage negation\nas well as absorption at higher levels."
+  applies-to: 'Chestplate'
+  type: DEFENSE
+  group: LEGENDARY
+  applies:
+    - ALL_CHESTPLATE
+  levels:
+    1:
+      chance: 5
+      cooldown: 10
+      effects:
+        - 'NEGATE_DAMAGE:10 %victim%'
+        - 'MESSAGE:&6&l** FAT ** %victim%'
+    2:
+      chance: 10
+      cooldown: 10
+      effects:
+        - 'NEGATE_DAMAGE:20 %victim%'
+        - 'MESSAGE:&6&l** FAT ** %victim%'
+    3:
+      chance: 12
+      cooldown: 10
+      effects:
+        - 'NEGATE_DAMAGE:30 %victim%'
+        - 'MESSAGE:&6&l** FAT ** %victim%'
+        - 'POTION:ABSORPTION:3:60 %victim%'
+    4:
+      chance: 15
+      cooldown: 10
+      effects:
+        - 'NEGATE_DAMAGE:40 %victim%'
+        - 'MESSAGE:&6&l** FAT ** %victim%'
+        - 'POTION:ABSORPTION:4:80 %victim%'
+    5:
+      chance: 18
+      cooldown: 10
+      effects:
+        - 'NEGATE_DAMAGE:50 %victim%'
+        - 'MESSAGE:&6&l** FAT ** %victim%'
+        - 'POTION:ABSORPTION:4:80 %victim%'
+    6:
+      chance: 20
+      cooldown: 10
+      effects:
+        - 'NEGATE_DAMAGE:60 %victim%'
+        - 'MESSAGE:&6&l** FAT ** %victim%'
+        - 'POTION:ABSORPTION:5:100 %victim%'
 leadership:
   display: '%group-color%Leadership'
   description: "The more allies near you\nthe more damage you deal."
@@ -5240,6 +5289,81 @@ reflectiveblock:
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HARM:%damage% %attacker%'
+markofthebeast:
+  display: '%group-color%Mark of the Beast'
+  description: "Once an enemy is afflicted with the mark\nall incoming damage is increased by 2x for\nup to 5 seconds"
+  applies-to: 'Armor'
+  type: 'DEFENSE'
+  group: 'MASTERY'
+  applies:
+    - ALL_ARMOR
+  levels:
+    1:
+      chance: 4
+      cooldown: 600
+      effects:
+        - 'MESSAGE:&c&l* MARK OF THE BEAST [&72s&c&l] * %victim%'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+    2:
+      chance: 6
+      cooldown: 500
+      effects:
+        - 'MESSAGE:&c&l* MARK OF THE BEAST [&72s&c&l] * %victim%'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+    3:
+      chance: 8
+      cooldown: 400
+      effects:
+        - 'MESSAGE:&c&l* MARK OF THE BEAST [&72s&c&l] * %victim%'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+    4:
+      chance: 10
+      cooldown: 300
+      effects:
+        - 'MESSAGE:&c&l* MARK OF THE BEAST [&73s&c&l] * %victim%'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+    5:
+      chance: 13
+      cooldown: 200
+      effects:
+        - 'MESSAGE:&c&l* MARK OF THE BEAST [&74s&c&l] * %victim%'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+    6:
+      chance: 16
+      cooldown: 100
+      effects:
+        - 'MESSAGE:&c&l* MARK OF THE BEAST [&74s&c&l] * %victim%'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'INCREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
 masterinquisitive:
   display: '%group-color%Master Inquisitive'
   description: "Heroic Enchantment. Massively\nincreases EXP drops from mobs.\nRequires Inquisitive IV enchant\non item to apply."
