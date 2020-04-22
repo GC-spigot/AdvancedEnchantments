@@ -3800,6 +3800,45 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
+quiver:
+  display: '%group-color%Quiver'
+  description: 'Chance to fling your attackers into the air.'
+  applies-to: 'Boots'
+  type: 'DEFENSE'
+  group: 'LEGENDARY'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      chance: 21
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:8.0'
+    2:
+      chance: 28
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:8.0'
+    3:
+      chance: 35
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:8.5'
+    4:
+      chance: 41
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:8.0'
+    5:
+      chance: 47
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:8.0'
+    6:
+      chance: 54
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:8.0'
 fat:
   display: '%group-color%Fat'
   description: "Wearer receives increased damage negation\nas well as absorption at higher levels."
@@ -6382,7 +6421,7 @@ horrify:
 chainlifesteal:
   display: '%group-color%Chain Lifesteal'
   description: 'A chance to regain health from multiple\nenemies near you damaged target based on level'
-  applies-to: 'Swords'
+  applies-to: 'Chestplate'
   type: 'ATTACK'
   group: 'MASTERY'
   settings:
@@ -6392,7 +6431,7 @@ chainlifesteal:
       - 'demoniclifesteallifesteal'
     removeable: false
   applies:
-    - ALL_SWORD
+    - ALL_CHESTPLATE
   levels:
     1:
       chance: 1.8
