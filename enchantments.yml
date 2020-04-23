@@ -3810,35 +3810,35 @@ quiver:
     - ALL_BOOTS
   levels:
     1:
-      chance: 21
+      chance: 8
       cooldown: 10
       effects:
-        - 'PULL_AWAY:8.0'
+        - 'PULL_AWAY:5.5'
     2:
-      chance: 28
+      chance: 10
       cooldown: 10
       effects:
-        - 'PULL_AWAY:8.0'
+        - 'PULL_AWAY:6'
     3:
-      chance: 35
+      chance: 12
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:6.5'
+    4:
+      chance: 14
+      cooldown: 10
+      effects:
+        - 'PULL_AWAY:7'
+    5:
+      chance: 16
       cooldown: 10
       effects:
         - 'PULL_AWAY:8.5'
-    4:
-      chance: 41
-      cooldown: 10
-      effects:
-        - 'PULL_AWAY:8.0'
-    5:
-      chance: 47
-      cooldown: 10
-      effects:
-        - 'PULL_AWAY:8.0'
     6:
-      chance: 54
+      chance: 18
       cooldown: 10
       effects:
-        - 'PULL_AWAY:8.0'
+        - 'PULL_AWAY:9.0'
 fat:
   display: '%group-color%Fat'
   description: "Wearer receives increased damage negation\nas well as absorption at higher levels."
