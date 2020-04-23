@@ -3804,6 +3804,43 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
+stun:
+  display: '%group-color%Stun'
+  description: "Chance to slow opponent, make them\nfeel weak, and remove slowness from you."
+  applies-to: 'Weapon'
+  type: 'ATTACK'
+  group: 'LEGENDARY'
+  applies:
+    - ALL_AXE
+    - ALL_SWORD
+  levels:
+    1:
+      chance: 15
+      cooldown: 6
+      effects:
+        - 'POTION:SLOW:0:120 %victim%'
+        - 'CURE:SLOW %attacker%'
+        - 'CURE_PERMANENT:SLOW %attacker%'
+        - 'POTION:WEAKNESS:0:80 %victim%'
+        - 'MESSAGE:&c&l** STUNNED ** %victim%'
+    2:
+      chance: 23
+      cooldown: 6
+      effects:
+        - 'POTION:SLOW:0:120 %victim%'
+        - 'CURE:SLOW %attacker%'
+        - 'CURE_PERMANENT:SLOW %attacker%'
+        - 'POTION:WEAKNESS:0:80 %victim%'
+        - 'MESSAGE:&c&l** STUNNED ** %victim%'
+    3:
+      chance: 35
+      cooldown: 6
+      effects:
+        - 'POTION:SLOW:1:120 %victim%'
+        - 'CURE:SLOW %attacker%'
+        - 'CURE_PERMANENT:SLOW %attacker%'
+        - 'POTION:WEAKNESS:0:80 %victim%'
+        - 'MESSAGE:&c&l** STUNNED ** %victim%'
 unholy:
   display: '%group-color%Unholy'
   description: "Chance to give weakness and wither to your attacker."
