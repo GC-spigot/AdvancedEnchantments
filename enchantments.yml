@@ -286,6 +286,10 @@
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Steal money from one player to another
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
+#       - REMOVE_HOLYWHITESCROLL
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove holy whitescroll from item with this effect
+#         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
+
 #       - STEAL_EXP:(amount)
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Steal exp from one player to another
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
@@ -3800,6 +3804,45 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
+unholy:
+  display: '%group-color%Unholy'
+  description: "Chance to give weakness and wither to your attacker."
+  applies-to: Armor
+  type: DEFENSE
+  group: LEGENDARY
+  applies:
+    - ALL_ARMOR
+  levels:
+    '1':
+      chance: 2
+      cooldown: 40
+      effects:
+        - POTION:WITHER:0:60 %attacker%
+        - POTION:WEAKNESS:0:100 %attacker%
+    '2':
+      chance: 4
+      cooldown: 40
+      effects:
+        - POTION:WITHER:1:60 %attacker%
+        - POTION:WEAKNESS:0:5 %attacker%
+    '3':
+      chance: 6
+      cooldown: 40
+      effects:
+        - POTION:WITHER:1:60 %attacker%
+        - POTION:WEAKNESS:0:100 %attacker%
+    '4':
+      chance: 8
+      cooldown: 40
+      effects:
+        - POTION:WITHER:1:60 %attacker%
+        - POTION:WEAKNESS:0:100 %attacker%
+    '5':
+      chance: 10
+      cooldown: 40
+      effects:
+        - POTION:WITHER:1:60 %attacker%
+        - POTION:WEAKNESS:0:100 %attacker%
 quiver:
   display: '%group-color%Quiver'
   description: 'Chance to fling your attackers into the air.'
@@ -4960,7 +5003,7 @@ mightycleave:
     required-enchants:
       - 'cleave:7'
     removed-enchants:
-       - 'cleave'
+      - 'cleave'
     removeable: false
   applies:
     - ALL_AXE
@@ -5328,6 +5371,51 @@ reflectiveblock:
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HARM:%damage% %attacker%'
+halloweenify:
+  display: '%group-color%Halloweenify'
+  description: 'Replace your opponents helmet to a pumpkin for a short time.'
+  applies-to: 'Weapon'
+  type: 'ATTACK'
+  group: 'MASTERY'
+  applies:
+    - ALL_SWORD
+    - ALL_AXE
+  levels:
+    1:
+      chance: 1.8
+      cooldown: 20
+      effects:
+        - 'PUMPKIN:40 %victim%'
+        - 'MESSAGE:&e&l** HALLOWEENIFY ** %victim%'
+        - 'PLAY_SOUND_OUTLOUD:ANVIL_DROP'
+    2:
+      chance: 3.6
+      cooldown: 20
+      effects:
+        - 'PUMPKIN:40 %victim%'
+        - 'MESSAGE:&e&l** HALLOWEENIFY ** %victim%'
+        - 'PLAY_SOUND_OUTLOUD:ANVIL_DROP'
+    3:
+      chance: 4.4
+      cooldown: 20
+      effects:
+        - 'PUMPKIN:60 %victim%'
+        - 'MESSAGE:&e&l** HALLOWEENIFY ** %victim%'
+        - 'PLAY_SOUND_OUTLOUD:ANVIL_DROP'
+    4:
+      chance: 5.2
+      cooldown: 20
+      effects:
+        - 'PUMPKIN:60 %victim%'
+        - 'MESSAGE:&e&l** HALLOWEENIFY ** %victim%'
+        - 'PLAY_SOUND_OUTLOUD:ANVIL_DROP'
+    5:
+      chance: 6
+      cooldown: 20
+      effects:
+        - 'PUMPKIN:80 %victim%'
+        - 'MESSAGE:&e&l** HALLOWEENIFY ** %victim%'
+        - 'PLAY_SOUND_OUTLOUD:ANVIL_DROP'
 markofthebeast:
   display: '%group-color%Mark of the Beast'
   description: "Once an enemy is afflicted with the mark\nall incoming damage is increased by 2x for\nup to 5 seconds"
