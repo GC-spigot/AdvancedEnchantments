@@ -5276,6 +5276,44 @@ polymorphicmetaphysical:
       chance: 90
       effects:
         - 'CURE:SLOW %victim%'
+distance:
+  display: '%group-color%Distance'
+  description: "Chance to distance yourself from your enemies\nand gain regeneration."
+  applies-to: 'Weapons'
+  type: 'ATTACK'
+  group: 'ULTIMATE'
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    1:
+      chance: 16
+      cooldown: 6
+      effects:
+      - 'PULL_AWAY:3.0 %victim%'
+      - 'POTION:REGENERATION:0:20 %attacker%'
+      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
+    2:
+      chance: 20
+      cooldown: 6
+      effects:
+      - 'PULL_AWAY:4.5 %victim%'
+      - 'POTION:REGENERATION:0:20 %attacker%'
+      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
+    3:
+      chance: 24
+      cooldown: 6
+      effects:
+      - 'PULL_AWAY:5.0 %victim%'
+      - 'POTION:REGENERATION:1:20 %attacker%'
+      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
+    4:
+      chance: 28
+      cooldown: 6
+      effects:
+      - 'PULL_AWAY:6.5 %victim%'
+      - 'POTION:REGENERATION:1:40 %attacker%'
+      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
 reinforcedtank:
   display: '%group-color%Reinforced Tank'
   description: "Decreases damage from enemy\naxes by 1.85% per level."
@@ -5480,6 +5518,80 @@ reflectiveblock:
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HARM:%damage% %attacker%'
+neutralize:
+  display: '%group-color%Neutralize'
+  description: "Negate all enemy defensive enchantment's for on the damage\nevent that neutralize activates for\nThis effect can stack with silence"
+  applies-to: "Swords"
+  type: ATTACK
+  group: MASTERY
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 1
+      cooldown: 140
+      effects:
+      - DISABLE_ACTIVATION:cactus:7 %victim%
+      - DISABLE_ACTIVATION:enlighted:7 %victim%
+      - DISABLE_ACTIVATION:angelic:7 %victim%
+      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+      - DISABLE_ACTIVATION:dodge:7 %victim%
+      - DISABLE_ACTIVATION:valor:7 %victim%
+      - DISABLE_ACTIVATION::7 %victim%
+      - DISABLE_ACTIVATION:mightycactus:7 %victim%
+      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+    '2':
+      chance: 2
+      cooldown: 120
+      effects:
+      - DISABLE_ACTIVATION:cactus:7 %victim%
+      - DISABLE_ACTIVATION:enlighted:7 %victim%
+      - DISABLE_ACTIVATION:angelic:7 %victim%
+      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+      - DISABLE_ACTIVATION:dodge:7 %victim%
+      - DISABLE_ACTIVATION:valor:7 %victim%
+      - DISABLE_ACTIVATION::7 %victim%
+      - DISABLE_ACTIVATION:mightycactus:7 %victim%
+      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+    '3':
+      chance: 3
+      cooldown: 100
+      effects:
+      - DISABLE_ACTIVATION:cactus:7 %victim%
+      - DISABLE_ACTIVATION:enlighted:7 %victim%
+      - DISABLE_ACTIVATION:angelic:7 %victim%
+      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+      - DISABLE_ACTIVATION:dodge:7 %victim%
+      - DISABLE_ACTIVATION:valor:7 %victim%
+      - DISABLE_ACTIVATION::7 %victim%
+      - DISABLE_ACTIVATION:mightycactus:7 %victim%
+      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+    '4':
+      chance: 4
+      cooldown: 80
+      effects:
+      - DISABLE_ACTIVATION:cactus:7 %victim%
+      - DISABLE_ACTIVATION:enlighted:7 %victim%
+      - DISABLE_ACTIVATION:angelic:7 %victim%
+      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+      - DISABLE_ACTIVATION:dodge:7 %victim%
+      - DISABLE_ACTIVATION:valor:7 %victim%
+      - DISABLE_ACTIVATION::7 %victim%
+      - DISABLE_ACTIVATION:mightycactus:7 %victim%
+      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+    '5':
+      chance: 6
+      cooldown: 20
+      effects:
+      - DISABLE_ACTIVATION:cactus:5 %victim%
+      - DISABLE_ACTIVATION:enlighted:5 %victim%
+      - DISABLE_ACTIVATION:angelic:5 %victim%
+      - DISABLE_ACTIVATION:divineenlighted:5 %victim
+      - DISABLE_ACTIVATION:dodge:5 %victim%
+      - DISABLE_ACTIVATION:valor:5 %victim%
+      - DISABLE_ACTIVATION:mightycactus:5 %victim%
+      - DISABLE_ACTIVATION:lucky:5 %victim%
+      - MESSAGE:&4&l* Neutralized&r &4[5s] &4&l* %victim%
 halloweenify:
   display: '%group-color%Halloweenify'
   description: 'Replace your opponents helmet to a pumpkin for a short time.'
