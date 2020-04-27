@@ -3347,6 +3347,45 @@ eagleeye:
       cooldown: 4
       effects:
         - 'DAMAGE_ARMOR:<random number>1-4</random number> %victim%'
+annihilate:
+  display: '&cAnnihilate'
+  description: "Demolish your opponent's armour quicker!"
+  applies-to: 'Axe'
+  type: 'ATTACK'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_AXE
+  levels:
+    1:
+      chance: 10
+      cooldown: 10
+      effects:
+        - 'DAMAGE_ARMOR:1 %victim%'
+    2:
+      chance: 20
+      cooldown: 12
+      effects:
+        - 'DAMAGE_ARMOR:1 %victim%'
+    3:
+      chance: 30
+      cooldown: 15
+      effects:
+        - 'DAMAGE_ARMOR:2 %victim%'
+    4:
+      chance: 40
+      cooldown: 18
+      effects:
+        - 'DAMAGE_ARMOR:2 %victim%'
+    5:
+      chance: 50
+      cooldown: 20
+      effects:
+        - 'DAMAGE_ARMOR:3 %victim%'
+    6:
+      chance: 55
+      cooldown: 28
+      effects:
+        - 'DAMAGE_ARMOR:4 %victim%'
 heavy:
   display: '%group-color%Heavy'
   description: "Decreases damage from enemy bows\nby 2% per level."
