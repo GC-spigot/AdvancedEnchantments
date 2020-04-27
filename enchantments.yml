@@ -2500,6 +2500,37 @@ hijack:
       cooldown: 5
       effects:
         - 'STEAL_GUARD'
+pickpocket:
+  display: '%group-color%Pickpocket'
+  description: 'Chance to steal in-game money whilst fighting.'
+  applies-to: 'Weapons'
+  type: 'ATTACK'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_SWORD
+    - ALL_AXE
+  levels:
+    1:
+      chance: 3
+      cooldown: 80
+      effects:
+      - 'STEAL_MONEY:<random number>200-1000</random number> %victim%'
+      - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
+      - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
+    2:
+      chance: 5
+      cooldown: 80
+      effects:
+      - 'STEAL_MONEY:<random number>200-1200</random number> %victim%'
+      - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
+      - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
+    3:
+      chance: 6
+      cooldown: 80
+      effects:
+      - 'STEAL_MONEY:<random number>200-1500</random number> %victim%'
+      - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
+      - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
 cleave:
   display: '%group-color%Cleave'
   description: "Damages players within a radius\nthat increases with the level of enchant."
