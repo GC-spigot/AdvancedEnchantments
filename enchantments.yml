@@ -56,6 +56,7 @@
 #    - SHIFT : Enchant runs when player toggles crouching (shifts)
 #    - ITEM_BREAK : Enchant runs when player toggles crouching (shifts)
 #    - CATCH_FISH : Enchant runs when player catches a fish
+#    - PASSIVE_DEATH : Enchant runs when player dies from non-pvp related cause
 #    - REPEATING : Repeating enchantments, read more here:
 #        https://github.com/N3kas/AdvancedEnchantments/wiki/Æ-Repeating-Enchantments-(timed)
 
@@ -925,31 +926,31 @@ lifebloom:
       cooldown: 10
       effects:
         - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     2:
       chance: 30
       cooldown: 10
       effects:
         - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     3:
       chance: 40
       cooldown: 10
       effects:
         - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     4:
       chance: 50
       cooldown: 15
       effects:
         - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
     5:
       chance: 50
       cooldown: 15
       effects:
         - 'ADD_HEALTH:40 <aoe> radius=10 target=undamageable </aoe>'
-        - '&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eLifebloom &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
 berserk:
   display: '%group-color%Berserk'
   description: "A chance of strength\nand mining fatigue."
@@ -3835,6 +3836,60 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
+protection:
+  display: '%group-color%Protection'
+  description: "Automatically heals and buffs\nall nearby faction allies."
+  applies-to: 'Armor'
+  type: 'DEFENSE'
+  group: 'LEGENDARY'
+  applies:
+    - 'ALL_ARMOR'
+  levels:
+    '1':
+      chance: 6
+      cooldown: 20
+      effects:
+        - 'ADD_HEALTH:2 <aoe> radius=5 target=undamageable </aoe>'
+        - 'CURE:POISON <aoe> radius=5 target=undamageable </aoe>'
+        - 'CURE:NAUSEA <aoe> radius=5 target=undamageable </aoe>'
+        - 'CURE:WITHER <aoe> radius=5 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eProtection &e&lxxx &7(%victim name%) <aoe> radius=5 target=undamageable </aoe>'
+    '2':
+      chance: 7
+      cooldown: 20
+      effects:
+        - 'ADD_HEALTH:3 <aoe> radius=6 target=undamageable </aoe>'
+        - 'CURE:POISON <aoe> radius=6 target=undamageable </aoe>'
+        - 'CURE:NAUSEA <aoe> radius=6 target=undamageable </aoe>'
+        - 'CURE:WITHER <aoe> radius=6 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eProtection &e&lxxx &7(%victim name%) <aoe> radius=6 target=undamageable </aoe>'
+    '3':
+      chance: 8
+      cooldown: 22
+      effects:
+        - 'ADD_HEALTH:4 <aoe> radius=7 target=undamageable </aoe>'
+        - 'CURE:POISON <aoe> radius=7 target=undamageable </aoe>'
+        - 'CURE:NAUSEA <aoe> radius=7 target=undamageable </aoe>'
+        - 'CURE:WITHER <aoe> radius=7 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eProtection &e&lxxx &7(%victim name%) <aoe> radius=7 target=undamageable </aoe>'
+    '4':
+      chance: 10
+      cooldown: 22
+      effects:
+        - 'ADD_HEALTH:5 <aoe> radius=8 target=undamageable </aoe>'
+        - 'CURE:POISON <aoe> radius=8 target=undamageable </aoe>'
+        - 'CURE:NAUSEA <aoe> radius=8 target=undamageable </aoe>'
+        - 'CURE:WITHER <aoe> radius=8 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eProtection &e&lxxx &7(%victim name%) <aoe> radius=8 target=undamageable </aoe>'
+    '5':
+      chance: 12
+      cooldown: 25
+      effects:
+        - 'ADD_HEALTH:6 <aoe> radius=10 target=undamageable </aoe>'
+        - 'CURE:POISON <aoe> radius=10 target=undamageable </aoe>'
+        - 'CURE:NAUSEA <aoe> radius=10 target=undamageable </aoe>'
+        - 'CURE:WITHER <aoe> radius=10 target=undamageable </aoe>'
+        - 'MESSAGE:&e&lxxx &eProtection &e&lxxx &7(%victim name%) <aoe> radius=10 target=undamageable </aoe>'
 judgement:
   display: '%group-color%Judgement'
   description: "Chance of dealing poison damage to\nyour target or adding regeneration to yourself."
@@ -3842,14 +3897,14 @@ judgement:
   type: DEFENSE
   group: LEGENDARY
   applies:
-  - ALL_ARMOR
+    - ALL_ARMOR
   levels:
     '1':
       chance: 6
       cooldown: 20
       effects:
-      - POTION:POISON:0:100 %attacker%
-      - POTION:REGENERATION:0:100 %victim%
+        - POTION:POISON:0:100 %attacker%
+        - POTION:REGENERATION:0:100 %victim%
     '2':
       chance: 8
       cooldown: 20
