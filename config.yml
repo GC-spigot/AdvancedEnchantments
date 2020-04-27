@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 7.3.7
-# Release date: 2020.04.18
+# Version: 7.4.8
+# Release date: 2020.04.26
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; no permission
@@ -771,3 +771,5 @@ settings:
     # Setting this to FALSE will only make the plugin work with WorldGuard
     # Setting this to TRUE will let plugin choose between WG-only or Universal method, may cause performance loss
     automaticallyDetect: true
+  # Should souls be collected from mobs? By default souls are collected from Mobs only
+  collect-souls-from-mobs: false
