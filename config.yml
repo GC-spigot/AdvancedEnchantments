@@ -773,3 +773,7 @@ settings:
     automaticallyDetect: true
   # Should souls be collected from mobs? By default souls are collected from Mobs only
   collect-souls-from-mobs: false
+  # Trench Whitelist
+  # If list is not empty, will not allow to break any other blocks than listed here
+  trench-whitelist: []
+  # E.g.: - 'DIAMOND_ORE'
