@@ -1601,6 +1601,39 @@ execute:
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
+radioactive:
+  display: '%group-color%Radioactive'
+  description: "A chance to effect your opponent with poison\nand a low chance to deal damage"
+  applies-to: 'Armor'
+  type: 'DEFENSE'
+  group: 'ELITE'
+  applies:
+    - ALL_ARMOR
+  levels:
+    1:
+      chance: 12
+      cooldown: 3
+      effects:
+        - 'POTION:POISON:0:80 %attacker%'
+        - 'ADD_HARM:<random number>1-3</random number> %attacker% <chance>10</chance>'
+    2:
+      chance: 14
+      cooldown: 4
+      effects:
+        - 'POTION:POISON:0:120 %attacker%'
+        - 'ADD_HARM:<random number>1-3</random number> %attacker% <chance>13</chance>'
+    3:
+      chance: 16
+      cooldown: 7
+      effects:
+        - 'POTION:POISON:1:100 %attacker%'
+        - 'ADD_HARM:<random number>2-4</random number> %attacker% <chance>16</chance>'
+    4:
+      chance: 18
+      cooldown: 9
+      effects:
+        - 'POTION:POISON:2:60 %attacker%'
+        - 'ADD_HARM:<random number>2-5</random number> %attacker% <chance>20</chance>'
 frozen:
   display: '%group-color%Frozen'
   description: "Can cause slowness to attacker\nwhen defending."
@@ -3875,6 +3908,45 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
+legion:
+  display: '%group-color%Legion'
+  description: "Summon a barrage of arrows upon your opponent\nwith a chance to make them weak"
+  applies-to: 'Bow'
+  type: 'BOW'
+  group: 'LEGENDARY'
+  applies:
+    - BOW
+  levels:
+    1:
+      chance: 5
+      cooldown: 4
+      effects:
+        - 'POTION:WEAKNESS:0:100 %victim% <chance>4</chance>'
+        - 'SPAWN_ARROWS %victim%'
+    2:
+      chance: 9
+      cooldown: 4
+      effects:
+        - 'POTION:WEAKNESS:0:100 %victim% <chance>5</chance>'
+        - 'SPAWN_ARROWS %victim%'
+    3:
+      chance: 13
+      cooldown: 4
+      effects:
+        - 'POTION:WEAKNESS:0:100 %victim% <chance>6</chance>'
+        - 'SPAWN_ARROWS %victim%'
+    4:
+      chance: 19
+      cooldown: 4
+      effects:
+        - 'POTION:WEAKNESS:0:100 %victim% <chance>7</chance>'
+        - 'SPAWN_ARROWS %victim%'
+    5:
+      chance: 24
+      cooldown: 5
+      effects:
+        - 'POTION:WEAKNESS:0:100 %victim% <chance>8</chance>'
+        - 'SPAWN_ARROWS %victim%'
 protection:
   display: '%group-color%Protection'
   description: "Automatically heals and buffs\nall nearby faction allies."
