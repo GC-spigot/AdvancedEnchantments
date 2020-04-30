@@ -1555,41 +1555,31 @@ enderslayer:
     1:
       chance: 16
       cooldown: 2
-      condition: 
-        - '%mob type% = ENDERMAN : %stop%'
-        - '%mob type% = ENDER_DRAGON : %stop%'
+      condition: '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     2:
       chance: 21
       cooldown: 2
-      condition: 
-        - '%mob type% = ENDERMAN : %stop%'
-        - '%mob type% = ENDER_DRAGON : %stop%'
+      condition: '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     3:
       chance: 29
       cooldown: 2
-      condition: 
-        - '%mob type% = ENDERMAN : %stop%'
-        - '%mob type% = ENDER_DRAGON : %stop%'
+      condition: '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     4:
       chance: 34
       cooldown: 2
-      condition: 
-        - '%mob type% = ENDERMAN : %stop%'
-        - '%mob type% = ENDER_DRAGON : %stop%'
+      condition: '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     5:
       chance: 41
       cooldown: 2
-      condition: 
-        - '%mob type% = ENDERMAN : %stop%'
-        - '%mob type% = ENDER_DRAGON : %stop%'
+      condition: '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
 netherslayer:
@@ -1605,41 +1595,31 @@ netherslayer:
     1:
       chance: 16
       cooldown: 2
-      condition: 
-        - '%mob type% = BLAZE : %stop%'
-        - '%mob type% = ZOMBIE_PIGMAN : %stop%'
+      condition: '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     2:
       chance: 21
       cooldown: 2
-      condition: 
-        - '%mob type% = BLAZE : %stop%'
-        - '%mob type% = ZOMBIE_PIGMAN : %stop%'
+      condition: '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     3:
       chance: 29
       cooldown: 2
-      condition: 
-        - '%mob type% = BLAZE : %stop%'
-        - '%mob type% = ZOMBIE_PIGMAN : %stop%'
+      condition: '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     4:
       chance: 34
       cooldown: 2
-      condition: 
-        - '%mob type% = BLAZE : %stop%'
-        - '%mob type% = ZOMBIE_PIGMAN : %stop%'
+      condition: '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     5:
       chance: 41
       cooldown: 2
-      condition: 
-        - '%mob type% = BLAZE : %stop%'
-        - '%mob type% = ZOMBIE_PIGMAN : %stop%'
+      condition: '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
 blind:
@@ -1765,39 +1745,6 @@ execute:
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
-radioactive:
-  display: '%group-color%Radioactive'
-  description: "A chance to effect your opponent with poison\nand a low chance to deal damage"
-  applies-to: 'Armor'
-  type: 'DEFENSE'
-  group: 'ELITE'
-  applies:
-    - ALL_ARMOR
-  levels:
-    1:
-      chance: 12
-      cooldown: 3
-      effects:
-        - 'POTION:POISON:0:80 %attacker%'
-        - 'ADD_HARM:<random number>1-3</random number> %attacker% <chance>10</chance>'
-    2:
-      chance: 14
-      cooldown: 4
-      effects:
-        - 'POTION:POISON:0:120 %attacker%'
-        - 'ADD_HARM:<random number>1-3</random number> %attacker% <chance>13</chance>'
-    3:
-      chance: 16
-      cooldown: 7
-      effects:
-        - 'POTION:POISON:1:100 %attacker%'
-        - 'ADD_HARM:<random number>2-4</random number> %attacker% <chance>16</chance>'
-    4:
-      chance: 18
-      cooldown: 9
-      effects:
-        - 'POTION:POISON:2:60 %attacker%'
-        - 'ADD_HARM:<random number>2-5</random number> %attacker% <chance>20</chance>'
 frozen:
   display: '%group-color%Frozen'
   description: "Can cause slowness to attacker\nwhen defending."
@@ -2712,23 +2659,23 @@ pickpocket:
       chance: 3
       cooldown: 80
       effects:
-      - 'STEAL_MONEY:<random number>200-1000</random number> %victim%'
-      - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
-      - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
+        - 'STEAL_MONEY:<random number>200-1000</random number> %victim%'
+        - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
+        - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
     2:
       chance: 5
       cooldown: 80
       effects:
-      - 'STEAL_MONEY:<random number>200-1200</random number> %victim%'
-      - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
-      - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
+        - 'STEAL_MONEY:<random number>200-1200</random number> %victim%'
+        - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
+        - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
     3:
       chance: 6
       cooldown: 80
       effects:
-      - 'STEAL_MONEY:<random number>200-1500</random number> %victim%'
-      - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
-      - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
+        - 'STEAL_MONEY:<random number>200-1500</random number> %victim%'
+        - 'PLAY_SOUND_OUTLOUD:NOTE_STICKS:10'
+        - 'MESSAGE:&9&l** PICKPOCKET ** &7(-&a%random% $&7) %victim%'
 distance:
   display: '%group-color%Distance'
   description: "Chance to distance yourself from your enemies\nand gain regeneration."
@@ -2736,37 +2683,37 @@ distance:
   type: 'ATTACK'
   group: 'ULTIMATE'
   applies:
-  - ALL_SWORD
-  - ALL_AXE
+    - ALL_SWORD
+    - ALL_AXE
   levels:
     1:
       chance: 16
       cooldown: 6
       effects:
-      - 'PULL_AWAY:3.0 %victim%'
-      - 'POTION:REGENERATION:0:20 %attacker%'
-      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
+        - 'PULL_AWAY:3.0 %victim%'
+        - 'POTION:REGENERATION:0:20 %attacker%'
+        - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
     2:
       chance: 20
       cooldown: 6
       effects:
-      - 'PULL_AWAY:4.5 %victim%'
-      - 'POTION:REGENERATION:0:20 %attacker%'
-      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
+        - 'PULL_AWAY:4.5 %victim%'
+        - 'POTION:REGENERATION:0:20 %attacker%'
+        - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
     3:
       chance: 24
       cooldown: 6
       effects:
-      - 'PULL_AWAY:5.0 %victim%'
-      - 'POTION:REGENERATION:1:20 %attacker%'
-      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
+        - 'PULL_AWAY:5.0 %victim%'
+        - 'POTION:REGENERATION:1:20 %attacker%'
+        - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
     4:
       chance: 28
       cooldown: 6
       effects:
-      - 'PULL_AWAY:6.5 %victim%'
-      - 'POTION:REGENERATION:1:40 %attacker%'
-      - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
+        - 'PULL_AWAY:6.5 %victim%'
+        - 'POTION:REGENERATION:1:40 %attacker%'
+        - 'MESSAGE:&a&l** DISTANCE ** &7(&o%attacker name%&7) %victim%'
 reinforced:
   display: '%group-color% Reinforced'
   description: "Take less damage when being hit from behind."
@@ -2779,25 +2726,25 @@ reinforced:
     1:
       chance: 9
       cooldown: 3
-      condition: '%damage from behind% = TRUE : %continue%'  
+      condition: '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
     2:
       chance: 12
       cooldown: 3
-      condition: '%damage from behind% = TRUE : %continue%'  
+      condition: '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
     3:
       chance: 15
       cooldown: 3
-      condition: '%damage from behind% = TRUE : %continue%'  
+      condition: '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
     4:
       chance: 18
       cooldown: 3
-      condition: '%damage from behind% = TRUE : %continue%'  
+      condition: '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
 cleave:
@@ -4203,45 +4150,6 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
-legion:
-  display: '%group-color%Legion'
-  description: "Summon a barrage of arrows upon your opponent\nwith a chance to make them weak"
-  applies-to: 'Bow'
-  type: 'BOW'
-  group: 'LEGENDARY'
-  applies:
-    - BOW
-  levels:
-    1:
-      chance: 5
-      cooldown: 4
-      effects:
-        - 'POTION:WEAKNESS:0:100 %victim% <chance>4</chance>'
-        - 'SPAWN_ARROWS %victim%'
-    2:
-      chance: 9
-      cooldown: 4
-      effects:
-        - 'POTION:WEAKNESS:0:100 %victim% <chance>5</chance>'
-        - 'SPAWN_ARROWS %victim%'
-    3:
-      chance: 13
-      cooldown: 4
-      effects:
-        - 'POTION:WEAKNESS:0:100 %victim% <chance>6</chance>'
-        - 'SPAWN_ARROWS %victim%'
-    4:
-      chance: 19
-      cooldown: 4
-      effects:
-        - 'POTION:WEAKNESS:0:100 %victim% <chance>7</chance>'
-        - 'SPAWN_ARROWS %victim%'
-    5:
-      chance: 24
-      cooldown: 5
-      effects:
-        - 'POTION:WEAKNESS:0:100 %victim% <chance>8</chance>'
-        - 'SPAWN_ARROWS %victim%'
 protection:
   display: '%group-color%Protection'
   description: "Automatically heals and buffs\nall nearby faction allies."
@@ -4348,26 +4256,26 @@ judgement:
       chance: 8
       cooldown: 20
       effects:
-      - POTION:POISON:0:100 %attacker%
-      - POTION:REGENERATION:0:100 %victim%
+        - POTION:POISON:0:100 %attacker%
+        - POTION:REGENERATION:0:100 %victim%
     '3':
       chance: 10
       cooldown: 20
       effects:
-      - POTION:POISON:0:100 %attacker%
-      - POTION:REGENERATION:0:100 %victim%
+        - POTION:POISON:0:100 %attacker%
+        - POTION:REGENERATION:0:100 %victim%
     '4':
       chance: 12
       cooldown: 20
       effects:
-      - POTION:POISON:0:100 %attacker%
-      - POTION:REGENERATION:1:60 %victim%
+        - POTION:POISON:0:100 %attacker%
+        - POTION:REGENERATION:1:60 %victim%
     '5':
       chance: 16
       cooldown: 25
       effects:
-      - POTION:POISON:0:100 %attacker%
-      - POTION:REGENERATION:1:100 %victim%
+        - POTION:POISON:0:100 %attacker%
+        - POTION:REGENERATION:1:100 %victim%
 surprise:
   display: '%group-color%Surprise'
   description: "Chance to teleport behind your opponent\nand take them by surprise."
@@ -4375,32 +4283,32 @@ surprise:
   type: 'DEFENSE'
   group: 'LEGENDARY'
   applies:
-  - ALL_ARMOR
+    - ALL_ARMOR
   levels:
     1:
       chance: 8
       cooldown: 5
       effects:
-      - 'MESSAGE:&6&l** SURPRISE ** %victim%'
-      - 'TELEPORT_BEHIND %victim%'
+        - 'MESSAGE:&6&l** SURPRISE ** %victim%'
+        - 'TELEPORT_BEHIND %victim%'
     2:
       chance: 14
       cooldown: 5
       effects:
-      - 'MESSAGE:&6&l** SURPRISE ** %victim%'
-      - 'TELEPORT_BEHIND %victim%'
+        - 'MESSAGE:&6&l** SURPRISE ** %victim%'
+        - 'TELEPORT_BEHIND %victim%'
     3:
       chance: 17
       cooldown: 5
       effects:
-      - 'MESSAGE:&6&l** SURPRISE ** %victim%'
-      - 'TELEPORT_BEHIND %victim%'
+        - 'MESSAGE:&6&l** SURPRISE ** %victim%'
+        - 'TELEPORT_BEHIND %victim%'
     4:
       chance: 21
       cooldown: 5
       effects:
-      - 'MESSAGE:&6&l** SURPRISE ** %victim%'
-      - 'TELEPORT_BEHIND %victim%'
+        - 'MESSAGE:&6&l** SURPRISE ** %victim%'
+        - 'TELEPORT_BEHIND %victim%'
 stun:
   display: '%group-color%Stun'
   description: "Chance to slow opponent, make them\nfeel weak, and remove slowness from you."
@@ -7142,73 +7050,73 @@ neutralize:
   type: ATTACK
   group: MASTERY
   applies:
-  - ALL_SWORD
+    - ALL_SWORD
   levels:
     '1':
       chance: 1
       cooldown: 140
       effects:
-      - DISABLE_ACTIVATION:cactus:7 %victim%
-      - DISABLE_ACTIVATION:enlighted:7 %victim%
-      - DISABLE_ACTIVATION:angelic:7 %victim%
-      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
-      - DISABLE_ACTIVATION:dodge:7 %victim%
-      - DISABLE_ACTIVATION:valor:7 %victim%
-      - DISABLE_ACTIVATION::7 %victim%
-      - DISABLE_ACTIVATION:mightycactus:7 %victim%
-      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+        - DISABLE_ACTIVATION:cactus:7 %victim%
+        - DISABLE_ACTIVATION:enlighted:7 %victim%
+        - DISABLE_ACTIVATION:angelic:7 %victim%
+        - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+        - DISABLE_ACTIVATION:dodge:7 %victim%
+        - DISABLE_ACTIVATION:valor:7 %victim%
+        - DISABLE_ACTIVATION::7 %victim%
+        - DISABLE_ACTIVATION:mightycactus:7 %victim%
+        - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
     '2':
       chance: 2
       cooldown: 120
       effects:
-      - DISABLE_ACTIVATION:cactus:7 %victim%
-      - DISABLE_ACTIVATION:enlighted:7 %victim%
-      - DISABLE_ACTIVATION:angelic:7 %victim%
-      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
-      - DISABLE_ACTIVATION:dodge:7 %victim%
-      - DISABLE_ACTIVATION:valor:7 %victim%
-      - DISABLE_ACTIVATION::7 %victim%
-      - DISABLE_ACTIVATION:mightycactus:7 %victim%
-      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+        - DISABLE_ACTIVATION:cactus:7 %victim%
+        - DISABLE_ACTIVATION:enlighted:7 %victim%
+        - DISABLE_ACTIVATION:angelic:7 %victim%
+        - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+        - DISABLE_ACTIVATION:dodge:7 %victim%
+        - DISABLE_ACTIVATION:valor:7 %victim%
+        - DISABLE_ACTIVATION::7 %victim%
+        - DISABLE_ACTIVATION:mightycactus:7 %victim%
+        - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
     '3':
       chance: 3
       cooldown: 100
       effects:
-      - DISABLE_ACTIVATION:cactus:7 %victim%
-      - DISABLE_ACTIVATION:enlighted:7 %victim%
-      - DISABLE_ACTIVATION:angelic:7 %victim%
-      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
-      - DISABLE_ACTIVATION:dodge:7 %victim%
-      - DISABLE_ACTIVATION:valor:7 %victim%
-      - DISABLE_ACTIVATION::7 %victim%
-      - DISABLE_ACTIVATION:mightycactus:7 %victim%
-      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+        - DISABLE_ACTIVATION:cactus:7 %victim%
+        - DISABLE_ACTIVATION:enlighted:7 %victim%
+        - DISABLE_ACTIVATION:angelic:7 %victim%
+        - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+        - DISABLE_ACTIVATION:dodge:7 %victim%
+        - DISABLE_ACTIVATION:valor:7 %victim%
+        - DISABLE_ACTIVATION::7 %victim%
+        - DISABLE_ACTIVATION:mightycactus:7 %victim%
+        - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
     '4':
       chance: 4
       cooldown: 80
       effects:
-      - DISABLE_ACTIVATION:cactus:7 %victim%
-      - DISABLE_ACTIVATION:enlighted:7 %victim%
-      - DISABLE_ACTIVATION:angelic:7 %victim%
-      - DISABLE_ACTIVATION:divineenlighted:7 %victim%
-      - DISABLE_ACTIVATION:dodge:7 %victim%
-      - DISABLE_ACTIVATION:valor:7 %victim%
-      - DISABLE_ACTIVATION::7 %victim%
-      - DISABLE_ACTIVATION:mightycactus:7 %victim%
-      - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
+        - DISABLE_ACTIVATION:cactus:7 %victim%
+        - DISABLE_ACTIVATION:enlighted:7 %victim%
+        - DISABLE_ACTIVATION:angelic:7 %victim%
+        - DISABLE_ACTIVATION:divineenlighted:7 %victim%
+        - DISABLE_ACTIVATION:dodge:7 %victim%
+        - DISABLE_ACTIVATION:valor:7 %victim%
+        - DISABLE_ACTIVATION::7 %victim%
+        - DISABLE_ACTIVATION:mightycactus:7 %victim%
+        - MESSAGE:&4&l* Neutralized&r &4[7s] &5&l* %victim%
     '5':
       chance: 6
       cooldown: 20
       effects:
-      - DISABLE_ACTIVATION:cactus:5 %victim%
-      - DISABLE_ACTIVATION:enlighted:5 %victim%
-      - DISABLE_ACTIVATION:angelic:5 %victim%
-      - DISABLE_ACTIVATION:divineenlighted:5 %victim
-      - DISABLE_ACTIVATION:dodge:5 %victim%
-      - DISABLE_ACTIVATION:valor:5 %victim%
-      - DISABLE_ACTIVATION:mightycactus:5 %victim%
-      - DISABLE_ACTIVATION:lucky:5 %victim%
-      - MESSAGE:&4&l* Neutralized&r &4[5s] &4&l* %victim%
+        - DISABLE_ACTIVATION:cactus:5 %victim%
+        - DISABLE_ACTIVATION:enlighted:5 %victim%
+        - DISABLE_ACTIVATION:angelic:5 %victim%
+        - DISABLE_ACTIVATION:divineenlighted:5 %victim
+        - DISABLE_ACTIVATION:dodge:5 %victim%
+        - DISABLE_ACTIVATION:valor:5 %victim%
+        - DISABLE_ACTIVATION:mightycactus:5 %victim%
+        - DISABLE_ACTIVATION:lucky:5 %victim%
+        - MESSAGE:&4&l* Neutralized&r &4[5s] &4&l* %victim%
 halloweenify:
   display: '%group-color%Halloweenify'
   description: 'Replace your opponents helmet to a pumpkin for a short time.'
@@ -7376,12 +7284,6 @@ chainlifesteal:
   applies-to: 'Chestplate'
   type: 'ATTACK'
   group: 'MASTERY'
-  settings:
-    required-enchants:
-      - 'demoniclifesteal:5'
-    removed-enchants:
-      - 'demoniclifesteal'
-    removeable: false
   applies:
     - ALL_CHESTPLATE
   levels:
