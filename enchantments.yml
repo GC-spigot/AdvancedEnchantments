@@ -4139,6 +4139,18 @@ bleed:
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
         - 'WAIT:20'
         - 'ADD_HARM:<random number>1-3</random number> %victim%'
+lavawalker:
+  display: '%group-color%Lava Walker'
+  description: 'Walk on Lava.'
+  applies-to: 'Boots'
+  type: 'EFFECT_STATIC'
+  group: 'LEGENDARY'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      effects:
+        - 'LAVA_WALKER'
 impale:
   display: '&eImpale'
   description: "Deal HUGE amounts of damage to your opponent causing\nSlowness V for some time"
