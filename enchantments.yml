@@ -1571,6 +1571,43 @@ enderslayer:
       condition: '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
+reaper:
+  display: '%group-color%Reaper'
+  description: "A chance to give your opponent the\nWither and Blindness effects\nwhile dealing damage"
+  applies-to: 'Axe'
+  type: 'ATTACK'
+  group: 'ELITE'
+  applies:
+    - ALL_AXE
+  levels:
+    1:
+      chance: 8
+      cooldown: 16
+      effects:
+        - 'POTION:WITHER:0:120 %victim%'
+        - 'POTION:BLINDNESS:0:120 %victim%'
+        - 'MESSAGE:&c&l** REAPER ** %victim%'
+    2:
+      chance: 10
+      cooldown: 14
+      effects:
+        - 'POTION:WITHER:0:120 %victim%'
+        - 'POTION:BLINDNESS:0:120 %victim%'
+        - 'MESSAGE:&c&l** REAPER ** %victim%'
+    3:
+      chance: 12
+      cooldown: 12
+      effects:
+        - 'POTION:WITHER:0:120 %victim%'
+        - 'POTION:BLINDNESS:0:120 %victim%'
+        - 'MESSAGE:&c&l** REAPER ** %victim%'
+    4:
+      chance: 14
+      cooldown: 10
+      effects:
+        - 'POTION:WITHER:0:120 %victim%'
+        - 'POTION:BLINDNESS:0:120 %victim%'
+        - 'MESSAGE:&c&l** REAPER ** %victim%'
 netherslayer:
   display: '%group-color%Nether Slayer'
   description: "Increases damage dealt to Blazes and Zombie Pigmen."
@@ -3536,6 +3573,33 @@ dominate:
       cooldown: 3
       effects:
         - 'POTION:WEAKNESS:0:80 %attacker%'
+arsonist:
+  display: '%group-color%Arsonist'
+  description: "Chance to deal more damage\nwhilst on fire"
+  applies-to: 'Sword'
+  type: 'ATTACK'
+  group: 'ADVANCED'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    1:
+      chance: 8
+      cooldown: 5
+      condition: '%attacker is on fire% = true : %allow%'
+      effects:
+        - 'ADD_HARM:<random number>1-2</random number> %victim%'
+    2:
+      chance: 12
+      cooldown: 5
+      condition: '%attacker is on fire% = true : %allow%'
+      effects:
+        - 'ADD_HARM:<random number>2-3</random number> %victim%'
+    3:
+      chance: 16
+      cooldown: 8
+      condition: '%attacker is on fire% = true : %allow%'
+      effects:
+        - 'ADD_HARM:3 %victim%'
 enderwalker:
   display: '%group-color%Ender Walker'
   description: "Wither and Poison do not injur\nand have a chance to heal at high levels."
