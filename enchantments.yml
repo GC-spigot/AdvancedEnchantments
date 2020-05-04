@@ -623,6 +623,24 @@ confusion:
       cooldown: 1
       effects:
         - 'POTION:CONFUSION:0:120 %victim%'
+etheral:
+  display: '%group-color%Etheral'
+  description: "Gain haste upon killing mobs"
+  applies-to: 'Sword'
+  type: 'KILL_MOB'
+  group: 'SIMPLE'
+  applies:
+    - ALL_SWORD
+  levels:
+    1:
+      effects:
+        - 'POTION:FAST_DIGGING:0:80'
+    2:
+      effects:
+        - 'POTION:FAST_DIGGING:1:80'
+    3:
+      effects:
+        - 'POTION:FAST_DIGGING:2:80'
 experience:
   display: '%group-color%Experience'
   description: 'Chance to get experience from mining.'
@@ -3578,7 +3596,7 @@ arsonist:
   description: "Chance to deal more damage\nwhilst on fire"
   applies-to: 'Sword'
   type: 'ATTACK'
-  group: 'ADVANCED'
+  group: 'ULTIMATE'
   applies:
     - 'ALL_SWORD'
   levels:
