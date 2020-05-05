@@ -3533,6 +3533,39 @@ marksman:
       condition: '%attacker is holding% = BOW : %continue%'
       effects:
         - 'INCREASE_DAMAGE:<random number>50-150</random number> %victim%'
+disappear:
+  display: '%group-color%Disappear'
+  description: "Chance to become invisible when\nlow on health."
+  applies-to: 'Armor'
+  type: 'DEFENSE'
+  group: 'ULTIMATE'
+  applies:
+    - 'ALL_ARMOR'
+  levels:
+    1:
+      chance: 20
+      cooldown: 20
+      condition:  '%victim health% > 5 : %stop%'
+      effects:
+        - 'POTION:INVISIBILITY:2:60 %victim%'
+    2:
+      chance: 23
+      cooldown: 20
+      condition:  '%victim health% > 6 : %stop%'
+      effects:
+        - 'POTION:INVISIBILITY:2:80 %victim%'
+    3:
+      chance: 26
+      cooldown: 20
+      condition:  '%victim health% > 6 : %stop%'
+      effects:
+        - 'POTION:INVISIBILITY:2:100 %victim%'
+    4:
+      chance: 30
+      cooldown: 20
+      condition:  '%victim health% > 6 : %stop%'
+      effects:
+        - 'POTION:INVISIBILITY:2:120 %victim%'
 disintegrate:
   display: '%group-color%Disintegrate'
   description: "Chance to deal double durability damage to\nall enemy armor with every attack."
