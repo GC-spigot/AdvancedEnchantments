@@ -610,17 +610,17 @@ confusion:
   levels:
     1:
       chance: 13
-      cooldown: 1
+      cooldown: 4
       effects:
         - 'POTION:CONFUSION:0:40 %victim%'
     2:
       chance: 19
-      cooldown: 1
+      cooldown: 5
       effects:
         - 'POTION:CONFUSION:0:80 %victim%'
     3:
       chance: 24
-      cooldown: 1
+      cooldown: 6
       effects:
         - 'POTION:CONFUSION:0:120 %victim%'
 etheral:
@@ -707,49 +707,49 @@ insomnia:
   levels:
     1:
       chance: 10
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'POTION:SLOW:0:40 %victim%'
         - 'POTION:CONFUSION:0:40 %victim%'
         - 'POTION:SLOW_DIGGING:0:60 %victim%'
     2:
       chance: 12
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'POTION:SLOW:0:80 %victim%'
         - 'POTION:CONFUSION:0:80 %victim%'
         - 'POTION:SLOW_DIGGING:0:100 %victim%'
     3:
       chance: 14
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'POTION:SLOW:1:100 %victim%'
         - 'POTION:CONFUSION:1:100 %victim%'
         - 'POTION:SLOW_DIGGING:1:120 %victim%'
     4:
       chance: 16
-      cooldown: 2
+      cooldown: 9
       effects:
         - 'POTION:SLOW:1:120 %victim%'
         - 'POTION:CONFUSION:1:120 %victim%'
         - 'POTION:SLOW_DIGGING:1:140 %victim%'
     5:
       chance: 18
-      cooldown: 2
+      cooldown: 9
       effects:
         - 'POTION:SLOW:1:140 %victim%'
         - 'POTION:CONFUSION:1:140 %victim%'
         - 'POTION:SLOW_DIGGING:1:160 %victim%'
     6:
       chance: 20
-      cooldown: 2
+      cooldown: 8
       effects:
         - 'POTION:SLOW:1:180 %victim%'
         - 'POTION:CONFUSION:1:180 %victim%'
         - 'POTION:SLOW_DIGGING:1:200 %victim%'
     7:
       chance: 22
-      cooldown: 2
+      cooldown: 8
       effects:
         - 'POTION:SLOW:2:80 %victim%'
         - 'POTION:CONFUSION:2:80 %victim%'
@@ -802,17 +802,17 @@ thunderingblow:
   levels:
     1:
       chance: 12
-      cooldown: 2
+      cooldown: 6
       effects:
         - 'LIGHTNING %victim%'
     2:
       chance: 17
-      cooldown: 2
+      cooldown: 4
       effects:
         - 'LIGHTNING %victim%'
     3:
       chance: 24
-      cooldown: 2
+      cooldown: 3
       effects:
         - 'LIGHTNING %victim%'
 glowing:
@@ -880,27 +880,27 @@ obliterate:
   levels:
     1:
       chance: 30
-      cooldown: 6
+      cooldown: 12
       effects:
         - 'PULL_AWAY:1.0 %victim%'
     2:
       chance: 36
-      cooldown: 6
+      cooldown: 12
       effects:
         - 'PULL_AWAY:1.5 %victim%'
     3:
       chance: 42
-      cooldown: 6
+      cooldown: 12
       effects:
         - 'PULL_AWAY:2.0 %victim%'
     4:
       chance: 48
-      cooldown: 6
+      cooldown: 13
       effects:
         - 'PULL_AWAY:2.5 %victim%'
     5:
       chance: 54
-      cooldown: 6
+      cooldown: 13
       effects:
         - 'PULL_AWAY:3.0 %victim%'
 epicness:
@@ -981,22 +981,22 @@ famine:
   levels:
     1:
       chance: 12
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'POTION:HUNGER:0:80 %victim%'
     2:
       chance: 15
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'POTION:HUNGER:0:120 %victim%'
     3:
       chance: 18
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'POTION:HUNGER:1:80 %victim%'
     4:
       chance: 22
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'POTION:HUNGER:1:120 %victim%'
 berserk:
@@ -1010,31 +1010,31 @@ berserk:
   levels:
     1:
       chance: 4
-      cooldown: 1
+      cooldown: 8
       effects:
         - 'POTION:SLOW_DIGGING:0:60 %attacker%'
         - 'POTION:INCREASE_DAMAGE:0:60 %attacker%'
     2:
       chance: 8
-      cooldown: 1
+      cooldown: 7
       effects:
         - 'POTION:SLOW_DIGGING:0:80 %attacker%'
         - 'POTION:INCREASE_DAMAGE:0:80 %attacker%'
     3:
       chance: 12
-      cooldown: 1
+      cooldown: 6
       effects:
         - 'POTION:SLOW_DIGGING:0:100 %attacker%'
         - 'POTION:INCREASE_DAMAGE:0:100 %attacker%'
     4:
       chance: 16
-      cooldown: 1
+      cooldown: 5
       effects:
         - 'POTION:SLOW_DIGGING:1:80 %attacker%'
         - 'POTION:INCREASE_DAMAGE:1:80 %attacker%'
     5:
       chance: 20
-      cooldown: 1
+      cooldown: 4
       effects:
         - 'POTION:SLOW_DIGGING:1:100 %attacker%'
         - 'POTION:INCREASE_DAMAGE:1:100 %attacker%'
@@ -1082,7 +1082,7 @@ curse:
   levels:
     1:
       chance: 10
-      cooldown: 2
+      cooldown: 4
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:0:100 %attacker%'
@@ -1090,7 +1090,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:0:40 %victim%'
     2:
       chance: 12
-      cooldown: 2
+      cooldown: 4
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:0:120 %attacker%'
@@ -1098,7 +1098,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:0:60 %victim%'
     3:
       chance: 14
-      cooldown: 2
+      cooldown: 4
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:1:80 %attacker%'
@@ -1106,7 +1106,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:0:80 %victim%'
     4:
       chance: 16
-      cooldown: 2
+      cooldown: 4
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:1:100 %attacker%'
@@ -1114,7 +1114,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:1:60 %victim%'
     5:
       chance: 18
-      cooldown: 2
+      cooldown: 4
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:2:100 %attacker%'
@@ -1162,27 +1162,27 @@ explosive:
   levels:
     1:
       chance: 20
-      cooldown: 5
+      cooldown: 7
       effects:
         - 'TNT %victim%'
     2:
       chance: 30
-      cooldown: 5
+      cooldown: 8
       effects:
         - 'TNT %victim%'
     3:
       chance: 40
-      cooldown: 5
+      cooldown: 8
       effects:
         - 'TNT %victim%'
     4:
       chance: 50
-      cooldown: 5
+      cooldown: 8
       effects:
         - 'TNT %victim%'
     5:
       chance: 60
-      cooldown: 5
+      cooldown: 9
       effects:
         - 'TNT %victim%'
 featherweight:
@@ -5451,14 +5451,14 @@ sniper:
     1:
       chance: 15
       cooldown: 5
-      condition: '%is headshot% = false : %stop%'
+      condition: '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-350</random number> %attacker%'
         - 'MESSAGE:&6&l** HEADSHOT ** %victim%'
     2:
       chance: 20
       cooldown: 5
-      condition: '%is headshot% = false : %stop%'
+      condition: '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-350</random number> %attacker%'
         - 'MESSAGE:&6&l** HEADSHOT ** %victim%'
@@ -5915,21 +5915,21 @@ reinforcedtank:
         - 'REMOVE_DAMAGE:8 %victim%'
     2:
       chance: 8
-      cooldown: 3
+      cooldown: 5
       condition:
         - '%attacker is holding% contains AXE : %allow%'
       effects:
         - 'REMOVE_DAMAGE:10 %victim%'
     3:
       chance: 12
-      cooldown: 3
+      cooldown: 6
       condition:
         - '%attacker is holding% contains AXE : %allow%'
       effects:
         - 'REMOVE_DAMAGE:12 %victim%'
     4:
       chance: 16
-      cooldown: 3
+      cooldown: 8
       condition:
         - '%attacker is holding% contains AXE : %allow%'
       effects:
@@ -5951,7 +5951,7 @@ epidemiccarrier:
   levels:
     1:
       chance: 13
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : %continue%'
         - '%victim health% > 4 : %stop%'
@@ -5961,7 +5961,7 @@ epidemiccarrier:
         - 'POTION:BLINDNESS:0:40 %attacker%'
     2:
       chance: 17
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : d%'
         - '%victim health% > 4 : %stop%'
@@ -5971,7 +5971,7 @@ epidemiccarrier:
         - 'POTION:BLINDNESS:0:60 %attacker%'
     3:
       chance: 24
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : %continue%'
         - '%victim health% > 4 : %stop%'
@@ -5982,7 +5982,7 @@ epidemiccarrier:
         - 'POTION:BLINDNESS:0:100 %attacker%'
     4:
       chance: 30
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : %continue%'
         - '%victim health% > 4 : %stop%'
@@ -5993,7 +5993,7 @@ epidemiccarrier:
         - 'POTION:BLINDNESS:1:40 %attacker%'
     5:
       chance: 38
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : %continue%'
         - '%victim health% > 4 : %stop%'
@@ -6004,7 +6004,7 @@ epidemiccarrier:
         - 'POTION:BLINDNESS:1:80 %attacker%'
     6:
       chance: 46
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : %continue%'
         - '%victim health% > 4 : %stop%'
@@ -6016,7 +6016,7 @@ epidemiccarrier:
         - 'POTION:BLINDNESS:1:120 %attacker%'
     7:
       chance: 55
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : %continue%'
         - '%victim health% > 4 : %stop%'
@@ -6028,7 +6028,7 @@ epidemiccarrier:
         - 'POTION:BLINDNESS:2:60 %attacker%'
     8:
       chance: 69
-      cooldown: 5
+      cooldown: 15
       condition:
         - '%victim health% < 2 : %continue%'
         - '%victim health% > 4 : %stop%'
