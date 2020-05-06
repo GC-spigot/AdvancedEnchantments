@@ -496,7 +496,7 @@ jellylegs:
         - 'MESSAGE:&b&l*** &f&lNegated Fall Damage &b&l***'
 restore:
   display: '%group-color%Restore'
-  description: "Upon breaking, item has a chance\nto lose this enchantment and repair\nhalf of it's durability"
+  description: "Upon breaking, item has a chance\nto lose this enchantment and repair\nhalf of its durability"
   applies-to: 'Tools'
   type: 'ITEM_BREAK'
   group: 'ULTIMATE'
