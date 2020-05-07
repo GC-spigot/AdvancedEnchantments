@@ -1043,7 +1043,7 @@ ward:
   description: "A chance to absorb enemy\ndamage and heal you"
   applies-to: 'Armor'
   type: 'DEFENSE'
-  group: 'MYTHIC'
+  group: 'UNIQUE'
   applies:
     - ALL_ARMOR
   levels:
