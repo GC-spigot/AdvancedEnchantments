@@ -1366,6 +1366,35 @@ telepathy:
     4:
       effects:
         - 'TP_DROPS'
+sustain:
+  display: '%group-color%Sustain'
+  description: "Chance to regain hunger when getting hit."
+  applies-to: 'Armor'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_BOW'
+  group: 'UNIQUE'
+  applies:
+    - ALL_ARMOR
+  levels:
+    1:
+      chance: 12
+      cooldown: 8
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> %victim%'
+    2:
+      chance: 14
+      cooldown: 8
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> %victim%'
+    3:
+      chance: 16
+      cooldown: 8
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> %victim%'
+    4:
+      chance: 20
+      cooldown: 8
+      effects:
+        - 'ADD_FOOD:<random number>1-4</random number> %victim%'
 skillswipe:
   display: '%group-color%Skill Swipe'
   description: "A chance to steal some of your enemy's\nEXP every time you damage them."
