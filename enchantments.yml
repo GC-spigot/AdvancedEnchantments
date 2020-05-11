@@ -1082,7 +1082,7 @@ curse:
   levels:
     1:
       chance: 10
-      cooldown: 4
+      cooldown: 7
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:0:100 %attacker%'
@@ -1090,7 +1090,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:0:40 %victim%'
     2:
       chance: 12
-      cooldown: 4
+      cooldown: 7
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:0:120 %attacker%'
@@ -1098,7 +1098,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:0:60 %victim%'
     3:
       chance: 14
-      cooldown: 4
+      cooldown: 7
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:1:80 %attacker%'
@@ -1106,7 +1106,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:0:80 %victim%'
     4:
       chance: 16
-      cooldown: 4
+      cooldown: 7
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:1:100 %attacker%'
@@ -1114,7 +1114,7 @@ curse:
         - 'POTION:DAMAGE_RESISTANCE:1:60 %victim%'
     5:
       chance: 18
-      cooldown: 4
+      cooldown: 7
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:2:100 %attacker%'
@@ -1132,24 +1132,27 @@ endershift:
   levels:
     1:
       chance: 16
-      cooldown: 2
+      cooldown: 6
       condition: "%victim health% > 6 : %stop%"
       effects:
         - 'POTION:SPEED:1:120 %victim%'
+        - 'MESSAGE:&dYou were about to die, so you have entered the Ender Dimension!'
         - 'POTION:ABSORPTION:0:80 %victim%'
     2:
       chance: 17
-      cooldown: 2
+      cooldown: 8
       condition: "%victim health% > 6 : %stop%"
       effects:
         - 'POTION:SPEED:1:120 %victim%'
+        - 'MESSAGE:&dYou were about to die, so you have entered the Ender Dimension!'
         - 'POTION:ABSORPTION:1:80 %victim%'
     3:
       chance: 18
-      cooldown: 2
+      cooldown: 12
       condition: "%victim health% > 6 : %stop%"
       effects:
         - 'POTION:SPEED:1:120 %victim%'
+        - 'MESSAGE:&dYou were about to die, so you have entered the Ender Dimension!'
         - 'POTION:ABSORPTION:2:80 %victim%'
 explosive:
   display: '%group-color%Explosive'
@@ -1750,16 +1753,16 @@ cactus:
   levels:
     1:
       chance: 18
-      cooldown: 3
+      cooldown: 7
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HARM:<random number>1-2</random number> %attacker%'
     2:
       chance: 23
-      cooldown: 3
+      cooldown: 7
       effects:
         - 'STOP_ATTACK'
-        - 'ADD_HARM:<random number>1-2</random number> %attacker%'
+        - 'ADD_HARM:<random number>1-3</random number> %attacker%'
 execute:
   display: '%group-color%Execute'
   description: "Damage buff when your target is at\nlow HP."
@@ -2623,23 +2626,23 @@ rocketescape:
     - ALL_BOOTS
   levels:
     1:
-      chance: 30
-      cooldown: 5
+      chance: 20
+      cooldown: 8
       condition: '%victim health% > 6 : %stop%'
       effects:
-        - 'BOOST:10 %victim%'
+        - 'BOOST:30 %victim%'
     2:
-      chance: 50
-      cooldown: 5
+      chance: 34
+      cooldown: 8
       condition: '%victim health% > 6 : %stop%'
       effects:
-        - 'BOOST:15 %victim%'
+        - 'BOOST:45 %victim%'
     3:
-      chance: 70
-      cooldown: 5
+      chance: 40
+      cooldown: 8
       condition: '%victim health% > 6 : %stop%'
       effects:
-        - 'BOOST:20 %victim%'
+        - 'BOOST:50 %victim%'
 trickster:
   display: '%group-color%Trickster'
   description: "When hit you have a chance to teleport directly\nbehind your opponent and take them by surprise."
@@ -2955,25 +2958,25 @@ arrowdeflect:
   levels:
     1:
       chance: 15
-      cooldown: 1
+      cooldown: 6
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l* ARROW DEFLECT * %victim%'
     2:
       chance: 25
-      cooldown: 4
+      cooldown: 6
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l* ARROW DEFLECT * %victim%'
     3:
       chance: 35
-      cooldown: 4
+      cooldown: 6
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l* ARROW DEFLECT * %victim%'
     4:
       chance: 45
-      cooldown: 4
+      cooldown: 6
       effects:
         - 'MESSAGE:&e&l* ARROW DEFLECT * %victim%'
         - 'STOP_ATTACK'
@@ -2988,40 +2991,46 @@ arrowbreak:
   levels:
     1:
       chance: 15
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l** ARROW BREAK ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:2 %victim%'
     2:
       chance: 25
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l** ARROW BREAK ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:2 %victim%'
     3:
       chance: 35
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l** ARROW BREAK ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:2 %victim%'
     4:
       chance: 45
-      cooldown: 4
+      cooldown: 9
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l** ARROW BREAK ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:2 %victim%'
     5:
       chance: 55
-      cooldown: 4
+      cooldown: 9
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l** ARROW BREAK ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:2 %victim%'
     6:
       chance: 65
-      cooldown: 4
+      cooldown: 10
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l** ARROW BREAK ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:2 %victim%'
 assassin:
   display: '%group-color%Assassin'
   description: "The closer you are to your enemy,\n the moredamage you deal (up to 1.25x).\n However, ifyou are more than 2\n blocks away, you will deal LESS\ndamage than normal."
@@ -3033,27 +3042,27 @@ assassin:
   levels:
     1:
       chance: 7
-      cooldown: 3
+      cooldown: 7
       effects:
         - 'DISTANCE_DAMAGE:3:1 %attacker%'
     2:
       chance: 12
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'DISTANCE_DAMAGE:3:1 %attacker%'
     3:
       chance: 19
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'DISTANCE_DAMAGE:3:1 %attacker%'
     4:
       chance: 24
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'DISTANCE_DAMAGE:3:1 %attacker%'
     5:
       chance: 29
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'DISTANCE_DAMAGE:3:1 %attacker%'
 blessed:
@@ -3275,39 +3284,44 @@ dodge:
   levels:
     1:
       chance: 7
-      cooldown: 5
+      cooldown: 8
       condition: "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
+        - 'PLAY_SOUND:BAT_TAKEOFF:0.7 %victim%'
     2:
       chance: 12
-      cooldown: 5
+      cooldown: 8
       condition: "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
+        - 'PLAY_SOUND:BAT_TAKEOFF:0.7 %victim%'
     3:
       chance: 16
-      cooldown: 5
+      cooldown: 8
       condition: "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
+        - 'PLAY_SOUND:BAT_TAKEOFF:0.7 %victim%'
     4:
       chance: 22
-      cooldown: 5
+      cooldown: 8
       condition: "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
+        - 'PLAY_SOUND:BAT_TAKEOFF:0.7 %victim%'
     5:
       chance: 27
-      cooldown: 5
+      cooldown: 8
       condition: "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
+        - 'PLAY_SOUND:BAT_TAKEOFF:0.7 %victim%'
 enrage:
   display: '%group-color%Enrage'
   description: 'Deal more damage on low HP.'
@@ -3346,63 +3360,59 @@ guardians:
   levels:
     1:
       chance: 6
-      cooldown: 5
+      cooldown: 8
       effects:
         - 'GUARD:IRON_GOLEM:%victim%'
     2:
       chance: 9
-      cooldown: 5
+      cooldown: 8
       effects:
         - 'GUARD:IRON_GOLEM:%victim%'
     3:
       chance: 13
-      cooldown: 5
+      cooldown: 8
       effects:
         - 'GUARD:IRON_GOLEM:%victim%'
     4:
       chance: 14
-      cooldown: 5
+      cooldown: 8
       effects:
         - 'GUARD:IRON_GOLEM:%victim%'
     5:
       chance: 16
-      cooldown: 5
+      cooldown: 9
       effects:
         - 'GUARD:IRON_GOLEM:%victim%'
     6:
       chance: 17
-      cooldown: 5
+      cooldown: 10
       effects:
-        - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
     7:
       chance: 18
-      cooldown: 5
+      cooldown: 12
       effects:
-        - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
     8:
       chance: 20
-      cooldown: 5
+      cooldown: 12
       effects:
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
     9:
       chance: 22
-      cooldown: 5
+      cooldown: 15
       effects:
-        - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
     10:
       chance: 24
-      cooldown: 5
+      cooldown: 15
       effects:
-        - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
         - 'GUARD:IRON_GOLEM:%victim%'
@@ -3691,32 +3701,32 @@ enderwalker:
   levels:
     1:
       chance: 9
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'CURE:WITHER %victim%'
         - 'CURE:POISON %victim%'
     2:
       chance: 14
-      cooldown: 4
+      cooldown: 8
       effects:
         - 'CURE:WITHER %victim%'
         - 'CURE:POISON %victim%'
     3:
       chance: 21
-      cooldown: 4
+      cooldown: 10
       effects:
         - 'CURE:WITHER %victim%'
         - 'CURE:POISON %victim%'
     4:
       chance: 28
-      cooldown: 4
+      cooldown: 13
       effects:
         - 'CURE:WITHER %victim%'
         - 'CURE:POISON %victim%'
         - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
     5:
       chance: 35
-      cooldown: 4
+      cooldown: 14
       effects:
         - 'CURE:WITHER %victim%'
         - 'CURE:POISON %victim%'
@@ -5174,28 +5184,28 @@ armored:
   levels:
     1:
       chance: 6
-      cooldown: 3
+      cooldown: 8
       condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'REMOVE_DAMAGE:2 %attacker%'
     2:
       chance: 12
-      cooldown: 3
+      cooldown: 8
       condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'REMOVE_DAMAGE:4 %attacker%'
     3:
-      chance: 18
-      cooldown: 3
+      chance: 16
+      cooldown: 8
       condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'REMOVE_DAMAGE:6 %attacker%'
     4:
-      chance: 24
-      cooldown: 3
+      chance: 20
+      cooldown: 8
       condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
@@ -5332,32 +5342,32 @@ diminish:
   levels:
     1:
       chance: 4
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'HALF_DAMAGE'
     2:
       chance: 8
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'HALF_DAMAGE'
     3:
       chance: 11
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'HALF_DAMAGE'
     4:
       chance: 15
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'HALF_DAMAGE'
     5:
       chance: 18
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'HALF_DAMAGE'
     6:
       chance: 23
-      cooldown: 3
+      cooldown: 8
       effects:
         - 'HALF_DAMAGE'
 disarmor:
@@ -5432,18 +5442,21 @@ deathgod:
       condition: '%victim health% > 9 : %stop%'
       effects:
         - 'ADD_HEALTH:11 %victim%'
+        - 'MESSAGE:&6&l* DEATH GOD * %victim%'
     2:
       chance: 6
-      cooldown: 7
+      cooldown: 10
       condition: '%victim health% > 10 : %stop%'
       effects:
         - 'ADD_HEALTH:12 %victim%'
+        - 'MESSAGE:&6&l* DEATH GOD * %victim%'
     3:
       chance: 11
-      cooldown: 10
+      cooldown: 15
       condition: '%victim health% > 11 : %stop%'
       effects:
         - 'ADD_HEALTH:13 %victim%'
+        - 'MESSAGE:&6&l* DEATH GOD * %victim%'
 insanity:
   display: '%group-color%Insanity'
   description: "You swing your axe like a maniac.\nMultiplies damage against players\nwho are wielding a SWORD at\nthe time they are hit."
@@ -6141,19 +6154,19 @@ reflectiveblock:
   levels:
     1:
       chance: 16
-      cooldown: 4
+      cooldown: 7
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HARM:%damage% %attacker%'
     2:
       chance: 22
-      cooldown: 4
+      cooldown: 7
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HARM:%damage% %attacker%'
     3:
       chance: 30
-      cooldown: 4
+      cooldown: 7
       effects:
         - 'STOP_ATTACK'
         - 'ADD_HARM:%damage% %attacker%'
@@ -6244,12 +6257,12 @@ divineenlighted:
         - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
     2:
       chance: 10
-      cooldown: 5
+      cooldown: 7
       effects:
         - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
     3:
       chance: 15
-      cooldown: 5
+      cooldown: 9
       effects:
         - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
 lethalsniper:
@@ -6625,19 +6638,19 @@ paladinarmored:
         - 'NEGATE_DAMAGE:15 %attacker%'
     2:
       chance: 9
-      cooldown: 5
+      cooldown: 6
       condition: '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'NEGATE_DAMAGE:20 %attacker%'
     3:
       chance: 11
-      cooldown: 5
+      cooldown: 8
       condition: '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'NEGATE_DAMAGE:25 %attacker%'
     4:
       chance: 14
-      cooldown: 5
+      cooldown: 8
       condition: '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'NEGATE_DAMAGE:30 %attacker%'
@@ -6879,10 +6892,10 @@ natureswrath:
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
         - 'WAIT:20'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     2:
       chance: 9
       cooldown: 10
@@ -6890,10 +6903,10 @@ natureswrath:
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
         - 'WAIT:20'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     3:
       chance: 15
       cooldown: 10
@@ -6901,10 +6914,10 @@ natureswrath:
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
         - 'WAIT:20'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     4:
       chance: 23
       cooldown: 10
@@ -6912,10 +6925,10 @@ natureswrath:
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
         - 'WAIT:20'
         - 'LIGHTNING %attacker%'
-        - 'MESSAGE:&c&l** NATURES WRATH ** %attacker%'
+        - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
 phoenix:
   display: '%group-color%Phoenix'
   description: "An attack that would normally\nkill you will instead heal you to\nfull HP. Can only be activated once every\ncouple minutes. 500 souls per use."
@@ -6934,6 +6947,7 @@ phoenix:
       effects:
         - 'ADD_HEALTH:40 %victim%'
         - 'MESSAGE:&c&l** PHOENIX ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:4 %victim%'
     2:
       chance: 9
       cooldown: 120
@@ -6943,6 +6957,7 @@ phoenix:
       effects:
         - 'ADD_HEALTH:40 %victim%'
         - 'MESSAGE:&c&l** PHOENIX ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:4 %victim%'
     3:
       chance: 15
       cooldown: 120
@@ -6952,6 +6967,7 @@ phoenix:
       effects:
         - 'ADD_HEALTH:40 %victim%'
         - 'MESSAGE:&c&l** PHOENIX ** %victim%'
+        - 'PLAY_SOUND:ITEM_BREAK:4 %victim%'
 teleblock:
   display: '%group-color%Teleblock'
   description: "Active soul enchant. Your bow is enchanted with enderpearl blocking magic\ndamaged players will be unable to use enderpearls for up to 20 seconds\nand will lose up to 15 enderpearls from their inventory."
