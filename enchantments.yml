@@ -4874,6 +4874,40 @@ gears:
     3:
       effects:
         - 'POTION:SPEED:2'
+killaura:
+  display: '%group-color%Kill Aura'
+  description: 'Chance to kill multiple monsters\nin a stack each death event.'
+  applies-to: 'Swords'
+  group: 'LEGENDARY'
+  type: 'ATTACK_MOB'
+  applies:
+    - 'ALL_SWORD'
+  levels:
+    '1':
+      chance: 5
+      cooldown: 3
+      effects:
+        - 'KILL_MOB:<random number>2-3</random number> %victim%'
+    '2':
+      chance: 8
+      cooldown: 4
+      effects:
+        - 'KILL_MOB:<random number>2-4</random number> %victim%'
+    '3':
+      chance: 12
+      cooldown: 5
+      effects:
+        - 'KILL_MOB:<random number>2-4</random number> %victim%'
+    '4':
+      chance: 15
+      cooldown: 5
+      effects:
+        - 'KILL_MOB:<random number>2-5</random number> %victim%'
+    '5':
+      chance: 18
+      cooldown: 6
+      effects:
+        - 'KILL_MOB:<random number>3-5</random number> %victim%'
 inquisitive:
   display: '%group-color%Inquisitive'
   description: 'Increases EXP drops from mobs.'
