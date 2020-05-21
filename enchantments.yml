@@ -762,6 +762,7 @@ lightning:
   group: 'SIMPLE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 24
@@ -1162,6 +1163,7 @@ explosive:
   group: 'UNIQUE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 20
@@ -1526,6 +1528,7 @@ virus:
   group: 'UNIQUE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 12
@@ -2012,6 +2015,7 @@ snare:
   group: 'ELITE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 12
@@ -2230,6 +2234,7 @@ venom:
   group: 'ELITE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 5
@@ -2392,6 +2397,7 @@ infernal:
   group: 'ELITE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 15
@@ -2512,6 +2518,7 @@ farcast:
   group: 'ELITE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 12
@@ -2700,6 +2707,7 @@ hijack:
   group: 'ELITE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 8
@@ -2921,6 +2929,7 @@ arrowlifesteal:
   group: 'ULTIMATE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 7
@@ -3513,6 +3522,7 @@ piercing:
   group: 'ULTIMATE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 13
@@ -3739,6 +3749,7 @@ eagleeye:
   group: 'ULTIMATE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 15
@@ -3851,6 +3862,7 @@ hellfire:
   group: 'ULTIMATE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 10
@@ -3885,6 +3897,7 @@ longbow:
   group: 'ULTIMATE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 12
@@ -3955,6 +3968,7 @@ unfocus:
   group: 'ULTIMATE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 7
@@ -4053,6 +4067,7 @@ pacify:
   group: 'ULTIMATE'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 12
@@ -4313,6 +4328,7 @@ impale:
   group: 'LEGENDARY'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 4
@@ -5556,6 +5572,7 @@ sniper:
   group: 'LEGENDARY'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 15
@@ -5984,6 +6001,7 @@ soulbound:
     - ALL_PICKAXE
     - ALL_SPADE
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 4
@@ -6313,6 +6331,7 @@ lethalsniper:
     removeable: false
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 22
@@ -6438,6 +6457,7 @@ bidirectionalteleportation:
   group: 'HEROIC'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 12
@@ -7010,6 +7030,7 @@ teleblock:
   group: 'SOUL'
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 24
