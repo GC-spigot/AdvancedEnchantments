@@ -342,6 +342,10 @@
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Disarm oponent
 #         * Usᴇᴅ Wɪᴛʜ: All 2-player enchant types
 
+#       - ADD_ENCHANT:(enchant):(level)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Add the specified enchant onto held item
+#         * Usᴇᴅ Wɪᴛʜ: All enchant types
+
 #       - REMOVE_ENCHANT:(enchant)
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove enchant from held item
 #         * Usᴇᴅ Wɪᴛʜ: All enchant types
