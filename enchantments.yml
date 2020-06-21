@@ -1102,7 +1102,7 @@ curse:
     1:
       chance: 10
       cooldown: 7
-      condition: 
+      condition:
         - '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:0:100 %attacker%'
@@ -1120,7 +1120,7 @@ curse:
     3:
       chance: 14
       cooldown: 7
-      condition: 
+      condition:
         - '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:1:80 %attacker%'
@@ -1129,7 +1129,7 @@ curse:
     4:
       chance: 16
       cooldown: 7
-      condition: 
+      condition:
         - '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:1:100 %attacker%'
@@ -1138,7 +1138,7 @@ curse:
     5:
       chance: 18
       cooldown: 7
-      condition: 
+      condition:
         - '%victim health% > 10 : %stop%'
       effects:
         - 'POTION:SLOW_DIGGING:2:100 %attacker%'
@@ -1157,7 +1157,7 @@ endershift:
     1:
       chance: 16
       cooldown: 6
-      condition: 
+      condition:
         - "%victim health% > 6 : %stop%"
       effects:
         - 'POTION:SPEED:1:120 %victim%'
@@ -1166,7 +1166,7 @@ endershift:
     2:
       chance: 17
       cooldown: 8
-      condition: 
+      condition:
         - "%victim health% > 6 : %stop%"
       effects:
         - 'POTION:SPEED:1:120 %victim%'
@@ -1175,7 +1175,7 @@ endershift:
     3:
       chance: 18
       cooldown: 12
-      condition: 
+      condition:
         - "%victim health% > 6 : %stop%"
       effects:
         - 'POTION:SPEED:1:120 %victim%'
@@ -1344,7 +1344,7 @@ selfdestruct:
     1:
       chance: 23
       cooldown: 2
-      condition: 
+      condition:
         - "%victim health% > 3 : %stop%"
       effects:
         - 'MESSAGE:&c&l*** SelfDestruct ***'
@@ -1356,7 +1356,7 @@ selfdestruct:
     2:
       chance: 35
       cooldown: 2
-      condition: 
+      condition:
         - "%victim health% > 3 : %stop%"
       effects:
         - 'MESSAGE:&c&l*** SelfDestruct ***'
@@ -1368,7 +1368,7 @@ selfdestruct:
     3:
       chance: 42
       cooldown: 2
-      condition: 
+      condition:
         - "%victim health% > 3 : %stop%"
       effects:
         - 'MESSAGE:&c&l*** SelfDestruct ***'
@@ -1621,36 +1621,36 @@ enderslayer:
     1:
       chance: 16
       cooldown: 2
-      condition: 
-      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      condition:
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     2:
       chance: 21
       cooldown: 2
-      condition: 
-      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      condition:
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     3:
       chance: 29
       cooldown: 2
-      condition: 
-      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      condition:
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     4:
       chance: 34
       cooldown: 2
-      condition: 
-      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      condition:
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     5:
       chance: 41
       cooldown: 2
-      condition: 
-      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      condition:
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
 reaper:
@@ -1703,36 +1703,36 @@ netherslayer:
     1:
       chance: 16
       cooldown: 2
-      condition: 
-      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
+      condition:
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     2:
       chance: 21
       cooldown: 2
-      condition: 
-      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
+      condition:
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     3:
       chance: 29
       cooldown: 2
-      condition: 
-      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
+      condition:
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     4:
       chance: 34
       cooldown: 2
-      condition: 
-      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
+      condition:
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
     5:
       chance: 41
       cooldown: 2
-      condition: 
-      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
+      condition:
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>10-40</random number> %attacker%'
 blind:
@@ -1812,56 +1812,56 @@ execute:
     1:
       chance: 9
       cooldown: 2
-      condition: 
-      - "%victim health% > 6 : %stop%"
+      condition:
+        - "%victim health% > 6 : %stop%"
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
     2:
       chance: 15
       cooldown: 2
-      condition: 
-      - "%victim health% > 6 : %stop%"
+      condition:
+        - "%victim health% > 6 : %stop%"
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
     3:
       chance: 19
       cooldown: 2
-      condition: 
-      - "%victim health% > 6 : %stop%"
+      condition:
+        - "%victim health% > 6 : %stop%"
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
     4:
       chance: 24
       cooldown: 2
-      condition: 
-      - "%victim health% > 6 : %stop%"
+      condition:
+        - "%victim health% > 6 : %stop%"
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
     5:
       chance: 29
       cooldown: 2
-      condition: 
-      - "%victim health% > 6 : %stop%"
+      condition:
+        - "%victim health% > 6 : %stop%"
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
     6:
       chance: 32
       cooldown: 2
-      condition: 
-      - "%victim health% > 6 : %stop%"
+      condition:
+        - "%victim health% > 6 : %stop%"
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
     7:
       chance: 40
       cooldown: 2
-      condition: 
-      - "%victim health% > 6 : %stop%"
+      condition:
+        - "%victim health% > 6 : %stop%"
       effects:
         - 'INCREASE_DAMAGE:<random number>10-50</random number> %attacker%'
         - 'MESSAGE:&b&l** EXECUTE ** %attacker%'
@@ -2378,40 +2378,40 @@ smokebomb:
     1:
       chance: 9
       cooldown: 2
-      condition: 
-      - '%victim health% > 4 : %stop%'
+      condition:
+        - '%victim health% > 4 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:0:60 %attacker%'
     2:
       chance: 15
       cooldown: 2
-      condition: 
-      - '%victim health% > 4 : %stop%'
+      condition:
+        - '%victim health% > 4 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:0:60 %attacker%'
     3:
       chance: 23
       cooldown: 2
-      condition: 
-      - '%victim health% > 4 : %stop%'
+      condition:
+        - '%victim health% > 4 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:0:100 %attacker%'
     4:
       chance: 28
       cooldown: 2
-      condition: 
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:0:100 %attacker%'
     5:
       chance: 30
       cooldown: 2
-      condition: 
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:1:60 %attacker%'
@@ -2419,23 +2419,23 @@ smokebomb:
       chance: 34
       cooldown: 2
       condition:
-      - '%victim health% > 5 : %stop%'
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:1:100 %attacker%'
     7:
       chance: 36
       cooldown: 2
-      condition: 
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:1:140 %attacker%'
     8:
       chance: 38
       cooldown: 2
-      condition: 
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
         - 'POTION:BLINDNESS:2:120 %attacker%'
@@ -2506,36 +2506,36 @@ shockwave:
     1:
       chance: 10
       cooldown: 4
-      condition: 
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PULL_AWAY:0.5 %attacker%'
     2:
       chance: 20
       cooldown: 4
-      condition: 
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PULL_AWAY:1.0 %attacker%'
     3:
       chance: 30
       cooldown: 4
-      condition: 
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PULL_AWAY:1.5 %attacker%'
     4:
       chance: 40
       cooldown: 4
-      condition: 
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PULL_AWAY:2.0 %attacker%'
     5:
       chance: 50
       cooldown: 4
-      condition: 
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'PULL_AWAY:2.5 %attacker%'
 vampire:
@@ -2622,40 +2622,40 @@ greatsword:
     1:
       chance: 15
       cooldown: 2
-      condition: 
-      - '%victim is holding% contains BOW : %allow%'
+      condition:
+        - '%victim is holding% contains BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>45-70</random number> %attacker%'
         - 'MESSAGE:&b&l** GREATSWORD ** %attacker%'
     2:
       chance: 25
       cooldown: 2
-      condition: 
-      - '%victim is holding% contains BOW : %allow%'
+      condition:
+        - '%victim is holding% contains BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>75-90</random number> %attacker%'
         - 'MESSAGE:&b&l** GREATSWORD ** %attacker%'
     3:
       chance: 35
       cooldown: 2
-      condition: 
-      - '%victim is holding% contains BOW : %allow%'
+      condition:
+        - '%victim is holding% contains BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>85-165</random number> %attacker%'
         - 'MESSAGE:&b&l** GREATSWORD ** %attacker%'
     4:
       chance: 45
       cooldown: 2
-      condition: 
-      - '%victim is holding% contains BOW : %allow%'
+      condition:
+        - '%victim is holding% contains BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>105-205</random number>'
         - 'MESSAGE:&b&l** GREATSWORD ** %attacker%'
     5:
       chance: 55
       cooldown: 2
-      condition: 
-      - '%victim is holding% contains BOW : %allow%'
+      condition:
+        - '%victim is holding% contains BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>105-205</random number>'
         - 'MESSAGE:&b&l** GREATSWORD ** %attacker%'
@@ -2695,22 +2695,22 @@ rocketescape:
     1:
       chance: 20
       cooldown: 8
-      condition: 
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'BOOST:30 %victim%'
     2:
       chance: 34
       cooldown: 8
-      condition: 
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'BOOST:45 %victim%'
     3:
       chance: 40
       cooldown: 8
-      condition: 
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'BOOST:50 %victim%'
 trickster:
@@ -2897,29 +2897,29 @@ reinforced:
     1:
       chance: 9
       cooldown: 3
-      condition: 
-      - '%damage from behind% = TRUE : %continue%'
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
     2:
       chance: 12
       cooldown: 3
-      condition: 
-      - '%damage from behind% = TRUE : %continue%'
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
     3:
       chance: 15
       cooldown: 3
-      condition: 
-      - '%damage from behind% = TRUE : %continue%'
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
     4:
       chance: 18
       cooldown: 3
-      condition: 
-      - '%damage from behind% = TRUE : %continue%'
+      condition:
+        - '%damage from behind% = TRUE : %continue%'
       effects:
         - 'NEGATE_DAMAGE:<random number>1-35</random number>'
 cleave:
@@ -3385,8 +3385,8 @@ dodge:
     1:
       chance: 7
       cooldown: 8
-      condition: 
-      - "%victim is sneaking% = true : %chance%+7"
+      condition:
+        - "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
@@ -3394,8 +3394,8 @@ dodge:
     2:
       chance: 12
       cooldown: 8
-      condition: 
-      - "%victim is sneaking% = true : %chance%+7"
+      condition:
+        - "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
@@ -3403,8 +3403,8 @@ dodge:
     3:
       chance: 16
       cooldown: 8
-      condition: 
-      - "%victim is sneaking% = true : %chance%+7"
+      condition:
+        - "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
@@ -3412,8 +3412,8 @@ dodge:
     4:
       chance: 22
       cooldown: 8
-      condition: 
-      - "%victim is sneaking% = true : %chance%+7"
+      condition:
+        - "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
@@ -3421,8 +3421,8 @@ dodge:
     5:
       chance: 27
       cooldown: 8
-      condition: 
-      - "%victim is sneaking% = true : %chance%+7"
+      condition:
+        - "%victim is sneaking% = true : %chance%+7"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&e&l*DODGE* %victim%'
@@ -3439,22 +3439,22 @@ enrage:
     1:
       chance: 21
       cooldown: 5
-      condition: 
-      - "%attacker health% > 6 : %stop%"
+      condition:
+        - "%attacker health% > 6 : %stop%"
       effects:
         - 'ADD_HARM:<random number>1-4</random number> %victim%'
     2:
       chance: 27
       cooldown: 5
-      condition: 
-      - "%attacker health% > 6 : %stop%"
+      condition:
+        - "%attacker health% > 6 : %stop%"
       effects:
         - 'ADD_HARM:<random number>1-4</random number> %victim%'
     3:
       chance: 33
       cooldown: 5
-      condition: 
-      - "%attacker health% > 6 : %stop%"
+      condition:
+        - "%attacker health% > 6 : %stop%"
       effects:
         - 'ADD_HARM:<random number>1-4</random number> %victim%'
 guardians:
@@ -3660,29 +3660,29 @@ marksman:
     1:
       chance: 13
       cooldown: 3
-      condition: 
-      - '%attacker is holding% = BOW : %allow%'
+      condition:
+        - '%attacker is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>50-150</random number> %victim%'
     2:
       chance: 19
       cooldown: 3
-      condition: 
-      - '%attacker is holding% = BOW : %allow%'
+      condition:
+        - '%attacker is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>50-150</random number> %victim%'
     3:
       chance: 25
       cooldown: 3
-      condition: 
-      - '%attacker is holding% = BOW : %allow%'
+      condition:
+        - '%attacker is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>50-150</random number> %victim%'
     4:
       chance: 32
       cooldown: 3
-      condition: 
-      - '%attacker is holding% = BOW : %allow%'
+      condition:
+        - '%attacker is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>50-150</random number> %victim%'
 disappear:
@@ -3697,29 +3697,29 @@ disappear:
     1:
       chance: 20
       cooldown: 20
-      condition:  
-      - '%victim health% > 5 : %stop%'
+      condition:
+        - '%victim health% > 5 : %stop%'
       effects:
         - 'POTION:INVISIBILITY:2:60 %victim%'
     2:
       chance: 23
       cooldown: 20
-      condition:  
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'POTION:INVISIBILITY:2:80 %victim%'
     3:
       chance: 26
       cooldown: 20
-      condition:  
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'POTION:INVISIBILITY:2:100 %victim%'
     4:
       chance: 30
       cooldown: 20
-      condition:  
-      - '%victim health% > 6 : %stop%'
+      condition:
+        - '%victim health% > 6 : %stop%'
       effects:
         - 'POTION:INVISIBILITY:2:120 %victim%'
 disintegrate:
@@ -3792,22 +3792,22 @@ arsonist:
     1:
       chance: 8
       cooldown: 5
-      condition: 
-      - '%attacker is on fire% = true : %allow%'
+      condition:
+        - '%attacker is on fire% = true : %allow%'
       effects:
         - 'ADD_HARM:<random number>1-2</random number> %victim%'
     2:
       chance: 12
       cooldown: 5
-      condition: 
-      - '%attacker is on fire% = true : %allow%'
+      condition:
+        - '%attacker is on fire% = true : %allow%'
       effects:
         - 'ADD_HARM:<random number>2-3</random number> %victim%'
     3:
       chance: 16
       cooldown: 8
-      condition: 
-      - '%attacker is on fire% = true : %allow%'
+      condition:
+        - '%attacker is on fire% = true : %allow%'
       effects:
         - 'ADD_HARM:3 %victim%'
 enderwalker:
@@ -3937,36 +3937,36 @@ heavy:
     1:
       chance: 4
       cooldown: 4
-      condition: 
-      - '%attacker is holding% = BOW : %continue%'
+      condition:
+        - '%attacker is holding% = BOW : %continue%'
       effects:
         - 'REMOVE_DAMAGE:2 %victim%'
     2:
       chance: 9
       cooldown: 4
-      condition: 
-      - '%attacker is holding% = BOW : %continue%'
+      condition:
+        - '%attacker is holding% = BOW : %continue%'
       effects:
         - 'REMOVE_DAMAGE:4 %victim%'
     3:
       chance: 12
       cooldown: 4
-      condition: 
-      - '%attacker is holding% = BOW : %continue%'
+      condition:
+        - '%attacker is holding% = BOW : %continue%'
       effects:
         - 'REMOVE_DAMAGE:6 %victim%'
     4:
       chance: 16
       cooldown: 4
-      condition: 
-      - '%attacker is holding% = BOW : %continue%'
+      condition:
+        - '%attacker is holding% = BOW : %continue%'
       effects:
         - 'REMOVE_DAMAGE:8 %victim%'
     5:
       chance: 21
       cooldown: 4
-      condition: 
-      - '%attacker is holding% = BOW : %continue%'
+      condition:
+        - '%attacker is holding% = BOW : %continue%'
       effects:
         - 'REMOVE_DAMAGE:10 %victim%'
 hellfire:
@@ -4017,28 +4017,28 @@ longbow:
     1:
       chance: 12
       cooldown: 4
-      condition: 
+      condition:
         - '%victim is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>25-50</random number> %attacker%'
     2:
       chance: 17
       cooldown: 4
-      condition: 
+      condition:
         - '%victim is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>25-50</random number> %attacker%'
     3:
       chance: 25
       cooldown: 4
-      condition: 
+      condition:
         - '%victim is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>50-100</random number> %attacker%'
     4:
       chance: 33
       cooldown: 4
-      condition: 
+      condition:
         - '%victim is holding% = BOW : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>50-100</random number> %attacker%'
@@ -4539,28 +4539,28 @@ torrent:
     1:
       chance: 8
       cooldown: 3
-      condition: 
+      condition:
         - '%is under water% = TRUE : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     2:
       chance: 13
       cooldown: 3
-      condition: 
+      condition:
         - '%is under water% = TRUE : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     3:
       chance: 19
       cooldown: 5
-      condition: 
+      condition:
         - '%is under water% = TRUE : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     4:
       chance: 23
       cooldown: 5
-      condition: 
+      condition:
         - '%is under water% = TRUE : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
@@ -4898,18 +4898,18 @@ deathbringer:
     - ALL_ARMOR
   levels:
     1:
-      chance: 22
-      cooldown: 5
+      chance: 15.8
+      cooldown: 45
       effects:
         - 'DOUBLE_DAMAGE'
     2:
-      chance: 33
-      cooldown: 5
+      chance: 22.1
+      cooldown: 45
       effects:
         - 'DOUBLE_DAMAGE'
     3:
-      chance: 44
-      cooldown: 5
+      chance: 28
+      cooldown: 45
       effects:
         - 'DOUBLE_DAMAGE'
 doublestrike:
@@ -4923,21 +4923,21 @@ doublestrike:
   levels:
     1:
       chance: 8
-      cooldown: 6
+      cooldown: 15
       effects:
         - 'WAIT:20'
         - 'ADD_HARM:%damage% %victim%'
         - 'MESSAGE:&6&l** DOUBLE STRIKE ** %victim%'
     2:
       chance: 13
-      cooldown: 6
+      cooldown: 15
       effects:
         - 'WAIT:20'
         - 'ADD_HARM:%damage% %victim%'
         - 'MESSAGE:&6&l** DOUBLE STRIKE ** %victim%'
     3:
       chance: 19
-      cooldown: 6
+      cooldown: 15
       effects:
         - 'WAIT:20'
         - 'ADD_HARM:%damage% %victim%'
@@ -4982,19 +4982,19 @@ enlighted:
   levels:
     1:
       chance: 6
-      cooldown: 5
+      cooldown: 30
       effects:
-        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-3</random number> %victim%'
     2:
       chance: 9
-      cooldown: 5
+      cooldown: 30
       effects:
-        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-3</random number> %victim%'
     3:
       chance: 12
-      cooldown: 5
+      cooldown: 30
       effects:
-        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-3</random number> %victim%'
 gears:
   display: '%group-color%Gears'
   description: 'Added speed when equipped.'
@@ -5120,27 +5120,27 @@ lifesteal:
   levels:
     1:
       chance: 9
-      cooldown: 4
+      cooldown: 15
       effects:
         - 'STEAL_HEALTH:<random number>1-3</random number> %attacker%'
     2:
       chance: 13
-      cooldown: 4
+      cooldown: 15
       effects:
         - 'STEAL_HEALTH:<random number>1-3</random number> %attacker%'
     3:
       chance: 17
-      cooldown: 4
+      cooldown: 15
       effects:
         - 'STEAL_HEALTH:<random number>1-4</random number> %attacker%'
     4:
       chance: 21
-      cooldown: 4
+      cooldown: 15
       effects:
         - 'STEAL_HEALTH:<random number>1-5</random number> %attacker%'
     5:
       chance: 25
-      cooldown: 4
+      cooldown: 15
       effects:
         - 'STEAL_HEALTH:<random number>1-5</random number> %attacker%'
 overload:
@@ -5173,17 +5173,17 @@ rage:
   levels:
     1:
       chance: 25
-      condition: 
+      condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
     2:
       chance: 30
-      condition: 
+      condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5191,7 +5191,7 @@ rage:
       chance: 35
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5199,23 +5199,23 @@ rage:
       chance: 40
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
     5:
       chance: 45
-      condition: 
+      condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
     6:
       chance: 50
-      condition: 
+      condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 2
+      cooldown: 10
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5489,28 +5489,28 @@ devour:
     1:
       chance: 25
       cooldown: 3
-      condition: 
+      condition:
         - '%victim is bleeding% = false : %stop%'
       effects:
         - 'EXTRA_DAMAGE:<random number>1-4</random number>'
     2:
       chance: 40
       cooldown: 3
-      condition: 
+      condition:
         - '%victim is bleeding% = false : %stop%'
       effects:
         - 'EXTRA_DAMAGE:<random number>1-4</random number>'
     3:
       chance: 55
       cooldown: 3
-      condition: 
+      condition:
         - '%victim is bleeding% = false : %stop%'
       effects:
         - 'EXTRA_DAMAGE:<random number>1-4</random number>'
     4:
       chance: 75
       cooldown: 3
-      condition: 
+      condition:
         - '%victim is bleeding% = false : %stop%'
       effects:
         - 'EXTRA_DAMAGE:<random number>1-4</random number>'
@@ -5622,7 +5622,7 @@ deathgod:
     1:
       chance: 2
       cooldown: 7
-      condition: 
+      condition:
         - '%victim health% > 9 : %stop%'
       effects:
         - 'ADD_HEALTH:11 %victim%'
@@ -5630,7 +5630,7 @@ deathgod:
     2:
       chance: 6
       cooldown: 10
-      condition: 
+      condition:
         - '%victim health% > 10 : %stop%'
       effects:
         - 'ADD_HEALTH:12 %victim%'
@@ -5638,7 +5638,7 @@ deathgod:
     3:
       chance: 11
       cooldown: 15
-      condition: 
+      condition:
         - '%victim health% > 11 : %stop%'
       effects:
         - 'ADD_HEALTH:13 %victim%'
@@ -5655,56 +5655,56 @@ insanity:
     1:
       chance: 17
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     2:
       chance: 23
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     3:
       chance: 29
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     4:
       chance: 35
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     5:
       chance: 41
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     6:
       chance: 49
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     7:
       chance: 52
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     8:
       chance: 56
       cooldown: 1
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
@@ -5721,7 +5721,7 @@ sniper:
     1:
       chance: 15
       cooldown: 5
-      condition: 
+      condition:
         - '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-350</random number> %attacker%'
@@ -5729,7 +5729,7 @@ sniper:
     2:
       chance: 20
       cooldown: 5
-      condition: 
+      condition:
         - '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-350</random number> %attacker%'
@@ -5737,7 +5737,7 @@ sniper:
     3:
       chance: 25
       cooldown: 5
-      condition: 
+      condition:
         - '%is headshot% = false : %stop%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-350</random number> %attacker%'
@@ -5745,7 +5745,7 @@ sniper:
     4:
       chance: 30
       cooldown: 5
-      condition: 
+      condition:
         - '%is headshot% = false : %stop%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-350</random number> %attacker%'
@@ -5753,7 +5753,7 @@ sniper:
     5:
       chance: 35
       cooldown: 5
-      condition: 
+      condition:
         - '%is headshot% = false : %stop%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-350</random number> %attacker%'
@@ -5840,56 +5840,56 @@ extremeinsanity:
     1:
       chance: 4
       cooldown: 4
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     2:
       chance: 8
       cooldown: 4
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     3:
       chance: 12
       cooldown: 5
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     4:
       chance: 14
       cooldown: 5
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     5:
       chance: 16
       cooldown: 5
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     6:
       chance: 19
       cooldown: 6
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     7:
       chance: 22
       cooldown: 7
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
     8:
       chance: 25
       cooldown: 8
-      condition: 
+      condition:
         - '%victim is holding% contains SWORD : %allow%'
       effects:
         - 'DOUBLE_DAMAGE'
@@ -5911,35 +5911,35 @@ megaheavy:
     1:
       chance: 4
       cooldown: 6
-      condition: 
+      condition:
         - '%attacker is holding% contains BOW : %allow%'
       effects:
         - 'REMOVE_DAMAGE:12'
     2:
       chance: 7
       cooldown: 7
-      condition: 
+      condition:
         - '%attacker is holding% contains BOW : %allow%'
       effects:
         - 'REMOVE_DAMAGE:14'
     3:
       chance: 8
       cooldown: 7
-      condition: 
+      condition:
         - '%attacker is holding% contains BOW : %allow%'
       effects:
         - 'REMOVE_DAMAGE:16'
     4:
       chance: 10
       cooldown: 7
-      condition: 
+      condition:
         - '%attacker is holding% contains BOW : %allow%'
       effects:
         - 'REMOVE_DAMAGE:18'
     5:
       chance: 12
       cooldown: 9
-      condition: 
+      condition:
         - '%attacker is holding% contains BOW : %allow%'
       effects:
         - 'REMOVE_DAMAGE:20'
@@ -6074,7 +6074,7 @@ guidedrocketescape:
     1:
       chance: 30
       cooldown: 5
-      condition: 
+      condition:
         - '%victim health% > 6 : %stop%'
       effects:
         - 'BOOST:20 %victim%'
@@ -6082,7 +6082,7 @@ guidedrocketescape:
     2:
       chance: 50
       cooldown: 5
-      condition: 
+      condition:
         - '%victim health% > 6 : %stop%'
       effects:
         - 'BOOST:40 %victim%'
@@ -6090,7 +6090,7 @@ guidedrocketescape:
     3:
       chance: 70
       cooldown: 5
-      condition: 
+      condition:
         - '%victim health% > 6 : %stop%'
       effects:
         - 'BOOST:60 %victim%'
@@ -6435,17 +6435,17 @@ planetarydeathbringer:
     - ALL_ARMOR
   levels:
     1:
-      chance: 10
+      chance: 20
       cooldown: 20
       effects:
         - 'INCREASE_DAMAGE:50 %attacker%'
     2:
-      chance: 15
+      chance: 26
       cooldown: 20
       effects:
         - 'INCREASE_DAMAGE:50 %attacker%'
     3:
-      chance: 20
+      chance: 32
       cooldown: 20
       effects:
         - 'INCREASE_DAMAGE:50 %attacker%'
@@ -6468,17 +6468,17 @@ divineenlighted:
       chance: 5
       cooldown: 5
       effects:
-        - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
     2:
       chance: 10
       cooldown: 7
       effects:
-        - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
     3:
       chance: 15
       cooldown: 9
       effects:
-        - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
 lethalsniper:
   display: '%group-color%Lethal Sniper'
   description: "Heroic Enchantment. Increased\nheadshot chance and multiplied damage\nup to 4.5x. Requires Sniper V\nenchant on item to apply."
@@ -6498,7 +6498,7 @@ lethalsniper:
     1:
       chance: 22
       cooldown: 4
-      condition: 
+      condition:
         - '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-450</random number> %attacker%'
@@ -6506,7 +6506,7 @@ lethalsniper:
     2:
       chance: 27
       cooldown: 4
-      condition: 
+      condition:
         - '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-450</random number> %attacker%'
@@ -6514,7 +6514,7 @@ lethalsniper:
     3:
       chance: 33
       cooldown: 4
-      condition: 
+      condition:
         - '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-450</random number> %attacker%'
@@ -6530,7 +6530,7 @@ lethalsniper:
     5:
       chance: 43
       cooldown: 4
-      condition: 
+      condition:
         - '%is headshot% = true : %allow%'
       effects:
         - 'INCREASE_DAMAGE:<random number>100-450</random number> %attacker%'
@@ -6604,19 +6604,22 @@ titantrap:
   levels:
     1:
       chance: 16
-      cooldown: 3
+      cooldown: 40
       effects:
-        - 'POTION:SLOW:4:100 %victim%'
+        - 'POTION:SLOW:40:60 %victim%'
+        - 'MESSAGE:&c&l** TITAN TRAP [&73s&c&l**'
     2:
       chance: 21
-      cooldown: 3
+      cooldown: 40
       effects:
-        - 'POTION:SLOW:4:140 %victim%'
+        - 'POTION:SLOW:40:80 %victim%'
+        - 'MESSAGE:&c&l** TITAN TRAP [&74s&c&l**'
     3:
       chance: 27
-      cooldown: 3
+      cooldown: 40
       effects:
-        - 'POTION:SLOW:4:220 %victim%'
+        - 'POTION:SLOW:40:120 %victim%'
+        - 'MESSAGE:&c&l** TITAN TRAP [&76s&c&l**'
 bidirectionalteleportation:
   display: '%group-color%Bidirectional Teleportation'
   description: "Heroic Enchantment. Chance to grapple an enemy towards you."
@@ -6714,37 +6717,37 @@ vengefuldiminish:
   levels:
     1:
       chance: 6
-      cooldown: 4
+      cooldown: 14
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     2:
       chance: 12
-      cooldown: 4
+      cooldown: 14
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     3:
       chance: 17
-      cooldown: 4
+      cooldown: 14
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     4:
       chance: 23
-      cooldown: 4
+      cooldown: 14
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     5:
       chance: 28
-      cooldown: 4
+      cooldown: 14
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     6:
       chance: 33
-      cooldown: 4
+      cooldown: 14
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
@@ -6798,50 +6801,14 @@ etherealdodge:
     removeable: false
   levels:
     1:
-      chance: 12
-      cooldown: 5
+      chance: 30
+      cooldown: 45
       condition:
         - "%victim is sneaking% = true : %chance%+5"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&d&l** ETHEREAL DODGE* * %victim%'
-        - 'POTION:SPEED:4:20 %victim%'
-    2:
-      chance: 16
-      cooldown: 5
-      condition: 
-        - "%victim is sneaking% = true : %chance%+5"
-      effects:
-        - 'STOP_ATTACK'
-        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
-        - 'POTION:SPEED:4:20 %victim%'
-    3:
-      chance: 22
-      cooldown: 5
-      condition:
-        - "%victim is sneaking% = true : %chance%+5"
-      effects:
-        - 'STOP_ATTACK'
-        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
-        - 'POTION:SPEED:4:20 %victim%'
-    4:
-      chance: 27
-      cooldown: 5
-      condition:
-        - "%victim is sneaking% = true : %chance%+5"
-      effects:
-        - 'STOP_ATTACK'
-        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
-        - 'POTION:SPEED:4:40 %victim%'
-    5:
-      chance: 33
-      cooldown: 5
-      condition: 
-        - "%victim is sneaking% = true : %chance%+5"
-      effects:
-        - 'STOP_ATTACK'
-        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
-        - 'POTION:SPEED:4:60 %victim%'
+        - 'POTION:SPEED:4:80 %victim%'
 paladinarmored:
   display: '%group-color%Paladin Armored'
   description: "Negates 10 + 5 per level of enemy sword damage. A chance\nto be Blessed every time you\nare struck by an enemy sword.\nRequires Armored IV."
@@ -6860,28 +6827,28 @@ paladinarmored:
     1:
       chance: 6
       cooldown: 5
-      condition: 
+      condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'NEGATE_DAMAGE:15 %attacker%'
     2:
       chance: 9
       cooldown: 6
-      condition: 
+      condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'NEGATE_DAMAGE:20 %attacker%'
     3:
       chance: 11
       cooldown: 8
-      condition: 
+      condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'NEGATE_DAMAGE:25 %attacker%'
     4:
       chance: 14
       cooldown: 8
-      condition: 
+      condition:
         - '%attacker is holding% contains SWORD : %allow%'
       effects:
         - 'NEGATE_DAMAGE:30 %attacker%'
@@ -6901,32 +6868,32 @@ demoniclifesteal:
     removeable: false
   levels:
     1:
-      chance: 8
-      cooldown: 5
+      chance: 5.9
+      cooldown: 25
       effects:
         - 'ADD_HEALTH:<random number>2-3</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     2:
-      chance: 12
-      cooldown: 5
+      chance: 9.3
+      cooldown: 25
       effects:
         - 'ADD_HEALTH:<random number>2-3</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     3:
-      chance: 15
-      cooldown: 6
+      chance: 11.4
+      cooldown: 25
       effects:
         - 'ADD_HEALTH:<random number>3-4</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     4:
-      chance: 19
-      cooldown: 6
+      chance: 13.9
+      cooldown: 25
       effects:
         - 'ADD_HEALTH:<random number>3-4</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     5:
-      chance: 24
-      cooldown: 8
+      chance: 15
+      cooldown: 25
       effects:
         - 'ADD_HEALTH:<random number>5-6</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
@@ -7118,7 +7085,7 @@ natureswrath:
   levels:
     1:
       chance: 5
-      cooldown: 10
+      cooldown: 30
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7129,7 +7096,7 @@ natureswrath:
         - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     2:
       chance: 9
-      cooldown: 10
+      cooldown: 30
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7140,7 +7107,7 @@ natureswrath:
         - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     3:
       chance: 15
-      cooldown: 10
+      cooldown: 30
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7151,7 +7118,7 @@ natureswrath:
         - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     4:
       chance: 23
-      cooldown: 10
+      cooldown: 30
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7297,28 +7264,28 @@ immortal:
   levels:
     1:
       chance: 12
-      cooldown: 2
+      cooldown: 40
       souls: 5
       effects:
-        - 'ADD_DURABILITY:10 %victim%'
+        - 'ADD_DURABILITY:-10 %victim%'
     2:
       chance: 18
-      cooldown: 2
+      cooldown: 40
       souls: 5
       effects:
-        - 'ADD_DURABILITY:10 %victim%'
+        - 'ADD_DURABILITY:-10 %victim%'
     3:
       chance: 25
-      cooldown: 2
+      cooldown: 40
       souls: 5
       effects:
-        - 'ADD_DURABILITY:10 %victim%'
+        - 'ADD_DURABILITY:-10 %victim%'
     4:
       chance: 31
-      cooldown: 2
+      cooldown: 40
       souls: 5
       effects:
-        - 'ADD_DURABILITY:10 %victim%'
+        - 'ADD_DURABILITY:-10 %victim%'
 divineimmolation:
   display: '%group-color%Divine Immolation'
   description: "Active soul enchant. Chance for your sword\nto be imbued with divine fire, turning\nall your physical attacks into Area of\nEffect spells and igniting divine fire\nupon all nearby enemies.\n75 souls per use."
@@ -7330,7 +7297,7 @@ divineimmolation:
   levels:
     1:
       chance: 7
-      cooldown: 10
+      cooldown: 15
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7347,7 +7314,7 @@ divineimmolation:
         - 'MESSAGE:&c&l** DIVINE IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'
     2:
       chance: 13
-      cooldown: 10
+      cooldown: 15
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7364,7 +7331,7 @@ divineimmolation:
         - 'MESSAGE:&c&l** DIVINE IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'
     3:
       chance: 23
-      cooldown: 10
+      cooldown: 15
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7381,7 +7348,7 @@ divineimmolation:
         - 'MESSAGE:&c&l** DIVINE IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'
     4:
       chance: 26
-      cooldown: 10
+      cooldown: 15
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7721,95 +7688,14 @@ chainlifesteal:
       effects:
         - 'STEAL_HEALTH:<random number>1-3</random number> <aoe> radius=6 target=damageable </aoe>'
         - 'MESSAGE:&4&l** CHAIN LIFESTEAL ** &7(-5 &cHP&7) <aoe> radius=6 target=damageable </aoe>'
-    3:
-      chance: 4.7
-      cooldown: 120
-      effects:
-        - 'STEAL_HEALTH:<random number>1-3</random number> <aoe> radius=6 target=damageable </aoe>'
-        - 'MESSAGE:&4&l** CHAIN LIFESTEAL ** &7(-5 &cHP&7) <aoe> radius=6 target=damageable </aoe>'
-    4:
-      chance: 5.1
-      cooldown: 120
-      effects:
-        - 'STEAL_HEALTH:4 <aoe> radius=6 target=damageable </aoe>'
-        - 'MESSAGE:&4&l** CHAIN LIFESTEAL ** &7(-5 &cHP&7) <aoe> radius=6 target=damageable </aoe>'
-    5:
-      chance: 8.3
-      cooldown: 120
-      effects:
-        - 'STEAL_HEALTH:5 <aoe> radius=6 target=damageable </aoe>'
-        - 'MESSAGE:&4&l** CHAIN LIFESTEAL ** &7(-5 &cHP&7) <aoe> radius=6 target=damageable </aoe>'
-poltergeist:
-  display: '%group-color%Poltergeist'
-  description: "Chance to cure Slowness when attacked."
+soulsiphone:
+  display: '%group-color%Soul Siphone'
+  description: "Proc'ing on outgoing damage events this enchant siphons souls\nand durability from enemies in large quantities!."
   applies-to: 'Boots'
-  type: 'DEFENSE;FALL_DAMAGE'
-  group: 'MASTERY'
-  applies:
-    - ALL_BOOTS
-  levels:
-    '1':
-      chance: 5
-      cooldown: 120
-      effects:
-        - 'CURE:SLOW %victim%'
-        - 'MESSAGE:&4&l** POLTERGEIST ** %victim%'
-        - 'PARTICLE:CLOUD:200:3'
-    '2':
-      chance: 10
-      cooldown: 120
-      effects:
-        - 'CURE:SLOW %victim%'
-        - 'MESSAGE:&4&l** POLTERGEIST ** %victim%'
-        - 'PARTICLE:CLOUD:200:3'
-    '3':
-      chance: 15
-      cooldown: 120
-      effects:
-        - 'CURE:SLOW %victim%'
-        - 'MESSAGE:&4&l** POLTERGEIST ** %victim%'
-        - 'PARTICLE:CLOUD:200:3'
-feigndeath:
-  display: '%group-color%Feign Death'
-  description: "Chance to fake death and vanish for up to 6 seconds."
-  applies-to: 'Armor'
   type: 'DEFENSE'
   group: 'MASTERY'
   applies:
-    - ALL_ARMOR
-  levels:
-    '1':
-      chance: 2
-      cooldown: 10
-      effects:
-        - 'POTION:INVISIBILITY:5:20'
-        - 'MESSAGE:&4&l** FEIGN DEATH ** %victim%'
-    '2':
-      chance: 4
-      cooldown: 10
-      effects:
-        - 'POTION:INVISIBILITY:5:20'
-        - 'MESSAGE:&4&l** FEIGN DEATH ** %victim%'
-    '3':
-      chance: 6
-      cooldown: 10
-      effects:
-        - 'POTION:INVISIBILITY:5:20'
-        - 'MESSAGE:&4&l** FEIGN DEATH ** %victim%'
-    '4':
-      chance: 8
-      cooldown: 10
-      effects:
-        - 'POTION:INVISIBILITY:5:20'
-        - 'MESSAGE:&4&l** FEIGN DEATH ** %victim%'
-soulsiphone:
-  display: '%group-color%Soul Siphone'
-  description: "Proc'ing on outgoing damage events, this enchant siphons souls\nand destroy durability from enemies in large quantities!."
-  applies-to: 'Armor'
-  type: 'ATTACK'
-  group: 'MASTERY'
-  applies:
-    - ALL_ARMOR
+    - ALL_BOOTS
   levels:
     '1':
       chance: 6.1
@@ -7839,48 +7725,3 @@ soulsiphone:
         - 'DAMAGE_ARMOR:30 %attacker%'
         - 'REMOVE_SOULS:200 %attacker%'
         - 'MESSAGE:&4&l** SOUL SIPHONE ** &7(%victim name%)'
-deathpact:
-  display: '%group-color%Death Pact'
-  description: "Take less damage when you are missing 10%HP\nwhile also dealing slightly less damage (based on level)"
-  applies-to: 'Armor'
-  type: 'DEFENSE'
-  group: 'MASTERY'
-  applies:
-    - ALL_ARMOR
-  levels:
-    1:
-      chance: 5
-      condition: 
-        - '%victim health percentage% > 90 : %stop%'
-      cooldown: 12
-      effects:
-        - 'NEGATE_DAMAGE:5 %victim%'
-        - 'INCREASE_DAMAGE:-5 %victim%'
-    2:
-      chance: 20
-      condition: 
-        - '%victim health percentage% > 90 : %stop%'
-      cooldown: 12
-      effects:
-        - 'NEGATE_DAMAGE:10 %victim%'
-        - 'INCREASE_DAMAGE:-10 %victim%'
-    3:
-      chance: 40
-      condition:
-        - '%victim health percentage% > 90 : %stop%'
-      cooldown: 12
-      effects:
-        - 'NEGATE_DAMAGE:15 %victim%'
-        - 'INCREASE_DAMAGE:-15 %victim%'
-webwalker:
-  display: '%group-color%Web Walker'
-  description: "Depth Strider, but for Spider Webs."
-  applies-to: 'Boots'
-  type: 'EFFECT_STATIC'
-  group: 'MASTERY'
-  applies:
-    - ALL_BOOTS
-  levels:
-    1:
-      effects:
-        - 'WEB_WALKER'
