@@ -5057,25 +5057,25 @@ inquisitive:
     - ALL_SWORD
   levels:
     1:
-      chance: 20
+      chance: 30
       cooldown: 4
       effects:
-        - 'EXP:<random number>4-8</random number> %victim%'
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
     2:
+      chance: 35
+      cooldown: 4
+      effects:
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
+    3:
       chance: 40
       cooldown: 4
       effects:
-        - 'EXP:<random number>4-8</random number> %victim%'
-    3:
-      chance: 60
-      cooldown: 4
-      effects:
-        - 'EXP:<random number>6-10</random number> %victim%'
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
     4:
-      chance: 80
+      chance: 45
       cooldown: 4
       effects:
-        - 'EXP:<random number>7-12</random number> %victim%'
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
 inversion:
   display: '%group-color%Inversion'
   description: "Damage dealt to you has a chance to be\nblocked and heal you for 1-5 HP."
@@ -6400,25 +6400,25 @@ masterinquisitive:
     - ALL_SWORD
   levels:
     1:
-      chance: 20
-      cooldown: 2
-      effects:
-        - 'EXP:<random number>6-12</random number> %victim%'
-    2:
-      chance: 40
-      cooldown: 2
-      effects:
-        - 'EXP:<random number>7-14</random number> %victim%'
-    3:
       chance: 60
       cooldown: 2
       effects:
-        - 'EXP:<random number>8-15</random number> %victim%'
-    4:
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
+    2:
+      chance: 70
+      cooldown: 2
+      effects:
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
+    3:
       chance: 80
       cooldown: 2
       effects:
-        - 'EXP:<random number>9-17</random number> %victim%'
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
+    4:
+      chance: 90
+      cooldown: 2
+      effects:
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
 planetarydeathbringer:
   display: '%group-color%Planetary Deathbringer'
   description: "Heroic Enchantment. An increased\nchance to deal 1.5x damage. Requires\nDeathbringer III enchant on item to apply."
