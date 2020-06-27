@@ -4898,18 +4898,18 @@ deathbringer:
     - ALL_ARMOR
   levels:
     1:
-      chance: 15.8
-      cooldown: 45
+      chance: 22
+      cooldown: 5
       effects:
         - 'DOUBLE_DAMAGE'
     2:
-      chance: 22.1
-      cooldown: 45
+      chance: 33
+      cooldown: 5
       effects:
         - 'DOUBLE_DAMAGE'
     3:
-      chance: 28
-      cooldown: 45
+      chance: 44
+      cooldown: 5
       effects:
         - 'DOUBLE_DAMAGE'
 doublestrike:
@@ -4923,21 +4923,21 @@ doublestrike:
   levels:
     1:
       chance: 8
-      cooldown: 15
+      cooldown: 6
       effects:
         - 'WAIT:20'
         - 'ADD_HARM:%damage% %victim%'
         - 'MESSAGE:&6&l** DOUBLE STRIKE ** %victim%'
     2:
       chance: 13
-      cooldown: 15
+      cooldown: 6
       effects:
         - 'WAIT:20'
         - 'ADD_HARM:%damage% %victim%'
         - 'MESSAGE:&6&l** DOUBLE STRIKE ** %victim%'
     3:
       chance: 19
-      cooldown: 15
+      cooldown: 6
       effects:
         - 'WAIT:20'
         - 'ADD_HARM:%damage% %victim%'
@@ -4982,19 +4982,19 @@ enlighted:
   levels:
     1:
       chance: 6
-      cooldown: 30
+      cooldown: 5
       effects:
-        - 'ADD_HEALTH:<random number>1-3</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
     2:
       chance: 9
-      cooldown: 30
+      cooldown: 5
       effects:
-        - 'ADD_HEALTH:<random number>1-3</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
     3:
       chance: 12
-      cooldown: 30
+      cooldown: 5
       effects:
-        - 'ADD_HEALTH:<random number>1-3</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
 gears:
   display: '%group-color%Gears'
   description: 'Added speed when equipped.'
@@ -5057,25 +5057,25 @@ inquisitive:
     - ALL_SWORD
   levels:
     1:
-      chance: 20
+      chance: 30
       cooldown: 4
       effects:
-        - 'EXP:<random number>4-8</random number> %victim%'
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
     2:
+      chance: 35
+      cooldown: 4
+      effects:
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
+    3:
       chance: 40
       cooldown: 4
       effects:
-        - 'EXP:<random number>4-8</random number> %victim%'
-    3:
-      chance: 60
-      cooldown: 4
-      effects:
-        - 'EXP:<random number>6-10</random number> %victim%'
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
     4:
-      chance: 80
+      chance: 45
       cooldown: 4
       effects:
-        - 'EXP:<random number>7-12</random number> %victim%'
+        - 'EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> %victim%'
 inversion:
   display: '%group-color%Inversion'
   description: "Damage dealt to you has a chance to be\nblocked and heal you for 1-5 HP."
@@ -5120,27 +5120,27 @@ lifesteal:
   levels:
     1:
       chance: 9
-      cooldown: 15
+      cooldown: 4
       effects:
         - 'STEAL_HEALTH:<random number>1-3</random number> %attacker%'
     2:
       chance: 13
-      cooldown: 15
+      cooldown: 4
       effects:
         - 'STEAL_HEALTH:<random number>1-3</random number> %attacker%'
     3:
       chance: 17
-      cooldown: 15
+      cooldown: 4
       effects:
         - 'STEAL_HEALTH:<random number>1-4</random number> %attacker%'
     4:
       chance: 21
-      cooldown: 15
+      cooldown: 4
       effects:
         - 'STEAL_HEALTH:<random number>1-5</random number> %attacker%'
     5:
       chance: 25
-      cooldown: 15
+      cooldown: 4
       effects:
         - 'STEAL_HEALTH:<random number>1-5</random number> %attacker%'
 overload:
@@ -5175,7 +5175,7 @@ rage:
       chance: 25
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 10
+      cooldown: 2
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5183,7 +5183,7 @@ rage:
       chance: 30
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 10
+      cooldown: 2
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5191,7 +5191,7 @@ rage:
       chance: 35
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 10
+      cooldown: 2
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5199,7 +5199,7 @@ rage:
       chance: 40
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 10
+      cooldown: 2
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5207,7 +5207,7 @@ rage:
       chance: 45
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 10
+      cooldown: 2
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -5215,7 +5215,7 @@ rage:
       chance: 50
       condition:
         - "%attacker combo% > 5 : %stop%"
-      cooldown: 10
+      cooldown: 2
       effects:
         - 'ADD_HARM:%combo% %victim%'
         - 'BLOOD %victim%'
@@ -6400,25 +6400,25 @@ masterinquisitive:
     - ALL_SWORD
   levels:
     1:
-      chance: 20
-      cooldown: 2
-      effects:
-        - 'EXP:<random number>6-12</random number> %victim%'
-    2:
-      chance: 40
-      cooldown: 2
-      effects:
-        - 'EXP:<random number>7-14</random number> %victim%'
-    3:
       chance: 60
       cooldown: 2
       effects:
-        - 'EXP:<random number>8-15</random number> %victim%'
-    4:
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
+    2:
+      chance: 70
+      cooldown: 2
+      effects:
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
+    3:
       chance: 80
       cooldown: 2
       effects:
-        - 'EXP:<random number>9-17</random number> %victim%'
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
+    4:
+      chance: 90
+      cooldown: 2
+      effects:
+        - 'EXP:<math>(%exp% * (1.0 + 0.25 * %level%))*2.0</math> %victim%'
 planetarydeathbringer:
   display: '%group-color%Planetary Deathbringer'
   description: "Heroic Enchantment. An increased\nchance to deal 1.5x damage. Requires\nDeathbringer III enchant on item to apply."
@@ -6435,17 +6435,17 @@ planetarydeathbringer:
     - ALL_ARMOR
   levels:
     1:
-      chance: 20
+      chance: 10
       cooldown: 20
       effects:
         - 'INCREASE_DAMAGE:50 %attacker%'
     2:
-      chance: 26
+      chance: 15
       cooldown: 20
       effects:
         - 'INCREASE_DAMAGE:50 %attacker%'
     3:
-      chance: 32
+      chance: 20
       cooldown: 20
       effects:
         - 'INCREASE_DAMAGE:50 %attacker%'
@@ -6468,17 +6468,17 @@ divineenlighted:
       chance: 5
       cooldown: 5
       effects:
-        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
     2:
       chance: 10
       cooldown: 7
       effects:
-        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
     3:
       chance: 15
       cooldown: 9
       effects:
-        - 'ADD_HEALTH:<random number>1-4</random number> %victim%'
+        - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
 lethalsniper:
   display: '%group-color%Lethal Sniper'
   description: "Heroic Enchantment. Increased\nheadshot chance and multiplied damage\nup to 4.5x. Requires Sniper V\nenchant on item to apply."
@@ -6604,22 +6604,19 @@ titantrap:
   levels:
     1:
       chance: 16
-      cooldown: 40
+      cooldown: 3
       effects:
-        - 'POTION:SLOW:40:60 %victim%'
-        - 'MESSAGE:&c&l** TITAN TRAP [&73s&c&l**'
+        - 'POTION:SLOW:4:100 %victim%'
     2:
       chance: 21
-      cooldown: 40
+      cooldown: 3
       effects:
-        - 'POTION:SLOW:40:80 %victim%'
-        - 'MESSAGE:&c&l** TITAN TRAP [&74s&c&l**'
+        - 'POTION:SLOW:4:140 %victim%'
     3:
       chance: 27
-      cooldown: 40
+      cooldown: 3
       effects:
-        - 'POTION:SLOW:40:120 %victim%'
-        - 'MESSAGE:&c&l** TITAN TRAP [&76s&c&l**'
+        - 'POTION:SLOW:4:220 %victim%'
 bidirectionalteleportation:
   display: '%group-color%Bidirectional Teleportation'
   description: "Heroic Enchantment. Chance to grapple an enemy towards you."
@@ -6717,37 +6714,37 @@ vengefuldiminish:
   levels:
     1:
       chance: 6
-      cooldown: 14
+      cooldown: 4
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     2:
       chance: 12
-      cooldown: 14
+      cooldown: 4
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     3:
       chance: 17
-      cooldown: 14
+      cooldown: 4
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     4:
       chance: 23
-      cooldown: 14
+      cooldown: 4
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     5:
       chance: 28
-      cooldown: 14
+      cooldown: 4
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
     6:
       chance: 33
-      cooldown: 14
+      cooldown: 4
       effects:
         - 'HALF_DAMAGE'
         - 'ADD_HARM:%damage% %attacker%'
@@ -6801,14 +6798,50 @@ etherealdodge:
     removeable: false
   levels:
     1:
-      chance: 30
-      cooldown: 45
+      chance: 12
+      cooldown: 5
       condition:
         - "%victim is sneaking% = true : %chance%+5"
       effects:
         - 'STOP_ATTACK'
         - 'MESSAGE:&d&l** ETHEREAL DODGE* * %victim%'
-        - 'POTION:SPEED:4:80 %victim%'
+        - 'POTION:SPEED:4:20 %victim%'
+    2:
+      chance: 16
+      cooldown: 5
+      condition:
+        - "%victim is sneaking% = true : %chance%+5"
+      effects:
+        - 'STOP_ATTACK'
+        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
+        - 'POTION:SPEED:4:20 %victim%'
+    3:
+      chance: 22
+      cooldown: 5
+      condition:
+        - "%victim is sneaking% = true : %chance%+5"
+      effects:
+        - 'STOP_ATTACK'
+        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
+        - 'POTION:SPEED:4:20 %victim%'
+    4:
+      chance: 27
+      cooldown: 5
+      condition:
+        - "%victim is sneaking% = true : %chance%+5"
+      effects:
+        - 'STOP_ATTACK'
+        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
+        - 'POTION:SPEED:4:40 %victim%'
+    5:
+      chance: 33
+      cooldown: 5
+      condition:
+        - "%victim is sneaking% = true : %chance%+5"
+      effects:
+        - 'STOP_ATTACK'
+        - 'MESSAGE:&d&l** ETHEREAL DODGE ** %victim%'
+        - 'POTION:SPEED:4:60 %victim%'
 paladinarmored:
   display: '%group-color%Paladin Armored'
   description: "Negates 10 + 5 per level of enemy sword damage. A chance\nto be Blessed every time you\nare struck by an enemy sword.\nRequires Armored IV."
@@ -6868,32 +6901,32 @@ demoniclifesteal:
     removeable: false
   levels:
     1:
-      chance: 5.9
-      cooldown: 25
+      chance: 8
+      cooldown: 5
       effects:
         - 'ADD_HEALTH:<random number>2-3</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     2:
-      chance: 9.3
-      cooldown: 25
+      chance: 12
+      cooldown: 5
       effects:
         - 'ADD_HEALTH:<random number>2-3</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     3:
-      chance: 11.4
-      cooldown: 25
+      chance: 15
+      cooldown: 6
       effects:
         - 'ADD_HEALTH:<random number>3-4</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     4:
-      chance: 13.9
-      cooldown: 25
+      chance: 19
+      cooldown: 6
       effects:
         - 'ADD_HEALTH:<random number>3-4</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
     5:
-      chance: 15
-      cooldown: 25
+      chance: 24
+      cooldown: 8
       effects:
         - 'ADD_HEALTH:<random number>5-6</random number> %attacker%'
         - 'MESSAGE:&d&l** DEMONIC LIFESTEAL ** &7(&c- %random%HP&7) %attacker%'
@@ -7085,7 +7118,7 @@ natureswrath:
   levels:
     1:
       chance: 5
-      cooldown: 30
+      cooldown: 10
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7096,7 +7129,7 @@ natureswrath:
         - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     2:
       chance: 9
-      cooldown: 30
+      cooldown: 10
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7107,7 +7140,7 @@ natureswrath:
         - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     3:
       chance: 15
-      cooldown: 30
+      cooldown: 10
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7118,7 +7151,7 @@ natureswrath:
         - 'MESSAGE:&2&l** NATURES WRATH ** %attacker%'
     4:
       chance: 23
-      cooldown: 30
+      cooldown: 10
       souls: 75
       effects:
         - 'POTION:SLOW:10:60 %attacker%'
@@ -7264,28 +7297,28 @@ immortal:
   levels:
     1:
       chance: 12
-      cooldown: 40
+      cooldown: 2
       souls: 5
       effects:
-        - 'ADD_DURABILITY:-10 %victim%'
+        - 'ADD_DURABILITY:10 %victim%'
     2:
       chance: 18
-      cooldown: 40
+      cooldown: 2
       souls: 5
       effects:
-        - 'ADD_DURABILITY:-10 %victim%'
+        - 'ADD_DURABILITY:10 %victim%'
     3:
       chance: 25
-      cooldown: 40
+      cooldown: 2
       souls: 5
       effects:
-        - 'ADD_DURABILITY:-10 %victim%'
+        - 'ADD_DURABILITY:10 %victim%'
     4:
       chance: 31
-      cooldown: 40
+      cooldown: 2
       souls: 5
       effects:
-        - 'ADD_DURABILITY:-10 %victim%'
+        - 'ADD_DURABILITY:10 %victim%'
 divineimmolation:
   display: '%group-color%Divine Immolation'
   description: "Active soul enchant. Chance for your sword\nto be imbued with divine fire, turning\nall your physical attacks into Area of\nEffect spells and igniting divine fire\nupon all nearby enemies.\n75 souls per use."
@@ -7297,7 +7330,7 @@ divineimmolation:
   levels:
     1:
       chance: 7
-      cooldown: 15
+      cooldown: 10
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7314,7 +7347,7 @@ divineimmolation:
         - 'MESSAGE:&c&l** DIVINE IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'
     2:
       chance: 13
-      cooldown: 15
+      cooldown: 10
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7331,7 +7364,7 @@ divineimmolation:
         - 'MESSAGE:&c&l** DIVINE IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'
     3:
       chance: 23
-      cooldown: 15
+      cooldown: 10
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7348,7 +7381,7 @@ divineimmolation:
         - 'MESSAGE:&c&l** DIVINE IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'
     4:
       chance: 26
-      cooldown: 15
+      cooldown: 10
       souls: 75
       effects:
         - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
@@ -7688,40 +7721,3 @@ chainlifesteal:
       effects:
         - 'STEAL_HEALTH:<random number>1-3</random number> <aoe> radius=6 target=damageable </aoe>'
         - 'MESSAGE:&4&l** CHAIN LIFESTEAL ** &7(-5 &cHP&7) <aoe> radius=6 target=damageable </aoe>'
-soulsiphone:
-  display: '%group-color%Soul Siphone'
-  description: "Proc'ing on outgoing damage events this enchant siphons souls\nand durability from enemies in large quantities!."
-  applies-to: 'Boots'
-  type: 'DEFENSE'
-  group: 'MASTERY'
-  applies:
-    - ALL_BOOTS
-  levels:
-    '1':
-      chance: 6.1
-      cooldown: 60
-      effects:
-        - 'DAMAGE_ARMOR:10 %attacker%'
-        - 'REMOVE_SOULS:200 %attacker%'
-        - 'MESSAGE:&4&l** SOUL SIPHONE ** &7(%victim name%)'
-    '2':
-      chance: 8.1
-      cooldown: 60
-      effects:
-        - 'DAMAGE_ARMOR:15 %attacker%'
-        - 'REMOVE_SOULS:200 %attacker%'
-        - 'MESSAGE:&4&l** SOUL SIPHONE ** &7(%victim name%)'
-    '3':
-      chance: 10.4
-      cooldown: 60
-      effects:
-        - 'DAMAGE_ARMOR:20 %attacker%'
-        - 'REMOVE_SOULS:200 %attacker%'
-        - 'MESSAGE:&4&l** SOUL SIPHONE ** &7(%victim name%)'
-    '4':
-      chance: 13.5
-      cooldown: 60
-      effects:
-        - 'DAMAGE_ARMOR:30 %attacker%'
-        - 'REMOVE_SOULS:200 %attacker%'
-        - 'MESSAGE:&4&l** SOUL SIPHONE ** &7(%victim name%)'
