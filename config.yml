@@ -367,7 +367,7 @@ items:
     id: 0
     name: "&eStatTrak Creator"
     lore:
-      - '&7track how many kills you have with a weapon'
+      - '&7Track how many kills you have with a weapon'
       - '&7Drag ontop of another item to apply it'
     messages:
       success:
