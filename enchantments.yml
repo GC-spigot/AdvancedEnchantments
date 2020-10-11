@@ -112,6 +112,14 @@
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Send player a message
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
+#       - TITLE:(message)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Send player a message via title
+#         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
+
+#       - SUBTITLE:(message)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Send player a message via subtitle
+#         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
+
 #       - PLAYER_COMMAND:(command)
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Make player run a command
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
@@ -840,7 +848,7 @@ insomnia:
   display: '%group-color%Insomnia'
   description: "Gives slowness, slow swinging\nand confusion."
   applies-to: 'Swords'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'SIMPLE'
   applies:
     - ALL_SWORD
@@ -898,7 +906,7 @@ lightning:
   display: '%group-color%Lightning'
   description: "A chance to strike lightning\nat the opponent."
   applies-to: 'Bows'
-  type: 'BOW'
+  type: 'BOW;BOW_MOB'
   group: 'SIMPLE'
   applies:
     - BOW
@@ -936,7 +944,7 @@ thunderingblow:
   display: '%group-color%Thundering Blow'
   description: 'Can cause smite effect on your enemy.'
   applies-to: 'Swords'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'SIMPLE'
   applies:
     - ALL_SWORD
@@ -1014,7 +1022,7 @@ obliterate:
   display: '%group-color%Obliterate'
   description: 'Extreme knockback.'
   applies-to: 'Swords'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'SIMPLE'
   applies:
     - ALL_SWORD
@@ -1193,7 +1201,7 @@ berserk:
   display: '%group-color%Berserk'
   description: "A chance of strength\nand mining fatigue."
   applies-to: 'Axes'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'UNIQUE'
   applies:
     - ALL_AXE
@@ -1232,7 +1240,7 @@ ward:
   display: '%group-color%Ward'
   description: "A chance to absorb enemy\ndamage and heal you"
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'UNIQUE'
   applies:
     - ALL_ARMOR
@@ -1265,7 +1273,7 @@ curse:
   display: '%group-color%Curse'
   description: 'Gives strength, slowness and resistance at low hp.'
   applies-to: 'Chestplate'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'UNIQUE'
   applies:
     - ALL_CHESTPLATE
@@ -1318,7 +1326,7 @@ curse:
 endershift:
   display: '%group-color%EnderShift'
   description: 'Gives speed/health boost at low hp.'
-  applies-to: 'Helmet + Boots'
+  applies-to: 'Helmet, Boots'
   type: 'DEFENSE'
   group: 'UNIQUE'
   applies:
@@ -1356,7 +1364,7 @@ explosive:
   display: '%group-color%Explosive'
   description: 'Explosive arrows.'
   applies-to: 'Bows'
-  type: 'BOW'
+  type: 'BOW;BOW_MOB'
   group: 'UNIQUE'
   applies:
     - BOW
@@ -1415,7 +1423,7 @@ molten:
   display: '%group-color%Molten'
   description: 'Chance of setting your attacker ablaze.'
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'UNIQUE'
   applies:
     - ALL_ARMOR
@@ -1444,7 +1452,7 @@ ravenous:
   display: '%group-color%Ravenous'
   description: "Chance to regain hunger\nwhilst in combat."
   applies-to: 'Axes'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'UNIQUE'
   applies:
     - ALL_AXE
@@ -1626,7 +1634,7 @@ plaguecarrier:
   display: '%group-color%Plague Carrier'
   description: "When near death summons creepers\nand debuffs to avenge you."
   applies-to: 'Leggings'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'UNIQUE'
   applies:
     - ALL_LEGGINGS
@@ -1960,7 +1968,7 @@ execute:
   display: '%group-color%Execute'
   description: "Damage buff when your target is at\nlow HP."
   applies-to: 'Swords'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'ELITE'
   applies:
     - ALL_SWORD
@@ -2025,7 +2033,7 @@ frozen:
   display: '%group-color%Frozen'
   description: "Can cause slowness to attacker\nwhen defending."
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ELITE'
   applies:
     - ALL_ARMOR
@@ -2097,7 +2105,7 @@ poison:
   display: '%group-color%Poison'
   description: 'A chance of giving poison effect.'
   applies-to: 'Weapon'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'ELITE'
   applies:
     - ALL_SWORD
@@ -2125,7 +2133,7 @@ poisoned:
   display: '%group-color%Poisoned'
   description: "Chance to give poison to your attacker."
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB;DEFENSE_BOW'
   group: 'ELITE'
   applies:
     - ALL_ARMOR
@@ -2209,7 +2217,7 @@ snare:
   display: '%group-color%Snare'
   description: "Chance to slow and fatigue\nenemies with projectiles."
   applies-to: 'Bows'
-  type: 'BOW'
+  type: 'BOW;BOW_MOB'
   group: 'ELITE'
   applies:
     - BOW
@@ -2261,7 +2269,7 @@ stormcaller:
   display: '%group-color%Stormcaller'
   description: 'Strikes lightning on attacking players.'
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ELITE'
   applies:
     - ALL_ARMOR
@@ -2323,7 +2331,7 @@ trap:
   display: '%group-color%Trap'
   description: 'Chance to give buffed slowness effect.'
   applies-to: 'Swords'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'ELITE'
   applies:
     - ALL_SWORD
@@ -2350,7 +2358,7 @@ undeadruse:
   display: '%group-color%Undead Ruse'
   description: "When hit you have a chance to spawn zombie\nhordes to distract and disorient your opponents."
   applies-to: 'Boots'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ELITE'
   applies:
     - ALL_BOOTS
@@ -2428,7 +2436,7 @@ venom:
   display: '%group-color%Venom'
   description: 'A chance of dealing poison.'
   applies-to: 'Bows'
-  type: 'BOW'
+  type: 'BOW;BOW_MOB'
   group: 'ELITE'
   applies:
     - BOW
@@ -2453,7 +2461,7 @@ voodoo:
   display: '%group-color%Voodoo'
   description: 'Gives a chance to deal weakness.'
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ELITE'
   applies:
     - ALL_ARMOR
@@ -2492,7 +2500,7 @@ wither:
   display: '%group-color%Wither'
   description: 'A chance to give the wither effect.'
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ELITE'
   applies:
     - ALL_ARMOR
@@ -2599,7 +2607,7 @@ infernal:
   display: '%group-color%Infernal'
   description: 'Explosive fire effect.'
   applies-to: 'Bow'
-  type: 'BOW'
+  type: 'BOW;BOW_MOB'
   group: 'ELITE'
   applies:
     - BOW
@@ -2627,7 +2635,7 @@ pummel:
   display: '%group-color%Pummel'
   description: "Chance to slow nearby enemy\nplayers for a short period."
   applies-to: 'Axe'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'ELITE'
   applies:
     - ALL_AXE
@@ -3133,7 +3141,7 @@ angelic:
   display: '%group-color%Angelic'
   description: "Heals health when damaged."
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ULTIMATE'
   applies:
     - ALL_ARMOR
@@ -3431,7 +3439,7 @@ ragdoll:
   display: '%group-color%Ragdoll'
   description: "Whenever you take damage\nyou are pushed far back."
   applies-to: 'Armor'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ULTIMATE'
   applies:
     - ALL_ARMOR
@@ -3460,7 +3468,7 @@ block:
   display: '%group-color%Block'
   description: "A chance to negate an attack and deal up to 4 damage back."
   applies-to: 'Swords'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ULTIMATE'
   applies:
     - ALL_SWORD
@@ -3685,7 +3693,7 @@ iceaspect:
   display: '%group-color%Ice Aspect'
   description: "A chance of causing the slowness\neffect on your enemy."
   applies-to: 'Swords'
-  type: 'ATTACK'
+  type: 'ATTACK;ATTACK_MOB'
   group: 'ULTIMATE'
   applies:
     - ALL_SWORD
@@ -3911,7 +3919,7 @@ dominate:
   display: '%group-color%Dominate'
   description: "Chance to weaken enemy players when attacked,\ncausing them to deal less damage."
   applies-to: 'Swords'
-  type: 'DEFENSE'
+  type: 'DEFENSE;DEFENSE_MOB'
   group: 'ULTIMATE'
   applies:
     - ALL_SWORD
@@ -4338,7 +4346,7 @@ pacify:
   display: '%group-color%Pacify'
   description: "A chance to pacify your target,\ndealing 1-4 damage and\nstopping their next attack on you."
   applies-to: 'Bow'
-  type: 'BOW'
+  type: 'BOW;BOW_MOB'
   group: 'ULTIMATE'
   applies:
     - BOW
@@ -4881,32 +4889,32 @@ quiver:
       chance: 8
       cooldown: 10
       effects:
-        - 'PULL_AWAY:5.5'
+        - 'PULL_AWAY:3.5'
     2:
       chance: 10
       cooldown: 10
       effects:
-        - 'PULL_AWAY:6'
+        - 'PULL_AWAY:4'
     3:
       chance: 12
       cooldown: 10
       effects:
-        - 'PULL_AWAY:6.5'
+        - 'PULL_AWAY:4.5'
     4:
       chance: 14
       cooldown: 10
       effects:
-        - 'PULL_AWAY:7'
+        - 'PULL_AWAY:5'
     5:
       chance: 16
       cooldown: 10
       effects:
-        - 'PULL_AWAY:8.5'
+        - 'PULL_AWAY:5.5'
     6:
       chance: 18
       cooldown: 10
       effects:
-        - 'PULL_AWAY:9.0'
+        - 'PULL_AWAY:6.0'
 fat:
   display: '%group-color%Fat'
   description: "Chance to receives increased damage negation\nwhen damaged, as well as absorption at higher levels."
