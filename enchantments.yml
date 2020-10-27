@@ -4889,32 +4889,32 @@ quiver:
       chance: 8
       cooldown: 10
       effects:
-        - 'PULL_AWAY:3.5'
+        - 'PULL_AWAY:1'
     2:
       chance: 10
       cooldown: 10
       effects:
-        - 'PULL_AWAY:4'
+        - 'PULL_AWAY:1.5'
     3:
       chance: 12
       cooldown: 10
       effects:
-        - 'PULL_AWAY:4.5'
+        - 'PULL_AWAY:2'
     4:
       chance: 14
       cooldown: 10
       effects:
-        - 'PULL_AWAY:5'
+        - 'PULL_AWAY:2.5'
     5:
       chance: 16
       cooldown: 10
       effects:
-        - 'PULL_AWAY:5.5'
+        - 'PULL_AWAY:3'
     6:
       chance: 18
       cooldown: 10
       effects:
-        - 'PULL_AWAY:6.0'
+        - 'PULL_AWAY:3.5'
 fat:
   display: '%group-color%Fat'
   description: "Chance to receives increased damage negation\nwhen damaged, as well as absorption at higher levels."
@@ -6798,22 +6798,22 @@ bidirectionalteleportation:
       chance: 12
       cooldown: 4
       effects:
-        - 'PULL_CLOSER:5.0 %victim%'
+        - 'PULL_CLOSER:2.0 %victim%'
     2:
       chance: 23
       cooldown: 5
       effects:
-        - 'PULL_CLOSER:5.0 %victim%'
+        - 'PULL_CLOSER:2.0 %victim%'
     3:
       chance: 32
       cooldown: 5
       effects:
-        - 'PULL_CLOSER:5.0 %victim%'
+        - 'PULL_CLOSER:3.0 %victim%'
     4:
       chance: 44
       cooldown: 5
       effects:
-        - 'PULL_CLOSER:5.0 %victim%'
+        - 'PULL_CLOSER:3.0 %victim%'
 masterblacksmith:
   display: '%group-color%Master Blacksmith'
   description: "Chance to heal your most damaged\npiece of armor by 2-3 durability whenever\nyou hit a player, but when it procs your\nattack will deal between 75%-100% damage.\nRequires Blacksmith V enchantment on item to apply."
