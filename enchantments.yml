@@ -406,6 +406,11 @@
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Send action bar message to player
 #         * Usᴇᴅ Wɪᴛʜ: ALL
 
+#       - PLANT_SEEDS:<radius, in blocks>
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Plant seeds in radius
+#         * Usᴇᴅ Wɪᴛʜ: ALL
+#         * Minecraft version: 1.13+
+
 #       - PERMISSION:<permission>
 #         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Adds permission to player via memory (resets upon restart)
 #         * With permanent events such as 'HELD' & 'EFFECT_STATIC', it will add upon activation and remove upon deactivation
@@ -504,6 +509,34 @@
 #      - 'My_World'
 
 #---- 1.13 or newer only enchantments ----#
+planter:
+  display: '%group-color%Planter'
+  description: "Plant seeds in a 3x3 area\nby shift+right-clicking."
+  applies-to: 'Hoes'
+  type: 'RIGHT_CLICK'
+  group: 'ULTIMATE'
+  settings:
+    newVersionsOnly: true # Only load this enchantment if server version is 1.13 or higher
+  applies:
+    - ALL_HOE
+  levels:
+    1:
+      condition:
+        - '%player is sneaking% = true : %allow%'
+      cooldown: 3
+      effects:
+        - 'PLANT_SEEDS:3'
+    2:
+      condition:
+        - '%player is sneaking% = true : %allow%'
+      cooldown: 2
+      effects:
+        - 'PLANT_SEEDS:3'
+    3:
+      condition:
+        - '%player is sneaking% = true : %allow%'
+      effects:
+        - 'PLANT_SEEDS:3'
 strike:
   display: '%group-color%Strike'
   description: "A chance to strike lightning\nat the opponent."
