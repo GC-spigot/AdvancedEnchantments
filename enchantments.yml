@@ -30,7 +30,7 @@
 
 #  Group (Setting)
 #    INFO: Create enchantment groups in config.yml under enchanter configuration.
-#   Enchantment groups are used for enchanter, to sell specific type books. You can group them
+#   Enchantment groups are used for the enchanter, to sell specific type books. You can group them
 #   and add a group-wide color, then obtain it with variable %group-color% (shown in example enchantments below).
 
 #  Type (Setting)
@@ -38,32 +38,32 @@
 #    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn)
 #    - ATTACK : Effects run only when attacking another player
 #    - DEFENSE : Effects run only when being attacked
-#    - DEFENSE_BOW : Effects run only when player gets shot by a bow
-#    - MINING : Gives effects when block is mined
-#    - HELD : Effects given when item is held
-#    - ATTACK_MOB : Gives effects when player attacks mob
-#    - KILL_MOB : Effects given when attacked mob is killed
-#    - BOW : Effects given when player is shot by another player
+#    - DEFENSE_BOW : Effects run only when the player gets shot by a bow
+#    - MINING : Gives effects when a block is mined
+#    - HELD : Effects given when an item is held
+#    - ATTACK_MOB : Gives effects when the player attacks a mob
+#    - KILL_MOB : Effects given when the attacked mob is killed
+#    - BOW : Effects given when a player is shot by another player
 #    - KILL_PLAYER : Effects given when attacker kills a player
-#    - DEATH : Runs when player dies due to another player.
-#    - RIGHT_CLICK : Runs when player right clicks held item
-#    - BOW_MOB : Effects given when mob is shot by player
-#    - FIRE : Effects given when player is on fire
-#    - EXPLOSION : Effects given when player gets hit by explosion
+#    - DEATH : Runs when a player dies due to another player.
+#    - RIGHT_CLICK : Runs when a player right-clicks held item
+#    - BOW_MOB : Effects given when a mob is shot by a player
+#    - FIRE : Effects given when a player is on fire
+#    - EXPLOSION : Effects given when a player gets hit by an explosion
 #    - SWING : Enchant runs when player swings
-#    - FALL_DAMAGE : Enchant runs when player takes fall damage
-#    - DEFENSE_MOB : Enchant runs when mob attacks a player
+#    - FALL_DAMAGE : Enchant runs when the player takes fall damage
+#    - DEFENSE_MOB : Enchant runs when a mob attacks a player
 #    - SHIFT : Enchant runs when player toggles crouching (shifts)
 #    - ITEM_BREAK : Enchant runs when player toggles crouching (shifts)
-#    - CATCH_FISH : Enchant runs when player catches a fish
-#    - PASSIVE_DEATH : Enchant runs when player dies from non-pvp related cause
+#    - CATCH_FISH : Enchant runs when a player catches a fish
+#    - PASSIVE_DEATH : Enchant runs when a player dies from a non-PVP related cause
 #    - REPEATING : Repeating enchantments, read more here:
 #        https://github.com/N3kas/AdvancedEnchantments/wiki/Æ-Repeating-Enchantments-(timed)
 
 #  Applies (Material)
 #    Determines which items will have the effects
 #    Latest Materials list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
-#    NOTICE: You can use "LEATHER_ARMOR, IRON_ARMOR, CHAIN_ARMOR, GOLD_ARMOR or DIAMOND_ARMOR" to
+#    NOTICE: You can use "LEATHER_ARMOR, IRON_ARMOR, CHAIN_ARMOR, GOLD_ARMOR, or DIAMOND_ARMOR" to
 #    to instantly add availability for all specific armor type pieces.
 #    Use "ALL_ARMOR" to add all armor pieces.
 #    Use "ALL_HELMET" to add all helmets
@@ -72,10 +72,10 @@
 #    Use "ALL_SWORD" to add all swords
 #    Use "ALL_PICKAXE" to add all pickaxes
 #    Use "ALL_AXE" to add all axes
-#    And so on, but make sure to use non plural names of items!
+#    And so on, but make sure to use non-plural names of items!
 
 #  Levels (Numbers)
-#    Effects for each level, use as display in examples.
+#    Effects for each level, use as a display in examples.
 
 #  Effects (Custom Effects, Potion Effects)
 #    List of effects enchantment will have
@@ -133,7 +133,7 @@
 #         * Usᴇᴅ Wɪᴛʜ: ATTACK_MOB, ATTACK, DEFENSE
 
 #       - LIGHTNING
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Strike a lightning at location of entity
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Strike lightning at the location of the entity
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - REPAIR
@@ -141,7 +141,7 @@
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - TNT:(integer)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Spawn number of TNT at entity's location
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Spawn number of TNT at the entity's location
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - DROP_HEAD
@@ -157,19 +157,19 @@
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - ADD_HEALTH:(integer)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Add number of health to entity
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Add number of health to the entity
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - FLAME:(integer)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Set entity on fire for number of seconds
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Set entity on fire for a number of seconds
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - CURE:(potion effect)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove a potion effect from player (doesn't remove permanent potion effects)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove a potion effect from the player (doesn't remove permanent potion effects)
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - CURE_PERMANENT:(potion effect)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove a potion effect from player (removes permanent potion effects as well)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove a potion effect from the player (removes permanent potion effects as well)
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - ADD_HARM:(integer)
@@ -185,7 +185,7 @@
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - PLAY_SOUND_OUTLOUD:(sound)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Play sound outloud for surrounding players (near specified player)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Play sound out loud for surrounding players (near specified player)
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - GUARD:(mob type):(mob name, can use %player name%)
@@ -234,15 +234,15 @@
 #         * Usᴇᴅ Wɪᴛʜ: ATTACK
 
 #       - SPAWN_ARROWS
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Spawn arrows on top of player
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Spawn arrows on top of the player
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - PULL_CLOSER
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Pull entity closer from opponent
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Pull entity closer from an opponent
 #         * Usᴇᴅ Wɪᴛʜ: Any effect with 2 parties involved
 
 #       - PULL_AWAY
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Pull entity further from opponent
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Push entity further from an opponent
 #         * Usᴇᴅ Wɪᴛʜ: Any effect with 2 parties involved
 
 #       - IGNORE_ARMOR_DAMAGE
@@ -266,7 +266,7 @@
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - HALF_DAMAGE
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Deduce half damage from attack
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Deduce half damage from an attack
 #         * Usᴇᴅ Wɪᴛʜ: ATTACK, DEFENSE, BOW
 
 #       - NEGATE_DAMAGE:(integer)
@@ -301,7 +301,7 @@
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - REMOVE_HOLYWHITESCROLL
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove holy whitescroll from item with this effect
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Remove holy whitescroll from the item with this effect
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - STEAL_EXP:(amount)
@@ -347,11 +347,11 @@
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
 #       - DISARM
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Disarm oponent
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Disarm opponent
 #         * Usᴇᴅ Wɪᴛʜ: All 2-player enchant types
 
 #       - ADD_ENCHANT:(enchant):(level)
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Add the specified enchant onto held item
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Add the specified enchant onto the held item
 #         * Usᴇᴅ Wɪᴛʜ: All enchant types
 
 #       - REMOVE_ENCHANT:(enchant)
@@ -367,7 +367,7 @@
 #         * Usᴇᴅ Wɪᴛʜ: All enchant types
 
 #       - ADD_DURABILITY_CURRENT_ITEM
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Changes durability on item which executed the enchant
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Changes durability on the item which executed the enchant
 #         * Usᴇᴅ Wɪᴛʜ: All enchant types
 
 #       - TAKE_AWAY:<material>:<amount>
@@ -399,7 +399,7 @@
 #         * Usᴇᴅ Wɪᴛʜ: All enchant types
 
 #       - BREAK_TREE
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Break whole tree in one hit
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Break an entire tree in one hit
 #         * Usᴇᴅ Wɪᴛʜ: MINING
 
 #       - ACTIONBAR:<message>
@@ -412,7 +412,7 @@
 #         * Minecraft version: 1.13+
 
 #       - PERMISSION:<permission>
-#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Adds permission to player via memory (resets upon restart)
+#         * Dᴇsᴄʀɪᴘᴛɪᴏɴ: Adds permission to the player via memory (resets upon restart)
 #         * With permanent events such as 'HELD' & 'EFFECT_STATIC', it will add upon activation and remove upon deactivation
 #         * Usᴇᴅ Wɪᴛʜ: All Enchant Types
 
@@ -422,9 +422,9 @@
 #        # Use <chance>x</chance> to set per-effect chance, x being a chance percentage.
 #        # e.g.: 'POTION:SPEED:1:100 %attacker% <chance>25</chance>'
 
-#        # You also may use %victim% or %attacker% flag to give effects to different players (in ATTACK, BOW, DEATH, KILL_PLAYER and DEFENSE types).
+#        # You also may use %victim% or %attacker% flag to give effects to different players (in ATTACK, BOW, DEATH, KILL_PLAYER, and DEFENSE types).
 #        # Example usage: - 'POTION:POISON:1:50 %attacker%', this will give Level 2 POISON potion effect to the player who attacked.
-#        # If none is provided, effects will be given to the player who had custom enchanted item.
+#        # If none is provided, effects will be given to the player who had a custom enchanted item.
 #        # You can add %combo% instead of numbers, to use number of combo's player has (eg. to limit combo number: '%combo% > 0 && %combo% < 5 : %continue%')
 #        # You can add %damage% instead of numbers, to use number of damage has been done (for ATTACK and DEFENSE)
 
@@ -442,10 +442,10 @@
 #       -> all (all players in radius)
 #
 #       -> damageable (all players in radius which CAN be damaged by enchantment owner. This should be compatible with most plugins)
-#         (Example usage: Can allow AOE (area of damage) to inflict damage to all enemied faction players in radius, since player can damage them)
+#         (Example usage: Can allow AOE (area of damage) to inflict damage to all enemy faction players in radius since the player can damage them)
 #
 #       -> undamageable (all players in radius which CANNOT be damaged by enchantment owner. This should be compatible with most plugins)
-#         (Example usage: Can be used to heal all faction members in radius, since player cannot damage them)
+#         (Example usage: Can be used to heal all faction members in radius, since the player cannot damage them)
 #
 
 #  Chance (Number)
@@ -455,7 +455,7 @@
 #    Number of effect cooldown, in seconds.
 
 # Conditions
-#   Conditions let you choose under what circumstances enchantment should be activated/stopped or chance increased/descreased
+#   Conditions let you choose under what circumstances enchantment should be activated/stopped or chance increased/decreased
 #
 #   « Examples »
 #      ► '%victim health% > 5 : %stop%' (Will not activate effects if player's health is higher than 2.5 hearts (1 heart = 2)
