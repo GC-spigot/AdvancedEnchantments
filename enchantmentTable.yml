@@ -1,27 +1,31 @@
 # Enchantment Table Support
-enabled: false
+enabled: true
 
-# Chance of an enchantment in the enchantment table turning into a custom enchant
-chance: 20
+# Chance of getting custom enchantments when
+# enchanting with enchantment table.
+chance: 45 # Value: 1 to 100 %
 
 # Chances for each group to become available in enchant table (only if 'chance' value activates)
-# Only listed groups here will be available in the enchantment table.
+# Only listed groups here will be available in enchant table
 groupChances:
   SIMPLE: 50
-  UNIQUE: 30
-  ELITE: 15
-  ULTIMATE: 7
-  LEGENDARY: 3
+  UNIQUE: 40
+  ELITE: 30
+  ULTIMATE: 20
+  LEGENDARY: 10
 
-# Enchantment Pricing (in exp levels)
-# How pricing is picked: Plugin looks at available prices in enchantment table and assigns the enchants into 3 categories
-#  Pricing Categories:
-#    Lowest Level - the price of enchantments below 10 levels (1-9)
-#    Middle Level - the price of enchantments more than 10 levels and less than 25 (10-24)
-#    Highest Level - the price of enchantments more than or equal to 25 (25-30)
-#  If you assign a custom price, that price will be shown as an enchantment price in that category
-# Example:
-pricing:
-  lowestLevel: 3-9
-  middleLevel: 10-24
-  highestLevel: 25-30
+
+# Set how many custom enchantments is possible
+# to get from enchanting at once.
+enchantCount:
+  lowestLevel: 1 # Value: 1 - 10
+  middleLevel: 1-2 # Value: 1 - 10
+  highestLevel: 2-3 # Value: 1 - 10
+
+prices:
+  # Configure enchantment table pricing
+  # By default these are random between 2 values, but can be
+  # set to a specific price, or even higher than vanilla prices
+  lowestLevel: 3-9 # Value: 1 - 1000
+  middleLevel: 10-24 # Value: 1 - 1000
+  highestLevel: 30 # Value: 1 - 1000
