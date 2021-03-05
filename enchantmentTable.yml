@@ -23,6 +23,7 @@ enchantCount:
   highestLevel: 2-3 # Value: 1 - 10
 
 prices:
+  enabled: false
   # Configure enchantment table pricing
   # By default these are random between 2 values, but can be
   # set to a specific price, or even higher than vanilla prices
