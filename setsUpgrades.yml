@@ -2,7 +2,7 @@
 
 # Heroic Upgrades (Increase armor durability and strength)
 # Turns armor it's applied to into a leather item piece for noticibility
-# Command to give an upgrade: /asets heroic <player> <setName>
+# Command to give an upgrade: /asets giveHeroicUpgrade <player> <set> <chance> [amount]
 
 armorCrystal:
   item:
