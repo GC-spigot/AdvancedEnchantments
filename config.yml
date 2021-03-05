@@ -1,18 +1,17 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 7.4.8
-# Release date: 2020.04.26
+# Version: 8.0.0-Pre20.6
+# Release date: 2021/03/05
 
 # ** Commands and permissions
-# /enchanter - Open Enchanter; no permission
+# /enchanter - Open Enchanter; n permission
 # /tinkerer - Open Tinkerer; no permission
 # /gkits - Open GKits; no permission
-# /ae - Main plugin command; no permission
+# /ae - Main plugin command; ae.help
 # /ae about - Information about current build; no permission
 # /ae list - List all custom enchantments; ae.list
 # /ae admin - Open a menu with all possible enchantments (100% success rate); ae.admin
 # /ae giveitem <player> <item> - Give various plugin items; ae.giveitem
-# /ae give <player> <enchantment> <level> - Give custom enchanted book; ae.give
 # /ae give <player> <enchantment> <level> - Give custom enchanted book; ae.give
 # /ae info <enchantment> - Information about custom enchantment; ae.info
 # /ae reload - Reload all configurations; ae.reload
@@ -30,10 +29,16 @@
 # /asets - Advanced Sets commands; asets.admin
 
 # Some configurable settings are explained, others should be self-explanatory.
-# Contact "GC." on SpigotMC with any questions or bug reports.
+# Join support discord for help or with questions: https://advancedplugins.net/discord
 
 # Manage plugin commands
 commands:
+  advancedenchantments:
+    # Should 'no permission' message be shown when
+    # user does not have 'ae.help' permission
+    permissionMessageEnabled: true
+    permissionMessage:
+      - '&6&lAdvancedEnchantments &cYou do not have permission to use this command.'
   enchanter:
     # Is command enabled?
     enabled: true
@@ -42,6 +47,7 @@ commands:
     # List of commands that will act as the command
     aliases:
       - 'e'
+      - 'ce'
   tinkerer:
     enabled: true
     command: /tinkerer
@@ -182,7 +188,7 @@ combining:
     # If true, Success and Destroy chances will effect combining
     use-chances: true
     # If true, item will break (if Protection is added, protection will be removed).
-    break-item: true
+    break-item: false
     # If higher level of enchantment already on item is applied, should the enchantment upgrade?
     upgrade: yes
   messages:
@@ -230,7 +236,7 @@ enchanter-books:
     particle: 'HAPPY_VILLAGER'
     sound: 'LEVEL_UP'
   # Show message when enchantment book is right clicked
-  display-right-click-message: false
+  display-right-click-message: true
   # Variables: %enchant% - enchantment name
   # %enchant-color% - enchantment name with color
   # %level% - level number in roman
@@ -241,7 +247,7 @@ enchanter-books:
   force-glow: false
   name: '%group-color%&l%group-name%&l Enchantment Book &7(Right Click)'
   lore:
-    - '&7Examine to receive a random'
+    - '&7Right Click while holding to receive a random'
     - '%group-color%%group-name% &7enchantment book.'
 
 items:
@@ -257,6 +263,11 @@ items:
       - ALL_HOE
       - BOOK
       - BOW
+      - CROSSBOW
+      - SKULL_ITEM
+      - PLAYER_HEAD
+      - ELYTRA
+      - TRIDENT
   transmogscroll:
     type: PAPER
     id: 0
@@ -319,6 +330,9 @@ items:
     success: 95
     destroy: 5
     random: true
+    messages:
+      noEnchantments: '&c&l(!)&c This item has &l0&c enchantments!'
+      cannotBeRemoved: '&c&l(!)&c %enchant% cannot be removed as it''s invalid.'
   secret-dust:
     type: FIREBALL
     id: 0
@@ -341,6 +355,8 @@ items:
       - '&a+%percent%% Success'
       - '&7Apply to a &7any %group-color%%group-name% &7Enchantment Book'
       - '&7to increase its success by %group-color%%percent%%'
+    messages:
+      cannotApplyToStacked: '&c&l(!) &cCannot be applied to stacked books'
   slot-increaser:
     type: EYE_OF_ENDER
     id: 0
@@ -447,7 +463,6 @@ items:
 
 white-scroll:
   # Obtain white scroll by giving it with command '/ae giveitem <player> whitescroll'
-  #
   # Should the white scroll be removed once applied enchantment fails?
   delete: true
   # Display in item lore
@@ -501,7 +516,7 @@ enchanter:
   #  %price% - price
   #  %left% - remaining needed exp until player can purchase item
   # Economy:
-  # exp, money, level, souls (works with items that are held when opening inventory)
+  # exp, money, level, souls (works with items that are held when opening inventory), diamonds, gold (gold ingots), emeralds
   inventory:
     size: 18
     name: '&7Server Enchanter'
@@ -511,6 +526,13 @@ enchanter:
       # <number> - Gives specific level of enchant
       enchanterBookLevel: 'ALL'
     items:
+      '0-18':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 7
+          force-glow: false
+        name: ' '
+        lore: []
       '2':
         item:
           type: STAINED_GLASS_PANE
@@ -586,13 +608,13 @@ enchanter:
           type: STAINED_GLASS_PANE
           id: 14
           force-glow: false
-        enchant-group: HEROIC
-        price: exp:50000
+        enchant-group: FABLED
+        price: exp:40000
         sound: ANVIL_LAND
-        name: '&4&lHeroic Enchantment &7(Right Click)'
+        name: '&d&lFabled Enchantment &7(Right Click)'
         lore:
           - '&7Examine to recieve a random'
-          - '&4heroic &7enchantment book.'
+          - '&dfabled &7enchantment book.'
           - ''
           - '&b&lCOST &f%price% EXP &7(You need %left% more)'
       '9':
@@ -626,7 +648,7 @@ destroy:
   # Should book be destroyed if it fails?
   enabled: true
   # Should Item be detroyed?
-  destroy-item: true
+  destroy-item: false
   # Enchantment fail message.
   message:
     - '&c&l(!) &cEnchantment was unsuccessful'
@@ -641,7 +663,7 @@ chances:
   # If applying book fails, should plugin destroy item 100% of the time or use Destroy from book to give a chance to
   # neither apply enchant neither destroy. If set to 'enabled: true', item will always be destroyed.
   destroy-if-fail:
-    enabled: true
+    enabled: false
     message:
       - '&c&l(!) &cYour book failed but item wasn''t destroyed!'
 
@@ -674,7 +696,7 @@ enchantment-book:
     type: BOOK
     id: 0
     force-glow: false
-    # Variables: %enchant%, %enchant-no-color%, %description%, %applies%, %success%, %destroy%, %color%
+    # Variables: %enchant%, %enchant-no-color%, %description%, %applies%, %success%, %destroy%, %color%, %max-level%
   name: '%group-color%&l&n%enchant-no-color% %level%'
   lore:
     - '&a%success%% Success Rate'
@@ -706,19 +728,24 @@ messages:
     reapplied: '&aYour armor has been re-applied.'
 
 settings:
+  # Should enchantments on items be organized automatically in lore based on rarity?
+  organizeEnchantsOnItems: true
+  # If this is true, items with custom enchants will have the same glowing effect
+  # as items with vanilla enchants.
+  custom-enchants-cause-glow: false
   # Non-legacy potions system stacks potions nd removes portions of potion from player,
   # so removing one piece will not remove the whole streak. Suggested value: true
   use-legacy-potions-system: true
+
   steal-money:
     message-enabled: false
     # replace with 'you' instead of player name for directed player
     message: '&6%attacker% &7stole &6%amount% &7from &6%victim%'
+
   # After how many sequential hits combo should reset?
   combo-limit: 5
   # Should trenched drops be automatically added to inventory? (prevents lag)
   trench-autoadd-items: false
-  # Should plugin run WorldGuard check for SWING enchant type? (might effect performance)
-  swing-worldguard-check: true
   # Length of name player can rename items to with itemnametag
   itemnametag-max-name-length: 32
   # Use all mined blocks durability on TRENCH items
@@ -746,12 +773,39 @@ settings:
     - 'SPAWNER'
     - 'PORTAL'
     - 'SHULKER'
+    - 'BARRIER'
+    - 'END_PORTAL_FRAME'
+    - 'END_PORTAL'
+    - 'SHULKER_BOX'
+    - 'RED_SHULKER_BOX'
+    - 'WHITE_SHULKER_BOX'
+    - 'ORANGE_SHULKER_BOX'
+    - 'MAGENTA_SHULKER_BOX'
+    - 'LIGHT_BLUE_SHULKER_BOX'
+    - 'YELLOW_SHULKER_BOX'
+    - 'LIME_SHULKER_BOX'
+    - 'PINK_SHULKER_BOX'
+    - 'GRAY_SHULKER_BOX'
+    - 'LIGHT_GRAY_SHULKER_BOX'
+    - 'CYAN_SHULKER_BOX'
+    - 'PURPLE_SHULKER_BOX'
+    - 'BLUE_SHULKER_BOX'
+    - 'BROWN_SHULKER_BOX'
+    - 'GREEN_SHULKER_BOX'
+    - 'BLACK_SHULKER_BOX'
   # Worlds to disable enchantments in
   enchantment-world-blacklist:
     - 'no_enchantments_world'
   holy-whitescrolls-world-blacklist:
     - 'no_holywhitescrolls_world'
+  # If a player is in any of the worlds listed, the FLY effect will not work.
+  # Note that the world names are case-sensitive.
+  fly-world-blacklist:
+    - 'no_fly_world'
   open-enchanter-by-right-clicking-enchantment-table: false
+  # If this is enabled, "Nether trees" (and mushrooms) will be counted as regular
+  # trees for effects like BREAK_TREE.
+  stems-count-as-trees: false
   # Get activated enchants listed in chat upon enchant type trigger
   enchants-debug-mode: false
   # Cooldown (in seconds) for /apply command, make sure to have a cooldown as extensive spam could impact peformance
@@ -771,9 +825,39 @@ settings:
     # Setting this to FALSE will only make the plugin work with WorldGuard
     # Setting this to TRUE will let plugin choose between WG-only or Universal method, may cause performance loss
     automaticallyDetect: true
-  # Should souls be collected from mobs? By default souls are collected from Mobs only
+  # Radius of the 'LAVA_WALKER' enchant. Can't be less then 2 or more then 10.
+  lava-walker-radius: 2
+  # Same as lavawalker-range but for 'WATER_WALKER'.
+  water-walker-radius: 2
+  # Should souls be collected from mobs? By default souls are collected from Players only
   collect-souls-from-mobs: false
   # Trench Whitelist
   # If list is not empty, will not allow to break any other blocks than listed here
   trench-whitelist: []
   # E.g.: - 'DIAMOND_ORE'
+
+  # Show enchantment level for level 1 enchants?
+  # E.g. if enabled, enchant 'Gears I' would be shown as 'Gears', but 'Gears II' would stay the same.
+  showFirstLevel: true
+  # Should plugin re-apply armor when /heal is used?
+  heal-check: true
+  # Show warning messages in console if you have an invalid particle / sound set in config?
+  invalidSettingWarnings: true
+
+  # Collecting souls from mining
+  # This can be used as a 'tokens' currency for prison servers
+  miningSouls:
+    enabled: false
+    # Chance to gain a soul from mining
+    chance: 20
+
+  # Should combining custom enchanted items in anvil be allowed?
+  anvilCombining: true
+
+  # Should BOW enchants only activate if bow that was shot with was extended fully?
+  bow-full-power: true
+
+  # Should enchantment descriptions be added under enchant names in lores?
+  lore-descriptions:
+    enabled: false
+    display: '%group-color%* &8%description%'
