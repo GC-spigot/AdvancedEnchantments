@@ -978,7 +978,7 @@ explosivedemise:
         - '%victim health% > 6 : %stop%'
       effects:
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:0:40 %attacker%'
+        - 'POTION:BLINDNESSNESS:0:40 %attacker%'
     2:
       chance: 17
       cooldown: 3
@@ -986,7 +986,7 @@ explosivedemise:
         - '%victim health% > 6 : %stop%'
       effects:
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:0:60 %attacker%'
+        - 'POTION:BLINDNESSNESS:0:60 %attacker%'
     3:
       chance: 24
       cooldown: 3
@@ -994,7 +994,7 @@ explosivedemise:
         - '%victim health% > 7 : %stop%'
       effects:
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:0:100 %attacker%'
+        - 'POTION:BLINDNESSNESS:0:100 %attacker%'
     4:
       chance: 30
       cooldown: 3
@@ -1002,7 +1002,7 @@ explosivedemise:
         - '%victim health% > 7 : %stop%'
       effects:
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:1:40 %attacker%'
+        - 'POTION:BLINDNESSNESS:1:40 %attacker%'
     5:
       chance: 38
       cooldown: 3
@@ -1011,7 +1011,7 @@ explosivedemise:
       effects:
         - 'GUARD:CREEPER:%victim%'
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:1:80 %attacker%'
+        - 'POTION:BLINDNESSNESS:1:80 %attacker%'
     6:
       chance: 46
       cooldown: 3
@@ -1020,7 +1020,7 @@ explosivedemise:
       effects:
         - 'GUARD:CREEPER:%victim%'
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:1:120 %attacker%'
+        - 'POTION:BLINDNESSNESS:1:120 %attacker%'
     7:
       chance: 55
       cooldown: 3
@@ -1029,7 +1029,7 @@ explosivedemise:
       effects:
         - 'GUARD:CREEPER:%victim%'
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:2:60 %attacker%'
+        - 'POTION:BLINDNESSNESS:2:60 %attacker%'
     8:
       chance: 69
       cooldown: 3
@@ -1039,7 +1039,7 @@ explosivedemise:
         - 'GUARD:CREEPER:%victim%'
         - 'GUARD:CREEPER:%victim%'
         - 'GUARD:CREEPER:%victim%'
-        - 'POTION:BLINDNESS:2:100 %attacker%'
+        - 'POTION:BLINDNESSNESS:2:100 %attacker%'
 enderslayer:
   display: '%group-color%Ender Slayer'
   description: "Increases damage dealt to Enderman and Ender dragons."
@@ -1518,25 +1518,25 @@ reaper:
       cooldown: 16
       effects:
         - 'POTION:WITHER:0:35 %victim%'
-        - 'POTION:BLINDNESS:0:35 %victim%'
+        - 'POTION:BLINDNESSNESS:0:35 %victim%'
     2:
       chance: 10
       cooldown: 14
       effects:
         - 'POTION:WITHER:0:40 %victim%'
-        - 'POTION:BLINDNESS:0:40 %victim%'
+        - 'POTION:BLINDNESSNESS:0:40 %victim%'
     3:
       chance: 12
       cooldown: 12
       effects:
         - 'POTION:WITHER:0:50 %victim%'
-        - 'POTION:BLINDNESS:0:50 %victim%'
+        - 'POTION:BLINDNESSNESS:0:50 %victim%'
     4:
       chance: 14
       cooldown: 10
       effects:
         - 'POTION:WITHER:0:60 %victim%'
-        - 'POTION:BLINDNESS:0:60 %victim%'
+        - 'POTION:BLINDNESSNESS:0:60 %victim%'
 netherslayer:
   display: '%group-color%Nether Slayer'
   description: "Increases damage dealt to nether mobs."
@@ -1595,17 +1595,17 @@ blind:
       chance: 17
       cooldown: 3
       effects:
-        - 'POTION:BLINDNESS:0:60 %victim%'
+        - 'POTION:BLINDNESSNESS:0:60 %victim%'
     2:
       chance: 25
       cooldown: 3
       effects:
-        - 'POTION:BLINDNESS:1:80 %victim%'
+        - 'POTION:BLINDNESSNESS:1:80 %victim%'
     3:
       chance: 33
       cooldown: 3
       effects:
-        - 'POTION:BLINDNESS:2:100 %victim%'
+        - 'POTION:BLINDNESSNESS:2:100 %victim%'
 allure:
   display: '%group-color%Allure'
   description: "Your attack pulls mobs towards you."
@@ -2078,7 +2078,7 @@ smokebomb:
         - '%victim health% > 4 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:0:60 %attacker%'
+        - 'POTION:BLINDNESSNESS:0:60 %attacker%'
     2:
       chance: 15
       cooldown: 2
@@ -2086,7 +2086,7 @@ smokebomb:
         - '%victim health% > 4 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:0:60 %attacker%'
+        - 'POTION:BLINDNESSNESS:0:60 %attacker%'
     3:
       chance: 23
       cooldown: 2
@@ -2094,7 +2094,7 @@ smokebomb:
         - '%victim health% > 4 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:0:100 %attacker%'
+        - 'POTION:BLINDNESSNESS:0:100 %attacker%'
     4:
       chance: 28
       cooldown: 2
@@ -2102,7 +2102,7 @@ smokebomb:
         - '%victim health% > 5 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:0:100 %attacker%'
+        - 'POTION:BLINDNESSNESS:0:100 %attacker%'
     5:
       chance: 30
       cooldown: 2
@@ -2110,7 +2110,7 @@ smokebomb:
         - '%victim health% > 5 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:1:60 %attacker%'
+        - 'POTION:BLINDNESSNESS:1:60 %attacker%'
     6:
       chance: 34
       cooldown: 2
@@ -2118,7 +2118,7 @@ smokebomb:
         - '%victim health% > 5 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:1:100 %attacker%'
+        - 'POTION:BLINDNESSNESS:1:100 %attacker%'
     7:
       chance: 36
       cooldown: 2
@@ -2126,7 +2126,7 @@ smokebomb:
         - '%victim health% > 6 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:1:140 %attacker%'
+        - 'POTION:BLINDNESSNESS:1:140 %attacker%'
     8:
       chance: 38
       cooldown: 2
@@ -2134,7 +2134,7 @@ smokebomb:
         - '%victim health% > 6 : %stop%'
       effects:
         - 'PARTICLE:CLOUD:200:3 %victim%'
-        - 'POTION:BLINDNESS:2:120 %attacker%'
+        - 'POTION:BLINDNESSNESS:2:120 %attacker%'
 infernal:
   display: '%group-color%Infernal'
   description: 'Explosive fire effect.'
@@ -4480,19 +4480,19 @@ lucid:
       chance: 22
       cooldown: 5
       effects:
-        - 'CURE:BLIND %victim%'
+        - 'CURE:BLINDNESS %victim%'
         - 'POTION:NIGHT_VISION:0:40 %victim%'
     2:
       chance: 32
       cooldown: 5
       effects:
-        - 'CURE:BLIND %victim%'
+        - 'CURE:BLINDNESS %victim%'
         - 'POTION:NIGHT_VISION:0:60 %victim%'
     3:
       chance: 42
       cooldown: 5
       effects:
-        - 'CURE:BLIND %victim%'
+        - 'CURE:BLINDNESS %victim%'
         - 'POTION:NIGHT_VISION:0:80 %victim%'
 doublestrike:
   display: '%group-color%Double Strike'
@@ -5421,7 +5421,7 @@ nulify:
       souls: 40
       effects:
         - 'INCREASE_DAMAGE:100'
-        - 'POTION:BLIND:0:80 %victim%'
+        - 'POTION:BLINDNESS:0:80 %victim%'
         - 'PARTICLE:FLASH:1:0 %victim%'
     2:
       chance: 10
@@ -5429,7 +5429,7 @@ nulify:
       souls: 40
       effects:
         - 'INCREASE_DAMAGE:100'
-        - 'POTION:BLIND:1:80 %victim%'
+        - 'POTION:BLINDNESS:1:80 %victim%'
         - 'PARTICLE:FLASH:2:0 %victim%'
     3:
       chance: 12
@@ -5437,7 +5437,7 @@ nulify:
       souls: 40
       effects:
         - 'INCREASE_DAMAGE:100'
-        - 'POTION:BLIND:2:80 %victim%'
+        - 'POTION:BLINDNESS:2:80 %victim%'
         - 'PARTICLE:FLASH:3:0 %victim%'
     4:
       chance: 14
@@ -5445,7 +5445,7 @@ nulify:
       souls: 40
       effects:
         - 'INCREASE_DAMAGE:100'
-        - 'POTION:BLIND:3:80 %victim%'
+        - 'POTION:BLINDNESS:3:80 %victim%'
         - 'PARTICLE:FLASH:4:0 %victim%'
 rush:
   display: '%group-color%Rush'
@@ -5525,35 +5525,35 @@ multiplication:
     1:
       chance: 15
       cooldown: 5
-      condition: '%block type% contains ORE = %allow%'
+      condition: '%block type% contains ORE : %allow%'
       souls: 5
       effects:
         - 'MORE_DROPS:1'
     2:
       chance: 20
       cooldown: 5
-      condition: '%block type% contains ORE = %allow%'
+      condition: '%block type% contains ORE : %allow%'
       souls: 5
       effects:
         - 'MORE_DROPS:1'
     3:
       chance: 25
       cooldown: 6
-      condition: '%block type% contains ORE = %allow%'
+      condition: '%block type% contains ORE : %allow%'
       souls: 5
       effects:
         - 'MORE_DROPS:1'
     4:
       chance: 28
       cooldown: 7
-      condition: '%block type% contains ORE = %allow%'
+      condition: '%block type% contains ORE : %allow%'
       souls: 5
       effects:
         - 'MORE_DROPS:1'
     5:
       chance: 30
       cooldown: 8
-      condition: '%block type% contains ORE = %allow%'
+      condition: '%block type% contains ORE : %allow%'
       souls: 5
       effects:
         - 'MORE_DROPS:1'
