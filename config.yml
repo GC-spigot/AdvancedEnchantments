@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.0.0-Pre20.6
-# Release date: 2021/03/05
+# Version: 8.0.0-Pre21.2
+# Release date: 2021/03/15
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; n permission
@@ -736,12 +736,14 @@ settings:
   # Non-legacy potions system stacks potions nd removes portions of potion from player,
   # so removing one piece will not remove the whole streak. Suggested value: true
   use-legacy-potions-system: true
-
+  # If this is enabled, when Fortune is paired with a custom enchant like
+  # SMELT or TP_DROPS, extra drops will be given just like if you used fortune on diamonds.
+  fortune-works-on-iron-gold: false
+  # Setting for the STEAL_MONEY effect.
   steal-money:
     message-enabled: false
     # replace with 'you' instead of player name for directed player
     message: '&6%attacker% &7stole &6%amount% &7from &6%victim%'
-
   # After how many sequential hits combo should reset?
   combo-limit: 5
   # Should trenched drops be automatically added to inventory? (prevents lag)
@@ -793,6 +795,18 @@ settings:
     - 'BROWN_SHULKER_BOX'
     - 'GREEN_SHULKER_BOX'
     - 'BLACK_SHULKER_BOX'
+  # Whitelist for blocks VEIN_MINE can break.
+  veinmine-whitelist:
+    - 'COAL_ORE'
+    - 'IRON_ORE'
+    - 'GOLD_ORE'
+    - 'LAPIS_ORE'
+    - 'REDSTONE_ORE'
+    - 'DIAMOND_ORE'
+    - 'EMERALD_ORE'
+    - 'NETHER_QUARTZ_ORE'
+    - 'NETHER_GOLD_ORE'
+    - 'ANCIENT_DEBRIS'
   # Worlds to disable enchantments in
   enchantment-world-blacklist:
     - 'no_enchantments_world'
@@ -841,8 +855,6 @@ settings:
   showFirstLevel: true
   # Should plugin re-apply armor when /heal is used?
   heal-check: true
-  # Show warning messages in console if you have an invalid particle / sound set in config?
-  invalidSettingWarnings: true
 
   # Collecting souls from mining
   # This can be used as a 'tokens' currency for prison servers
