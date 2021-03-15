@@ -402,6 +402,7 @@ smelting:
   group: 'SIMPLE'
   applies:
     - ALL_PICKAXE
+    - ALL_SHOVEL
   levels:
     1:
       chance: 33
@@ -5338,17 +5339,17 @@ nightwalker:
   levels:
     1:
       chance: 40
-      condition: '%time% < 12300 or %time% >= 23850 : %allow%'
+      condition: '%time% < 12300 or %time% > 23850 : %allow%'
       effects:
         - 'POTION:SLOW:10:400'
     2:
       chance: 70
-      condition: '%time% < 12300 or %time% >= 23850 : %allow%'
+      condition: '%time% < 12300 or %time% > 23850 : %allow%'
       effects:
         - 'POTION:SLOW:10:400'
     3:
       chance: 100
-      condition: '%time% < 12300 or %time% >= 23850 : %allow%'
+      condition: '%time% < 12300 or %time% > 23850 : %allow%'
       effects:
         - 'POTION:SLOW:10:400'
 launch:
