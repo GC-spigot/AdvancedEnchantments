@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.0.0-Pre21.3
-# Release date: 2021/03/18
+# Version: 8.0.0-Pre21.6
+# Release date: 2021/03/28
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; n permission
@@ -174,10 +174,12 @@ souls:
         - '&a&l(!) &aYou successfully applied &f&lSoul Tracker &7to your item!'
 
 # Enchantments limitation
-# If lore contains the line, players wont be allowed to apply enchants to item
+# If an item contains the specified lore, or the specified NBT tag, custom enchants
+# will not be able to be applied.
 enchantLimitation:
   enabled: true
   lore: '&c&lUnmodifiable'
+  NBT-tag: "unmodifiable"
   message: '&cThis item cannot be modified!'
 
 # Enchantment combining (leveling up) on items.
@@ -261,6 +263,7 @@ items:
       - ALL_AXE
       - ALL_SPADE
       - ALL_HOE
+      - ALL_EDIBLE
       - BOOK
       - BOW
       - CROSSBOW
@@ -304,6 +307,8 @@ items:
       colors: true
       # Should magic color codes (&k, &m, &o, &r, &l) be allowed?
       magic: false
+      # Words the name can't be. This uses regex, not an exact match.
+      # You can learn the basics of regex here: https://www.rexegg.com/regex-quickstart.html
       word-blacklist:
         - 'fuck'
         - 'dick'
@@ -606,7 +611,7 @@ enchanter:
       '13':
         item:
           type: STAINED_GLASS_PANE
-          id: 14
+          id: 6
           force-glow: false
         enchant-group: FABLED
         price: exp:40000
@@ -647,7 +652,7 @@ enchanter:
 destroy:
   # Should book be destroyed if it fails?
   enabled: true
-  # Should Item be detroyed?
+  # Should Item be destroyed?
   destroy-item: false
   # Enchantment fail message.
   message:
@@ -748,6 +753,9 @@ settings:
   combo-limit: 5
   # Should trenched drops be automatically added to inventory? (prevents lag)
   trench-autoadd-items: false
+  # If true, when TRENCH is paired with MORE_DROPS, the MORE_DROPS effect will
+  # be applied to each block TRENCH breaks.
+  trench-works-with-more-drops: false
   # Length of name player can rename items to with itemnametag
   itemnametag-max-name-length: 32
   # Use all mined blocks durability on TRENCH items
