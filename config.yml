@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.0.0-Pre21.6
-# Release date: 2021/03/28
+# Version: 8.0.0-Pre21.7
+# Release date: 2021/03/29
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; n permission
@@ -165,6 +165,7 @@ souls:
   item:
     type: PAPER
     id: 0
+    custom-model-data: 0
     name: "&f&lSoul Tracker"
     lore:
       - '&7Apply to weapons to start tracking'
@@ -246,6 +247,7 @@ enchanter-books:
     - '&7You examined %group-color%%group%&7 book and found %enchant-color% %level%'
   type: BOOK
   id: 0
+  custom-model-data: 0
   force-glow: false
   name: '%group-color%&l%group-name%&l Enchantment Book &7(Right Click)'
   lore:
@@ -274,6 +276,7 @@ items:
   transmogscroll:
     type: PAPER
     id: 0
+    custom-model-data: 0
     name: '&c&lTransmog Scroll'
     lore:
       - "&7Organizes enchants by &e&nrarity&7 on item"
@@ -284,12 +287,14 @@ items:
   soulgem:
     type: EMERALD
     id: 0
+    custom-model-data: 0
     name: "&c&lSoul Gem &7[&a%count%&7]"
     lore:
       - '&7Apply to an item to add souls.'
   itemnametag:
     type: NAME_TAG
     id: 0
+    custom-model-data: 0
     name: '&6&lItem NameTag &7(Right Click)'
     lore:
       - '&7Rename and customize your equipment'
@@ -316,6 +321,7 @@ items:
   randomization-scroll:
     type: PAPER
     id: 0
+    custom-model-data: 0
     name: '%group-color%%group-name%&l%group-color% Randomization Scroll'
     lore:
       - ''
@@ -326,6 +332,7 @@ items:
   black-scroll:
     type: INK_SACK
     id: 0
+    custom-model-data: 0
     name: '&f&lBlack Scroll'
     lore:
       - '&7Removes a random enchantment'
@@ -341,6 +348,7 @@ items:
   secret-dust:
     type: FIREBALL
     id: 0
+    custom-model-data: 0
     name: '%group-color%%group-name%%group-color% Secret Dust &7(Right Click)'
     lore:
       - '&7Contains: &bMagic, &fMystery &7dust.'
@@ -348,6 +356,7 @@ items:
   mystery-dust:
     type: SULPHUR
     id: 0
+    custom-model-data: 0
     name: '&fMystery Dust'
     lore:
       - '&7A failed bi-product'
@@ -355,6 +364,7 @@ items:
   magic-dust:
     type: SUGAR
     id: 0
+    custom-model-data: 0
     name: '%group-color%%group-name%%group-color% Magic Dust'
     lore:
       - '&a+%percent%% Success'
@@ -365,6 +375,7 @@ items:
   slot-increaser:
     type: EYE_OF_ENDER
     id: 0
+    custom-model-data: 0
     name: "%group-color%&l%group-name% Slot Increaser"
     lore:
       - '&7Increase slots limit on an item by &a+%count%'
@@ -374,6 +385,7 @@ items:
   blocktrak:
     type: SLIME_BALL
     id: 0
+    custom-model-data: 0
     name: "&aBlockTrak Creator"
     lore:
       - '&7Track how many blocks you break with a tool'
@@ -386,6 +398,7 @@ items:
   stattrak:
     type: MAGMA_CREAM
     id: 0
+    custom-model-data: 0
     name: "&eStatTrak Creator"
     lore:
       - '&7Track how many kills you have with a weapon'
@@ -398,6 +411,7 @@ items:
   mobtrak:
     type: SLIME_BALL
     id: 0
+    custom-model-data: 0
     name: "&3MobTrak Creator"
     lore:
       - '&7track how many mob kills you have with a weapon'
@@ -410,6 +424,7 @@ items:
   holywhitescroll:
     type: PAPER
     id: 0
+    custom-model-data: 0
     name: "&6&lHoly White Scroll"
     lore:
       - "&eA legendary reward that can"
@@ -475,6 +490,7 @@ white-scroll:
   item:
     type: EMPTY_MAP
     id: 0
+    custom-model-data: 0
     force-glow: false
     name: '&fWhite Scroll'
     lore:
@@ -509,6 +525,7 @@ enchanter:
     item:
       type: NETHER_STAR
       id: 0
+      custom-model-data: 0
     name: '&c&lGo Back'
     lore: []
   # Should enchanter stay open after item is bought?
@@ -535,6 +552,7 @@ enchanter:
         item:
           type: STAINED_GLASS_PANE
           id: 7
+          custom-model-data: 0
           force-glow: false
         name: ' '
         lore: []
@@ -542,6 +560,7 @@ enchanter:
         item:
           type: STAINED_GLASS_PANE
           id: 0
+          custom-model-data: 0
           force-glow: false
         enchant-group: SIMPLE
         price: exp:400
@@ -556,6 +575,7 @@ enchanter:
         item:
           type: STAINED_GLASS_PANE
           id: 5
+          custom-model-data: 0
           force-glow: false
         enchant-group: UNIQUE
         sound: ANVIL_LAND
@@ -570,6 +590,7 @@ enchanter:
         item:
           type: STAINED_GLASS_PANE
           id: 3
+          custom-model-data: 0
           force-glow: false
         enchant-group: ELITE
         price: exp:2500
@@ -584,6 +605,7 @@ enchanter:
         item:
           type: STAINED_GLASS_PANE
           id: 4
+          custom-model-data: 0
           force-glow: false
         enchant-group: ULTIMATE
         price: exp:5000
@@ -598,6 +620,7 @@ enchanter:
         item:
           type: STAINED_GLASS_PANE
           id: 1
+          custom-model-data: 0
           force-glow: false
         enchant-group: LEGENDARY
         price: exp:25000
@@ -612,6 +635,7 @@ enchanter:
         item:
           type: STAINED_GLASS_PANE
           id: 6
+          custom-model-data: 0
           force-glow: false
         enchant-group: FABLED
         price: exp:40000
@@ -626,6 +650,7 @@ enchanter:
         item:
           type: ANVIL
           id: 0
+          custom-model-data: 0
           force-glow: false
         sound: ANVIL_USE
         player-command:
@@ -639,6 +664,7 @@ enchanter:
         item:
           type: ENDER_PORTAL_FRAME
           id: 0
+          custom-model-data: 0
           force-glow: false
         sound: ARROW_HIT
         player-command:
@@ -698,8 +724,9 @@ armor-switching:
 
 enchantment-book:
   item:
-    type: BOOK
+    type: ENCHANTED_BOOK
     id: 0
+    custom-model-data: 0
     force-glow: false
     # Variables: %enchant%, %enchant-no-color%, %description%, %applies%, %success%, %destroy%, %color%, %max-level%
   name: '%group-color%&l&n%enchant-no-color% %level%'
