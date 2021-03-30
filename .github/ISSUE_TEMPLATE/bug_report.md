@@ -1,21 +1,43 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: "[Issue]"
-labels: issue
-assignees: ''
+name: Bug Report
+about: Report a bug with AE. Make sure your issue is actually a bug before reporting!
+labels: "Bug: Unconfirmed"
 
 ---
 
+<!--
+
+Before reporting a bug, make sure you have the latest version of the plugin.
+Advanced Plugins: https://advancedplugins.net/item/1
+Spigot: https://www.spigotmc.org/resources/43058/
+Songoda: https://songoda.com/marketplace/product/327
+
+Do not write inside the arrows or it will be hidden!
+
+1.  Check whether it has already been requested or added.
+     You can search the issue tracker to see if what you want has already 
+     been requested and/or added to the plugin.
+
+2.  Only put ONE bug per issue. This helps us keep track of things.
+
+3.  Fully fill out the template. Everything other then screenshots/ videos is absolutely required.
+
+-->
+
+
+
+## Details
+
 **Describe the bug**
-A clear and concise description of what the bug is.
+<!-- Replace this with a clear and concise description of what the bug is. -->
 
 **To Reproduce**
-A way to reliability reproduce the bug.
+<!-- Replace this with a way to reliability reproduce the bug. Without this, the issue will not get fixed. -->
 
 **Screenshots / Video**
-If applicable, add screenshots or videos to help explain/ show your problem.
+<!-- If possible, add screenshots or videos to help explain/ show your problem. These are greatly appreciated. -->
 
-**Server Information (please complete the following information):**
-- Server Version: [e.g. PaperSpigot-123 1.8.8]
-- Plugin Version: [e.g. 6.7.8]
+
+## Server Information
+- "/ae plinfo" link: <!-- Replace this with the command output's https://paste.md-5.net/ link -->
+- Server log: <!-- Upload `logs/latest.log` to https://gist.github.com/ -->
