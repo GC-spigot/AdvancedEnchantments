@@ -32,36 +32,41 @@ enchantment-info:
       0:
         type: STAINED_GLASS_PANE
         id: 15
+        custom-model-data: 0
         force-glow: false
         name: " "
         lore: []
       1:
         type: ENCHANTED_BOOK
         id: 0
+        custom-model-data: 0
         force-glow: false
         name: "&7Information about &e%enchant% &7enchantment"
         lore:
-        - "&eEnchantment &7» &r%ench-colors%"
-        - "&eApplies to &7» &r%applies-to%"
-        - "&eMax Level &7» &r%max-lvl%"
-        - "&eDescription &7» &r%desc%"
+        - "&eEnchantment &7Â» &r%ench-colors%"
+        - "&eApplies to &7Â» &r%applies-to%"
+        - "&eMax Level &7Â» &r%max-lvl%"
+        - "&eDescription &7Â» &r%desc%"
         # you can as well use %group-color% to get enchantment color
       2:
         type: STAINED_GLASS_PANE
         id: 15
+        custom-model-data: 0
         force-glow: false
         name: " "
         lore: []
       3:
         type: CHEST
         id: 0
+        custom-model-data: 0
         force-glow: false
-        name: "&eApplies to &7»"
+        name: "&eApplies to &7Â»"
         lore:
         - '&7%applies-to%'
       4:
         type: STAINED_GLASS_PANE
         id: 15
+        custom-model-data: 0
         force-glow: false
         name: " "
         lore: []
@@ -98,6 +103,7 @@ enchantments:
       11:
         type: STAINED_GLASS_PANE
         id: 0
+        custom-model-data: 0
         force-glow: false
         # What enchantment group list should it open?
         group: 'SIMPLE'
@@ -108,6 +114,7 @@ enchantments:
       12:
         type: STAINED_GLASS_PANE
         id: 5
+        custom-model-data: 0
         force-glow: false
         group: 'UNIQUE'
         name: "&7All &a&lUnique Enchantments"
@@ -117,6 +124,7 @@ enchantments:
       13:
         type: STAINED_GLASS_PANE
         id: 3
+        custom-model-data: 0
         force-glow: false
         group: 'ELITE'
         name: "&7All &b&lElite Enchantments &7(Click to open)"
@@ -126,6 +134,7 @@ enchantments:
       14:
         type: STAINED_GLASS_PANE
         id: 4
+        custom-model-data: 0
         force-glow: false
         group: 'ULTIMATE'
         name: "&7All &e&lUltimate Enchantments &7(Click to open)"
@@ -135,6 +144,7 @@ enchantments:
       15:
         type: STAINED_GLASS_PANE
         id: 1
+        custom-model-data: 0
         force-glow: false
         group: 'LEGENDARY'
         name: "&7All &6&lLegendary Enchantments &7(Click to open)"
@@ -144,6 +154,7 @@ enchantments:
       22:
         type: STAINED_GLASS_PANE
         id: 6
+        custom-model-data: 0
         force-glow: false
         group: 'FABLED'
         name: "&7All &d&lFabled Enchantments &7(Click to open)"
@@ -153,6 +164,7 @@ enchantments:
       fill:
         type: STAINED_GLASS_PANE
         id: 15
+        custom-model-data: 0
         force-glow: false
         name: " "
         lore: []
@@ -162,30 +174,34 @@ enchantments:
     fill-item:
       material: STAINED_GLASS_PANE
       id: 15
+      custom-model-data: 0
       name: " "
       lore: []
     previous-page:
       material: STAINED_GLASS_PANE
       id: 14
+      custom-model-data: 0
       name: "&cPrevious Page."
       lore: []
       slot: '%invSize% - 3'
     next-page:
       material: STAINED_GLASS_PANE
       id: 5
+      custom-model-data: 0
       name: "&aNext Page."
       lore: []
       slot: '%invSize% - 2'
     item:
       type: ENCHANTED_BOOK
       id: 0
+      custom-model-data: 0
       force-glow: false
       # What command should be ran when player clicks on one of the enchantments?
       # %max-lvl% - Displays max. level in numbers, %max-lvl-roman% - displays max. level in roman numerals
       command: '/enchant %enchantment%'
       name: "&e%enchant% &7enchantment"
       lore:
-      - " &f* &eEnchantment &7» &r%ench-colors%"
-      - " &f* &eApplies to &7» &r%applies-to%"
-      - " &f* &eMax Level &7» &r%max-lvl-roman%"
-      - " &f* &eDescription &7» &r%desc%"
+      - " &f* &eEnchantment &7Â» &r%ench-colors%"
+      - " &f* &eApplies to &7Â» &r%applies-to%"
+      - " &f* &eMax Level &7Â» &r%max-lvl-roman%"
+      - " &f* &eDescription &7Â» &r%desc%"
