@@ -1,7 +1,7 @@
 ---
 name: "Feature Request"
 about: "Request a feature you would like added to AE."
-labels: "Feature Request"
+labels: "Type: Feature Request"
 
 ---
 
