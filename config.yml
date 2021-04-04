@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.0.0-Pre21.7
-# Release date: 2021/03/29
+# Version: 8.0.0-Pre22.0
+# Release date: 2021/04/03
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; n permission
@@ -799,6 +799,11 @@ settings:
   ae-market-enabled: true
   # Use Numbers instead of Roman Numerals?
   use-numbers: false
+  # EXPERIMENTAL!!! If true, AE will use a different way of handling MINING enchants. This may solve compatibility
+  # issues with other plugins & MINING enchants, but it may cause some issues. If you find
+  # any issues with it, please report them on GitHub https://github.com/GC-spigot/AdvancedEnchantments/issues/new/choose
+  # Only works on 1.13+ servers.
+  use-experimental-block-breaking: false
   # Trench effect materials blacklist
   trench-blacklist:
     - 'AIR'
