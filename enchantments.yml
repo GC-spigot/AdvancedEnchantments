@@ -35,28 +35,29 @@
 
 #  Type (Setting)
 #    Decides type of the enchantment. Types:
-#    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn)
-#    - ATTACK : Effects run only when attacking another player
-#    - DEFENSE : Effects run only when being attacked
-#    - DEFENSE_BOW : Effects run only when player gets shot by a bow
-#    - MINING : Gives effects when block is mined
-#    - HELD : Effects given when item is held
-#    - ATTACK_MOB : Gives effects when player attacks mob
-#    - KILL_MOB : Effects given when attacked mob is killed
-#    - BOW : Effects given when player is shot by another player
-#    - KILL_PLAYER : Effects given when attacker kills a player
+#    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn).
+#    - ATTACK : Effects run only when attacking another player.
+#    - DEFENSE : Effects run only when being attacked.
+#    - DEFENSE_BOW : Effects run only when player gets shot by a bow.
+#    - MINING : Gives effects when block is mined.
+#    - HELD : Effects given when item is held.
+#    - ATTACK_MOB : Gives effects when player attacks mob.
+#    - KILL_MOB : Effects given when attacked mob is killed.
+#    - BOW : Effects given when player is shot by another player.
+#    - KILL_PLAYER : Effects given when attacker kills a player.
 #    - DEATH : Runs when player dies due to another player.
-#    - RIGHT_CLICK : Runs when player right clicks held item
-#    - BOW_MOB : Effects given when mob is shot by player
-#    - FIRE : Effects given when player is on fire
-#    - EXPLOSION : Effects given when player gets hit by explosion
-#    - SWING : Enchant runs when player swings
-#    - FALL_DAMAGE : Enchant runs when player takes fall damage
-#    - DEFENSE_MOB : Enchant runs when mob attacks a player
-#    - SHIFT : Enchant runs when player toggles crouching (shifts)
-#    - ITEM_BREAK : Enchant runs when player toggles crouching (shifts)
-#    - CATCH_FISH : Enchant runs when player catches a fish
-#    - PASSIVE_DEATH : Enchant runs when player dies from non-pvp related cause
+#    - RIGHT_CLICK : Runs when player right clicks held item.
+#    - BOW_MOB : Effects given when mob is shot by player.
+#    - FIRE : Effects given when player is on fire.
+#    - EXPLOSION : Effects given when player gets hit by explosion.
+#    - SWING : Enchant runs when player swings.
+#    - FALL_DAMAGE : Enchant runs when player takes fall damage.
+#    - DEFENSE_MOB : Enchant runs when mob attacks a player.
+#    - SHIFT : Enchant runs when player toggles crouching (shifts).
+#    - ITEM_BREAK : Enchant runs when player toggles crouching (shifts).
+#    - CATCH_FISH : Enchant runs when player catches a fish.
+#    - PASSIVE_DEATH : Enchant runs when player dies from non-pvp related cause.
+#    - EAT : Enchant runs whenever a player consumes an item.
 #    - REPEATING : Repeating enchantments, read more here: https://ae.advancedplugins.net/enchantments/repeating-enchantments
 
 #  Applies (Material)
@@ -65,12 +66,13 @@
 #    NOTICE: You can use "LEATHER_ARMOR, IRON_ARMOR, CHAIN_ARMOR, GOLD_ARMOR or DIAMOND_ARMOR" to
 #    to instantly add availability for all specific armor type pieces.
 #    Use "ALL_ARMOR" to add all armor pieces.
-#    Use "ALL_HELMET" to add all helmets
-#    Use "ALL_CHESTPLATE" to add all chestplates
-#    Use "ALL_BOOTS" to add all boots
-#    Use "ALL_SWORD" to add all swords
-#    Use "ALL_PICKAXE" to add all pickaxes
-#    Use "ALL_AXE" to add all axes
+#    Use "ALL_HELMET" to add all helmets.
+#    Use "ALL_CHESTPLATE" to add all chestplates.
+#    Use "ALL_BOOTS" to add all boots.
+#    Use "ALL_SWORD" to add all swords.
+#    Use "ALL_PICKAXE" to add all pickaxes.
+#    Use "ALL_AXE" to add all axes.
+#    Use "ALL_EDIBLE" to add all foods.
 #    And so on, but make sure to use non plural names of items!
 
 #  Levels (Numbers)
