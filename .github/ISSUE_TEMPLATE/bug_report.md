@@ -7,7 +7,7 @@ labels: "Bug: Unconfirmed"
 
 <!--
 
-FILL OUT THE TEMPLATE. YOUR ISSUE WILL BE IMMEDIATELY CLOSED IF YOU DON'T.
+FULLY FILL OUT THE TEMPLATE. YOUR ISSUE WILL BE IMMEDIATELY CLOSED IF YOU DON'T.
 
 Before reporting a bug, make sure you have the latest version of the plugin.
 Advanced Plugins: https://advancedplugins.net/item/1
