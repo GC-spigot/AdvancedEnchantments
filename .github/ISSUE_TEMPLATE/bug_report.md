@@ -41,5 +41,5 @@ Do not write inside the arrows or it will be hidden!
 
 
 ## Server Information
-- "/ae plinfo" link: <!-- Replace this with the command output's https://paste.md-5.net/ link -->
-- Server log: <!-- Upload `logs/latest.log` to https://gist.github.com/ -->
+- "/ae plinfo" link: <!-- REQUIRED! Replace this with the command output's https://paste.md-5.net/ link -->
+- Server log: <!-- REQUIRED! Upload `logs/latest.log` to https://gist.github.com/ -->
