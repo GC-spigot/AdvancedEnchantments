@@ -8,27 +8,27 @@ armorCrystal:
   item:
     material: NETHER_STAR
     damage: 0
-    name: '&6&lArmor Crystal (&a&l%setName%&6&l)'
+    name: "&6&lArmor Crystal (&a&l%setName%&6&l)"
     lore:
-      - '&a%chance%% Success Rate'
-      - '&7Can be applied to any non'
-      - '&7armor set that is not'
-      - '&7already equipped with a'
-      - '&7bonus crystal to gain'
-      - '&7a passive advantage!'
+      - "&a%chance%% Success Rate"
+      - "&7Can be applied to any non"
+      - "&7armor set that is not"
+      - "&7already equipped with a"
+      - "&7bonus crystal to gain"
+      - "&7a passive advantage!"
 heroicUpgrades:
   item:
     material: INK_SACK
     damage: 11
-    name: '&6&lHeroic (&a&l%setName%&6&l) Upgrade'
+    name: "&6&lHeroic (&a&l%setName%&6&l) Upgrade"
     lore:
-      - ''
-      - '&7Apply to any &a&l%setName%&7 armor'
-      - '&7for a &6%chance%%&7 chance to imbue it'
-      - 'with the power of Heroic Armor!'
-      - ''
-      - '&7This will increase armor''s base'
-      - '&7stats, such as durability and strength.'
+      - ""
+      - "&7Apply to any &a&l%setName%&7 armor"
+      - "&7for a &6%chance%%&7 chance to imbue it"
+      - "with the power of Heroic Armor!"
+      - ""
+      - "&7This will increase armor''s base"
+      - "&7stats, such as durability and strength."
   durability:
     helmet: 810
     chestplate: 1000
@@ -40,10 +40,10 @@ heroicUpgrades:
     leggings: 6
     boots: 3
   addedLore:
-    - ''
-    - '&7+%armorValue% Armor Value'
-    - '&7%durability% Durability'
-    - '&4This armor is stronger than diamond.'
+    - ""
+    - "&7+%armorValue% Armor Value"
+    - "&7%durability% Durability"
+    - "&4This armor is stronger than diamond."
 
 # General settings
 settings:
