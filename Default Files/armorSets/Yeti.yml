@@ -2,7 +2,7 @@
 # These sets are fully creatable, to create your own simply copy this file, rename it and edit it however you want!
 
 # ** Set Materials:
-# * LEATHER (change-able color)
+# * LEATHER (change-able color) https://github.com/GC-spigot/AdvancedEnchantments/wiki/Æ-Colored-Leather-Armor
 # * IRON
 # * GOLD
 # * CHAIN
@@ -42,18 +42,16 @@
 #    effects: <effects are available in enchantments.yml>
 #    # E.g.: - 'INCREASED_DAMAGE:10'
 
-name: '&5&lDimensional Traveller Armor'
+name: '&b&lYeti Armor'
 material: DIAMOND
 settings:
   equipped:
-    - '&a&l(!) &aYou have activated the Dimensional Traveller Armor Set!'
+    - '&a&l(!) &aYou have activated the Yeti set!'
   unequipped:
-    - '&c&l(!) &cYou have deactivated the Dimensional Traveller Armor Set!'
+    - '&c&l(!) &cYou have deactivated the Yeti set!'
 items:
   helmet:
-    name: '&5&lInterdimensional Hood'
-    # If you want this item to be a player head, uncomment this line
-    #owner: "name"
+    name: '&b&lYeti Facemask'
     # Custom Model Data (for 1.13+ servers with custom item packs)
     # Set custom model data integer
     customModelData: 0
@@ -62,59 +60,26 @@ items:
     itemFlags: []
     #  - 'HIDE_POTION_EFFECTS' # An Example Item Flag
     lore:
-      - '&7A hood that fades in and out'
-      - '&7Existance inside the dimension of the owner'
+      - '&bThe savage mask of the Yeti.'
       - ''
-      - '&5&lTRAVELLER SET BONUS"'
-      - '&D* You deal 30% more damage.'
-      - '&D* Dimensional Shift Passive Ability'
-      - '&7&o(Requires all four traveller items)'
-    enchants: # Supports AdvancedEnchantments CE
-      - "protection:4"
-      - "unbreaking:3"
-      - "planetarydeathbringer:%1-3%"
-      - "alienimplants:%1-3%"
-      - "drunk:%1-4%"
-      - "armored:%1-4%"
-      - "enlighted:%1-3%"
-      - "valor:%1-5%"
-      - "dodge:%1-5%"
-      - "guardians:%1-10%"
-      - "angelic:%1-5%"
-      - "tank:%1-4%"
-      - "hardened:%1-3%"
-  chestplate:
-    name: '&5&lChestplate of Ad Infinitum'
-    # Custom Model Data (for 1.13+ servers with custom item packs)
-    # Set custom model data integer
-    customModelData: 0
-    # Item Flags
-    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html
-    itemFlags: []
-    #  - 'HIDE_POTION_EFFECTS' # An Example Item Flag
-    lore:
-      - '&7A cross-dimensional chestplate'
-      - '&7with impossibly infinite density'
-      - '&7and defensive properties.'
-      - ''
-      - '&5&lTRAVELLER SET BONUS"'
-      - '&D* You deal 30% more damage.'
-      - '&D* Dimensional Shift Passive Ability'
-      - '&7&o(Requires all four traveller items)'
+      - '&b&lYETI SET BONUS'
+      - '&b* Deal +10% damage to all enemies.'
+      - '&b* Enemies deal 10% less damage to you.'
+      - '&7&o(Requires all 4 yeti items.)'
     enchants: # Supports AdvancedEnchantments CE
       - "protection:4"
       - "unbreaking:3"
       - "deathbringer:%1-3%"
-      - "godlyoverload:%1-3%"
-      - "paladinarmored:%1-4%"
+      - "implants:%1-3%"
+      - "drunk:%1-4%"
+      - "armored:%1-4%"
       - "enlighted:%1-3%"
-      - "arrowdeflect:%1-4%"
       - "valor:%1-5%"
-      - "dodge:%1-5%"
       - "angelic:%1-5%"
       - "tank:%1-4%"
-  leggings:
-    name: '&5&lTimeless Robes'
+      - "hardened:%1-3%"
+  chestplate:
+    name: '&b&lBloody Yeti Torso'
     # Custom Model Data (for 1.13+ servers with custom item packs)
     # Set custom model data integer
     customModelData: 0
@@ -123,14 +88,38 @@ items:
     itemFlags: []
     #  - 'HIDE_POTION_EFFECTS' # An Example Item Flag
     lore:
-      - '&7Robes that evade the 4th dimension'
-      - '&7are in a state of constant existence'
-      - '&7cross all planets of reality.'
+      - '&bThe impermeable chestplate of the Yeti.'
       - ''
-      - '&5&lTRAVELLER SET BONUS"'
-      - '&D* You deal 30% more damage.'
-      - '&D* Dimensional Shift Passive Ability'
-      - '&7&o(Requires all four traveller items)'
+      - '&b&lYETI SET BONUS'
+      - '&b* Deal +10% damage to all enemies.'
+      - '&b* Enemies deal 10% less damage to you.'
+      - '&7&o(Requires all 4 yeti items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "godlyoverload:%1-3%"
+      - "armored:%1-4%"
+      - "enlighted:%1-3%"
+      - "guardians:%1-10%"
+      - "dodge:%1-5%"
+      - "angelic:%1-5%"
+      - "tank:%1-4%"
+  leggings:
+    name: '&b&lFuzzy Yeti Leggings'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    # Item Flags
+    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html
+    itemFlags: []
+    #  - 'HIDE_POTION_EFFECTS' # An Example Item Flag
+    lore:
+      - '&bThe cozy yet monstrous legs of the Yeti.'
+      - ''
+      - '&b&lYETI SET BONUS'
+      - '&b* Deal +10% damage to all enemies.'
+      - '&b* Enemies deal 10% less damage to you.'
+      - '&7&o(Requires all 4 yeti items.)'
     enchants: # Supports AdvancedEnchantments CE
       - "protection:4"
       - "unbreaking:3"
@@ -145,7 +134,7 @@ items:
       - "clarity:%1-3%"
       - "natureswrath:%1-4%"
   boots:
-    name: '&5&lWarp Speed Sandals'
+    name: '&b&lBig-Yeti Boots'
     # Custom Model Data (for 1.13+ servers with custom item packs)
     # Set custom model data integer
     customModelData: 0
@@ -154,20 +143,18 @@ items:
     itemFlags: []
     #  - 'HIDE_POTION_EFFECTS' # An Example Item Flag
     lore:
-      - '&7Sandals capable of breaking through'
-      - '&7dimensional barriers to allow the barer'
-      - '&7to preform impossible feats.'
+      - '&bBigfoot has nothing on these boots.'
       - ''
-      - '&5&lTRAVELLER SET BONUS"'
-      - '&D* You deal 30% more damage.'
-      - '&D* Dimensional Shift Passive Ability'
-      - '&7&o(Requires all four traveller items)'
+      - '&b&lYETI SET BONUS'
+      - '&b* Deal +10% damage to all enemies.'
+      - '&b* Enemies deal 10% less damage to you.'
+      - '&7&o(Requires all 4 yeti items.)'
     enchants: # Supports AdvancedEnchantments CE
       - "protection:4"
       - "unbreaking:3"
-      - "divineenlighted:%1-3%"
-      - "etherealdodge:%1-5%"
+      - "enlighted:%1-3%"
       - "gears:%1-3%"
+      - "armored:%1-4%"
       - "deathbringer:%1-3%"
       - "valor:%1-5%"
       - "enderwalker:%1-5%"
@@ -177,12 +164,11 @@ items:
       - "springs:%1-3%"
       - "rocketescape:%1-3%"
 events:
-  FALL_DAMAGE:
+  ATTACK:
     chance: 100
     effects:
-      - 'STOP_ATTACK'
+      - 'INCREASE_DAMAGE:10'
   DEFENSE:
-    chance: 20
-    cooldown: 10
+    chance: 100
     effects:
-      - 'DIMENSIONAL_SHIFT:&5&l*** THE WRATH OF TRAVELLER <&c&l%victim name%&5&l> ***:2:5 %chance:30%' #  COMING IN NEXT UPDATE! 7.0.1
+      - 'DECREASE_DAMAGE:10'

@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.0.0-Pre22.9
-# Release date: 2021/04/13
+# Version: 8.0.1
+# Release date: 2021/04/30
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; no permission
@@ -443,6 +443,7 @@ items:
     lore: "&a%max% Enchantment Slots &7(Orb [&a+%increased%&7])"
     weapon:
       material: EYE_OF_ENDER
+      custom-model-data: 0
       name: "&6&lWeapon Enchantment Orb &6[&a&n%max%&6]"
       lore:
         - "&a%success%% Success Rate"
@@ -456,6 +457,7 @@ items:
         - "&7Drag n' Drop onto an item to apply."
     armor:
       material: EYE_OF_ENDER
+      custom-model-data: 0
       name: "&6&lArmor Enchantment Orb &6[&a&n%max%&6]"
       lore:
         - "&a%success%% Success Rate"
@@ -469,6 +471,7 @@ items:
         - "&7Drag n' Drop onto an item to apply."
     tool:
       material: EYE_OF_ENDER
+      custom-model-data: 0
       name: "&6&lTool Enchantment Orb &6[&a&n%max%&6]"
       lore:
         - "&a%success%% Success Rate"
@@ -776,6 +779,10 @@ settings:
   # If this is enabled, when Fortune is paired with a custom enchant like
   # SMELT or TP_DROPS, extra drops will be given just like if you used fortune on diamonds.
   fortune-works-on-iron-gold: false
+  # Which mode the CHANGE_ARROW effect should use.
+  # Mode 1: Summons an entity that gets teleported to the arrow every tick until the arrow lands.
+  # Mode 2: (requires ProtocolLib) Uses to packets to turn the arrow into the other entity. Looks much better, less glitchly, & less laggy.
+  change-arrow-mode: 1
   # Setting for the STEAL_MONEY effect.
   steal-money:
     message-enabled: false

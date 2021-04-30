@@ -2,7 +2,7 @@
 
 # What set should be required in order to apply effects from this weapon?
 # Set to '' to not require a set
-requireSet: 'Phantom'
+requireSet: 'Supreme'
 
 # Currently supported are only melee weapons
 material: DIAMOND_SWORD
@@ -17,26 +17,34 @@ itemFlags: []
 #  - 'HIDE_POTION_EFFECTS' # An Example Item Flag
 
 # Weapon's name
-name: '&c&lPhantom Scythe'
+name: '&4&lSupreme Fanny Pack'
 
 # Weapon's lore
 lore:
-  - '&7An eerie blade designed to'
-  - '&7cut through the enemies.'
+  - '&7They laughed at you, they'
+  - '&7told you a fanny pack is not'
+  - '&7a practical piece of clothing...'
+  - '&7now they will pay for their ignorance!'
   - ''
-  - '&c&lPHANTOM WEAPON BONUS'
-  - '&cDeal +10% damage to all enemies.'
-  - '&7(Requires all 4 phantom items.)'
+  - '&4&lSUPREME WEAPON BONUS'
+  - '&4Deal +20% damage to all enemies.'
+  - '&4Enemies deal 10% less damage to you.'
+  - '&7(Requires all 4 supreme items.)'
 
 # These enchants will be applied by default when giving out weapons
 # Advanced Enchantments are supported
 enchants:
   - 'sharpness:5'
   - 'unbreaking:3'
+  - 'reflectiveblock:%1-3%'
 
 # ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
 events:
   ATTACK:
     chance: 100
     effects:
-      - 'INCREASE_DAMAGE:10'
+      - 'INCREASE_DAMAGE:20'
+  DEFENSE:
+    chance: 100
+    effects:
+      - 'DECREASE_DAMAGE:10'
