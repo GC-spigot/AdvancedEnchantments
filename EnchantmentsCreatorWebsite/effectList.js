@@ -86,5 +86,6 @@ var effectsList  =  [
   "BREAK_TREE",
   "ADD_SOULS:(amount)",
   "ADD_ENCHANT:(enchant)",
+  "CHANGE_ARROW:(ENTITY):[LAND ACTION]:[PICKUP STATUS]"
 ];
   
