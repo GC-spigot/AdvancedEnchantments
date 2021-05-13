@@ -1,9 +1,3 @@
-messages:
-  non-tradeable-item:
-    - "&cThe Server Tinkerer doesn''t want that item!"
-    - "&7He will only accept custom enchanted equipment"
-  trade-accepted:
-    - "&eTrade accepted."
 inventory:
   # set to "none' to disable
   open-sound: "BLOCK_CHEST_OPEN"

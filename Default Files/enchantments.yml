@@ -4926,17 +4926,17 @@ striker:
       chance: 15
       cooldown: 8
       effects:
-        - "SPAWN_ARROWS"
+        - "SPAWN_ARROWS %victim%"
     2:
       chance: 18
       cooldown: 8
       effects:
-        - "SPAWN_ARROWS"
+        - "SPAWN_ARROWS %victim%"
     3:
       chance: 22
       cooldown: 8
       effects:
-        - "SPAWN_ARROWS"
+        - "SPAWN_ARROWS %victim%"
 sniper:
   display: "%group-color%Sniper"
   description: "Headshots with bows\ndeal double damage."
@@ -5298,14 +5298,14 @@ suspend:
     1:
       chance: 40
       effects:
-        - "STOP_KNOCKBACK"
+        - "STOP_KNOCKBACK %victim%"
     2:
       chance: 80
       effects:
-        - "STOP_KNOCKBACK"
+        - "STOP_KNOCKBACK %victim%"
     3:
       effects:
-        - "STOP_KNOCKBACK"
+        - "STOP_KNOCKBACK %victim%"
 nightowl:
   display: "%group-color%Night Owl"
   description: "Deal more damage to mobs at night."

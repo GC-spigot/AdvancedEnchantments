@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.0.1
-# Release date: 2021/04/30
+# Version: 8.0.4
+# Release date: 2021/05/07
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; no permission
@@ -31,14 +31,16 @@
 # Some configurable settings are explained, others should be self-explanatory.
 # Join support discord for help or with questions: https://advancedplugins.net/discord
 
+# Change default messages language. You can modify all messages in AdvancedEnchantments `locale` folder.
+# Read more here: https://ae.advancedplugins.net/general-information/languages
+language: 'en-us'
+
 # Manage plugin commands
 commands:
   advancedenchantments:
     # Should "no permission" message be shown when
     # user does not have "ae.help" permission
     permissionMessageEnabled: true
-    permissionMessage:
-      - "&6&lAdvancedEnchantments &cYou do not have permission to use this command."
   enchanter:
     # Is command enabled?
     enabled: true
@@ -153,12 +155,6 @@ alchemist:
       item:
         type: STAINED_GLASS_PANE
         damage: 15
-    cannot-afford:
-      - "&cYou cannot afford this transaction"
-    exceeds-max-level:
-      &cYour combined level exceeds maximum enchantment level."
-    trade-cancelled:
-      &cTrade cancelled."
 souls:
   enabled: true
   lore: "&cSouls Collected: %souls%"
@@ -170,9 +166,6 @@ souls:
     lore:
       - "&7Apply to weapons to start tracking"
       - "&7souls collected from kills."
-    messages:
-      success:
-        - "&a&l(!) &aYou successfully applied &f&lSoul Tracker &7to your item!"
 
 # Enchantments limitation
 # If an item contains the specified lore, or the specified NBT tag, custom enchants
@@ -181,7 +174,6 @@ enchantLimitation:
   enabled: true
   lore: "&c&lUnmodifiable"
   NBT-tag: "unmodifiable"
-  message: "&cThis item cannot be modified!"
 
 # Enchantment combining (leveling up) on items.
 # Example: https://media.giphy.com/media/26n6QDunj6iC3Z6Zq/giphy.gif
@@ -194,13 +186,6 @@ combining:
     break-item: false
     # If higher level of enchantment already on item is applied, should the enchantment upgrade?
     upgrade: yes
-  messages:
-    successfull-combining:
-      - "&a&l(!) &aSuccessful, &7%enchant% is now level %level%!"
-    failure:
-      - "&c&l(!) &cCombining failed!"
-    already-max-level:
-      - "&c&l(!) &cNOTICE: This enchantment is already max level!"
 
 # Limit number of enchantments item can have
 slots:
@@ -213,8 +198,6 @@ slots:
   # Should it be displayed in lore?
   display-in-lore: false
   display: "&eItem Slots&7: %left%"
-  message:
-    - "&c&l(!) &cYou have reached maximum limit for enchantments this item!"
 
 applying:
   cosmetics:
@@ -224,14 +207,6 @@ applying:
     failed:
       particle: "LAVA_POP"
       sound: "ANVIL_BREAK"
-  already-applied:
-    - "&c&l(!) &cThe item already has this enchantment."
-  applied:
-    - "&a&l(!) &aEnchantment was applied to your item."
-  max-level:
-    - "&c&l(!) &cThis enchantment is already at max level!"
-  wrong-material:
-    - "&c&l(!) &cThis enchantment cannot be applied on this item."
 
 enchanter-books:
   firework-on-open: true
@@ -240,11 +215,6 @@ enchanter-books:
     sound: "LEVEL_UP"
   # Show message when enchantment book is right clicked
   display-right-click-message: true
-  # Variables: %enchant% - enchantment name
-  # %enchant-color% - enchantment name with color
-  # %level% - level number in roman
-  message:
-    - "&7You examined %group-color%%group%&7 book and found %enchant-color% %level%"
   type: BOOK
   id: 0
   custom-model-data: 0
@@ -342,9 +312,6 @@ items:
     success: 95
     destroy: 5
     random: true
-    messages:
-      noEnchantments: "&c&l(!)&c This item has &l0&c enchantments!"
-      cannotBeRemoved: "&c&l(!)&c %enchant% cannot be removed as it's invalid."
   secret-dust:
     type: FIREBALL
     id: 0
@@ -500,11 +467,6 @@ white-scroll:
       - "&fPrevents an item from being destroyed"
       - "&fdue to a failed Enchantment Book."
       - "&ePlace scroll on item to apply."
-  messages:
-    applied:
-      - "&a&l(!) &aWhite scroll has been applied to your item."
-    failed:
-      - "&c&l(!) &cWhite scroll saved the item."
 
 enchanter:
   # set to "none" to disable
@@ -513,13 +475,6 @@ enchanter:
   disabled-in-worlds:
     - "bad_world"
   messages:
-    cannot-afford:
-      - "&cYou do not have enough EXP to purchase that."
-      - "&7Your XP: %exp%"
-    successfull-purchase:
-      - "&a&l(!) &aSuccessful purchase!"
-    inventory-is-full:
-      - "&c&l(!) &cYour inventory is full!"
     sound: LEVEL_UP
     # 1.8 Sound == LEVEL_UP
   right-click-to-view-enchants: true
@@ -683,9 +638,6 @@ destroy:
   enabled: true
   # Should Item be destroyed?
   destroy-item: false
-  # Enchantment fail message.
-  message:
-    - "&c&l(!) &cEnchantment was unsuccessful"
 
 chances:
   # Should book chances be random?
@@ -698,8 +650,6 @@ chances:
   # neither apply enchant neither destroy. If set to "enabled: true', item will always be destroyed.
   destroy-if-fail:
     enabled: false
-    message:
-      - "&c&l(!) &cYour book failed but item wasn't destroyed!"
 
 # Confirmation inventory for enchanter payments
 # Confirm or deny the transaction, acts like 2-step confirmation
@@ -740,27 +690,6 @@ enchantment-book:
     - "&7%applies% Enchantment"
     - "&7Drag n' drop onto item to enchant"
 
-messages:
-  main-hand-only: "&cYou can only do this with main hand!"
-  command:
-    # Variables: %enchant%, %description%, %applies%, %max-level%
-    info:
-      - "&eInformation about &6%enchant% &eenchantment&7:"
-      - "&6Description&7: &e%description%"
-      - "&6Applies to&7: &e%applies%"
-      - "&6Max level&7: &e%max-level%"
-    enchantment-not-found:
-      - "&cEnchantment &c&n%enchant%&c could not be found."
-    player-not-online: "&f%player% &cis not online!"
-    no-permission: "&cYou do not have permission to use this command."
-    not-a-number: "&f%number% &cis not a number!"
-    invalid-level: "&cLevel is too big, try using:&f %levels%"
-  enchantment-cannot-be-removed: "&cEnchantment %enchant% cannot be removed!"
-  cannot-apply-with: "&7Enchantment cannot be applied together with &c%enchant%&7 enchant."
-  requires-enchant: "&7Enchantment requires &c%enchant% &7enchant to be applied."
-  apply:
-    cooldown: "&cYou will be able to use this command in %seconds% seconds."
-    reapplied: "&aYour armor has been re-applied."
 applies-groups:
   MISC_HELMETS:
     - TURTLE_HELMET
@@ -786,8 +715,6 @@ settings:
   # Setting for the STEAL_MONEY effect.
   steal-money:
     message-enabled: false
-    # replace with "you" instead of player name for directed player
-    message: "&6%attacker% &7stole &6%amount% &7from &6%victim%"
   # After how many sequential hits combo should reset?
   combo-limit: 5
   # Should trenched drops be automatically added to inventory? (prevents lag)

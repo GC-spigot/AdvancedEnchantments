@@ -8,11 +8,6 @@ enchantment-info:
   # Permission for command
   # Set to "" to disable
   permission: ""
-  # Message when opening menu
-  # Set to [] to disable
-  # Use %list-of-items% for applyable materials in lore and %list-of-items-msg% for message.
-  message:
-    - "&7Information about &e%enchant% &7enchantment."
   inventory:
     # If not enabled, only message will be shown.
     # You can use all variables that are used for items in the message,
@@ -79,10 +74,6 @@ enchantments:
   # Permission for command
   # Set to "" to disable
   permission: ""
-  # Message when opening menu
-  # Set to [] to disable
-  message:
-    - "&7Showing list of all enchantments..."
   mode:
     # Modes: GROUPS, ALL
     # If set to GROUPS, first group selection inventory will show up
