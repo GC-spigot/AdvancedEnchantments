@@ -1,0 +1,853 @@
+# AdvancedEnchantments
+# Made by GC
+# Version: 8.1.1
+# Release date: 2021/05/18
+
+# ** Commands and permissions
+# /enchanter - Open Enchanter; no permission
+# /tinkerer - Open Tinkerer; no permission
+# /gkits - Open GKits; no permission
+# /ae - Main plugin command; ae.help
+# /ae about - Information about current build; no permission
+# /ae list - List all custom enchantments; ae.list
+# /ae admin - Open a menu with all possible enchantments (100% success rate); ae.admin
+# /ae giveitem <player> <item> - Give various plugin items; ae.giveitem
+# /ae give <player> <enchantment> <level> - Give custom enchanted book; ae.give
+# /ae info <enchantment> - Information about custom enchantment; ae.info
+# /ae reload - Reload all configurations; ae.reload
+# /ae enchant <enchantment> <level> - Enchant item; ae.enchant
+# /ae givebook <player> <enchantment> <level> <count> <success> <destroy> - Give book with specific rates; ae.givebook
+# /ae givercbook <type> <player> <amount> - Give right-clickable book; ae.givercbook
+# /ae giverandombook <player> <group> - Gives random book from group; ae.giverandombook
+# /ae pasteenchants - Pastes formatted enchantments list; ae.admin
+# /alchemist - Open alchemist; no permission
+# /ae givegkit <player> <gkit> - Give player gkit items; ae.givegkit
+
+# /aegive - Give player gkit items; ae.give
+# Example: /aegive GC diamond_helmet 1 name:&&7cItem_name protection:5 glowing:1 lore:&&7cLore_line_#1|&&7cSecond_Line
+
+# /asets - Advanced Sets commands; asets.admin
+
+# Some configurable settings are explained, others should be self-explanatory.
+# Join support discord for help or with questions: https://advancedplugins.net/discord
+
+# Change default messages language. You can modify all messages in AdvancedEnchantments `locale` folder.
+# Read more here: https://ae.advancedplugins.net/general-information/languages
+language: 'en-us'
+
+# Manage plugin commands
+commands:
+  advancedenchantments:
+    # Should "no permission" message be shown when
+    # user does not have "ae.help" permission
+    permissionMessageEnabled: true
+  enchanter:
+    # Is command enabled?
+    enabled: true
+    # Main command to open Enchanter
+    command: /enchanter
+    # List of commands that will act as the command
+    aliases:
+      - "e"
+      - "ce"
+  tinkerer:
+    enabled: true
+    command: /tinkerer
+    aliases:
+      - "tinker"
+  alchemist:
+    enabled: true
+    command: /alchemist
+    aliases:
+      - "alchem"
+  withdrawsouls:
+    enabled: true
+    command: /withdrawsouls
+    aliases:
+      - "wsouls"
+  apply: # Reapplies current worn armor's effects, repeating effects as well
+    enabled: true
+    command: /apply
+    aliases:
+      - "reapply"
+
+permissions:
+  enchanter:
+    enabled: false
+    perm: "ae.enchanter"
+  tinkerer:
+    enabled: false
+    perm: "ae.tinkerer"
+  gkits:
+    enabled: false
+    perm: "ae.gkits"
+  alchemist:
+    enabled: false
+    perm: "ae.alchemist"
+
+disable-enchants:
+  # Disable enchants in specific world
+  test_world: # world name
+    - "test_enchant" # enchantment
+
+alchemist:
+  settings:
+    combine-books: true
+    combine-dust: true
+  books:
+    # This method adds chances together and splits by 2 (x+y/2)
+    add-up-chances: true
+    pre-set-chances:
+      enabled: false
+      success: 50
+      destroy: 50
+  dusts:
+    # This method just adds up chances together
+    add-up: true
+  price:
+    # if false, money economy will be used instead
+    exp: true
+    let-plugin-count: true
+    pre-set-pricing:
+      price: 250
+  messages:
+    inv-name: "Alchemist"
+    item-preview:
+      name: "&e&lItem Preview"
+      lore:
+        - "&7A preview of item you will"
+        - "&7receive from the Alchemist"
+        - "&7will be displayed here."
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 0
+    item-explanation:
+      name: "&e&lAlchemist"
+      lore:
+        - "&7The Alchemist will Exchange..."
+        - ""
+        - "&b&l* &f2X Enchantment Books"
+        - "&7(of the same type and level)"
+        - "&d= &f1X Enchantment Book"
+        - "&7(of higher level)"
+        - ""
+        - "&b&l* &f2X Magic Dust"
+        - "&7(of the same rarity)"
+        - "&d= &f1X Magic Dust"
+        - "&7(of higher chances)"
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 14
+    item-combine:
+      name: "&b&lCLICK TO EXCHANGE"
+      lore:
+        - "&c&lCOSTS &c%price% EXP"
+        - ""
+        - "&7Click here to confirm this"
+        - "&7item exchange and recieve your"
+        - "&7epic new item shown above!"
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 5
+    item-placeholder:
+      name: " "
+      lore: [ ]
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 15
+souls:
+  enabled: true
+  lore: "&cSouls Collected: %souls%"
+  item:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: "&f&lSoul Tracker"
+    lore:
+      - "&7Apply to weapons to start tracking"
+      - "&7souls collected from kills."
+
+# Enchantments limitation
+# If an item contains the specified lore, or the specified NBT tag, custom enchants
+# will not be able to be applied.
+enchantLimitation:
+  enabled: true
+  lore: "&c&lUnmodifiable"
+  NBT-tag: "unmodifiable"
+
+# Enchantment combining (leveling up) on items.
+# Example: https://media.giphy.com/media/26n6QDunj6iC3Z6Zq/giphy.gif
+combining:
+  enabled: true
+  chances:
+    # If true, Success and Destroy chances will effect combining
+    use-chances: true
+    # If true, item will break (if Protection is added, protection will be removed).
+    break-item: false
+    # If higher level of enchantment already on item is applied, should the enchantment upgrade?
+    upgrade: yes
+
+# Limit number of enchantments item can have
+slots:
+  enabled: true
+  # Max number of enchantments
+  max: 9
+  # Max slots increasement with slot increaser
+  # This is a total slot number that can be with upgrades
+  max-increase-of-slots: 13
+  # Should it be displayed in lore?
+  display-in-lore: false
+  display: "&eItem Slots&7: %left%"
+
+applying:
+  cosmetics:
+    applied:
+      particle: "HAPPY_VILLAGER"
+      sound: "LEVEL_UP"
+    failed:
+      particle: "LAVA_POP"
+      sound: "ANVIL_BREAK"
+
+enchanter-books:
+  firework-on-open: true
+  cosmetics:
+    particle: "HAPPY_VILLAGER"
+    sound: "LEVEL_UP"
+  # Show message when enchantment book is right clicked
+  display-right-click-message: true
+  type: BOOK
+  id: 0
+  custom-model-data: 0
+  force-glow: false
+  name: "%group-color%&l%group-name%&l Enchantment Book &7(Right Click)"
+  lore:
+    - "&7Right Click while holding to receive a random"
+    - "%group-color%%group-name% &7enchantment book."
+
+items:
+  settings:
+    # Admin Items listed below this list will only be
+    # applyable to materials in this list
+    can-apply-to:
+      - ALL_SWORD
+      - ALL_ARMOR
+      - ALL_PICKAXE
+      - ALL_AXE
+      - ALL_SPADE
+      - ALL_HOE
+      - ALL_EDIBLE
+      - BOOK
+      - BOW
+      - CROSSBOW
+      - SKULL_ITEM
+      - PLAYER_HEAD
+      - ELYTRA
+      - TRIDENT
+  transmogscroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: "&c&lTransmog Scroll"
+    lore:
+      - "&7Organizes enchants by &e&nrarity&7 on item"
+      - "&7and adds the &dlore &bcount&7 to name."
+      - ""
+      - "&e&oPlace scroll on item to apply."
+    enchants-count-formatting: "&d[&b&n%count%&d]"
+  soulgem:
+    type: EMERALD
+    id: 0
+    custom-model-data: 0
+    name: "&c&lSoul Gem &7[&a%count%&7]"
+    lore:
+      - "&7Apply to an item to add souls."
+  itemnametag:
+    type: NAME_TAG
+    id: 0
+    custom-model-data: 0
+    name: "&6&lItem NameTag &7(Right Click)"
+    lore:
+      - "&7Rename and customize your equipment"
+    messages:
+      success:
+        - "&a&l(!) &aYou have successfully renamed your item to &e%name%"
+      activated:
+        - "&a&l(!) &aYour next message will rename your item in hand"
+      air:
+        - "&c&l(!) &cYou need to be holding an item to do this"
+      renaming-not-enchanted-item:
+        - "&c&l(!) &cYou can only rename enchanted items"
+    settings:
+      # Should colors be allowed
+      colors: true
+      # Should magic color codes (&k, &m, &o, &r, &l) be allowed?
+      magic: false
+      # Words the name can't be. This uses regex, not an exact match.
+      # You can learn the basics of regex here: https://www.rexegg.com/regex-quickstart.html
+      word-blacklist:
+        - "fuck"
+        - "dick"
+        - "bitch"
+  randomization-scroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: "%group-color%%group-name%&l%group-color% Randomization Scroll"
+    lore:
+      - ""
+      - "&7Apply to any %group-color%%group-name% &7Enchantment Book"
+      - "&7to reroll the success and destroy rates."
+      - ""
+      - "&7Drag n' drop onto &nenchantment book&7 to apply."
+  black-scroll:
+    type: INK_SACK
+    id: 0
+    custom-model-data: 0
+    name: "&f&lBlack Scroll"
+    lore:
+      - "&7Removes a random enchantment"
+      - "&7from an item and converts"
+      - "&7it into a &f%success%% &7success book."
+      - "&fPlace scroll onto item to extract."
+    success: 95
+    destroy: 5
+    random: true
+  secret-dust:
+    type: FIREBALL
+    id: 0
+    custom-model-data: 0
+    name: "%group-color%%group-name%%group-color% Secret Dust &7(Right Click)"
+    lore:
+      - "&7Contains: &bMagic, &fMystery &7dust."
+      - "&7An unidentified satchel of dust."
+  mystery-dust:
+    type: SULPHUR
+    id: 0
+    custom-model-data: 0
+    name: "&fMystery Dust"
+    lore:
+      - "&7A failed bi-product"
+      - "&7of Magic dust."
+  magic-dust:
+    type: SUGAR
+    id: 0
+    custom-model-data: 0
+    name: "%group-color%%group-name%%group-color% Magic Dust"
+    lore:
+      - "&a+%percent%% Success"
+      - "&7Apply to a &7any %group-color%%group-name% &7Enchantment Book"
+      - "&7to increase its success by %group-color%%percent%%"
+    messages:
+      cannotApplyToStacked: "&c&l(!) &cCannot be applied to stacked books"
+  slot-increaser:
+    type: EYE_OF_ENDER
+    id: 0
+    custom-model-data: 0
+    name: "%group-color%&l%group-name% Slot Increaser"
+    lore:
+      - "&7Increase slots limit on an item by &a+%count%"
+    messages:
+      success:
+        - "&a&l(!) &aYou have successfully increased maximum slots on item by %count%!"
+  blocktrak:
+    type: SLIME_BALL
+    id: 0
+    custom-model-data: 0
+    name: "&aBlockTrak Creator"
+    lore:
+      - "&7Track how many blocks you break with a tool"
+      - "&7Drag ontop of another item to apply it"
+    messages:
+      success:
+        - "&7You successfully applied &aBlockTrak Creator"
+    settings:
+      lore-display: "&eBlockTrak Blocks Broken: &6%stats%"
+  stattrak:
+    type: MAGMA_CREAM
+    id: 0
+    custom-model-data: 0
+    name: "&eStatTrak Creator"
+    lore:
+      - "&7Track how many kills you have with a weapon"
+      - "&7Drag ontop of another item to apply it"
+    messages:
+      success:
+        - "&7You successfully applied &eStatTrak Creator"
+    settings:
+      lore-display: "&eStatTrak Kills: &6%stats%"
+  mobtrak:
+    type: SLIME_BALL
+    id: 0
+    custom-model-data: 0
+    name: "&3MobTrak Creator"
+    lore:
+      - "&7track how many mob kills you have with a weapon"
+      - "&7Drag ontop of another item to apply it"
+    messages:
+      success:
+        - "&7You successfully applied &3MobTrak Creator"
+    settings:
+      lore-display: "&3MobTrak Kills: &f%stats%"
+  holywhitescroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: "&6&lHoly White Scroll"
+    lore:
+      - "&eA legendary reward that can"
+      - "&ebe applied to armor/weapons,"
+      - "&egives a 100% chance of not losing"
+      - "&ethe blessed item on death."
+    messages:
+      applied:
+        - "&7You successfully applied &6&lHoly White Scroll"
+    settings:
+      lore-display: "&e&l*&f&lHOLY&e&l* &f&lPROTECTED"
+      # Keep holywhitescroll equipped to item even after death
+      keep-after-death: false
+  # Orbs allow applying x number of enchants
+  orb:
+    lore: "&a%max% Enchantment Slots &7(Orb [&a+%increased%&7])"
+    weapon:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: "&6&lWeapon Enchantment Orb &6[&a&n%max%&6]"
+      lore:
+        - "&a%success%% Success Rate"
+        - ""
+        - "&6+%new% Enchantment slots"
+        - "&6%max% Max Enchantment Slots"
+        - ""
+        - "&eIncreases the # of enchantment"
+        - "&eslots on a weapon by %new%,"
+        - "&eup to a maximum of %max%"
+        - "&7Drag n' Drop onto an item to apply."
+    armor:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: "&6&lArmor Enchantment Orb &6[&a&n%max%&6]"
+      lore:
+        - "&a%success%% Success Rate"
+        - ""
+        - "&6+%new% Enchantment slots"
+        - "&6%max% Max Enchantment Slots"
+        - ""
+        - "&eIncreases the # of enchantment"
+        - "&eslots on a piece of armor by %new%,"
+        - "&eup to a maximum of %max%"
+        - "&7Drag n' Drop onto an item to apply."
+    tool:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: "&6&lTool Enchantment Orb &6[&a&n%max%&6]"
+      lore:
+        - "&a%success%% Success Rate"
+        - ""
+        - "&6+%new% Enchantment slots"
+        - "&6%max% Max Enchantment Slots"
+        - ""
+        - "&eIncreases the # of enchantment"
+        - "&eslots on a tool by %new%,"
+        - "&eup to a maximum of %max%"
+        - "&7Drag n' Drop onto an item to apply."
+
+white-scroll:
+  # Obtain white scroll by giving it with command "/ae giveitem <player> whitescroll"
+  # Should the white scroll be removed once applied enchantment fails?
+  delete: true
+  # Display in item lore
+  lore-display: "&f&lPROTECTED"
+  item:
+    type: EMPTY_MAP
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+    name: "&fWhite Scroll"
+    lore:
+      - "&fPrevents an item from being destroyed"
+      - "&fdue to a failed Enchantment Book."
+      - "&ePlace scroll on item to apply."
+
+enchanter:
+  # set to "none" to disable
+  open-sound: "ENDERDRAGON_WINGS"
+  # In what worlds enchanter is disabled
+  disabled-in-worlds:
+    - "bad_world"
+  messages:
+    sound: LEVEL_UP
+    # 1.8 Sound == LEVEL_UP
+  right-click-to-view-enchants: true
+  go-back-item:
+    enabled: true
+    item:
+      type: NETHER_STAR
+      id: 0
+      custom-model-data: 0
+    name: "&c&lGo Back"
+    lore: [ ]
+  # Should enchanter stay open after item is bought?
+  keep-open: true
+  # Enchanter inventory size
+  # 9-18-27-36-45-54
+  #
+  # Placeholders:
+  #  %group-enchant-count% - number of enchants in the group
+  #  %price% - price
+  #  %left% - remaining needed exp until player can purchase item
+  # Economy:
+  # exp, money, level, souls (works with items that are held when opening inventory), diamonds, gold (gold ingots), emeralds
+  inventory:
+    size: 18
+    name: "&7Server Enchanter"
+    settings:
+      # Which level books should enchanter give?
+      # "ALL" - gives all levels
+      # <number> - Gives specific level of enchant
+      enchanterBookLevel: "ALL"
+    items:
+      0-18:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 7
+          custom-model-data: 0
+          force-glow: false
+        name: " "
+        lore: [ ]
+      2:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: SIMPLE
+        price: exp:400
+        sound: ANVIL_LAND
+        name: "&f&lSimple Enchantment &7(Right Click)"
+        lore:
+          - "&7Examine to recieve a random"
+          - "&fsimple &7enchantment book."
+          - ""
+          - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
+      3:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 5
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: UNIQUE
+        sound: ANVIL_LAND
+        price: exp:800
+        name: "&a&lUnique Enchantment &7(Right Click)"
+        lore:
+          - "&7Examine to recieve a random"
+          - "&aunique &7enchantment book."
+          - ""
+          - "&b&lCOST &f%price% EXP &7(You need %left% more)"
+      4:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 3
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: ELITE
+        price: exp:2500
+        sound: ANVIL_LAND
+        name: "&b&lElite Enchantment &7(Right Click)"
+        lore:
+          - "&7Examine to recieve a random"
+          - "&belite &7enchantment book."
+          - ""
+          - "&b&lCOST &f%price% EXP &7(You need %left% more)"
+      5:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 4
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: ULTIMATE
+        price: exp:5000
+        sound: ANVIL_LAND
+        name: "&e&lUltimate Enchantment &7(Right Click)"
+        lore:
+          - "&7Examine to recieve a random"
+          - "&eultimate &7enchantment book."
+          - ""
+          - "&b&lCOST &f%price% EXP &7(You need %left% more)"
+      6:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 1
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: LEGENDARY
+        price: exp:25000
+        sound: ANVIL_LAND
+        name: "&6&lLegendary Enchantment &7(Right Click)"
+        lore:
+          - "&7Examine to recieve a random"
+          - "&6legendary &7enchantment book."
+          - ""
+          - "&b&lCOST &f%price% EXP &7(You need %left% more)"
+      13:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 6
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: FABLED
+        price: exp:40000
+        sound: ANVIL_LAND
+        name: "&d&lFabled Enchantment &7(Right Click)"
+        lore:
+          - "&7Examine to recieve a random"
+          - "&dfabled &7enchantment book."
+          - ""
+          - "&b&lCOST &f%price% EXP &7(You need %left% more)"
+      9:
+        item:
+          type: ANVIL
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        sound: ANVIL_USE
+        player-command:
+          - "tinkerer"
+        name: "&fOpen &b&lTinkerer &7(Right Click)"
+        lore:
+          - "&7Tinker books for Magic Dusts and EXP."
+          - ""
+          - "&b&lRight Click to visit"
+      17:
+        item:
+          type: ENDER_PORTAL_FRAME
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        sound: ARROW_HIT
+        player-command:
+          - "alchemist"
+        name: "&fOpen &b&lAlchemist &7(Right Click)"
+        lore:
+          - "&7Combine Books and Magic Dusts."
+          - ""
+          - "&b&lRight Click to visit"
+
+destroy:
+  # Should book be destroyed if it fails?
+  enabled: true
+  # Should Item be destroyed?
+  destroy-item: false
+
+chances:
+  # Should book chances be random?
+  random: true
+  # If not random, what should be the simple values?
+  # Can use `<min>-<max` to define range between
+  success: 92
+  destroy: 8
+  # If applying book fails, should plugin destroy item 100% of the time or use Destroy from book to give a chance to
+  # neither apply enchant neither destroy. If set to "enabled: true', item will always be destroyed.
+  destroy-if-fail:
+    enabled: false
+
+# Confirmation inventory for enchanter payments
+# Confirm or deny the transaction, acts like 2-step confirmation
+confirmation-inventory:
+  enabled: true
+  name: "&aConfirmation Inventory"
+  accept:
+    material: STAINED_GLASS_PANE
+    damage: 5
+    name: "&aAccept Transaction"
+    lore:
+      - "&7Click this to pay %price% with %paymentType%"
+  cancel:
+    material: STAINED_GLASS_PANE
+    damage: 14
+    name: "&cClick to cancel"
+    lore: [ ]
+
+# Armor Switching (Right click while holding a piece of armor you're already wearing and they will be switched)
+armor-switching:
+  enabled: true
+  sound: "LEVEL_UP"
+  # Is switching between armor skulls enabled
+  armorSkullsSwitching: true
+
+enchantment-book:
+  item:
+    type: ENCHANTED_BOOK
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+    # Variables: %enchant%, %enchant-no-color%, %description%, %applies%, %success%, %destroy%, %color%, %max-level%
+  name: "%group-color%&l&n%enchant-no-color% %level%"
+  lore:
+    - "&a%success%% Success Rate"
+    - "&c%destroy%% Destroy Rate"
+    - "&e%description%"
+    - "&7%applies% Enchantment"
+    - "&7Drag n' drop onto item to enchant"
+
+applies-groups:
+  MISC_HELMETS:
+    - TURTLE_HELMET
+    - CARVED_PUMPKIN
+settings:
+  # If true, grindstones will remove custom enchants from items and return a small amount of XP.
+  grindstones-remove-custom-enchants: true
+  # Should enchantments on items be organized automatically in lore based on rarity?
+  organizeEnchantsOnItems: true
+  # If this is true, items with custom enchants will have the same glowing effect
+  # as items with vanilla enchants.
+  custom-enchants-cause-glow: false
+  # Non-legacy potions system stacks potions nd removes portions of potion from player,
+  # so removing one piece will not remove the whole streak. Suggested value: true
+  use-legacy-potions-system: true
+  # If this is enabled, when Fortune is paired with a custom enchant like
+  # SMELT or TP_DROPS, extra drops will be given just like if you used fortune on diamonds.
+  fortune-works-on-iron-gold: false
+  # Which mode the CHANGE_ARROW effect should use.
+  # Mode 1: Summons an entity that gets teleported to the arrow every tick until the arrow lands.
+  # Mode 2: (requires ProtocolLib) Uses to packets to turn the arrow into the other entity. Looks much better, less glitchly, & less laggy.
+  change-arrow-mode: 1
+  # Setting for the STEAL_MONEY effect.
+  steal-money:
+    message-enabled: false
+  # After how many sequential hits combo should reset?
+  combo-limit: 5
+  # Should trenched drops be automatically added to inventory? (prevents lag)
+  trench-autoadd-items: false
+  # If true, when TRENCH is paired with MORE_DROPS, the MORE_DROPS effect will
+  # be applied to each block TRENCH breaks.
+  trench-works-with-more-drops: false
+  # Length of name player can rename items to with itemnametag
+  itemnametag-max-name-length: 32
+  # Use all mined blocks durability on TRENCH items
+  # true = does how many blocks were mined damage on item
+  # false = does 1 durab. damage
+  trench-do-all-durab: true
+  # Should magic dust lower failure chances on books as well?
+  lower-destroy-with-magic-dust: true
+  # Enable COMBO effect on mobs?
+  enable-combo-for-mobs: true
+  # Clear potion effects on quit (may be useful in-case exploits are found) ?
+  clear-potion-effects-on-quit: true
+  # Should /ae market be enabled?
+  ae-market-enabled: true
+  # Use Numbers instead of Roman Numerals?
+  use-numbers: false
+  # EXPERIMENTAL!!! If true, AE will use a different way of handling MINING enchants. This may solve compatibility
+  # issues with other plugins & MINING enchants, but it may cause some issues. If you find
+  # any issues with it, please report them on GitHub https://github.com/GC-spigot/AdvancedEnchantments/issues/new/choose
+  use-experimental-block-breaking: false
+  # Trench effect materials blacklist
+  trench-blacklist:
+    - "AIR"
+    - "BEDROCK"
+    - "LAVA"
+    - "WATER"
+    - "STATIONARY_LAVA"
+    - "STATIONARY_WATER"
+    - "SPAWNER"
+    - "PORTAL"
+    - "SHULKER"
+    - "BARRIER"
+    - "END_PORTAL_FRAME"
+    - "END_PORTAL"
+    - "SHULKER_BOX"
+    - "RED_SHULKER_BOX"
+    - "WHITE_SHULKER_BOX"
+    - "ORANGE_SHULKER_BOX"
+    - "MAGENTA_SHULKER_BOX"
+    - "LIGHT_BLUE_SHULKER_BOX"
+    - "YELLOW_SHULKER_BOX"
+    - "LIME_SHULKER_BOX"
+    - "PINK_SHULKER_BOX"
+    - "GRAY_SHULKER_BOX"
+    - "LIGHT_GRAY_SHULKER_BOX"
+    - "CYAN_SHULKER_BOX"
+    - "PURPLE_SHULKER_BOX"
+    - "BLUE_SHULKER_BOX"
+    - "BROWN_SHULKER_BOX"
+    - "GREEN_SHULKER_BOX"
+    - "BLACK_SHULKER_BOX"
+  # Whitelist for blocks VEIN_MINE can break.
+  veinmine-whitelist:
+    - "COAL_ORE"
+    - "IRON_ORE"
+    - "GOLD_ORE"
+    - "LAPIS_ORE"
+    - "REDSTONE_ORE"
+    - "DIAMOND_ORE"
+    - "EMERALD_ORE"
+    - "NETHER_QUARTZ_ORE"
+    - "NETHER_GOLD_ORE"
+    - "ANCIENT_DEBRIS"
+  # Worlds to disable enchantments in
+  enchantment-world-blacklist:
+    - "no_enchantments_world"
+  holy-whitescrolls-world-blacklist:
+    - "no_holywhitescrolls_world"
+  # If a player is in any of the worlds listed, the FLY effect will not work.
+  # Note that the world names are case-sensitive.
+  fly-world-blacklist:
+    - "no_fly_world"
+  open-enchanter-by-right-clicking-enchantment-table: false
+  # If this is enabled, "Nether trees" (and mushrooms) will be counted as regular
+  # trees for effects like BREAK_TREE.
+  stems-count-as-trees: false
+  # Get activated enchants listed in chat upon enchant type trigger
+  enchants-debug-mode: false
+  # Cooldown (in seconds) for /apply command, make sure to have a cooldown as extensive spam could impact peformance
+  apply-cooldown: 20
+  # White scroll material blacklist
+  whitescroll-material-blacklist:
+    - "STONE" # Example item
+  # Amount of souls given per kill
+  souls-per-kill: 1
+  # TRENCH optimization system configuration
+  trench-optimization:
+    # Should player automatically detect what protection plugins are used and work from there
+    #   Explanation of how this works: Currently AE can support either WorldGuard only checks
+    #   or Universal which will support all protection plugins but this may sometimes result in
+    #   poor performance (depending on what protection plugins server is running). Recommended to
+    #   leave this setting as "true" if you are using other land plugins (ie. Factions, Skyblock, etc)
+    # Setting this to FALSE will only make the plugin work with WorldGuard
+    # Setting this to TRUE will let plugin choose between WG-only or Universal method, may cause performance loss
+    automaticallyDetect: true
+  # Radius of the "LAVA_WALKER" enchant. Can't be less then 2 or more then 10.
+  lava-walker-radius: 2
+  # Same as lavawalker-range but for "WATER_WALKER'.
+  water-walker-radius: 2
+  # Should souls be collected from mobs? By default souls are collected from Players only
+  collect-souls-from-mobs: false
+  # Trench Whitelist
+  # If list is not empty, will not allow to break any other blocks than listed here
+  trench-whitelist: [ ]
+  # E.g.: - "DIAMOND_ORE"
+
+  # Show enchantment level for level 1 enchants?
+  # E.g. if enabled, enchant "Gears I" would be shown as "Gears', but "Gears II" would stay the same.
+  showFirstLevel: true
+  # Should plugin re-apply armor when /heal is used?
+  heal-check: true
+
+  # Collecting souls from mining
+  # This can be used as a "tokens" currency for prison servers
+  miningSouls:
+    enabled: false
+    # Chance to gain a soul from mining
+    chance: 20
+
+  # Should combining custom enchanted items in anvil be allowed?
+  anvilCombining: true
+
+  # Should BOW enchants only activate if bow that was shot with was extended fully?
+  bow-full-power: true
+
+  # Should enchantment descriptions be added under enchant names in lores?
+  lore-descriptions:
+    enabled: false
+    display: "%group-color%* &8%description%"

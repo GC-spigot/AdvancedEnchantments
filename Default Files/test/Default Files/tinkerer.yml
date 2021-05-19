@@ -1,0 +1,55 @@
+inventory:
+  # set to "none' to disable
+  open-sound: "BLOCK_CHEST_OPEN"
+  name: "You                   Tinkerer"
+  items:
+    agree:
+      type: STAINED_GLASS_PANE
+      id: 14
+      name: "&eClick to ACCEPT trade"
+      lore: [ ]
+    placeholder-items:
+      type: THIN_GLASS
+      id: 0
+      name: " "
+      lore: [ ]
+    confirm-agree:
+      enable: false
+      type: STAINED_GLASS_PANE
+      id: 5
+      name: "&aClick to confirm the transaction"
+      lore: [ ]
+      enabled: true
+      sound: BLOCK_LEVER_CLICK
+    confirm-agree-tinkerer:
+      enable: false
+      type: STAINED_GLASS_PANE
+      id: 5
+      name: "&aClick to confirm the transaction"
+      lore: [ ]
+prices:
+  # Exp or money (exp/money)
+  type: exp
+  # Define how much of currency should be paid for items per enchantment number (3 enchantments = x3 the amount, and so on)
+  amount: 26
+  # More advanced formula for tinkerer calculation, set to `%amount%' if you want to give a set amount (from "amount')
+  # Variables:
+  # %amount% = amount from previous setting
+  # %enchants% = number of enchants on item
+  # %durability% = percent of durability left, so if item had half of it's durability remaining, it would be 0.5
+  formula: "(%amount%*%enchants%)*%durability%"
+items:
+  money:
+    type: PAPER
+    id: 0
+    name: "&cMoney Voucher &7(%amount%)"
+    lore:
+      - "&cReceived from &fEnchanter"
+      - "&cReceived by &f%name%"
+  exp:
+    type: EXP_BOTTLE
+    id: 0
+    name: "&a&lExperience Bottle &7(throw)"
+    lore:
+      - "&dValue &f%amount% XP"
+      - "&dEnchanter &fServer Enchanter"

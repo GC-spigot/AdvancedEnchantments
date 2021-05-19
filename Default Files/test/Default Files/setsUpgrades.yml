@@ -1,0 +1,51 @@
+# Sets Upgrades
+
+# Heroic Upgrades (Increase armor durability and strength)
+# Turns armor it's applied to into a leather item piece for noticibility
+# Command to give an upgrade: /asets giveHeroicUpgrade <player> <set> <chance> [amount]
+
+armorCrystal:
+  item:
+    material: NETHER_STAR
+    damage: 0
+    name: "&6&lArmor Crystal (&a&l%setName%&6&l)"
+    lore:
+      - "&a%chance%% Success Rate"
+      - "&7Can be applied to any non"
+      - "&7armor set that is not"
+      - "&7already equipped with a"
+      - "&7bonus crystal to gain"
+      - "&7a passive advantage!"
+heroicUpgrades:
+  item:
+    material: INK_SACK
+    damage: 11
+    name: "&6&lHeroic (&a&l%setName%&6&l) Upgrade"
+    lore:
+      - ""
+      - "&7Apply to any &a&l%setName%&7 armor"
+      - "&7for a &6%chance%%&7 chance to imbue it"
+      - "with the power of Heroic Armor!"
+      - ""
+      - "&7This will increase armor''s base"
+      - "&7stats, such as durability and strength."
+  durability:
+    helmet: 810
+    chestplate: 1000
+    leggings: 935
+    boots: 686
+  armorValue:
+    helmet: 3 # Higher = more resistance to damage
+    chestplate: 8
+    leggings: 6
+    boots: 3
+  addedLore:
+    - ""
+    - "&7+%armorValue% Armor Value"
+    - "&7%durability% Durability"
+    - "&4This armor is stronger than diamond."
+
+# General settings
+settings:
+  # Should durability damage be done in pvp?
+  doPvpDurabilityDamage: true
