@@ -19,6 +19,7 @@ groups:
     # Use this to change the type of item per group
     right-click-book-material: FIREWORK_CHARGE
     right-click-book-damage: 0
+    right-click-book-custom-model-data: 0
     # Use this to set firework charge's color only! Uses RGB
     # Find colors here: https://htmlcolorcodes.com/color-picker/
     firework-color: 200;200;200
