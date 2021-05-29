@@ -2414,21 +2414,21 @@ rocketescape:
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "BOOST:30 %victim%"
+        - "BOOST:UP:30 %victim%"
     2:
       chance: 34
       cooldown: 8
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "BOOST:45 %victim%"
+        - "BOOST:UP:45 %victim%"
     3:
       chance: 40
       cooldown: 8
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "BOOST:50 %victim%"
+        - "BOOST:UP:50 %victim%"
 trickster:
   display: "%group-color%Trickster"
   description: "When hit you have a\nchance to teleport directly\nbehind you opponent."
@@ -4368,32 +4368,32 @@ convulse:
       chance: 8
       cooldown: 10
       effects:
-        - "BOOST:5 %attacker%"
+        - "BOOST:UP:5 %attacker%"
     2:
       chance: 10
       cooldown: 10
       effects:
-        - "BOOST:6 %attacker%"
+        - "BOOST:UP:6 %attacker%"
     3:
       chance: 12
       cooldown: 10
       effects:
-        - "BOOST:7 %attacker%"
+        - "BOOST:UP:7 %attacker%"
     4:
       chance: 14
       cooldown: 10
       effects:
-        - "BOOST:8 %attacker%"
+        - "BOOST:UP:8 %attacker%"
     5:
       chance: 16
       cooldown: 10
       effects:
-        - "BOOST:9 %attacker%"
+        - "BOOST:UP:9 %attacker%"
     6:
       chance: 18
       cooldown: 10
       effects:
-        - "BOOST:10 %attacker%"
+        - "BOOST:UP:10 %attacker%"
 chunky:
   display: "%group-color%Chunky"
   description: "Chance to receive less damage."
@@ -5367,19 +5367,19 @@ launch:
       chance: 20
       cooldown: 15
       effects:
-        - "BOOST:8"
+        - "BOOST:UP:8"
         - "PARTICLE:CLOUD:20:2"
     2:
       chance: 27
       cooldown: 15
       effects:
-        - "BOOST:9"
+        - "BOOST:UP:9"
         - "PARTICLE:CLOUD:20:2"
     3:
       chance: 35
       cooldown: 10
       effects:
-        - "BOOST:10"
+        - "BOOST:UP:10"
         - "PARTICLE:CLOUD:20:2"
 slingshot:
   display: "%group-color%Slingshot"
@@ -5395,19 +5395,19 @@ slingshot:
       cooldown: 15
       condition: "%is holding% contains FIREWORK : %stop%"
       effects:
-        - "BOOST:10"
+        - "BOOST:UP:10"
     2:
       chance: 40
       cooldown: 10
       condition: "%is holding% contains FIREWORK : %stop%"
       effects:
-        - "BOOST:12"
+        - "BOOST:UP:12"
     3:
       chance: 50
       cooldown: 5
       condition: "%is holding% contains FIREWORK : %stop%"
       effects:
-        - "BOOST:16"
+        - "BOOST:UP:16"
 nulify:
   display: "%group-color%Nulify"
   description: "Chance to deal double damage\nwhile leaving enemy blind.\nCosts 40 souls / activation."

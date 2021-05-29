@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.0.4
-# Release date: 2021/05/07
+# Version: 8.1.7
+# Release date: 2021/05/25
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; no permission
@@ -708,10 +708,6 @@ settings:
   # If this is enabled, when Fortune is paired with a custom enchant like
   # SMELT or TP_DROPS, extra drops will be given just like if you used fortune on diamonds.
   fortune-works-on-iron-gold: false
-  # Which mode the CHANGE_ARROW effect should use.
-  # Mode 1: Summons an entity that gets teleported to the arrow every tick until the arrow lands.
-  # Mode 2: (requires ProtocolLib) Uses to packets to turn the arrow into the other entity. Looks much better, less glitchly, & less laggy.
-  change-arrow-mode: 1
   # Setting for the STEAL_MONEY effect.
   steal-money:
     message-enabled: false
@@ -722,6 +718,8 @@ settings:
   # If true, when TRENCH is paired with MORE_DROPS, the MORE_DROPS effect will
   # be applied to each block TRENCH breaks.
   trench-works-with-more-drops: false
+  # If true, the Rename Tag will only work on enchanted items.
+  renametag-enchanted-only: true
   # Length of name player can rename items to with itemnametag
   itemnametag-max-name-length: 32
   # Use all mined blocks durability on TRENCH items
