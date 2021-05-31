@@ -92,5 +92,5 @@ var effectsList  =  [
   "TRENCH:(size)",
   "VEIN_MINE",
   "WAIT:(ticks)",
-  "XP"
+  "XP:(amount)"
 ];
