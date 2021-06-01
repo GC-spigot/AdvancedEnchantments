@@ -10,9 +10,9 @@ labels: "Bug: Unconfirmed"
 FULLY FILL OUT THE TEMPLATE. YOUR ISSUE WILL BE IMMEDIATELY CLOSED IF YOU DON'T.
 
 Before reporting a bug, make sure you have the latest version of the plugin.
-Advanced Plugins: https://advancedplugins.net/item/1
+Advanced Plugins: https://advancedplugins.net/item/1/
 Spigot: https://www.spigotmc.org/resources/43058/
-Songoda: https://songoda.com/marketplace/product/327
+Songoda: https://songoda.com/marketplace/product/327/
 
 Do not write inside the arrows or it will be hidden!
 
@@ -42,4 +42,4 @@ Do not write inside the arrows or it will be hidden!
 
 ## Server Information
 - "/ae plinfo" link: <!-- REQUIRED! Replace this with the command output's https://paste.md-5.net/ link -->
-- Server log: <!-- REQUIRED! Upload `logs/latest.log` to https://gist.github.com/ -->
+- Server log: <!-- REQUIRED! Upload `logs/latest.log` to https://mcpaste.io/ -->
