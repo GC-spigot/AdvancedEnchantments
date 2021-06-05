@@ -18,13 +18,8 @@ commands:
   not-holding-item: "&cYou must be holding an item!"
   enchantment-info:
     invalid-usage: "&cInvalid usage! Proper usage: %command% <enchantment>"
-    # Message when /enchant <enchant> menu
-    # Set to '' to disable
-    # Use %list-of-items% for applyable materials in lore and %list-of-items-msg% for message.
     open-menu-message: "&7Information about &e%enchant% &7enchantment."
   enchants:
-    # Message when opening /enchants menu
-    # Set to [] to disable
     open-menu-message: "&7Showing list of all enchantments..."
   apply:
     cooldown: "&cYou will be able to use this command in %seconds% seconds."
@@ -118,9 +113,6 @@ enchanter:
   re-buy: "&cPlease re-buy the item from the enchanter."
   disabled-in-world: "&cThe Enchanter is disabled in this world."
   full-inventory: "&cYour inventory is full!"
-  # Variables: %enchant% - enchantment name
-  # %enchant-color% - enchantment name with color
-  # %level% - level number in roman
   examine-book: "&7You examined %group-color%%group%&7 book and found %enchant-color% %level%"
   unknown-payment-method: "&cFailed to validate %paymentType% payment method, please contact an administrator."
   successful-purchase: "&aPurchase successful!"
@@ -140,9 +132,6 @@ alchemist:
   cannot-afford: "&cYou cannot afford this transaction!"
   exceeds-max-level: "&cYour combined level exceeds maximum enchantment level!"
 
-# Placeholders available:
-# * {gkit} - Name of GKit
-# * {cooldown} - Cooldown of GKit
 gkits:
   no-permission: "&eYou don't have permissions to use &e%gkit%&6 kit."
   cooldown: "&eYou cannot use this kit yet, kit &6%gkit%&e is on cooldown &7(%cooldown%)"
