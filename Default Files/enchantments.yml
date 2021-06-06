@@ -4851,7 +4851,7 @@ abiding:
   group: "LEGENDARY"
   applies:
     - ALL_SWORD
-    - ALL_BOW
+    - BOW
   levels:
     1:
       effects:
@@ -5061,7 +5061,7 @@ neutralize:
   type: "BOW"
   group: "FABLED"
   applies:
-    - ALL_BOW
+    - BOW
   levels:
     1:
       chance: 5
