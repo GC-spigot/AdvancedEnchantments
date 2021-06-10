@@ -659,7 +659,7 @@ berserk:
   type: "ATTACK;ATTACK_MOB"
   group: "UNIQUE"
   applies:
-    - ALL_AXE
+    - ALL_SWORD
     - ALL_AXE
   levels:
     1:
@@ -2044,27 +2044,27 @@ perish:
       chance: 9
       cooldown: 3
       effects:
-        - "POTION:WITHER:0:60 %attacker%"
+        - "POTION:WITHER:0:60 %victim%"
     2:
       chance: 11
       cooldown: 3
       effects:
-        - "POTION:WITHER:0:100 %attacker%"
+        - "POTION:WITHER:0:100 %victim%"
     3:
       chance: 14
       cooldown: 3
       effects:
-        - "POTION:WITHER:0:140 %attacker%"
+        - "POTION:WITHER:0:140 %victim%"
     4:
       chance: 17
       cooldown: 3
       effects:
-        - "POTION:WITHER:1:60 %attacker%"
+        - "POTION:WITHER:1:60 %victim%"
     5:
       chance: 21
       cooldown: 3
       effects:
-        - "POTION:WITHER:1:100 %attacker%"
+        - "POTION:WITHER:1:100 %victim%"
 smokebomb:
   display: "%group-color%Smoke Bomb"
   description: "When you are near death, you\nwill spawn a smoke bomb to\ndistract your enemies."
@@ -5062,6 +5062,7 @@ neutralize:
   group: "FABLED"
   applies:
     - BOW
+    - CROSSBOW
   levels:
     1:
       chance: 5
