@@ -237,6 +237,25 @@ carrotplanter:
         - "%player is sneaking% = true : %allow%"
       effects:
         - "PLANT_SEEDS:3:CARROT"
+replanter:
+  display: "%group-color%Replanter"
+  description: "Replants crops when you break them."
+  applies-to: "Hoes"
+  type: "MINING"
+  group: "UNIQUE"
+  settings:
+    newVersionsOnly: true # Only load this enchantment if server version is 1.13 or higher
+  applies:
+    - ALL_HOE
+  levels:
+    1:
+      condition:
+        - "%is crop% = false : %stop%"
+        - "%is fully grown% = false : %stop%"
+        - "%offhand item% = %block drop type% : %allow%"
+      effects:
+        - "TAKE_AWAY:%block drop type%"
+        - "SET_BLOCK:%block type%"
 strike:
   display: "%group-color%Strike"
   description: "Chance to strike lightning\nat the opponent."
