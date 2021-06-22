@@ -72,6 +72,7 @@ var effectsList  =  [
   "REPAIR",
   "RESET_COMBO",
   "REVIVE",
+  "SET_BLOCK:(material):[x]:[y]:[z]",
   "SET_OXYGEN:(amount)",
   "SMELT",
   "SNOWBLIND",
