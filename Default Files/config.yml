@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.2.5
-# Release date: 2021/06/05
+# Version: 8.3.4
+# Release date: 2021/06/22
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; no permission
@@ -643,7 +643,7 @@ chances:
   # Should book chances be random?
   random: true
   # If not random, what should be the simple values?
-  # Can use `<min>-<max` to define range between
+  # Can use `<min>-<max>` to define range between
   success: 92
   destroy: 8
   # If applying book fails, should plugin destroy item 100% of the time or use Destroy from book to give a chance to
@@ -676,6 +676,10 @@ armor-switching:
   armorSkullsSwitching: true
 
 enchantment-book:
+  # If true, books can be applied to items in anvils.
+  anvil-application: true
+  # If true, books can be applied to items by dragging and dropping them on the item in an inventory.
+  drag-drop-application: true
   item:
     type: ENCHANTED_BOOK
     id: 0
@@ -694,6 +698,7 @@ applies-groups:
   MISC_HELMETS:
     - TURTLE_HELMET
     - CARVED_PUMPKIN
+
 settings:
   # If true, grindstones will remove custom enchants from items and return a small amount of XP.
   grindstones-remove-custom-enchants: true
@@ -736,6 +741,11 @@ settings:
   ae-market-enabled: true
   # Use Numbers instead of Roman Numerals?
   use-numbers: false
+  # If this is enabled, whenever an enchant with HELD is equipped/ unequipped, all armor will be reapplied.
+  # And when armor is equipped/ unequipped, the item you're holding will have it's effects updated.
+  # This can solve issues with armor & held items giving the same potion effect but may cause some
+  # unwanted side effects. Test before using on a live server.
+  held-effect-static-cross-update: false
   # EXPERIMENTAL!!! If true, AE will use a different way of handling MINING enchants. This may solve compatibility
   # issues with other plugins & MINING enchants, but it may cause some issues. If you find
   # any issues with it, please report them on GitHub https://github.com/GC-spigot/AdvancedEnchantments/issues/new/choose
@@ -838,9 +848,6 @@ settings:
     enabled: false
     # Chance to gain a soul from mining
     chance: 20
-
-  # Should combining custom enchanted items in anvil be allowed?
-  anvilCombining: true
 
   # Should BOW enchants only activate if bow that was shot with was extended fully?
   bow-full-power: true
