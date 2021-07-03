@@ -1,7 +1,7 @@
 # AdvancedEnchantments
 # Made by GC
-# Version: 8.3.4
-# Release date: 2021/06/22
+# Version: 8.4.2
+# Release date: 2021/07/02
 
 # ** Commands and permissions
 # /enchanter - Open Enchanter; no permission
@@ -32,7 +32,7 @@
 # Join support discord for help or with questions: https://advancedplugins.net/discord
 
 # Change default messages language. You can modify all messages in AdvancedEnchantments `locale` folder.
-# Read more here: https://ae.advancedplugins.net/general-information/languages
+# See all default languages & other info here: https://ae.advancedplugins.net/general-information/languages
 language: 'en-us'
 
 # Manage plugin commands
@@ -841,17 +841,20 @@ settings:
   showFirstLevel: true
   # Should plugin re-apply armor when /heal is used?
   heal-check: true
-
+  # If WorldGuardExtraFlags is installed, should the FLY effect only work if
+  # the player is allowed to fly in that area.
+  use-worldguard-fly-flag: false
+  # If set to false, mobs that spawn from spawners won't
+  # drop custom drops defined in the mobs.yml file.
+  custom-drops-from-spawners: false
   # Collecting souls from mining
   # This can be used as a "tokens" currency for prison servers
   miningSouls:
     enabled: false
     # Chance to gain a soul from mining
     chance: 20
-
   # Should BOW enchants only activate if bow that was shot with was extended fully?
   bow-full-power: true
-
   # Should enchantment descriptions be added under enchant names in lores?
   lore-descriptions:
     enabled: false

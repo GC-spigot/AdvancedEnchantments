@@ -1,4 +1,4 @@
-# « Example configuration »
+# << Example configuration >>
 #lastchance:    <-- Enchantment name
 #  display: "%group-color%Last Chance"    <-- Display in item lore
 #  description: "Has a chance to heal when on low hearts"    <-- Enchantment Description
@@ -20,8 +20,6 @@
 #      effects:    <-- All enchantment effects
 #        - "ADD_HEALTH:2 %victim%"    <-- Effect(s) list
 
-# Æ »»» ENCHANTMENT OPTIONS EXPLAINED BELOW «««ß
-
 #  Display (String) (No spaces or enchantment will break)
 #    Determines how will enchantment look in item lore
 
@@ -33,32 +31,7 @@
 #   Enchantment groups are used for enchanter, to sell specific type books. You can group them
 #   and add a group-wide color, then obtain it with variable %group-color% (shown in example enchantments below).
 
-#  Type (Setting)
-#    Decides type of the enchantment. Types:
-#    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn).
-#    - ATTACK : Effects run only when attacking another player.
-#    - DEFENSE : Effects run only when being attacked.
-#    - DEFENSE_BOW : Effects run only when player gets shot by a bow.
-#    - MINING : Gives effects when block is mined.
-#    - HELD : Effects given when item is held.
-#    - ATTACK_MOB : Gives effects when player attacks mob.
-#    - KILL_MOB : Effects given when attacked mob is killed.
-#    - BOW : Effects given when player is shot by another player.
-#    - KILL_PLAYER : Effects given when attacker kills a player.
-#    - DEATH : Runs when player dies due to another player.
-#    - RIGHT_CLICK : Runs when player right clicks held item.
-#    - BOW_MOB : Effects given when mob is shot by player.
-#    - FIRE : Effects given when player is on fire.
-#    - EXPLOSION : Effects given when player gets hit by explosion.
-#    - SWING : Enchant runs when player swings.
-#    - FALL_DAMAGE : Enchant runs when player takes fall damage.
-#    - DEFENSE_MOB : Enchant runs when mob attacks a player.
-#    - SHIFT : Enchant runs when player toggles crouching (shifts).
-#    - ITEM_BREAK : Enchant runs when player toggles crouching (shifts).
-#    - CATCH_FISH : Enchant runs when player catches a fish.
-#    - PASSIVE_DEATH : Enchant runs when player dies from non-pvp related cause.
-#    - EAT : Enchant runs whenever a player consumes an item.
-#    - REPEATING : Repeating enchantments, read more here: https://ae.advancedplugins.net/enchantments/repeating-enchantments
+#  Enchantment Types List: https://ae.advancedplugins.net/enchantments/creating-enchantments/type-list
 
 #  Applies (Material)
 #    Determines which items will have the effects
@@ -93,54 +66,7 @@
 #        # You can add %damage% instead of numbers, to use number of damage has been done (for ATTACK and DEFENSE)
 
 #  Area of effect: https://ae.advancedplugins.net/enchantments/radius-of-effect-enchantments
-
-#  Chance (Number)
-#    Chance of effect occurring
-
-#  Cooldown (number)
-#    Number of effect cooldown, in seconds.
-
-# Conditions
-#   Conditions let you choose under what circumstances enchantment should be activated/stopped or chance increased/descreased
-#
-#   « Examples »
-#      ► "%victim health% > 5 : %stop%" (Will not activate effects if player's health is higher than 2.5 hearts (1 heart = 2)
-#      ► "%player world% = my_world : %allow%" (If player is in world called "my_world", the enchantment will activate)
-#      ► "%player y% < 30 && %player health% > 10 =  : %chance%+10" (If player's Y level is less than 30 and health is more than 5 hearts, it 7
-#      will increase chance of effects activating by 10)
-#      ► "%victim health% > %attacker health% : %force%" (If victim has more health than attacker, effects will be forced to run
-#      ignoring probability chance of it activating).
-#
-#   « Variables for conditional part »
-#    %player health%, %player food%, %player_world%, %player_name%, %player x, %player y%, %player z%, %near players% (number)
-#    You can also replace "player" with attacker/victim for ATTACK, BOW, DEATH, DEFENSE and KILL_PLAYER enchantment types.
-#    %block x%, %block y% and %block z% can be used for MINING enchantment type. %combo%, %attacker combo% and %victim combo% can
-#    be used to define how many combo's player has. You can also use %is sneaking% as well as %attacker is sneaking%, %victim is sneaking%
-#    (eg. %is sneaking% = true : %continue%) As well as %is on fire%, can be used with %victim/attacker is on fire% (returns true/false)
-#    You can use %mob type% variable for KILL_MOB and ATTACK_MOB, to get mob in the event, e.g.: (CREEPER, CAVE_SPIDER, ZOMBIE)
-#    %block type% - Mined block type, find all block types at: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
-#    %(victim/attacker)is under water% - returns "true/false"
-#    %is headshot% - returns "true/false" (for BOW)
-#    %has potion effect <POTION EFFECT TYPE>% - returns "true/false"
-#    %(attacker /victim )faction land% - returns ENEMY, NEUTRAL, TRUCE, MEMBER (own land) (Factions)
-#    %(attacker /victim )level of skill (mcmmo skill(UpperCase))% - returns level number (mcMMO)
-#    %(attacker /victim )is bleeding% - returns "true/false" if player is bleeding (mcMMO)
-#    %damaged from behind% - returns if victim was damaged from behind by enemy
-#    %attacker has enchantment in hand of <enchant>% - returns "true/false", checks if player has enchantment on their item
-#    %attacker time%/%victim time% - get player world time
-#    %health percentage% - get player's health percentage
-#    %victim/attacker custom name% - get mob's name
-#    %potion effect level <potion name>% - get level of applied potion effect, remember that potion amplifiers are counted from 0, so level 1 = 0
-#    %<player> can break% - checks if player can break specified block, can be used with MINING and SWING, returns true/false
-#    %<player> is holding% - returns material of held item
-#
-# PLACHOLDERAPI SUPPORT FOR CONDITIONS:
-#    E.g: "%victim player_level% > 10 : %stop%', player_level is a PlaceholderAPI condition %player_level%. You can use %player <condition>%, %attacker <condition>% and %victim <condition>%.
-#    It's a must to remove percentage signs from PlaceholderAPI placeholders, more examples: %server_online% -> server_online -> "%player server_online% > 5 : %allow%"
-#
-#   « Variables for end solution »
-#    %force% (forces effect to activate ignoring chance), %continue% (let's the effect reading continue, takes chance in consideration),
-#    %stop% (ignores all of the effects), %chance%+x (increases chance by x%), %chance-x% (decreases chance by x%)
+#  Conditions:  https://ae.advancedplugins.net/enchantments/enchantment-conditions
 
 # Settings for enchantments
 # *** This is not a required configuration section and each enchantment doesn't need to have it ***
