@@ -85,8 +85,6 @@ planter:
   applies-to: "Hoes"
   type: "RIGHT_CLICK"
   group: "ULTIMATE"
-  settings:
-    newVersionsOnly: true # Only load this enchantment if server version is 1.13 or higher
   applies:
     - ALL_HOE
   levels:
@@ -112,9 +110,7 @@ potatoplanter:
   description: "Plant potatoes in a 3x3 area\nby shift+right-clicking."
   applies-to: "Hoes"
   type: "RIGHT_CLICK"
-  group: "SIMPLE"
-  settings:
-    newVersionsOnly: true # Only load this enchantment if server version is 1.13 or higher
+  group: "ULTIMATE"
   applies:
     - ALL_HOE
   levels:
@@ -140,9 +136,7 @@ carrotplanter:
   description: "Plant carrots in a 3x3 area\nby shift+right-clicking."
   applies-to: "Hoes"
   type: "RIGHT_CLICK"
-  group: "SIMPLE"
-  settings:
-    newVersionsOnly: true # Only load this enchantment if server version is 1.13 or higher
+  group: "ULTIMATE"
   applies:
     - ALL_HOE
   levels:
@@ -169,8 +163,6 @@ replanter:
   applies-to: "Hoes"
   type: "MINING"
   group: "UNIQUE"
-  settings:
-    newVersionsOnly: true # Only load this enchantment if server version is 1.13 or higher
   applies:
     - ALL_HOE
   levels:
@@ -178,10 +170,8 @@ replanter:
       condition:
         - "%is crop% = false : %stop%"
         - "%is fully grown% = false : %stop%"
-        - "%offhand item% = %block drop type% : %allow%"
       effects:
-        - "TAKE_AWAY:%block drop type%"
-        - "SET_BLOCK:%block type%"
+        - "PLANT_SEEDS:0:%block drop type%"
 strike:
   display: "%group-color%Strike"
   description: "Chance to strike lightning\nat the opponent."

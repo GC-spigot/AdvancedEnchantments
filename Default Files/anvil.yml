@@ -6,6 +6,11 @@ enabled: true
 # You can read more about it here https://minecraft.fandom.com/wiki/Anvil_mechanics.
 use-repair-cost: true
 
+# If true, enchantments that normally can't be put on items together (eg. Smite & Sharpness)
+# will be allowed to be combined.
+allow-illegal-vanilla-enchant-combinations: false
+allow-illegal-custom-enchant-combinations: false
+
 # The maximum levels vanilla enchants can be combined up to.
 levels:
   # Armor Enchantments
