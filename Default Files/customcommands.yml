@@ -38,10 +38,10 @@ enchantment-info:
         force-glow: false
         name: "&7Information about &e%enchant% &7enchantment"
         lore:
-          - "&eEnchantment &7» &r%ench-colors%"
-          - "&eApplies to &7» &r%applies-to%"
-          - "&eMax Level &7» &r%max-lvl%"
-          - "&eDescription &7» &r%desc%"
+          - "&eEnchantment &7>> &r%ench-colors%"
+          - "&eApplies to &7>> &r%applies-to%"
+          - "&eMax Level &7>> &r%max-lvl%"
+          - "&eDescription &7>> &r%desc%"
         # you can as well use %group-color% to get enchantment color
       2:
         type: STAINED_GLASS_PANE
@@ -55,7 +55,7 @@ enchantment-info:
         id: 0
         custom-model-data: 0
         force-glow: false
-        name: "&eApplies to &7»"
+        name: "&eApplies to &7>>"
         lore:
           - "&7%applies-to%"
       4:
@@ -192,7 +192,7 @@ enchantments:
       command: "/enchant %enchantment%"
       name: "&e%enchant% &7enchantment"
       lore:
-        - " &f* &eEnchantment &7» &r%ench-colors%"
-        - " &f* &eApplies to &7» &r%applies-to%"
-        - " &f* &eMax Level &7» &r%max-lvl-roman%"
-        - " &f* &eDescription &7» &r%desc%"
+        - " &f* &eEnchantment &7>> &r%ench-colors%"
+        - " &f* &eApplies to &7>> &r%applies-to%"
+        - " &f* &eMax Level &7>> &r%max-lvl-roman%"
+        - " &f* &eDescription &7>> &r%desc%"

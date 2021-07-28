@@ -160,10 +160,10 @@ sets:
     invalid-chances: "&cKesempatan invalid."
     list:
       header: "&eDaftar set yang tersedia &7[%size%]"
-      set: " &8» &f%set%"
+      set: " &8>> &f%set%"
     listweapons:
       header: "&eDaftar senjata yang tersedia &7[%size%]"
-      weapon: " &8» &f%weapon%"
+      weapon: " &8>> &f%weapon%"
     give:
       success: "&eMemberikan &f %set% &eSet ke pemain &f %player%"
     givepiece:

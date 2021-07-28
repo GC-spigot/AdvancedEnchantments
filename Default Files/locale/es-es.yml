@@ -160,10 +160,10 @@ sets:
     invalid-chances: "&cPosibilidades no válidos."
     list:
       header: "&eLista de todos los conjuntos disponibles &7[%size%]"
-      set: " &8» &f%set%"
+      set: " &8>> &f%set%"
     listweapons:
       header: "&eLista de todas las armas disponibles &7[%size%]"
-      weapon: " &8» &f%weapon%"
+      weapon: " &8>> &f%weapon%"
     give:
       success: "&eLe dio &f %set% &ea &f %player%"
     givepiece:

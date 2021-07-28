@@ -178,10 +178,10 @@ sets:
     invalid-chances: "&cȘansă invalidă."
     list:
       header: "&eLista tuturor Seturilor disponibile &7[%size%]"
-      set: " &8» &f%set%"
+      set: " &8>> &f%set%"
     listweapons:
       header: "&eLista tuturor Armelor disponibile &7[%size%]"
-      weapon: " &8» &f%weapon%"
+      weapon: " &8>> &f%weapon%"
     give:
       success: "&eAm dat Setul &f %set% &elui &f %player%"
     givepiece:

@@ -11,6 +11,9 @@ use-repair-cost: true
 allow-illegal-vanilla-enchant-combinations: false
 allow-illegal-custom-enchant-combinations: false
 
+# If this is enabled, you can apply enchants to enchanted books with items.
+allow-backwards-enchant-books: false
+
 # The maximum levels vanilla enchants can be combined up to.
 levels:
   # Armor Enchantments

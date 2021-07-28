@@ -160,10 +160,10 @@ sets:
     invalid-chances: "&cНедействительные шансы."
     list:
       header: "&eСписок всех доступных наборов &7[%size%]"
-      set: " &8» &f%set%"
+      set: " &8>> &f%set%"
     listweapons:
       header: "&eСписок всего доступного оружия &7[%size%]"
-      weapon: " &8» &f%weapon%"
+      weapon: " &8>> &f%weapon%"
     give:
       success: "&eВыдан &f %set% &eнабор для &f %player%"
     givepiece:

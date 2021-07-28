@@ -160,10 +160,10 @@ sets:
     invalid-chances: "&cSai tỉ lệ."
     list:
       header: "&eDanh sách các Sets &7[%size%]"
-      set: " &8» &f%set%"
+      set: " &8>> &f%set%"
     listweapons:
       header: "&eDanh sách các vũ khí &7[%size%]"
-      weapon: " &8» &f%weapon%"
+      weapon: " &8>> &f%weapon%"
     give:
       success: "&eĐã gửi Set &f %set% &echo &f %player%"
     givepiece:
