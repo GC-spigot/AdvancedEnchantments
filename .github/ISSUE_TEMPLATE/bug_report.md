@@ -12,7 +12,6 @@ FULLY FILL OUT THE TEMPLATE. YOUR ISSUE WILL BE IMMEDIATELY CLOSED IF YOU DON'T.
 Before reporting a bug, make sure you have the latest version of the plugin.
 Advanced Plugins: https://advancedplugins.net/item/1/
 Spigot: https://www.spigotmc.org/resources/43058/
-Songoda: https://songoda.com/marketplace/product/327/
 
 Do not write inside the arrows or it will be hidden!
 
@@ -33,7 +32,7 @@ Do not write inside the arrows or it will be hidden!
 **Describe the bug**
 <!-- Replace this with a clear and concise description of what the bug is. -->
 
-**To Reproduce**
+**To Reproduce** <!-- !IMPORTANT! -->
 <!-- Replace this with a way to reliability reproduce the bug. Without this, the issue will not get fixed. -->
 
 **Screenshots / Video**
