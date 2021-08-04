@@ -704,6 +704,12 @@ settings:
   grindstones-remove-custom-enchants: true
   # Should enchantments on items be organized automatically in lore based on rarity?
   organizeEnchantsOnItems: true
+  # The mode used to organize enchants in items lore's.
+  # 0 = No organization.
+  # 1 = Organize by group.
+  # 2 = Organize by group & alphabetically.
+  # 3 = Organize alphabetically.
+  lore-organize-mode: 2
   # If this is true, items with custom enchants will have the same glowing effect
   # as items with vanilla enchants.
   custom-enchants-cause-glow: false
@@ -746,6 +752,10 @@ settings:
   # This can solve issues with armor & held items giving the same potion effect but may cause some
   # unwanted side effects. Test before using on a live server.
   held-effect-static-cross-update: false
+  # EXPERIMENTAL!!! If true, AE will use a different way of handling damage for effects like DOUBLE_DAMAGE. This may solve
+  # issues with kills not counting towards players. If you find any issues
+  # with it, please report them on GitHub https://github.com/GC-spigot/AdvancedEnchantments/issues/new/choose
+  use-experimental-damage: false
   # EXPERIMENTAL!!! If true, AE will use a different way of handling MINING enchants. This may solve compatibility
   # issues with other plugins & MINING enchants, but it may cause some issues. If you find
   # any issues with it, please report them on GitHub https://github.com/GC-spigot/AdvancedEnchantments/issues/new/choose
