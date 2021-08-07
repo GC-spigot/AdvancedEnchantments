@@ -2,8 +2,6 @@
   <img src="https://i.imgur.com/eCYuTN9.gif" alt="image" width="500"/>
 </h1>
 
----------
-
 ### **The most advanced custom enchantments' plugin up to date**
 
 * Integration with Villager trading.
