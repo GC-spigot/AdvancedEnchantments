@@ -17,12 +17,13 @@ groups:
     global-color: "&7"
     group-name: "Simple"
     # Use this to change the type of item per group
-    right-click-book-material: FIREWORK_CHARGE
-    right-click-book-damage: 0
-    right-click-book-custom-model-data: 0
-    # Use this to set firework charge's color only! Uses RGB
-    # Find colors here: https://htmlcolorcodes.com/color-picker/
-    firework-color: 200;200;200
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # Use this to set firework charge's color only! Uses RGB
+      # Find colors here: https://htmlcolorcodes.com/color-picker/
+      rgb-color: 200;200;200
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
@@ -35,10 +36,13 @@ groups:
   UNIQUE:
     global-color: "&a"
     group-name: "Unique"
-    right-click-book-material: FIREWORK_CHARGE
-    # Use this to set firework charge's color only! Uses RGB
-    # Find colors here: https://htmlcolorcodes.com/color-picker/
-    firework-color: 122;255;80
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # Use this to set firework charge's color only! Uses RGB
+      # Find colors here: https://htmlcolorcodes.com/color-picker/
+      rgb-color: 122;255;80
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
@@ -51,10 +55,13 @@ groups:
   ELITE:
     global-color: "&b"
     group-name: "Elite"
-    right-click-book-material: FIREWORK_CHARGE
-    # Use this to set firework charge's color only! Uses RGB
-    # Find colors here: https://htmlcolorcodes.com/color-picker/
-    firework-color: 20;250;255
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # Use this to set firework charge's color only! Uses RGB
+      # Find colors here: https://htmlcolorcodes.com/color-picker/
+      rgb-color: 20;250;255
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
@@ -67,10 +74,13 @@ groups:
   ULTIMATE:
     global-color: "&e"
     group-name: "Ultimate"
-    right-click-book-material: FIREWORK_CHARGE
-    # Use this to set firework charge's color only! Uses RGB
-    # Find colors here: https://htmlcolorcodes.com/color-picker/
-    firework-color: 250;255;0
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # Use this to set firework charge's color only! Uses RGB
+      # Find colors here: https://htmlcolorcodes.com/color-picker/
+      rgb-color: 250;255;0
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
@@ -83,10 +93,13 @@ groups:
   LEGENDARY:
     global-color: "&6"
     group-name: "Legendary"
-    right-click-book-material: FIREWORK_CHARGE
-    # Use this to set firework charge's color only! Uses RGB
-    # Find colors here: https://htmlcolorcodes.com/color-picker/
-    firework-color: 255;182;0
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # Use this to set firework charge's color only! Uses RGB
+      # Find colors here: https://htmlcolorcodes.com/color-picker/
+      rgb-color: 133;50;168
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
@@ -99,10 +112,13 @@ groups:
   FABLED:
     global-color: "&d"
     group-name: "Fabled"
-    right-click-book-material: FIREWORK_CHARGE
-    # Use this to set firework charge's color only! Uses RGB
-    # Find colors here: https://htmlcolorcodes.com/color-picker/
-    firework-color: 133;50;168
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # Use this to set firework charge's color only! Uses RGB
+      # Find colors here: https://htmlcolorcodes.com/color-picker/
+      rgb-color: 133;50;168
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
