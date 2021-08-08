@@ -8,6 +8,7 @@
 * Integration with natural loot spawning.
 * Integration with enchantment tables.
 * Integration with anvils.
+* Much more!
 
 Java Edition required. AdvancedEnchantments is compatible with [Spigot](https://www.spigotmc.org/),
 [Paper](https://papermc.io/downloads), and most forks of the two.
