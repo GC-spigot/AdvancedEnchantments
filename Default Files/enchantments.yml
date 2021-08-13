@@ -859,7 +859,7 @@ veinminer:
   group: "ELITE"
   type: "MINING"
   applies:
-    - "ALL_PICKAXE"
+    - ALL_PICKAXE
   levels:
     1:
       chance: 15
@@ -881,9 +881,7 @@ telepathy:
   type: "MINING"
   group: "UNIQUE"
   applies:
-    - ALL_PICKAXE
-    - ALL_SPADE
-    - ALL_AXE
+    - ALL_TOOLS
   levels:
     1:
       chance: 40
@@ -915,7 +913,7 @@ explosivedemise:
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:1:%victim%"
         - "POTION:BLINDNESS:0:40 %attacker%"
     2:
       chance: 17
@@ -923,7 +921,7 @@ explosivedemise:
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:1:%victim%"
         - "POTION:BLINDNESS:0:60 %attacker%"
     3:
       chance: 24
@@ -931,7 +929,7 @@ explosivedemise:
       condition:
         - "%victim health% > 7 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:1:%victim%"
         - "POTION:BLINDNESS:0:100 %attacker%"
     4:
       chance: 30
@@ -939,7 +937,7 @@ explosivedemise:
       condition:
         - "%victim health% > 7 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:1:%victim%"
         - "POTION:BLINDNESS:1:40 %attacker%"
     5:
       chance: 38
@@ -947,8 +945,7 @@ explosivedemise:
       condition:
         - "%victim health% > 8 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:2:%victim%"
         - "POTION:BLINDNESS:1:80 %attacker%"
     6:
       chance: 46
@@ -956,8 +953,7 @@ explosivedemise:
       condition:
         - "%victim health% > 8 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:2:%victim%"
         - "POTION:BLINDNESS:1:120 %attacker%"
     7:
       chance: 55
@@ -965,8 +961,7 @@ explosivedemise:
       condition:
         - "%victim health% > 8 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:2:%victim%"
         - "POTION:BLINDNESS:2:60 %attacker%"
     8:
       chance: 69
@@ -974,9 +969,7 @@ explosivedemise:
       condition:
         - "%victim health% > 8 : %stop%"
       effects:
-        - "GUARD:CREEPER:%victim%"
-        - "GUARD:CREEPER:%victim%"
-        - "GUARD:CREEPER:%victim%"
+        - "GUARD:CREEPER:8:3:%victim%"
         - "POTION:BLINDNESS:2:100 %attacker%"
 enderslayer:
   display: "%group-color%Ender Slayer"
@@ -1826,71 +1819,52 @@ undeadruse:
       chance: 3
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:2:%victim%"
     2:
-      chance: 3
+      chance: 4
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:2:%victim%"
     3:
       chance: 5
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:2:%victim%"
     4:
       chance: 6
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:2:%victim%"
     5:
       chance: 7
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:2:%victim%"
     6:
       chance: 8
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:3:%victim%"
     7:
       chance: 10
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:3:%victim%"
     8:
       chance: 14
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:4:%victim%"
     9:
       chance: 18
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:4:%victim%"
     10:
       chance: 22
       cooldown: 6
       effects:
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
-        - "GUARD:ZOMBIE:%victim%"
+        - "GUARD:ZOMBIE:8:5:%victim%"
 voodoo:
   display: "%group-color%Voodoo"
   description: "Gives a chance to deal weakness."
@@ -2998,61 +2972,53 @@ guardians:
       chance: 6
       cooldown: 8
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:1:%victim%"
     2:
       chance: 9
       cooldown: 8
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:1:%victim%"
     3:
       chance: 13
       cooldown: 8
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:1:%victim%"
     4:
       chance: 14
       cooldown: 8
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:1:%victim%"
     5:
       chance: 16
       cooldown: 9
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:1:%victim%"
     6:
       chance: 17
       cooldown: 10
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:2:%victim%"
     7:
       chance: 18
       cooldown: 12
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:2:%victim%"
+        - "GUARD:IRON_GOLEM:8:2:%victim%"
     8:
       chance: 20
       cooldown: 12
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:3:%victim%"
     9:
       chance: 22
       cooldown: 15
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:3:%victim%"
     10:
       chance: 24
       cooldown: 15
       effects:
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
-        - "GUARD:IRON_GOLEM:%victim%"
+        - "GUARD:IRON_GOLEM:8:4:%victim%"
 iceaspect:
   display: "%group-color%Ice Aspect"
   description: "A chance of causing the slowness\neffect on your enemy."
@@ -3934,82 +3900,52 @@ spirits:
       chance: 2
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:3:%victim%"
     2:
       chance: 2
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     3:
       chance: 3
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     4:
       chance: 5
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     5:
       chance: 8
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     6:
       chance: 12
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     7:
       chance: 15
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     8:
       chance: 19
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     9:
       chance: 22
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:4:%victim%"
     10:
       chance: 27
       cooldown: 8
       effects:
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
-        - "GUARD:BLAZE:%victim%"
+        - "GUARD:BLAZE:8:5:%victim%"
 bleed:
   display: "%group-color%Bleed"
   description: "Make your opponent bleed."
@@ -4771,9 +4707,7 @@ unbreakable:
   type: "MINING;ATTACK;ATTACK_MOB"
   group: "FABLED"
   applies:
-    - ALL_PICKAXE
-    - ALL_SPADE
-    - ALL_AXE
+    - ALL_TOOLS
   levels:
     1:
       effects:
@@ -4967,10 +4901,8 @@ soulbound:
   type: "DEATH;PASSIVE_DEATH"
   group: "FABLED"
   applies:
+    - ALL_TOOLS
     - ALL_SWORD
-    - ALL_AXE
-    - ALL_PICKAXE
-    - ALL_SPADE
     - BOW
     - CROSSBOW
   levels:

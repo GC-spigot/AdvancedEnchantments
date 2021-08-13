@@ -794,6 +794,7 @@ settings:
   # Whitelist for blocks VEIN_MINE can break.
   veinmine-whitelist:
     - "COAL_ORE"
+    - "COPPER_ORE"
     - "IRON_ORE"
     - "GOLD_ORE"
     - "LAPIS_ORE"
