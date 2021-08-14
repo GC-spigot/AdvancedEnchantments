@@ -3530,7 +3530,7 @@ replenish:
   type: "MINING"
   group: "ELITE"
   applies:
-    - ALL_HELMET
+    - ALL_PICKAXE
   levels:
     1:
       chance: 30
