@@ -696,7 +696,6 @@ enchantment-book:
 
 applies-groups:
   MISC_HELMETS:
-    - TURTLE_HELMET
     - CARVED_PUMPKIN
 
 settings:
@@ -747,8 +746,10 @@ settings:
   ae-market-enabled: true
   # Use Numbers instead of Roman Numerals?
   use-numbers: false
-  # If this is enabled, whenever an enchant with HELD is equipped/ unequipped, all armor will be reapplied.
-  # And when armor is equipped/ unequipped, the item you're holding will have it's effects updated.
+  # If disabled, non-armor items such as pickaxes won't trigger enchants when worn on armor slots.
+  activate-non-armor-in-armor-slots: false
+  # If this is enabled, whenever an item with HELD is equipped/ unequipped, all armor will be reapplied.
+  # And when armor is equipped/ unequipped, the item you're holding will have its effects updated.
   # This can solve issues with armor & held items giving the same potion effect but may cause some
   # unwanted side effects. Test before using on a live server.
   held-effect-static-cross-update: false
