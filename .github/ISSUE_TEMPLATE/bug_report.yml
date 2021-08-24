@@ -32,7 +32,7 @@ body:
   - type: input
     id: pl-info
     attributes:
-      label: "/ae plinfo" link
+      label: '"/ae plinfo" link'
       description: 'This shows us information about your server that is crutial in fixing the issue. (You can do "/ae plinfo skipPlugins" to skip adding plugins to the report)'
       placeholder: ex. https://paste.md-5.net/abcdefghij
     validations:
