@@ -1,0 +1,47 @@
+name: Bug Report
+description: Report a bug with AE.
+labels: ["Bug: Unconfirmed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for creating a bug report. Before you fill this out, please read the following:
+        1. Ensure the issue has not already been reported.
+        2. Only put ONE bug per issue. This helps us keep track of things.
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: Please describe the bug in as best detail you can!
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How to reproduce
+      description: Please leave very detailed reproduction instructions. The better these are, the faster your issue will get fixed.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Videos
+      description: Screenshots and/or videos of the bug in action.
+    validations:
+      required: false
+  - type: input
+    id: pl-info
+    attributes:
+      label: "/ae plinfo" link
+      description: This shows us information about your server that is crutial in fixing the issue. (You can do "/ae plinfo skipPlugins" to skip adding plugins to the report)
+      placeholder: ex. https://paste.md-5.net/abcdefghij
+    validations:
+      required: true
+  - type: input
+    id: server-log
+    attributes:
+      label: Server Log
+      description: You servers "logs/latest.log" file uploaded to https://mcpaste.io/
+      placeholder: ex. https://mcpaste.io/00000a0aa0a000aa
+    validations:
+      required: false
