@@ -29,8 +29,8 @@ body:
       label: Screenshots / Videos
       description: Screenshots and/or videos of the bug in action.
       placeholder: |-
-        https://prnt.sc/0aaa00a
-        https://prnt.sc/1bbb11b
+        https://prnt.sc/0aaa00a, 
+        https://prnt.sc/1bbb11b, 
         https://gyazo.com/a00aa0aa000000000aa000aaaa0000aa
     validations:
       required: false
