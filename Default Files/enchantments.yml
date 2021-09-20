@@ -93,18 +93,18 @@ planter:
         - "%player is sneaking% = true : %allow%"
       cooldown: 3
       effects:
-        - "PLANT_SEEDS:3"
+        - "PLANT_SEEDS:1"
     2:
       condition:
         - "%player is sneaking% = true : %allow%"
       cooldown: 2
       effects:
-        - "PLANT_SEEDS:3"
+        - "PLANT_SEEDS:1"
     3:
       condition:
         - "%player is sneaking% = true : %allow%"
       effects:
-        - "PLANT_SEEDS:3"
+        - "PLANT_SEEDS:1"
 potatoplanter:
   display: "%group-color%Potato Planter"
   description: "Plant potatoes in a 3x3 area\nby shift+right-clicking."
@@ -119,18 +119,18 @@ potatoplanter:
         - "%player is sneaking% = true : %allow%"
       cooldown: 3
       effects:
-        - "PLANT_SEEDS:3:POTATO"
+        - "PLANT_SEEDS:1:POTATO"
     2:
       condition:
         - "%player is sneaking% = true : %allow%"
       cooldown: 2
       effects:
-        - "PLANT_SEEDS:3:POTATO"
+        - "PLANT_SEEDS:1:POTATO"
     3:
       condition:
         - "%player is sneaking% = true : %allow%"
       effects:
-        - "PLANT_SEEDS:3:POTATO"
+        - "PLANT_SEEDS:1:POTATO"
 carrotplanter:
   display: "%group-color%Carrot Planter"
   description: "Plant carrots in a 3x3 area\nby shift+right-clicking."
@@ -145,18 +145,18 @@ carrotplanter:
         - "%player is sneaking% = true : %allow%"
       cooldown: 3
       effects:
-        - "PLANT_SEEDS:3:CARROT"
+        - "PLANT_SEEDS:1:CARROT"
     2:
       condition:
         - "%player is sneaking% = true : %allow%"
       cooldown: 2
       effects:
-        - "PLANT_SEEDS:3:CARROT"
+        - "PLANT_SEEDS:1:CARROT"
     3:
       condition:
         - "%player is sneaking% = true : %allow%"
       effects:
-        - "PLANT_SEEDS:3:CARROT"
+        - "PLANT_SEEDS:1:CARROT"
 replanter:
   display: "%group-color%Replanter"
   description: "Replants crops when you break them."

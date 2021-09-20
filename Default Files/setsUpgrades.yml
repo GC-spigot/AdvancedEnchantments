@@ -34,7 +34,7 @@ heroicUpgrades:
     chestplate: 1000
     leggings: 935
     boots: 686
-  armorValue:
+  armorValue: # For Minecraft 1.13+ versions only
     helmet: 3 # Higher = more resistance to damage
     chestplate: 8
     leggings: 6
