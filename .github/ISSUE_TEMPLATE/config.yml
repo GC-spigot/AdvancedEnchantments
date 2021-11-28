@@ -1,6 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: "Feature Request"
+    url: "#"
     about: "Feature requests are currently disabled."
   - name: "Get Support"
     url: "https://discord.gg/GzdQdMw"
