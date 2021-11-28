@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: "Feature Request"
-    url: "#"
     about: "Feature requests are currently disabled."
+    url: "https://discord.gg/GzdQdMw"
   - name: "Get Support"
     url: "https://discord.gg/GzdQdMw"
     about: "Need help using AE? Join our Discord Server for help!"
