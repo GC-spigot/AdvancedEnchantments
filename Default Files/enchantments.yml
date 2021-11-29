@@ -2323,21 +2323,21 @@ rocketescape:
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "BOOST:UP:30 %victim%"
+        - "BOOST:UP:10 %victim%"
     2:
       chance: 34
       cooldown: 8
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "BOOST:UP:45 %victim%"
+        - "BOOST:UP:15 %victim%"
     3:
       chance: 40
       cooldown: 8
       condition:
         - "%victim health% > 6 : %stop%"
       effects:
-        - "BOOST:UP:50 %victim%"
+        - "BOOST:UP:20 %victim%"
 trickster:
   display: "%group-color%Trickster"
   description: "When hit you have a\nchance to teleport directly\nbehind you opponent."
@@ -2685,12 +2685,12 @@ interrupt:
     1:
       chance: 13
       effects:
-        - "POTION:SLOW_DIGGING:0:100 %attacker%"
+        - "POTION:SLOW_DIGGING:0:100 %victim%"
     2:
       chance: 17
       cooldown: 15
       effects:
-        - "POTION:SLOW_DIGGING:1:100 %attacker%"
+        - "POTION:SLOW_DIGGING:1:100 %victim%"
 exalted:
   display: "%group-color%Exalted"
   description: "A chance of removing\nbad potion effects."
@@ -5209,19 +5209,19 @@ nightwalker:
   levels:
     1:
       chance: 40
-      condition: "%time% < 12300 or %time% > 23850 : %allow%"
+      condition: "%is night% = true : %allow%"
       effects:
-        - "POTION:SLOW:10:400"
+        - "POTION:SLOW:10:400 %victim%"
     2:
       chance: 70
-      condition: "%time% < 12300 or %time% > 23850 : %allow%"
+      condition: "%is night% = true : %allow%"
       effects:
-        - "POTION:SLOW:10:400"
+        - "POTION:SLOW:10:400 %victim%"
     3:
       chance: 100
-      condition: "%time% < 12300 or %time% > 23850 : %allow%"
+      condition: "%is night% = true : %allow%"
       effects:
-        - "POTION:SLOW:10:400"
+        - "POTION:SLOW:10:400 %victim%"
 launch:
   display: "%group-color%Launch"
   description: "Launch yourself by right-clicking."
