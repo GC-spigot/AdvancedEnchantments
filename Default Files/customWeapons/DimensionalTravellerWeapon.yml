@@ -1,0 +1,44 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# 设置为“不需要设置”
+requireSet: 'DimensionalTraveller'
+
+# 目前只支持近战武器
+material: DIAMOND_AXE
+
+# 自定义模型数据(适用于1.13+带有自定义项目包的服务器)
+# 设置自定义模型数据整数
+customModelData: 0
+
+# 项目标志
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html
+itemFlags: []
+#  - 'HIDE_POTION_EFFECTS' #示例项目标志
+
+# 武器的名字
+name: '&5&lTime Splitter'
+
+# 武器的传说
+lore:
+  - '&7The mythic, fabled magic axe'
+  - '&7with the impossible power to'
+  - '&7cut the very fabric of time.'
+  - ''
+  - '&5&lTRAVELLER WEAPON BONUS'
+  - '&5Deal +10% damage to all enemies.'
+  - '&7(Requires all 4 traveller items.)'
+
+# 这些附魔将被默认应用在武器上
+# 支持高级附魔
+enchants:
+  - 'lifesteal:%1-3%'
+  - 'sharpness:5'
+  - 'unbreaking:3'
+
+# ** 附魔效果支持-视图附魔。Yml可以看到自定义武器的所有效果
+events:
+  ATTACK:
+    chance: 100
+    effects:
+      - 'INCREASE_DAMAGE:10'

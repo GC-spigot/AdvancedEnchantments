@@ -1,0 +1,73 @@
+# 在世界和村民交易中产生的随机战利品的配置文件
+#  随机地点包括:
+#   * 任何在野外生成的箱子，例如怪物产卵室，矿井等.
+#  配置村民交易。村民可以交易自定义魔法书和管理物品，如白色卷轴，魔法球，灰尘.
+
+# ------ 随机战利品节------ #
+randomLoot:
+  # 世界中是否应该产生随机战利品?
+  randomLootEnabled: false
+
+  # 在随机战利品容器中生成的自定义物品的最大数量
+  maxItemsPerContainer: 2
+
+  # 任何物品生成的几率
+  chanceOfItems: 5
+
+  # 机会格式:
+  # ITEM_NAME:机会值(0到100)
+  chances:
+    SLOT_INCREASER: 5
+    WHITE_SCROLL: 12
+    MYSTERY_DUST: 0
+    SECRET_DUST: 15
+    MAGIC_DUST: 12
+    BLACK_SCROLL: 7
+    RANDOMIZER: 10
+    RENAME_TAG: 8
+    BLOCKTRAK: 4
+    STATTRAK: 4
+    MOBTRAK: 4
+    SOUL_TRACKER: 2
+    SOUL_GEM: 15
+    TRANSMOG_SCROLL: 8
+    HOLY_WHITE_SCROLL: 4
+    ARMOR_ORB: 2
+    WEAPON_ORB: 2
+    TOOL_ORB: 2
+    RANDOM_ENCHANT_BOOK: 10
+
+# ------ 村民交易部分 ------ #
+villagerTrades:
+  # 村民应该交易定制书籍/物品吗?
+  villagerTradesEnabled: false
+
+  # 村民也应该交换管理物品吗?例如《white卷轴》、《Blackscroll》和《Magic Dust》
+  # 如果设置为false，他们将只交易自定义魔法书
+  tradeAllLoot: true
+
+  # 任何物品作为交易被添加的几率
+  chanceOfItems: 3
+
+  # 机会格式:
+  # ITEM_NAME:机会值(0到100)
+  chances:
+    SLOT_INCREASER: 5
+    WHITE_SCROLL: 12
+    MYSTERY_DUST: 0
+    SECRET_DUST: 15
+    MAGIC_DUST: 12
+    BLACK_SCROLL: 7
+    RANDOMIZER: 10
+    RENAME_TAG: 8
+    BLOCKTRAK: 4
+    STATTRAK: 4
+    MOBTRAK: 4
+    SOUL_TRACKER: 2
+    SOUL_GEM: 15
+    TRANSMOG_SCROLL: 8
+    HOLY_WHITE_SCROLL: 4
+    ARMOR_ORB: 2
+    WEAPON_ORB: 2
+    TOOL_ORB: 2
+    RANDOM_ENCHANT_BOOK: 10

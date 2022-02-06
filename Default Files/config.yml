@@ -1,0 +1,693 @@
+# AdvancedEnchantments
+# 由制成 GC
+# 版本: 8.8.8
+# 发布日期: 30/01/2022
+# 汉化wykwey（whsx12）
+# ** 命令和权限
+# /enchanter - 打开附魔师; 没有权限
+# /tinkerer - 打开修补匠; 没有权限
+# /gkits - 打开 GKit; 没有权限
+# /ae - 主要插件命令; ae.help
+# /ae about - 有关当前构建的信息; 没有权限
+# /ae list - 列出所有自定义附魔; ae.list
+# /ae admin - 打开包含所有可能附魔的菜单（100% 成功率）; ae.admin
+# /ae giveitem <player> <item> - 给各种插件项目; ae.giveitem
+# /ae give <player> <enchantment> <level> - 赠送自定义附魔书; ae.give
+# /ae info <enchantment> - 关于自定义附魔的信息; ae.info
+# /ae reload - 重新加载所有配置; ae.reload
+# /ae enchant <enchantment> <level> - 附魔物品; ae.enchant
+# /ae givebook <player> <enchantment> <level> <count> <success> <destroy> - 提供特定价格的书；  ae.givebook
+# /ae givercbook <type> <player> <amount> - 赠送可右键点击的书; ae.givercbook
+# /ae giverandombook <player> <group> - 从组中随机出本附魔书; ae.giverandombook
+# /ae pasteenchants - 粘贴格式化的魔法列表; ae.admin
+# /alchemist - Open alchemist; 没有权限
+# /ae givegkit <player> <gkit> - 给玩家gkit道具; ae.givegkit
+# 
+# /aegive - 给玩家gkit道具; ae.give
+# 例子: /aegive GC diamond_helmet 1 name:&&7cItem_name protection:5 glowing:1 lore:&&7cLore_line_#1|&&7cSecond_Line
+# 
+# /asets - 先进的命令集; asets.admin
+# 
+# 本文解释了一些可配置的设置，其他设置应该是自解释的.
+# 加入支持不和谐，寻求帮助或提出问题: https://advancedplugins.net/discord
+# 
+# 更改默认消息语言。你可以在AdvancedEnchantments ' locale '文件夹中修改所有消息.
+# 在这里查看所有默认语言和其他信息: https://ae.advancedplugins.net/general-information/languages
+language: zh_cn
+commands:
+  advancedenchantments:
+    permissionMessageEnabled: true
+  enchanter:
+    enabled: true
+    command: /enchanter
+    aliases:
+    - e
+    - ce
+  tinkerer:
+    enabled: true
+    command: /tinkerer
+    aliases:
+    - tinker
+  alchemist:
+    enabled: true
+    command: /alchemist
+    aliases:
+    - alchem
+  withdrawsouls:
+    enabled: true
+    command: /withdrawsouls
+    aliases:
+    - wsouls
+  apply:
+    enabled: true
+    command: /apply
+    aliases:
+    - reapply
+permissions:
+  enchanter:
+    enabled: false
+    perm: ae.enchanter
+  tinkerer:
+    enabled: false
+    perm: ae.tinkerer
+  gkits:
+    enabled: false
+    perm: ae.gkits
+  alchemist:
+    enabled: false
+    perm: ae.alchemist
+disable-enchants:
+  test_world:
+  - test_enchant
+alchemist:
+  settings:
+    combine-books: true
+    combine-dust: true
+  books:
+    add-up-chances: true
+    pre-set-chances:
+      enabled: false
+      success: 50
+      destroy: 50
+  dusts:
+    add-up: true
+  price:
+    exp: true
+    let-plugin-count: true
+    pre-set-pricing:
+      price: 250
+  messages:
+    inv-name: Alchemist
+    item-preview:
+      name: '&e&l项目预览'
+      lore:
+      - '&7你将预览的项目'
+      - '&7从炼金师那里获得'
+      - '&7将在这里展示。'
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 0
+    item-explanation:
+      name: '&e&l炼金术士'
+      lore:
+      - '&7炼金术士将交换……'
+      - ''
+      - '&b&l* &f2X 魔法书'
+      - '&7(同一类型和水平的)'
+      - '&d= &f1X 魔法书'
+      - '&7(更高的水平)'
+      - ''
+      - '&b&l* &f2X 魔法尘埃'
+      - '&7(同样稀有)'
+      - '&d= &f1X 魔法尘埃'
+      - '&7(更高的几率)'
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 14
+    item-combine:
+      name: '&b&l点击交换'
+      lore:
+      - '&c&l花费 &c%price% 经验值'
+      - ''
+      - '&7点击这里确认'
+      - '&7物品交换和接受您的'
+      - '&7上面显示的史诗新项目!'
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 5
+    item-placeholder:
+      name: ' '
+      lore: []
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 15
+souls:
+  enabled: true
+  lore: '&c收集的灵魂: %souls%'
+  item:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '&f&l灵魂追踪'
+    lore:
+    - '&7适用于武器开始跟踪'
+    - '&7从杀戮中收集的灵魂。'
+enchantLimitation:
+  enabled: true
+  lore: '&c&l无法改变的'
+  NBT-tag: unmodifiable
+combining:
+  enabled: true
+  chances:
+    use-chances: true
+    break-item: false
+    upgrade: true
+slots:
+  enabled: true
+  max: 9
+  max-increase-of-slots: 13
+  display-in-lore: false
+  display: '&eItem Slots&7: %left%'
+applying:
+  cosmetics:
+    applied:
+      particle: HAPPY_VILLAGER
+      sound: LEVEL_UP
+    failed:
+      particle: LAVA_POP
+      sound: ANVIL_BREAK
+enchanter-books:
+  firework-on-open: true
+  cosmetics:
+    particle: HAPPY_VILLAGER
+    sound: LEVEL_UP
+  display-right-click-message: true
+  type: BOOK
+  id: 0
+  custom-model-data: 0
+  force-glow: false
+  name: '%group-color%&l%group-name%&l 魔法书 &7(Right Click)'
+  lore:
+  - '&7按住鼠标右键接收随机信号'
+  - '%group-color%%group-name% &7魔法书.'
+items:
+  settings:
+    can-apply-to:
+    - ALL_SWORD
+    - ALL_ARMOR
+    - ALL_PICKAXE
+    - ALL_AXE
+    - ALL_SPADE
+    - ALL_HOE
+    - ALL_EDIBLE
+    - BOOK
+    - BOW
+    - CROSSBOW
+    - SKULL_ITEM
+    - PLAYER_HEAD
+    - ELYTRA
+    - TRIDENT
+  transmogscroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '&c&lTransmog Scroll'
+    lore:
+    - '&7组织附魔&e&nrarity&7上的项目'
+    - '&7并将&dlore &bcount&7添加到name中。'
+    - ''
+    - '&e&o放置滚动项上应用。'
+    enchants-count-formatting: '&d[&b&n%count%&d]'
+  soulgem:
+    type: EMERALD
+    id: 0
+    custom-model-data: 0
+    name: '&c&l灵魂宝石 &7[&a%count%&7]'
+    lore:
+    - '&7应用于添加灵魂的物品。'
+  itemnametag:
+    type: NAME_TAG
+    id: 0
+    custom-model-data: 0
+    name: '&6&l物品名称标签&7(右击)'
+    lore:
+    - '&7重命名和定制您的设备'
+    messages:
+      success:
+      - '&a&l(!) &a您已经成功地将项目重命名为 &e%name%'
+      activated:
+      - '&a&l(!) &a您的下一条消息将重命名您手中的项目'
+      air:
+      - '&c&l(!) &c你需要拿着一个东西来做这件事'
+      renaming-not-enchanted-item:
+      - '&c&l(!) &c你只能重命名魔法物品'
+    settings:
+      colors: true
+      magic: false
+      word-blacklist:
+      - fuck
+      - dick
+      - bitch
+  randomization-scroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%%group-name%&l%group-color% 随机滚动'
+    lore:
+    - ''
+    - '&7适用于任何 %group-color%%group-name% &7魔法书'
+    - '&7重新开始成功和毁灭的速度。'
+    - ''
+    - '&7Drag n'' drop onto &nenchantment book&7 to apply.'
+  black-scroll:
+    type: INK_SACK
+    id: 0
+    custom-model-data: 0
+    name: '&f&l黑色卷轴'
+    lore:
+    - '&7移除一个随机的魔法'
+    - '&7和转换'
+    - '&7它变成一个&f%success%% &7成功的书。'
+    - '&f放置滚动到项目提取。'
+    success: 95
+    destroy: 5
+    random: true
+  secret-dust:
+    type: FIREBALL
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%%group-name%%group-color% Secret Dust &7(Right Click)'
+    lore:
+    - '&7Contains: &bMagic, &fMystery &7dust.'
+    - '&7一个身份不明的尘埃包。'
+  mystery-dust:
+    type: SULPHUR
+    id: 0
+    custom-model-data: 0
+    name: '&f神秘的尘埃'
+    lore:
+    - '&7一个失败的衍生产品'
+    - '&7神奇的灰尘。'
+  magic-dust:
+    type: SUGAR
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%%group-name%%group-color% 魔法尘埃'
+    lore:
+    - '&a+%percent%% Success'
+    - '&7申请一个&7any %group-color%%group-name% &7魔法书'
+    - '&7以增加其成功 %group-color%%percent%%'
+    messages:
+      cannotApplyToStacked: '&c&l(!) &c不能应用于堆叠的书籍'
+  slot-increaser:
+    type: EYE_OF_ENDER
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%&l%group-name% 槽增加者'
+    lore:
+    - '&7增加物品的插槽限制 &a+%count%'
+    messages:
+      success:
+      - '&a&l(!) &a你已经成功增加物品的最大插槽 %count%!'
+  blocktrak:
+    type: SLIME_BALL
+    id: 0
+    custom-model-data: 0
+    name: '&aBlockTrak创造者'
+    lore:
+    - '&7用工具记录你打破了多少块'
+    - '&7拖到另一个项目的顶部以应用它'
+    messages:
+      success:
+      - '&7您成功应用&aBlockTrak Creator'
+    settings:
+      lore-display: '&eBlockTrak Blocks Broken: &6%stats%'
+  stattrak:
+    type: MAGMA_CREAM
+    id: 0
+    custom-model-data: 0
+    name: '&eStatTrak创造者'
+    lore:
+    - '&7追踪你用武器杀了多少人'
+    - '&7拖到另一项的顶部以应用it'
+    messages:
+      success:
+      - '&7您成功应用&eStatTrak Creator'
+    settings:
+      lore-display: '&eStatTrak杀死: &6%stats%'
+  mobtrak:
+    type: SLIME_BALL
+    id: 0
+    custom-model-data: 0
+    name: '&3MobTrak创造者'
+    lore:
+    - '&7追踪你用武器杀过多少暴徒'
+    - '&7拖到另一个项目的顶部以应用它'
+    messages:
+      success:
+      - '&7您成功应用&3MobTrak Creator'
+    settings:
+      lore-display: '&3MobTrak杀死: &f%stats%'
+  holywhitescroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '&6&l神圣的白卷轴'
+    lore:
+    - '&e一个传奇的奖励可以'
+    - '&e适用于盔甲/武器，'
+    - '&e有100%的机会不输'
+    - '&e死亡之福.'
+    messages:
+      applied:
+      - '&7你成功应用了圣白卷轴'
+    settings:
+      lore-display: '&e&l*&f&lHOLY&e&l* &f&l受保护的'
+      keep-after-death: false
+  orb:
+    lore: '&a%max% 附魔槽 &7(Orb [&a+%increased%&7])'
+    weapon:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: '&6&l武器Orb &6[&a&n%max%&6]'
+      lore:
+      - '&a%success%% 成功率'
+      - ''
+      - '&6+%new% 附魔槽'
+      - '&6%max% 最大附魔槽'
+      - ''
+      - '&e增加魔法等级'
+      - '&e武器上的槽 %new%,'
+      - '&e最多为 %max%'
+      - '&7拖 n'' 拖放到要应用的项目上。'
+    armor:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: '&6&l护甲魔球 &6[&a&n%max%&6]'
+      lore:
+      - '&a%success%% 成功率'
+      - ''
+      - '&6+%new% 附魔槽'
+      - '&6%max% 最大附魔槽'
+      - ''
+      - '&e增加魔法等级'
+      - '&e一件盔甲上的插槽靠 %new%,'
+      - '&e最多为 %max%'
+      - '&7拖 n'' 拖放到要应用的项目上.'
+    tool:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: '&6&l工具附魔Orb &6[&a&n%max%&6]'
+      lore:
+      - '&a%success%% 成功率'
+      - ''
+      - '&6+%new% 附魔槽'
+      - '&6%max% 最大附魔槽'
+      - ''
+      - '&e增加魔法等级'
+      - '&e工具上的槽 %new%,'
+      - '&e最多为 %max%'
+      - '&7拖 n'' 拖放到要应用的项目上。'
+white-scroll:
+  delete: true
+  lore-display: '&f&l受保护的'
+  item:
+    type: EMPTY_MAP
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+    name: '&f白色的滚动'
+    lore:
+    - '&f防止物品被销毁'
+    - '&f因为一本失败的魔法书'
+    - '&e放置滚动项上应用。'
+enchanter:
+  open-sound: ENDERDRAGON_WINGS
+  disabled-in-worlds:
+  - bad_world
+  messages:
+    sound: LEVEL_UP
+  right-click-to-view-enchants: true
+  go-back-item:
+    enabled: true
+    item:
+      type: NETHER_STAR
+      id: 0
+      custom-model-data: 0
+    name: '&c&l回去'
+    lore: []
+  keep-open: true
+  inventory:
+    size: 18
+    name: '&7服务器魔法师'
+    settings:
+      enchanterBookLevel: ALL
+    items:
+      0-18:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 7
+          custom-model-data: 0
+          force-glow: false
+        name: ' '
+        lore: []
+      '2':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: SIMPLE
+        price: exp:400
+        sound: ANVIL_LAND
+        name: '&f&l简单附魔&7(右击)'
+        lore:
+        - '&7检查接收随机'
+        - '&f简单&7enchantment书。'
+        - ''
+        - '&b&lCOST &f%price% EXP &7(You need %left% more EXP)'
+      '3':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 5
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: UNIQUE
+        sound: ANVIL_LAND
+        price: exp:800
+        name: '&a&l独特的附魔 &7(Right Click)'
+        lore:
+        - '&7检查接收随机'
+        - '&a独特的&7enchantment书。'
+        - ''
+        - '&b&l成本&f%price% EXP &7(你需要 %left% 更多的)'
+      '4':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 3
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: ELITE
+        price: exp:2500
+        sound: ANVIL_LAND
+        name: '&b&l精英附魔 &7(右击)'
+        lore:
+        - '&7检查接收随机'
+        - '&b精英&7enchantment书。'
+        - ''
+        - '&b&l成本f %价格% EXP &(你需要%left%更多的)'
+      '5':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 4
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: ULTIMATE
+        price: exp:5000
+        sound: ANVIL_LAND
+        name: '&e&l终极附魔&7(右击)'
+        lore:
+        - '&7检查接收随机'
+        - '&e最终&7enchantment书。'
+        - ''
+        - '&b&l成本f %价格% EXP &(你需要%左%更多的)'
+      '6':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 1
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: LEGENDARY
+        price: exp:25000
+        sound: ANVIL_LAND
+        name: '&6&l传奇魔法&7(右击)'
+        lore:
+        - '&7检查接收随机'
+        - '&6传奇&7附魔书.'
+        - ''
+        - '&b&l成本f %价格% EXP &(你需要%left%更多的)'
+      '13':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 6
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: FABLED
+        price: exp:40000
+        sound: ANVIL_LAND
+        name: '&d&l传说魔法&7(右击)'
+        lore:
+        - '&7检查接收随机'
+        - '&d传说中的&7附魔书。'
+        - ''
+        - '&b&l成本f %价格% EXP &(你需要%left%更多的)'
+      '9':
+        item:
+          type: ANVIL
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        sound: ANVIL_USE
+        player-command:
+        - tinkerer
+        name: '&f打开&b&l修补匠 &7(右键单击)'
+        lore:
+        - '&7魔法之尘和经验修补书。'
+        - ''
+        - '&b&l右键点击查看'
+      '17':
+        item:
+          type: ENDER_PORTAL_FRAME
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        sound: ARROW_HIT
+        player-command:
+        - alchemist
+        name: '&f开放 &b&l炼金术士 &7(右击)'
+        lore:
+        - '&7把书和魔法粉结合起来.'
+        - ''
+        - '&b&l右键点击访问'
+destroy:
+  enabled: true
+  destroy-item: false
+chances:
+  random: true
+  success: 92
+  destroy: 8
+  destroy-if-fail:
+    enabled: false
+confirmation-inventory:
+  enabled: true
+  name: '&a确认库存'
+  accept:
+    material: STAINED_GLASS_PANE
+    damage: 5
+    name: '&a接受交易'
+    lore:
+    - '&7点击支付 %price% 与 %paymentType%'
+  cancel:
+    material: STAINED_GLASS_PANE
+    damage: 14
+    name: '&c点击取消'
+    lore: []
+armor-switching:
+  enabled: true
+  sound: LEVEL_UP
+  armorSkullsSwitching: true
+enchantment-book:
+  anvil-application: false
+  drag-drop-application: true
+  item:
+    type: ENCHANTED_BOOK
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+  name: '%group-color%&l&n%enchant-no-color% %level%'
+  lore:
+  - '&a%success%% 成功率'
+  - '&c%destroy%% 破坏率'
+  - '&e%description%'
+  - '&7%applies% 魅力'
+  - '&7Drag n'' 掉落到物品上使其附魔'
+applies-groups:
+  MISC_HELMETS:
+  - CARVED_PUMPKIN
+  SKULL_ITEM: []
+settings:
+  grindstones-remove-custom-enchants: true
+  organizeEnchantsOnItems: true
+  lore-organize-mode: 2
+  custom-enchants-cause-glow: false
+  use-legacy-potions-system: true
+  fortune-works-on-iron-gold: false
+  steal-money:
+    message-enabled: false
+  combo-limit: 5
+  trench-autoadd-items: false
+  trench-works-with-more-drops: false
+  renametag-enchanted-only: true
+  itemnametag-max-name-length: 32
+  trench-do-all-durab: true
+  lower-destroy-with-magic-dust: true
+  enable-combo-for-mobs: true
+  clear-potion-effects-on-quit: true
+  ae-market-enabled: true
+  use-numbers: false
+  activate-non-armor-in-armor-slots: false
+  held-effect-static-cross-update: false
+  use-experimental-damage: false
+  trench-blacklist: []
+  trench-whitelist: []
+  veinmine-whitelist:
+  - COAL_ORE
+  - COPPER_ORE
+  - IRON_ORE
+  - GOLD_ORE
+  - LAPIS_ORE
+  - REDSTONE_ORE
+  - DIAMOND_ORE
+  - EMERALD_ORE
+  - NETHER_QUARTZ_ORE
+  - NETHER_GOLD_ORE
+  - ANCIENT_DEBRIS
+  - DEEPSLATE_COAL_ORE
+  - DEEPSLATE_COPPER_ORE
+  - DEEPSLATE_IRON_ORE
+  - DEEPSLATE_GOLD_ORE
+  - DEEPSLATE_LAPIS_ORE
+  - DEEPSLATE_REDSTONE_ORE
+  - DEEPSLATE_DIAMOND_ORE
+  - DEEPSLATE_EMERALD_ORE
+  enchantment-world-blacklist:
+  - no_enchantments_world
+  holy-whitescrolls-world-blacklist:
+  - no_holywhitescrolls_world
+  fly-world-blacklist:
+  - no_fly_world
+  open-enchanter-by-right-clicking-enchantment-table: false
+  stems-count-as-trees: false
+  enchants-debug-mode: false
+  apply-cooldown: 20
+  whitescroll-material-blacklist:
+  - STONE
+  souls-per-kill: 1
+  trench-optimization:
+    automaticallyDetect: true
+  lava-walker-radius: 2
+  water-walker-radius: 2
+  collect-souls-from-mobs: false
+  showFirstLevel: true
+  heal-check: true
+  use-worldguard-fly-flag: false
+  custom-drops-from-spawners: false
+  miningSouls:
+    enabled: false
+    chance: 20
+  bow-full-power: true
+  lore-descriptions:
+    enabled: false
+    display: '%group-color%* &8%description%'
+  held-check-frequency: 5
+  give-mcmmo-with-custom-block-breaks: true

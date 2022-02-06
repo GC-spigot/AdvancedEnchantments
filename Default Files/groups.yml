@@ -1,0 +1,130 @@
+# 附魔组用于附魔师，出售特定类型的书。你可以把它们分组
+# 并给每个组全局颜色。
+# 您可以删除这些组并创建自己的组
+settings:
+  magic-dust:
+    # 限制每组魔法粉的使用
+    # 如果是假的，魔法粉可以应用到不同的群体
+    limit-applying-per-group: true
+  randomization-scrolls:
+    # 限制每组随机卷轴的应用
+    # 如果为false，那么随机化卷轴便可以应用于不同的群组中
+    limit-applying-per-group: true
+  # 如果set group无效，则回退组应该是什么
+  fallback-group: SIMPLE
+groups:
+  SIMPLE:
+    global-color: "&7"
+    group-name: "Simple"
+    # 使用此选项可更改每组项的类型
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # 只用这个来设置烟花炸药的颜色!使用RGB
+      # 在这里找到颜色:https://htmlcolorcodes.com/color-picker/
+      rgb-color: 200;200;200
+    slot-increaser:
+      # 当使用这种类型的增加器时，插槽增加器应该增加多少插槽
+      slots: 1
+    magic-dust:
+      # 当右键点击时，它给魔术成功的机会
+      # 尘埃应该取得多大的成功?(例如:5意味着总是5,5-10意味着从5到10的随机数)
+      success: 1-15
+      # 有机会给予魔法尘而不是神秘尘
+      chance: 22
+  UNIQUE:
+    global-color: "&a"
+    group-name: "Unique"
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # 只用这个来设置烟花炸药的颜色!使用RGB
+      # 在这里找到颜色:https://htmlcolorcodes.com/color-picker/
+      rgb-color: 122;255;80
+    slot-increaser:
+      # 当使用这种类型的增加器时，插槽增加器应该增加多少插槽
+      slots: 1
+    magic-dust:
+      # 当右键点击时，它给魔术成功的机会
+      # 尘埃应该取得多大的成功?(例如:5意味着总是5,5-10意味着从5到10的随机数)
+      success: 1-15
+      # 有机会给予魔法尘而不是神秘尘
+      chance: 22
+  ELITE:
+    global-color: "&b"
+    group-name: "Elite"
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # 只用这个来设置烟花炸药的颜色!使用RGB
+      # 在这里找到颜色:https://htmlcolorcodes.com/color-picker/
+      rgb-color: 20;250;255
+    slot-increaser:
+      # 当使用这种类型的增加器时，插槽增加器应该增加多少插槽
+      slots: 1
+    magic-dust:
+      # 当右键点击时，它给魔术成功的机会
+      # 尘埃应该取得多大的成功?(例如:5意味着总是5,5-10意味着从5到10的随机数)
+      success: 1-15
+      # 有机会给予魔法尘而不是神秘尘
+      chance: 22
+  ULTIMATE:
+    global-color: "&e"
+    group-name: "Ultimate"
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # 只用这个来设置烟花炸药的颜色!使用RGB
+      # 在这里找到颜色:https://htmlcolorcodes.com/color-picker/
+      rgb-color: 250;255;0
+    slot-increaser:
+      # 当使用这种类型的增加器时，插槽增加器应该增加多少插槽
+      slots: 1
+    magic-dust:
+      # 当右键点击时，它给魔术成功的机会
+      # 尘埃应该取得多大的成功?(例如:5意味着总是5,5-10意味着从5到10的随机数)
+      success: 1-15
+      # 有机会给予魔法尘而不是神秘尘
+      chance: 22
+  LEGENDARY:
+    global-color: "&6"
+    group-name: "Legendary"
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # 只用这个来设置烟花炸药的颜色!使用RGB
+      # 在这里找到颜色:https://htmlcolorcodes.com/color-picker/
+      rgb-color: 133;50;168
+    slot-increaser:
+      # 当使用这种类型的增加器时，插槽增加器应该增加多少插槽
+      slots: 1
+    magic-dust:
+      # 当右键点击时，它给魔术成功的机会
+      # 尘埃应该取得多大的成功?(例如:5意味着总是5,5-10意味着从5到10的随机数)
+      success: 1-15
+      # 有机会给予魔法尘而不是神秘尘
+      chance: 22
+  FABLED:
+    global-color: "&d"
+    group-name: "Fabled"
+    item:
+      type: FIREWORK_CHARGE
+      id: 0
+      custom-model-data: 0
+      # 只用这个来设置烟花炸药的颜色!使用RGB
+      # 在这里找到颜色:https://htmlcolorcodes.com/color-picker/
+      rgb-color: 133;50;168
+    slot-increaser:
+      # 当使用这种类型的增加器时，插槽增加器应该增加多少插槽
+      slots: 1
+    magic-dust:
+      # 当右键点击时，它给魔术成功的机会
+      # 尘埃应该取得多大的成功?(例如:5意味着总是5,5-10意味着从5到10的随机数)
+      success: 1-15
+      # 有机会给予魔法尘而不是神秘尘
+      chance: 22
