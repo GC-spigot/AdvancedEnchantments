@@ -1,0 +1,146 @@
+# 配置装甲集GUI
+# 这个家伙可以让玩家在服务器上预览盔甲集
+
+# Command list that will open the GUI
+commands:
+  - "/armorsets"
+  - "/previewsets"
+
+gui:
+  name: "&7Armor Sets"
+  size: 27
+  items:
+    0-27:
+      material: STAINED_GLASS_PANE
+      damage: 15
+      name: " "
+      lore: [ ]
+    10:
+      material: CHEST
+      damage: 0
+      armorSet: DimensionalTraveller
+      name: "%armor set name%"
+      lore:
+        - "&7制成的 &f%armor set material%"
+        - "&7点击到&npreview&7这个装甲集"
+        - " "
+        - "&5&l旅行者设置奖金"
+        - "&D* 你的伤害增加30%。"
+        - "&D* 空间转移被动能力"
+        - "&7&o(需要所有四件旅行物品)"
+    11:
+      material: CHEST
+      damage: 0
+      armorSet: Koth
+      name: "%armor set name%"
+      lore:
+        - "&7制成的 &f%armor set material%"
+        - "&7点击到&npreview&7这个装甲集"
+        - " "
+        - "&d&l标签设置奖金"
+        - "&d&l* &d+20% PvP的伤害"
+        - "&d&l* &d+50% pve破坏"
+        - "&d&l* &d自动祝福"
+        - "&d&l* &d坠落无伤"
+        - "&7&o(需要所有4个koth道具。)"
+    12:
+      material: CHEST
+      damage: 0
+      armorSet: Phantom
+      name: "%armor set name%"
+      lore:
+        - "&7制成的 &f%armor set material%"
+        - "&7点击到&npreview&7这个装甲集"
+        - " "
+        - "&c&l幻影设置奖金"
+        - "&cDeal +25% 对所有敌人造成伤害。"
+        - "&7&o(需要所有4个幻影道具。)"
+    13:
+      material: CHEST
+      damage: 0
+      armorSet: Ranger
+      name: "%armor set name%"
+      lore:
+        - "&7制成的&f%armor set material%"
+        - "&7点击到&npreview&7这个装甲集"
+        - " "
+        - "&a&l管理员设置奖金"
+        - "&a&l* &a敌人使用弓对你造成的伤害减少25%。"
+        - "&a&l* &a我方使用弓增加30%的弓伤害。"
+        - "&a&l* &a免疫Teleblock"
+        - "&a&l* &aGears IV（不会）"
+        - "&7&o(需要4个护林员道具)"
+    14:
+      material: CHEST
+      damage: 0
+      armorSet: Supreme
+      name: "%armor set name%"
+      lore:
+        - "&7由&f%armor set material%制成"
+        - "&7点击到&npreview&7这个装甲集"
+        - " "
+        - "&4&l最高设置奖金"
+        - "&4&l* &4Gears IV（不会）"
+        - "&4&l* &4无坠落伤害/食物损失"
+        - "&4&l* &4对所有敌人造成15%伤害"
+        - "&4&l* &4敌人的箭矢对你的伤害增加10%。"
+        - "&4&l* &4+200%的影响力"
+        - "&7&o(需要4种至尊物品)"
+    15:
+      material: CHEST
+      damage: 0
+      armorSet: Yeti
+      name: "%armor set name%"
+      lore:
+        - "&7&f%armor set material%制成的 "
+        - "&7点击到&npreview&7这个装甲集"
+        - " "
+        - "&b&l雪人设置奖金"
+        - "&b* 对所有敌人造成10%的伤害。"
+        - "&b* 敌人对你的伤害减少10%。"
+        - "&7&o(需要所有4个雪人物品。)"
+    16:
+      material: CHEST
+      damage: 0
+      armorSet: Yijki
+      name: "%armor set name%"
+      lore:
+        - "&7 &f%armor set material%制成的"
+        - "&7点击到&npreview&7这个装甲集"
+        - " "
+        - "&f&lYIJKI设置奖金（瞎翻译）"
+        - "&F* 敌人对你造成的伤害减少30%。"
+        - "&f* 复仇Yijki被动技能"
+        - "&7&o(需要所有4个yijki物品)"
+
+previewArmorSet:
+  name: "&7预览盔甲集"
+  size: 27
+  items:
+    0-27:
+      material: STAINED_GLASS_PANE
+      damage: 15
+      name: " "
+      lore: [ ]
+    11:
+      itemType: SET_HELMET
+    12:
+      itemType: SET_CHESTPLATE
+    13:
+      itemType: SET_LEGGINGS
+    14:
+      itemType: SET_BOOTS
+    15:
+      itemType: SET_WEAPON
+      # 后备材料，如果没有武器，这将显示代替
+      material: BARRIER
+      damage: 0
+      name: "&c没有武器"
+      lore:
+        - "&c这一套没有武器!"
+    26:
+      itemType: GO_BACK
+      material: PAPER
+      damage: 0
+      name: "&c返回"
+      lore: [ ]

@@ -1,0 +1,12 @@
+# 当怪物被杀死时，你可以给自定义AE物品
+# 项目名称必须与'/ae giveitem'命令相同(供将来参考)。
+
+# 当前物品:whites卷轴，renametag, blocktrak, stattrak, soultracker, mobtrak, transmog, random omenchantmentbook, secret:<amount>:<group>
+
+# 格式:“<项目名称>:<统计> "
+
+mobs:
+#  ZOMBIE:
+#    chance: 75
+#    items:
+#      - "randomenchantmentbook:1"

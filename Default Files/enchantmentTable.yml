@@ -1,0 +1,32 @@
+# 魅力表支持
+enabled: true
+
+# 获得自定义魔法的机会
+# 附魔表。
+chance: 45 # Value: 1 to 100 %
+
+# 每组在附魔表中出现的几率(只有当“几率”值激活时)
+# 只有在这里列出的组将可在附魔表
+groupChances:
+  SIMPLE: 50
+  UNIQUE: 40
+  ELITE: 30
+  ULTIMATE: 20
+  LEGENDARY: 10
+
+
+# 设置多少自定义魔法是可能的
+#立即从附魔中得到。
+enchantCount:
+  lowestLevel: 1 # Value: 1 - 10
+  middleLevel: 1-2 # Value: 1 - 10
+  highestLevel: 2-3 # Value: 1 - 10
+
+prices:
+  enabled: false
+  # 配置附魔表价格
+  # 默认情况下，它们在两个值之间是随机的，但也可以是
+  # 设定一个特定的价格，甚至高于香草的价格
+  lowestLevel: 3-9 # Value: 1 - 1000
+  middleLevel: 10-24 # Value: 1 - 1000
+  highestLevel: 30 # Value: 1 - 1000

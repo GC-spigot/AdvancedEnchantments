@@ -1,0 +1,64 @@
+# 铁砧是否应由AE控制。
+# 如果这个被禁用，没有自定义魔法将在铁砧中起作用。
+enabled: true
+
+# 如果是真的，AE将处理维修费用相同的香草.
+# 你可以在这里阅读更多关于它的内容https://minecraft.fandom.com/wiki/Anvil_mechanics。
+use-repair-cost: true
+
+# 如果是真的，通常不能放在物品上的魔法。击打和锐度)
+# 将被允许合并。
+allow-illegal-vanilla-enchant-combinations: false
+allow-illegal-custom-enchant-combinations: false
+
+# 如果启用了，你可以对带有物品的魔法书使用魔法.
+allow-backwards-enchant-books: false
+
+# 香草附魔的最高等级可以组合到一起.
+levels:
+  # 盔甲附魔
+  Protection: 4
+  Fire-Protection: 4
+  Feather-Falling: 4
+  Blast-Protection: 4
+  Projectile-Protection: 4
+  Respiration: 3
+  Aqua-Affinity: 1
+  Thorns: 3
+  Depth-Strider: 3
+  Frost-Walker: 2
+  Curse-of-Binding: 1
+  Soul-Speed: 3
+  # 剑附魔
+  Sharpness: 5
+  Smite: 5
+  Bane-of-Arthropods: 5
+  Knockback: 2
+  Fire-Aspect: 2
+  Looting: 3
+  Sweeping-Edge: 3
+  # 弓附魔
+  Power: 5
+  Punch: 2
+  Flame: 1
+  Infinity: 1
+  # 弩法术
+  Multishot: 1
+  Piercing: 4
+  Quick-Charge: 3
+  # 工具附魔
+  Efficiency: 5
+  Silk-Touch: 1
+  Fortune: 3
+  # 鱼竿附魔
+  Luck-of-the-Sea: 3
+  Lure: 3
+  # 任何附魔
+  Unbreaking: 3
+  Mending: 1
+  Curse-of-Vanishing: 1
+  # 三叉戟魔法
+  Channeling: 1
+  Impaling: 5
+  Loyalty: 3
+  Riptide: 3
