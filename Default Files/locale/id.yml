@@ -80,8 +80,8 @@ commands:
       success: "&aMemberikan &2%player% %amount%x %enchant% %level% &abooks!"
     enchant:
       added: "&aMenambahkan sihir %enchant%!"
-      upgraded: "&2Meningkatkan sihir %enchant% dari level %prevLevel% ke level %level%."
-      downgraded: "&2Menurunkan sihir %enchant% dari level %prevLevel% ke level %level%."
+      upgraded: "&2Meningkatkan sihir %enchant% dari level %previous-level% ke level %level%."
+      downgraded: "&2Menurunkan sihir %enchant% dari level %previous-level% ke level %level%."
       removed: "&cMenghapus sihir %enchant% dari item."
     giveitem:
       success: "&7Menambahkan %amount%x %item%&7 untuk pemain %player%"
@@ -113,7 +113,7 @@ enchanter:
   re-buy: "&cDimohon untuk membeli ulang item di penyihir."
   disabled-in-world: "&cPenyihir dilaran di dunia ini."
   full-inventory: "&cInventory kamu penuh!"
-  examine-book: "&7Kamu memeriksa %group-color%%group%&7  buku dan menemukan sihir %enchant-color% %level%"
+  examine-book: "&7Kamu memeriksa %group-color%%group-name%&7  buku dan menemukan sihir %enchant-color% %level%"
   unknown-payment-method: "&cGagal untuk memvalidasi metode pembayaran %paymentType%, hubungi Admin."
   successful-purchase: "&aSukses membeli!"
   cannot-afford:

@@ -80,8 +80,8 @@ commands:
       success: "&aGave &2%player% %amount%x %enchant% %level% &abooks!"
     enchant:
       added: "&aAdded the %enchant% enchant!"
-      upgraded: "&2Upgraded %enchant% from level %prevLevel% to %level%."
-      downgraded: "&2Downgraded %enchant% from level %prevLevel% to %level%."
+      upgraded: "&2Upgraded %enchant% from level %previous-level% to %level%."
+      downgraded: "&2Downgraded %enchant% from level %previous-level% to %level%."
       removed: "&cRemoved the %enchant% enchant from the item."
     giveitem:
       success: "&7Added %amount%x %item%&7 for player &b%player%"
@@ -113,7 +113,7 @@ enchanter:
   re-buy: "&cPlease re-buy the item from the enchanter."
   disabled-in-world: "&cThe Enchanter is disabled in this world."
   full-inventory: "&cYour inventory is full!"
-  examine-book: "&7You examined %group-color%%group%&7 book and found %enchant-color% %level%"
+  examine-book: "&7You examined %group-color%%group-name%&7 book and found %enchant-color% %level%"
   unknown-payment-method: "&cFailed to validate %paymentType% payment method, please contact an administrator."
   successful-purchase: "&aPurchase successful!"
   cannot-afford:

@@ -80,8 +80,8 @@ commands:
       success: "&2%player% &ajátékosnak adtál %amount%x %enchant% %level% &aszintű könyvet!"
     enchant:
       added: "&aA(z) %enchant% varázslat hozzá lett adva!"
-      upgraded: "&2A(z) %enchant% %prevLevel% szintű varázslat fejlesztve lett %level% szintre."
-      downgraded: "&2A(z) %enchant% %prevLevel% szintű varázslatvissza lett fejlesztve %level% szintre."
+      upgraded: "&2A(z) %enchant% %previous-level% szintű varázslat fejlesztve lett %level% szintre."
+      downgraded: "&2A(z) %enchant% %previous-level% szintű varázslatvissza lett fejlesztve %level% szintre."
       removed: "&cA(z) %enchant% varázslat el lett távolítva erről a tételről."
     giveitem:
       success: "&7Hozzáadva %amount%x %item% tétel %player% játékos számára."
@@ -113,7 +113,7 @@ enchanter:
   re-buy: "&cKérlek, vásárold meg újra ezt a varázslatot a varázslótól."
   disabled-in-world: "&cEz a varázsló le van tiltva ebben a világban."
   full-inventory: "&cAz eszköztárad megtelt!"
-  examine-book: "&7Megvizsgáltad a(z) %group-color%%group%&7 könyvet, és találtál egy %enchant-color% %level% szintű varázslatot."
+  examine-book: "&7Megvizsgáltad a(z) %group-color%%group-name%&7 könyvet, és találtál egy %enchant-color% %level% szintű varázslatot."
   unknown-payment-method: "&cNem sikerült érvényesíteni a(z) %paymentType% kifizetési módszert. Kérlek, vedd fel a kapcsolatot a szerver adminisztrátorával."
   successful-purchase: "&aVásárlás sikeres!"
   cannot-afford:

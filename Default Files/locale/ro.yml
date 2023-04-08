@@ -98,8 +98,8 @@ commands:
       success: "&aAm dat lui &2%player% %amount%x &acărți %enchant% %level% &a!"
     enchant:
       added: "&aAm adăugat enchantul %enchant% !"
-      upgraded: "&2Am upgradat %enchant% de la nivelul %prevLevel% la nivelul %level%."
-      downgraded: "&2Am downgradat %enchant% de la nivelul %prevLevel% la nivelul %level%."
+      upgraded: "&2Am upgradat %enchant% de la nivelul %previous-level% la nivelul %level%."
+      downgraded: "&2Am downgradat %enchant% de la nivelul %previous-level% la nivelul %level%."
       removed: "&cRemoved the %enchant% enchant from the item."
     giveitem:
       success: "&7Am dat %amount%x %item% jucătorului %player%"
@@ -131,7 +131,7 @@ enchanter:
   re-buy: "&cVă rog cumpărați itemul din nou de la enchanter."
   disabled-in-world: "&cEnchanterul este dezactivat în această lume."
   full-inventory: "&cInventarul tău este plin!"
-  examine-book: "&7Ai examinat cartea %group-color%%group%&7 și ai găsit enchantul %enchant-color% %level%"
+  examine-book: "&7Ai examinat cartea %group-color%%group-name%&7 și ai găsit enchantul %enchant-color% %level%"
   unknown-payment-method: "&cEroare la validarea metodei de plată %paymentType%, vă rog contactați un administrator."
   successful-purchase: "&aAchiziție reușită!"
   cannot-afford:

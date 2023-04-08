@@ -1,4 +1,4 @@
-# Whether or not AE should take control of anvils.
+# Whether AE should take control of anvils.
 # If this is disabled, no custom enchantments will work in anvils.
 enabled: true
 
@@ -24,7 +24,7 @@ levels:
   Projectile-Protection: 4
   Respiration: 3
   Aqua-Affinity: 1
-  Throns: 3
+  Thorns: 3
   Depth-Strider: 3
   Frost-Walker: 2
   Curse-of-Binding: 1

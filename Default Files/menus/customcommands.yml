@@ -13,36 +13,13 @@ enchantment-info:
     # You can use all variables that are used for items in the message,
     # if you want the command to only show text.
     enabled: true
-    # Inventory types
-    # NORMAL is chest-like inventory, HOPPER is hopper-like (has only 5 slots)
-    type: HOPPER
     # Inventory size (9-18-27-36-45-54)
-    # Does not work with HOPPER inventory
-    size: 45
+    size: 9
     # Inventory name
     name: "&e%enchant%&7 information"
     items:
       # Slots start from 0
       # This number defines the inventory slot.
-      0:
-        type: STAINED_GLASS_PANE
-        id: 15
-        custom-model-data: 0
-        force-glow: false
-        name: " "
-        lore: [ ]
-      1:
-        type: ENCHANTED_BOOK
-        id: 0
-        custom-model-data: 0
-        force-glow: false
-        name: "&7Information about &e%enchant% &7enchantment"
-        lore:
-          - "&eEnchantment &7>> &r%ench-colors%"
-          - "&eApplies to &7>> &r%applies-to%"
-          - "&eMax Level &7>> &r%max-lvl%"
-          - "&eDescription &7>> &r%desc%"
-        # you can as well use %group-color% to get enchantment color
       2:
         type: STAINED_GLASS_PANE
         id: 15
@@ -51,6 +28,26 @@ enchantment-info:
         name: " "
         lore: [ ]
       3:
+        type: ENCHANTED_BOOK
+        id: 0
+        custom-model-data: 0
+        force-glow: false
+        name: "&7Information about &e%enchant% &7enchantment"
+        lore:
+          - " &f* &eEnchantment &7>> &r%ench-colors%"
+          - " &f* &eApplies to &7>> &r%applies-to%"
+          - " &f* &eMax Level &7>> &r%max-lvl%"
+          - " &f* &eDescription &7>> &r%desc%"
+        # you can as well use %group-color% to get enchantment color
+        prefix-addon: " &f* &7"
+      4:
+        type: STAINED_GLASS_PANE
+        id: 15
+        custom-model-data: 0
+        force-glow: false
+        name: " "
+        lore: [ ]
+      5:
         type: CHEST
         id: 0
         custom-model-data: 0
@@ -58,7 +55,7 @@ enchantment-info:
         name: "&eApplies to &7>>"
         lore:
           - "&7%applies-to%"
-      4:
+      6:
         type: STAINED_GLASS_PANE
         id: 15
         custom-model-data: 0
@@ -187,7 +184,7 @@ enchantments:
       id: 0
       custom-model-data: 0
       force-glow: false
-      # What command should be ran when player clicks on one of the enchantments?
+      # What command should be run when player clicks on one of the enchantments?
       # %max-lvl% - Displays max. level in numbers, %max-lvl-roman% - displays max. level in roman numerals
       command: "/enchant %enchantment%"
       name: "&e%enchant% &7enchantment"
@@ -196,3 +193,4 @@ enchantments:
         - " &f* &eApplies to &7>> &r%applies-to%"
         - " &f* &eMax Level &7>> &r%max-lvl-roman%"
         - " &f* &eDescription &7>> &r%desc%"
+      prefix-addon: " &f* &7"

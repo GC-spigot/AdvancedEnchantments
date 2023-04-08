@@ -80,8 +80,8 @@ commands:
       success: "&2%player% &aerhielt &2%amount%x %enchant% %level% &aBücher!"
     enchant:
       added: "&aFüge die Verzauberung %enchant% hinzu!"
-      upgraded: "&2Verbessere die Verzauberung %enchant% von Level %prevLevel% zu Level %level%."
-      downgraded: "&2Verschlechtere die Verzauberung %enchant% von Level %prevLevel% zu Level %level%."
+      upgraded: "&2Verbessere die Verzauberung %enchant% von Level %previous-level% zu Level %level%."
+      downgraded: "&2Verschlechtere die Verzauberung %enchant% von Level %previous-level% zu Level %level%."
       removed: "&cEntferne die Verzauberung %enchant% vom Gegenstand."
     giveitem:
       success: "&7Gab %player% %amount%x %item%s"
@@ -113,7 +113,7 @@ enchanter:
   re-buy: "&cBitte kaufe den Gegenstand beim Verzauberer erneut."
   disabled-in-world: "&cIn dieser Welt ist der Verzauberer ausgeschaltet."
   full-inventory: "&cDein Inventar ist voll!"
-  examine-book: "&7Du hast ein %group-color%%group%&7 Buch untersucht und ein Level %enchant-color% %level% Buch gefunden"
+  examine-book: "&7Du hast ein %group-color%%group-name%&7 Buch untersucht und ein Level %enchant-color% %level% Buch gefunden"
   unknown-payment-method: "&cKonnte die Zahlungsmethode %paymentType% nicht überprüfen. Bitte kontaktiere einen Administrator"
   successful-purchase: "&aKauf erfolgreich!"
   cannot-afford:

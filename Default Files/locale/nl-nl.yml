@@ -80,8 +80,8 @@ commands:
       success: "&2%player% %amount%x %enchant% %level% &abooks gegeven!"
     enchant:
       added: "&aEnchant %enchant% toegevoegd!"
-      upgraded: "&2%enchant% opgewaardeerd van level %prevLevel% naar %level%."
-      downgraded: "&2%enchant% gedegradeerd van level %prevLevel% naar %level%."
+      upgraded: "&2%enchant% opgewaardeerd van level %previous-level% naar %level%."
+      downgraded: "&2%enchant% gedegradeerd van level %previous-level% naar %level%."
       removed: "&c%enchant% enchant verwijdert van de item."
     giveitem:
       success: "&7%amount%x %item%&7's gegeven aan speler %player%"
@@ -113,7 +113,7 @@ enchanter:
   re-buy: "&cKoop aub de item opnieuw van de enchanter."
   disabled-in-world: "&cDe Enchanter is uitgeschakeld in deze wereld."
   full-inventory: "&cJe inventaris is vol!"
-  examine-book: "&7Je hebt het boek %group-color%%group%&7 onderzocht en vond %enchant-color% %level%"
+  examine-book: "&7Je hebt het boek %group-color%%group-name%&7 onderzocht en vond %enchant-color% %level%"
   unknown-payment-method: "&cKon de betaalmethode %paymentType% niet valideren, neem aub contact op met een administrator."
   successful-purchase: "&aAankoop succesvol!"
   cannot-afford:

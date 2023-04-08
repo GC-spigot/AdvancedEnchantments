@@ -80,8 +80,8 @@ commands:
       success: "&aLe dio a &2%player% %amount%x %enchant% %level% &alibros"
     enchant:
       added: "&aSe agregó el encantamiento %enchant%!"
-      upgraded: "&2Upgraded %enchant% mejorado del nivel %prevLevel% a %level%."
-      downgraded: "&2%enchant% rebajado del nivel %prevLevel% a %level%."
+      upgraded: "&2Upgraded %enchant% mejorado del nivel %previous-level% a %level%."
+      downgraded: "&2%enchant% rebajado del nivel %previous-level% a %level%."
       removed: "&cSe ha eliminado el encantamiento %enchant% del artículo."
     giveitem:
       success: "&7Se agregó %amount%x %item%&7 al jugador %player%"
@@ -113,7 +113,7 @@ enchanter:
   re-buy: "&cVuelve a comprar el artículo del encantador."
   disabled-in-world: "&cEl encantador está desactivado en este mundo."
   full-inventory: "&cTu inventario está lleno!"
-  examine-book: "&7Examinaste el %group-color%libro %group%&7 y encontraste %enchant-color% %level%"
+  examine-book: "&7Examinaste el %group-color%libro %group-name%&7 y encontraste %enchant-color% %level%"
   unknown-payment-method: "&cNo se pudo validar el método de pago %paymentType% comuníquese con un administrador."
   successful-purchase: "&aCompra exitosa!"
   cannot-afford:

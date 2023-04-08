@@ -1,0 +1,59 @@
+name: AdvancedEnchantments
+version: @version@
+main: net.advancedplugins.ae.Core
+api-version: "1.13"
+
+description: "The most extensive custom enchantments plugin up to date"
+website: "https://advancedplugins.net/item/AdvancedEnchantments.1"
+
+authors:
+  - 'AdvancedPlugins'
+
+softdepend:
+  - AAC
+  - AAC5
+  - AdvancedHeads
+  - AureliumSkills
+  - AutoPickup
+  - BanItem
+  - BlockLocker
+  - CMI
+  - CoreProtect
+  - DecentHolograms
+  - Factions
+  - FactionsOne
+  - FactionsUUID
+  - GadgetsMenu
+  - GriefPrevention
+  - mcMMO
+  - MythicMobs
+  - NoCheatPlus
+  - PlaceholderAPI
+  - PlotSquared
+  - ProtocolLib
+  - ProtectionStones
+  - RestrictedCreative
+  - Towny
+  - RoseStacker
+  - Slimefun
+  - Spartan
+  - UltimateClans
+  - Vault
+  - Vulcan
+  - WildStacker
+  - WorldGuard
+  - WorldGuardExtraFlags
+
+commands:
+  AdvancedEnchantments:
+    description: "Main AE Command"
+    usage: "/AdvancedEnchantments"
+    aliases: [ ae, customenchants ]
+
+permissions:
+  ae.bypass.souls:
+    default: false
+    description: "Allows players to bypass enchantment's soul requirements."
+  ae.bypass.cooldown:
+    default: false
+    description: "Allows player to bypass enchantment's cooldowns."

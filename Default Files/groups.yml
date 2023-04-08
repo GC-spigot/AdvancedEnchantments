@@ -27,6 +27,7 @@ groups:
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
+      custom-model-data: 0
     magic-dust:
       # when right-clicked, it gives magic with success chance
       # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
@@ -46,6 +47,7 @@ groups:
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
+      custom-model-data: 0
     magic-dust:
       # when right-clicked, it gives magic with success chance
       # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
@@ -65,6 +67,7 @@ groups:
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
+      custom-model-data: 0
     magic-dust:
       # when right-clicked, it gives magic with success chance
       # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
@@ -84,6 +87,7 @@ groups:
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
+      custom-model-data: 0
     magic-dust:
       # when right-clicked, it gives magic with success chance
       # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
@@ -103,6 +107,7 @@ groups:
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
+      custom-model-data: 0
     magic-dust:
       # when right-clicked, it gives magic with success chance
       # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
@@ -122,6 +127,7 @@ groups:
     slot-increaser:
       # How many slots should slot increaser add when using this type increaser
       slots: 1
+      custom-model-data: 0
     magic-dust:
       # when right-clicked, it gives magic with success chance
       # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)

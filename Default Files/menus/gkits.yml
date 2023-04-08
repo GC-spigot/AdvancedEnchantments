@@ -11,35 +11,36 @@ inventory:
   # Name of inventory
   # * Change the name of GKits inventory
   name: "&7Global Kits"
-  # Custom inventory commnad
+  # Custom inventory command
   # * Create a handy command to open GKits inventory
   custom-command:
     - "/gkit"
     - "/gkits"
   sounds:
     # Inventory opening sound
-    # * Sound is played on inventory open via comamnd
+    # * Sound is played on inventory open via command
     inventory-open: CLICK
     # Usage of kit sound
-    # * Sound played upon the use of any of the available kits
+    # * Sound played upon the use of the available kits
     kit-use: LEVEL_UP
     # These are 1.8 sounds, if your server version is 1.9 or higher, please use different sounds.
     # Invalid sounds will not spam console with errors, they will just not play.
-# Let players preview GKits by right-clicking on any gkit (permission: gkit.preview)
+# Let players preview GKits by right-clicking on any GKit (permission: gkit.preview)
 preview:
   enabled: true
   inventory:
-    # Biggest the inventory can be, set to "AUTO" if you want inventory size to be set depending on gkit content amount.
+    inv-name: "&7Previewing %gkit%"
+    # Biggest the inventory can be, set to "AUTO" if you want inventory size to be set depending on GKit content amount.
     # (1 row = 9 slots, max 6 rows)
     max-size: 6
     # If there is any free slots in preview inventory, should they be filled with selected block?
     fill-blanks: true
-    inv-name: "&7Previewing %gkit%"
     material: STAINED_GLASS_PANE
     data: 15
     go-back-item:
       material: STAINED_GLASS_PANE
       data: 14
+      custom-model-data: 0
       name: "&cGo back to GKits menu"
       lore: [ ]
 # ((this adds custom enchantments support, you may give random level of custom enchantments, eg: "&fSpeed %1-3%" adding in lore))
@@ -52,54 +53,63 @@ customization:
   27:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   28:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   29:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   30:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   31:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   32:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   33:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   34:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
   35:
     material: STAINED_GLASS_PANE
     damage: 15
+    custom-model-data: 0
     amount: 1
     name: " "
     lore: [ ]
@@ -119,6 +129,7 @@ kits:
       no-permission:
         material: PUMPKIN
         data: 0
+        custom-model-data: 0
         force-glow: true
         name: "&b&kiii&f&l&nHeroic&d&kiii&f&l Spooky Kit"
         lore:
@@ -138,6 +149,7 @@ kits:
       cooldown:
         material: STAINED_GLASS_PANE
         data: 4
+        custom-model-data: 0
         force-glow: true
         name: "&b&kiii&f&l&nHeroic&d&kiii&f&l Spooky Kit"
         lore:
@@ -157,6 +169,7 @@ kits:
       available:
         material: PUMPKIN
         data: 0
+        custom-model-data: 0
         force-glow: true
         name: "&b&kiii&f&l&nHeroic&d&kiii&f&l Spooky Kit"
         lore:

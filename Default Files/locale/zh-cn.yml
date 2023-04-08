@@ -85,8 +85,8 @@ commands:
       success: "&a给 &2%player% %amount%x %enchant% %level% &abooks!"
     enchant:
       added: "&a添加了 %enchant% 附魔!"
-      upgraded: "&2已升级 %enchant% 从等级 %prevLevel% 到 %level%."
-      downgraded: "&2已降级 %enchant%从等级 %prevLevel% 到 %level%."
+      upgraded: "&2已升级 %enchant% 从等级 %previous-level% 到 %level%."
+      downgraded: "&2已降级 %enchant%从等级 %previous-level% 到 %level%."
       removed: "&c移除了 %enchant% 附魔."
     giveitem:
       success: "&7添加了 %amount%x %item%&7 给玩家 &b%player%"
@@ -121,7 +121,7 @@ enchanter:
   # Variables: %enchant% - enchantment name
   # %enchant-color% - enchantment name with color
   # %level% - level number in roman
-  examine-book: "&7你检查过了 %group-color%%group%&7 书并且找到了  %enchant-color% %level%"
+  examine-book: "&7你检查过了 %group-color%%group-name%&7 书并且找到了  %enchant-color% %level%"
   unknown-payment-method: "&c验证失败 %paymentType% 付款方式, 请联系管理员."
   successful-purchase: "&a购买成功!"
   cannot-afford:

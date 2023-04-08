@@ -80,8 +80,8 @@ commands:
       success: "&aĐã gửi cho &2%player% %amount%x &asách loại &2%enchant% %level%!"
     enchant:
       added: "&aĐã thêm phù phép %enchant%!"
-      upgraded: "&2Đã nâng cấp phù phép %enchant% từ cấp %prevLevel% lên cấp %level%."
-      downgraded: "&2Đã giảm cấp phù phép %enchant% từ cấp %prevLevel% xuống cấp %level%."
+      upgraded: "&2Đã nâng cấp phù phép %enchant% từ cấp %previous-level% lên cấp %level%."
+      downgraded: "&2Đã giảm cấp phù phép %enchant% từ cấp %previous-level% xuống cấp %level%."
       removed: "&cĐã xóa phù phép %enchant% ra khỏi vật phẩm."
     giveitem:
       success: "&7Đã gửi %amount%x %item%&7 cho &b%player%"
@@ -113,7 +113,7 @@ enchanter:
   re-buy: "&cHãy mua lại phù phép đó ở enchanter."
   disabled-in-world: "&cEnchanter đã bị tắt ở thế giới này."
   full-inventory: "&cTúi đồ của bạn đã đầy!"
-  examine-book: "&7Bạn kiểm tra sách %group-color%%group%&7 và tìm thấy phù phép %enchant-color% %level%"
+  examine-book: "&7Bạn kiểm tra sách %group-color%%group-name%&7 và tìm thấy phù phép %enchant-color% %level%"
   unknown-payment-method: "&cKhông xác thực được phương thức thanh toán %paymentType%, hãy liên hệ admin."
   successful-purchase: "&aMua thành công!"
   cannot-afford:
