@@ -17,6 +17,7 @@
 #    1:     <-- Level indicator
 #      chance: 30    <-- Chance for enchantment to activate
 #      conditions: "%victim health% > 5 : %stop%"    <-- Condition (read more about it at Conditions)
+#      description: "Has the lowest chance to heal when on low hearts"    <-- Per level description (different description for each level - optional)
 #      effects:    <-- All enchantment effects
 #        - "ADD_HEALTH:2 %victim%"    <-- Effect(s) list
 
@@ -86,6 +87,8 @@ planter:
     by shift+right-clicking.
   applies-to: Hoes
   type: RIGHT_CLICK
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_HOE
@@ -114,6 +117,8 @@ potatoplanter:
     by shift+right-clicking.
   applies-to: Hoes
   type: RIGHT_CLICK
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_HOE
@@ -143,6 +148,8 @@ carrotplanter:
   applies-to: Hoes
   type: RIGHT_CLICK
   group: ULTIMATE
+  settings:
+    showActionBar: true
   applies:
     - ALL_HOE
   levels:
@@ -185,6 +192,8 @@ strike:
     at the opponent.
   applies-to: Swords, Bow, Crossbow, Trident
   type: ATTACK;ATTACK_MOB;SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: SIMPLE
   applies:
     - TRIDENT
@@ -212,6 +221,8 @@ impact:
   description: Chance to double dealt damage.
   applies-to: Trident
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: ELITE
   applies:
     - TRIDENT
@@ -244,6 +255,8 @@ twinge:
   applies-to: Trident
   type: ATTACK
   group: LEGENDARY
+  settings:
+    showActionBar: true
   applies:
     - TRIDENT
   levels:
@@ -296,6 +309,8 @@ jellylegs:
   description: Chance to negate fall damage.
   applies-to: Boots
   type: FALL_DAMAGE
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_BOOTS
@@ -489,6 +504,8 @@ decapitation:
     head drop on death.
   applies-to: Swords, Axes
   type: KILL_PLAYER
+  settings:
+    showActionBar: true
   group: SIMPLE
   applies:
     - ALL_SWORD
@@ -514,6 +531,8 @@ forcefield:
   description: Chance to push away your opponent.
   applies-to: Swords
   type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
   group: SIMPLE
   applies:
     - ALL_SWORD
@@ -722,6 +741,8 @@ explosive:
   description: Chance for arrows to explode.
   applies-to: Bow
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: UNIQUE
   applies:
     - BOW
@@ -756,6 +777,8 @@ frenzy:
   description: Chance for arrows to explode.
   applies-to: Crossbow
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: UNIQUE
   applies:
     - CROSSBOW
@@ -989,6 +1012,8 @@ explosivedemise:
     when near death.
   applies-to: Leggings
   type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
   group: UNIQUE
   applies:
     - ALL_LEGGINGS
@@ -1347,6 +1372,8 @@ bait:
   description: Chance to receive double fishing drops.
   applies-to: Fishing Rod
   type: CATCH_FISH
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - FISHING_ROD
@@ -1535,6 +1562,8 @@ reaper:
     Wither and Blindness effects
     while dealing damage
   applies-to: Axe
+  settings:
+    showActionBar: true
   type: ATTACK
   group: ELITE
   applies:
@@ -1760,6 +1789,8 @@ virus:
   description: A chance of giving poison effect.
   applies-to: Bow, Crossbow, Trident
   type: SHOOT_MOB;SHOOT
+  settings:
+    showActionBar: true
   group: UNIQUE
   applies:
     - TRIDENT
@@ -1870,6 +1901,8 @@ snare:
     enemies with projectiles.
   applies-to: Bows
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: ELITE
   applies:
     - BOW
@@ -1924,6 +1957,8 @@ undeadruse:
     hordes to distract and disorient your opponents.
   applies-to: Boots
   type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
   group: ELITE
   applies:
     - ALL_BOOTS
@@ -2056,6 +2091,8 @@ perish:
   description: A chance to give the wither effect.
   applies-to: Bow, Crossbow, Trident
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: UNIQUE
   applies:
     - TRIDENT
@@ -2095,6 +2132,8 @@ smokebomb:
     distract your enemies.
   applies-to: Helmet
   type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
   group: ELITE
   applies:
     - ALL_HELMET
@@ -2224,6 +2263,8 @@ shockwave:
     when your health is low.
   applies-to: Chestplates
   type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
   group: ELITE
   applies:
     - ALL_CHESTPLATE
@@ -2300,6 +2341,8 @@ greatsword:
   applies-to: Sword
   type: ATTACK
   group: ELITE
+  settings:
+    showActionBar: true
   applies:
     - ALL_SWORD
   levels:
@@ -2439,6 +2482,8 @@ rocketescape:
   description: Blast off into the air at low HP.
   applies-to: Boots
   type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
   group: ELITE
   applies:
     - ALL_BOOTS
@@ -2472,6 +2517,8 @@ trickster:
     behind you opponent.
   applies-to: Armor
   type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
   group: ELITE
   applies:
     - ALL_ARMOR
@@ -2522,6 +2569,8 @@ timber:
   applies-to: Axes
   group: ULTIMATE
   type: MINING
+  settings:
+    showActionBar: true
   applies:
     - ALL_AXE
   levels:
@@ -2583,6 +2632,8 @@ cleave:
     that increases with the level of enchant.
   applies-to: Axes
   type: ATTACK
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_AXE
@@ -2627,6 +2678,8 @@ ambit:
   description: "Damages mobs within a radius\nthat increases with the level of enchant."
   applies-to: Swords, Axes
   type: ATTACK_MOB
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_SWORD
@@ -3111,6 +3164,8 @@ guardians:
     assist you and watch over you.
   applies-to: Armor
   type: DEFENSE
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_ARMOR
@@ -3261,6 +3316,8 @@ restore:
   applies-to: Tools
   type: ITEM_BREAK
   group: FABLED
+  settings:
+    showActionBar: true
   applies:
     - ALL_PICKAXE
     - ALL_SPADE
@@ -3269,26 +3326,26 @@ restore:
     '1':
       chance: 40
       effects:
-        - REMOVE_ENCHANT:restore
         - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
     '2':
       chance: 60
       effects:
-        - REMOVE_ENCHANT:restore
         - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
     '3':
       chance: 80
       effects:
-        - REMOVE_ENCHANT:restore
         - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
     '4':
       chance: 100
       effects:
-        - REMOVE_ENCHANT:restore
         - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
 implants:
   display: '%group-color%Implants'
@@ -3500,6 +3557,8 @@ disappear:
     low on health.
   applies-to: Armor
   type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_ARMOR
@@ -3717,6 +3776,8 @@ hellfire:
   description: Arrows turn into fireballs.
   applies-to: Bow
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - BOW
@@ -3750,6 +3811,8 @@ missile:
   display: '%group-color%Missile'
   description: Arrows turn into fireballs.
   applies-to: Crossbow
+  settings:
+    showActionBar: true
   type: SHOOT;SHOOT_MOB
   group: ELITE
   applies:
@@ -3787,6 +3850,8 @@ longbow:
     to enemy players that have
     a bow in their hands.
   applies-to: Bow
+  settings:
+    showActionBar: true
   type: SHOOT
   group: ULTIMATE
   applies:
@@ -3941,6 +4006,8 @@ rebound:
   description: Gain some health back after kills.
   applies-to: Weapons
   type: KILL_PLAYER;KILL_MOB
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - ALL_AXE
@@ -4080,6 +4147,8 @@ spirits:
   description: Chance to spawn guard blazes.
   applies-to: Armor
   type: DEFENSE
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_ARMOR
@@ -4139,6 +4208,8 @@ bleed:
   description: Make your opponent bleed.
   applies-to: Axes
   type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_AXE
@@ -4384,6 +4455,8 @@ chaos:
   description: Deal weakness and wither effects.
   applies-to: Trident
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - TRIDENT
@@ -4503,6 +4576,8 @@ barbarian:
   description: Chance to inflicts more axe damage.
   applies-to: Axes
   type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - ALL_AXE
@@ -4569,6 +4644,8 @@ doublestrike:
   description: A chance to strike twice.
   applies-to: Swords
   type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - ALL_SWORD
@@ -4618,6 +4695,8 @@ inflame:
   applies-to: Axes
   group: LEGENDARY
   type: ATTACK
+  settings:
+    showActionBar: true
   applies:
     - ALL_AXE
   levels:
@@ -4645,6 +4724,8 @@ immolation:
   applies-to: Swords
   group: ULTIMATE
   type: ATTACK_MOB
+  settings:
+    showActionBar: true
   applies:
     - ALL_SWORD
   levels:
@@ -4674,6 +4755,8 @@ killaura:
   applies-to: Swords
   group: LEGENDARY
   type: ATTACK_MOB
+  settings:
+    showActionBar: true
   applies:
     - ALL_SWORD
   levels:
@@ -4888,22 +4971,22 @@ immortal:
       chance: 12
       cooldown: 40
       effects:
-        - ADD_DURABILITY:-10 @Victim
+        - ADD_DURABILITY_ARMOR:-10 @Victim
     '2':
       chance: 18
       cooldown: 40
       effects:
-        - ADD_DURABILITY:-10 @Victim
+        - ADD_DURABILITY_ARMOR:-10 @Victim
     '3':
       chance: 25
       cooldown: 40
       effects:
-        - ADD_DURABILITY:-10 @Victim
+        - ADD_DURABILITY_ARMOR:-10 @Victim
     '4':
       chance: 31
       cooldown: 40
       effects:
-        - ADD_DURABILITY:-10 @Victim
+        - ADD_DURABILITY_ARMOR:-10 @Victim
 unbreakable:
   display: '%group-color%Unbreakable'
   description: Tools with this enchant become unbreakable
@@ -4936,6 +5019,8 @@ disarmor:
     armor piece from your opponent.
   applies-to: Sword
   type: ATTACK
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - ALL_SWORD
@@ -4993,6 +5078,8 @@ striker:
   description: Rain arrows over opponent.
   applies-to: Bow
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - BOW
@@ -5019,6 +5106,8 @@ sniper:
     deal double damage.
   applies-to: Bow
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - BOW
@@ -5065,6 +5154,8 @@ deadshot:
     deal double damage.
   applies-to: Trident
   type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - TRIDENT
@@ -5135,6 +5226,8 @@ neutralize:
   display: '%group-color%Neutralize'
   description: Chance to disarm opponent.
   applies-to: Bow, Crossbow
+  settings:
+    showActionBar: true
   type: SHOOT
   group: FABLED
   applies:
@@ -5156,6 +5249,8 @@ disarm:
   description: Chance to disarm opponent.
   applies-to: Swords
   type: ATTACK
+  settings:
+    showActionBar: true
   group: FABLED
   applies:
     - ALL_SWORD
@@ -5295,6 +5390,8 @@ bluntforce:
   applies-to: Axes
   group: ELITE
   type: ATTACK
+  settings:
+    showActionBar: true
   applies:
     - ALL_AXE
   levels:
@@ -5349,6 +5446,8 @@ plummet:
     when taking fall damage.
   applies-to: Boots
   type: FALL_DAMAGE
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_BOOTS
@@ -5443,6 +5542,8 @@ launch:
   description: Launch yourself by right-clicking.
   applies-to: Swords
   type: RIGHT_CLICK
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - ALL_SWORD
@@ -5514,7 +5615,7 @@ nulify:
       conditions:
         - '%souls on item% < 40 : %stop%'
       effects:
-        - REMOVE_SOULS: 40 @Attacker
+        - REMOVE_SOULS:40 @Attacker
         - INCREASE_DAMAGE:100
         - POTION:BLINDNESS:0:80 @Victim
         - PARTICLE:FLASH:1:0 @Victim
@@ -5524,7 +5625,7 @@ nulify:
       conditions:
         - '%souls on item% < 40 : %stop%'
       effects:
-        - REMOVE_SOULS: 40 @Attacker
+        - REMOVE_SOULS:40 @Attacker
         - POTION:BLINDNESS:1:80 @Victim
         - PARTICLE:FLASH:2:0 @Victim
     '3':
@@ -5541,7 +5642,7 @@ nulify:
       conditions:
         - '%souls on item% < 40 : %stop%'
       effects:
-        - REMOVE_SOULS: 40 @Attacker
+        - REMOVE_SOULS:40 @Attacker
         - POTION:BLINDNESS:3:80 @Victim
         - PARTICLE:FLASH:4:0 @Victim
 rush:
@@ -5635,6 +5736,27 @@ multiplication:
     '1':
       chance: 15
       cooldown: 5
+      settings:
+        whitelist:
+          - "COAL_ORE"
+          - "COPPER_ORE"
+          - "IRON_ORE"
+          - "GOLD_ORE"
+          - "LAPIS_ORE"
+          - "REDSTONE_ORE"
+          - "DIAMOND_ORE"
+          - "EMERALD_ORE"
+          - "NETHER_QUARTZ_ORE"
+          - "NETHER_GOLD_ORE"
+          - "ANCIENT_DEBRIS"
+          - "DEEPSLATE_COAL_ORE"
+          - "DEEPSLATE_COPPER_ORE"
+          - "DEEPSLATE_IRON_ORE"
+          - "DEEPSLATE_GOLD_ORE"
+          - "DEEPSLATE_LAPIS_ORE"
+          - "DEEPSLATE_REDSTONE_ORE"
+          - "DEEPSLATE_DIAMOND_ORE"
+          - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
         - '%souls on item% > 4: %allow%'
@@ -5644,6 +5766,27 @@ multiplication:
     '2':
       chance: 20
       cooldown: 5
+      settings:
+        whitelist:
+          - "COAL_ORE"
+          - "COPPER_ORE"
+          - "IRON_ORE"
+          - "GOLD_ORE"
+          - "LAPIS_ORE"
+          - "REDSTONE_ORE"
+          - "DIAMOND_ORE"
+          - "EMERALD_ORE"
+          - "NETHER_QUARTZ_ORE"
+          - "NETHER_GOLD_ORE"
+          - "ANCIENT_DEBRIS"
+          - "DEEPSLATE_COAL_ORE"
+          - "DEEPSLATE_COPPER_ORE"
+          - "DEEPSLATE_IRON_ORE"
+          - "DEEPSLATE_GOLD_ORE"
+          - "DEEPSLATE_LAPIS_ORE"
+          - "DEEPSLATE_REDSTONE_ORE"
+          - "DEEPSLATE_DIAMOND_ORE"
+          - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
         - '%souls on item% > 4: %allow%'
@@ -5653,6 +5796,27 @@ multiplication:
     '3':
       chance: 25
       cooldown: 6
+      settings:
+        whitelist:
+          - "COAL_ORE"
+          - "COPPER_ORE"
+          - "IRON_ORE"
+          - "GOLD_ORE"
+          - "LAPIS_ORE"
+          - "REDSTONE_ORE"
+          - "DIAMOND_ORE"
+          - "EMERALD_ORE"
+          - "NETHER_QUARTZ_ORE"
+          - "NETHER_GOLD_ORE"
+          - "ANCIENT_DEBRIS"
+          - "DEEPSLATE_COAL_ORE"
+          - "DEEPSLATE_COPPER_ORE"
+          - "DEEPSLATE_IRON_ORE"
+          - "DEEPSLATE_GOLD_ORE"
+          - "DEEPSLATE_LAPIS_ORE"
+          - "DEEPSLATE_REDSTONE_ORE"
+          - "DEEPSLATE_DIAMOND_ORE"
+          - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
         - '%souls on item% > 4: %allow%'
@@ -5662,6 +5826,27 @@ multiplication:
     '4':
       chance: 28
       cooldown: 7
+      settings:
+        whitelist:
+          - "COAL_ORE"
+          - "COPPER_ORE"
+          - "IRON_ORE"
+          - "GOLD_ORE"
+          - "LAPIS_ORE"
+          - "REDSTONE_ORE"
+          - "DIAMOND_ORE"
+          - "EMERALD_ORE"
+          - "NETHER_QUARTZ_ORE"
+          - "NETHER_GOLD_ORE"
+          - "ANCIENT_DEBRIS"
+          - "DEEPSLATE_COAL_ORE"
+          - "DEEPSLATE_COPPER_ORE"
+          - "DEEPSLATE_IRON_ORE"
+          - "DEEPSLATE_GOLD_ORE"
+          - "DEEPSLATE_LAPIS_ORE"
+          - "DEEPSLATE_REDSTONE_ORE"
+          - "DEEPSLATE_DIAMOND_ORE"
+          - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
         - '%souls on item% > 4: %allow%'
@@ -5671,6 +5856,27 @@ multiplication:
     '5':
       chance: 30
       cooldown: 8
+      settings:
+        whitelist:
+          - "COAL_ORE"
+          - "COPPER_ORE"
+          - "IRON_ORE"
+          - "GOLD_ORE"
+          - "LAPIS_ORE"
+          - "REDSTONE_ORE"
+          - "DIAMOND_ORE"
+          - "EMERALD_ORE"
+          - "NETHER_QUARTZ_ORE"
+          - "NETHER_GOLD_ORE"
+          - "ANCIENT_DEBRIS"
+          - "DEEPSLATE_COAL_ORE"
+          - "DEEPSLATE_COPPER_ORE"
+          - "DEEPSLATE_IRON_ORE"
+          - "DEEPSLATE_GOLD_ORE"
+          - "DEEPSLATE_LAPIS_ORE"
+          - "DEEPSLATE_REDSTONE_ORE"
+          - "DEEPSLATE_DIAMOND_ORE"
+          - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
         - '%souls on item% > 4: %allow%'
@@ -5682,6 +5888,8 @@ fuddle:
   description: Disorganize opponent's hotbar.
   applies-to: Swords
   type: ATTACK
+  settings:
+    showActionBar: true
   group: ULTIMATE
   applies:
     - ALL_SWORD
@@ -5806,6 +6014,8 @@ deranged:
   description: Strike lightning at nearby players.
   applies-to: Swords
   type: ATTACK
+  settings:
+    showActionBar: true
   group: LEGENDARY
   applies:
     - ALL_SWORD
