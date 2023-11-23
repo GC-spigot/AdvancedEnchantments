@@ -80,6 +80,31 @@
 #    disable-in-enchanter: true # Players can no longer obtain enchantment from Enchanter
 #    disabled-worlds: # List worlds in which enchantment will not work (cAsE sEnSiTiVe)
 #      - "My_World"
+gemify:
+  display: '%group-color%Gemify'
+  description: Chance for an ore block to turn into it's block
+  applies-to: Pickaxe
+  type: MINING
+  group: FABLED
+  settings:
+    showActionBar: true
+  applies:
+    - ALL_PICKAXE
+  levels:
+    '1':
+      chance: 3
+      cooldown: 5
+      effects:
+        - PARTICLE:GLOW:30:0.5 @Block
+        - PLAY_SOUND:ENTITY_PLAYER_LEVELUP @Self
+        - 'SET_BLOCK:GOLD_BLOCK @Block <condition>%block type% contains GOLD_ORE : %allow%</condition>'
+        - 'SET_BLOCK:IRON_BLOCK @Block <condition>%block type% contains IRON_ORE : %allow%</condition>'
+        - 'SET_BLOCK:COAL_BLOCK @Block <condition>%block type% contains COAL_ORE : %allow%</condition>'
+        - 'SET_BLOCK:EMERALD_BLOCK @Block <condition>%block type% contains EMERALD_ORE : %allow%</condition>'
+        - 'SET_BLOCK:COPPER_BLOCK @Block <condition>%block type% contains copper_ore : %allow%</condition>'
+        - 'SET_BLOCK:REDSTONE_BLOCK @Block <condition>%block type% contains redstone_ore: %allow%</condition>'
+        - 'SET_BLOCK:LAPIS_BLOCK @Block <condition>%block type% contains lapis_ore : %allow%</condition>'
+        - 'SET_BLOCK:DIAMOND_BLOCK @Block <condition>%block type% contains diamond_ore: %allow%</condition>'
 planter:
   display: '%group-color%Planter'
   description: |-
@@ -1858,42 +1883,42 @@ reforged:
     '1':
       chance: 10
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '2':
       chance: 20
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '3':
       chance: 30
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '4':
       chance: 40
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '5':
       chance: 50
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '6':
       chance: 60
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '7':
       chance: 70
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '8':
       chance: 80
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '9':
       chance: 90
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
     '10':
       effects:
-        - ADD_DURABILITY_ITEM:-1
+        - ADD_DURABILITY_ITEM:1
 snare:
   display: '%group-color%Snare'
   description: |-
@@ -2442,17 +2467,17 @@ hardened:
       chance: 25
       cooldown: 7
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-1 @Victim
+        - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
     '2':
       chance: 35
       cooldown: 7
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-1 @Victim
+        - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
     '3':
       chance: 45
       cooldown: 7
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-2 @Victim
+        - ADD_DURABILITY_CURRENT_ITEM:2 @Victim
 patch:
   display: '%group-color%Patch'
   description: Chance to recover durability when damaged by mobs.
@@ -2466,17 +2491,17 @@ patch:
       chance: 25
       cooldown: 7
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-1 @Victim
+        - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
     '2':
       chance: 35
       cooldown: 7
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-1 @Victim
+        - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
     '3':
       chance: 45
       cooldown: 7
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-2 @Victim
+        - ADD_DURABILITY_CURRENT_ITEM:2 @Victim
 rocketescape:
   display: '%group-color%Rocket Escape'
   description: Blast off into the air at low HP.
@@ -3326,25 +3351,25 @@ restore:
     '1':
       chance: 40
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
         - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
     '2':
       chance: 60
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
         - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
     '3':
       chance: 80
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
         - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
     '4':
       chance: 100
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:<round><math>-1 * (%maximum durability%/2)</math></round>
+        - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
         - REMOVE_ENCHANT:restore
         - PLAY_SOUND:ITEM_TOTEM_USE
 implants:
@@ -3635,22 +3660,22 @@ disintegrate:
       chance: 12
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
     '2':
       chance: 25
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
     '3':
       chance: 39
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
     '4':
       chance: 46
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
 shatter:
   display: '%group-color%Shatter'
   description: |-
@@ -3666,22 +3691,22 @@ shatter:
       chance: 12
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
     '2':
       chance: 25
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
     '3':
       chance: 39
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
     '4':
       chance: 46
       cooldown: 2
       effects:
-        - DAMAGE_ARMOR:2 @Victim
+        - ADD_DURABILITY_ARMOR:-2 @Victim
 heavy:
   display: '%group-color%Heavy'
   description: |-
@@ -4925,35 +4950,35 @@ blacksmith:
       chance: 9
       cooldown: 3
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-3
+        - ADD_DURABILITY_CURRENT_ITEM:3
         - HALF_DAMAGE
         - PARTICLE:BLOCK_DUST:20:1
     '2':
       chance: 15
       cooldown: 3
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-3
+        - ADD_DURABILITY_CURRENT_ITEM:3
         - HALF_DAMAGE
         - PARTICLE:BLOCK_DUST:20:1
     '3':
       chance: 23
       cooldown: 3
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-3
+        - ADD_DURABILITY_CURRENT_ITEM:3
         - HALF_DAMAGE
         - PARTICLE:BLOCK_DUST:20:1
     '4':
       chance: 31
       cooldown: 3
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-4
+        - ADD_DURABILITY_CURRENT_ITEM:4
         - HALF_DAMAGE
         - PARTICLE:BLOCK_DUST:20:1
     '5':
       chance: 39
       cooldown: 3
       effects:
-        - ADD_DURABILITY_CURRENT_ITEM:-4
+        - ADD_DURABILITY_CURRENT_ITEM:4
         - HALF_DAMAGE
         - PARTICLE:BLOCK_DUST:20:1
 immortal:
@@ -4971,22 +4996,22 @@ immortal:
       chance: 12
       cooldown: 40
       effects:
-        - ADD_DURABILITY_ARMOR:-10 @Victim
+        - ADD_DURABILITY_ARMOR:10 @Victim
     '2':
       chance: 18
       cooldown: 40
       effects:
-        - ADD_DURABILITY_ARMOR:-10 @Victim
+        - ADD_DURABILITY_ARMOR:10 @Victim
     '3':
       chance: 25
       cooldown: 40
       effects:
-        - ADD_DURABILITY_ARMOR:-10 @Victim
+        - ADD_DURABILITY_ARMOR:10 @Victim
     '4':
       chance: 31
       cooldown: 40
       effects:
-        - ADD_DURABILITY_ARMOR:-10 @Victim
+        - ADD_DURABILITY_ARMOR:10 @Victim
 unbreakable:
   display: '%group-color%Unbreakable'
   description: Tools with this enchant become unbreakable
