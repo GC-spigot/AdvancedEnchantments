@@ -80,6 +80,32 @@
 #    disable-in-enchanter: true # Players can no longer obtain enchantment from Enchanter
 #    disabled-worlds: # List worlds in which enchantment will not work (cAsE sEnSiTiVe)
 #      - "My_World"
+autoreel:
+  display: '%group-color%Auto Reel'
+  description: "Automatically reels in the fishing rod when it gets a bite."
+  applies-to: Fishing Rod
+  type: BITE_HOOK
+  group: ULTIMATE
+  settings:
+    showActionBar: true
+  applies:
+    - FISHING_ROD
+  levels:
+    '1':
+      chance: 25
+      effects:
+        - AUTO_REEL
+    '2':
+      chance: 50
+      effects:
+        - AUTO_REEL
+    '3':
+      chance: 75
+      effects:
+        - AUTO_REEL
+    '4':
+      effects:
+        - AUTO_REEL
 gemify:
   display: '%group-color%Gemify'
   description: Chance for an ore block to turn into it's block
@@ -858,6 +884,90 @@ featherweight:
       cooldown: 2
       effects:
         - POTION:FAST_DIGGING:2:100
+sharpnesshook:
+  display: '%group-color%Sharpness Hook'
+  description: Deal damage with the hook.
+  applies-to: Fishing Rod
+  type: HOOK_ENTITY
+  group: ULTIMATE
+  applies:
+    - FISHING_ROD
+  levels:
+    '1':
+      effects:
+        - DO_HARM:2 @Victim
+    '2':
+      effects:
+        - DO_HARM:4 @Victim
+    '3':
+      effects:
+        - DO_HARM:6 @Victim
+    '4':
+      effects:
+        - DO_HARM:9 @Victim
+    '5':
+      effects:
+        - DO_HARM:12 @Victim
+    '6':
+      effects:
+        - DO_HARM:15 @Victim
+    '7':
+      effects:
+        - DO_HARM:19 @Victim
+    '8':
+      effects:
+        - DO_HARM:23 @Victim
+    '9':
+      effects:
+        - DO_HARM:27 @Victim
+poisonedhook:
+  display: '%group-color%Poisoned Hook'
+  description: Poisons the hook.
+  applies-to: Fishing Rod
+  type: HOOK_ENTITY
+  group: ELITE
+  applies:
+    - FISHING_ROD
+  levels:
+    '1':
+      chance: 6
+      cooldown: 2
+      effects:
+        - POTION:POISON:0:80 @Victim
+    '2':
+      chance: 22
+      cooldown: 2
+      effects:
+        - POTION:POISON:0:120 @Victim
+    '3':
+      chance: 35
+      cooldown: 2
+      effects:
+        - POTION:POISON:1:80 @Victim
+firehook:
+  display: '%group-color%Fire Hook'
+  description: The hook is on fire.
+  applies-to: Fishing Rod
+  type: HOOK_ENTITY
+  group: ELITE
+  applies:
+    - FISHING_ROD
+  levels:
+    '1':
+      chance: 25
+      cooldown: 3
+      effects:
+        - BURN:40 @Victim
+    '2':
+      chance: 35
+      cooldown: 6
+      effects:
+        - BURN:40 @Victim
+    '3':
+      chance: 100
+      cooldown: 8
+      effects:
+        - BURN:40 @Victim
 molten:
   display: '%group-color%Molten'
   description: Chance of setting your attacker ablaze.
