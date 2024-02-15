@@ -30,3 +30,22 @@ prices:
   lowestLevel: 3-9 # Value: 1 - 1000
   middleLevel: 10-24 # Value: 1 - 1000
   highestLevel: 30 # Value: 1 - 1000
+
+
+# Custom enchants from enchantment table
+enchantmentBooks:
+  enabled: true
+  # Chance of getting custom enchantments when enchanting with enchantment table.
+  # This will give custom enchantment book instead of vanilla books, and can be
+  #  applied either with anvil or drag & drop onto item.
+  chance: 3 # Value: 1 to 100 %
+  groups:
+    lowest:
+      - SIMPLE
+      - UNIQUE
+    middle:
+      - ELITE
+      - ULTIMATE
+    highest:
+      - LEGENDARY
+      - FABLED
