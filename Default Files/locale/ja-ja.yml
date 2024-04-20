@@ -75,9 +75,7 @@ commands:
     givegkit:
       success: "&c%gkit%キットがプレイヤー%player%に与えられました。"
     giverandombook:
-      success: "&2%player%プレイヤーに&2%amount%x%group%&a本
-
-が与えられました！"
+      success: "&2%player%プレイヤーに&2%amount%x%group%&a本 が与えられました！"
     givebook:
       success: "&2%player%プレイヤーに&2%amount%x%enchant% %level%&a本が与えられました！"
     enchant:
@@ -162,9 +160,7 @@ sets:
     invalid-chances: "&c無効なチャンスです。"
     list:
       header: "&eすべての利用可能なセットのリスト&7[%size%]"
-      set: " &8
-
->> &f%set%"
+      set: " &8 >> &f%set%"
     listweapons:
       header: "&eすべての利用可能な武器のリスト&7[%size%]"
       weapon: " &8>> &f%weapon%"
