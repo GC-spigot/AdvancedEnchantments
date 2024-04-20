@@ -1,0 +1,222 @@
+# Use %p% to insert the plugins prefix.
+# All messages support HEX color codes on 1.16+. Format: {#FFFFFF}
+# Almost all messages support PlaceholderAPI.
+prefix: "&7[&9AdvancedEnchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &6%victim% &7プレイヤーから&6%amount%&7を盗みました！"
+
+commands:
+  no-permission: "&cこれを行う権限がありません！"
+  offline-player: "&cこのプレイヤーはオフラインです！"
+  enchantment-not-found: "&c&n%enchant%&cエンチャントが見つかりませんでした。"
+  invalid-amount: "&c無効な金額です。1から64の間でなければなりません。"
+  invalid-enchant: "&c%enchant%は有効なエンチャントではありません！"
+  invalid-level: "&c無効なエンチャントレベルです！次を試してください：%levels%"
+  invalid-usage: "&c使用法：%usage%"
+  not-a-number: "&c%number%は数字ではありません！"
+  not-holding-item: "&cアイテムを持っている必要があります！"
+  enchantment-info:
+    invalid-usage: "&c無効な使用法です！正しい使用法：%command% <enchantments>"
+    open-menu-message: "&e%enchant%&7エンチャントに関する情報。"
+  enchants:
+    open-menu-message: "&7全エンチャントのリストを表示中..."
+  apply:
+    cooldown: "&cこのコマンドは%seconds%秒後に使用できます。"
+    no-args: "&c影響を受けるプレイヤーを指定してください。"
+    reapplied: "&a装甲が再適用されました。"
+    reapplied-other: "&a%player%の装甲が再適用されました。"
+    reapplied-for-all: "&a全員の装甲が再適用されました！"
+  withdrawsouls:
+    invalid-usage: "&c使用法：/withdrawsouls <number>"
+    less-than-one: "&c数は正の値でなければなりません。"
+    invalid-item: "&c無効なアイテムです。"
+  aegive:
+    invalid-material: "&c無効な素材です。すべての有効な素材については'materials.yml'ファイルを参照してください。"
+    invalid-item-flag: "&c無効なItemFlag！次から選択してください：%itemflags%"
+    invalid-enchantment: "&c無効なエンチャント！"
+    success: "&2%player%&aプレイヤーに&2%amount%x%material%&aを与えました！"
+  gedit:
+    unknown-gkit: "&c%gkit%は有効なGkitではありません！"
+    edit:
+      invalid-usage: "&c使用法：/gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&c使用法：/gedit setpermission <gkit> <permission>"
+      success: "&6%gkit%&eキットの権限が&6%permission%&eに変更されました。"
+    reset:
+      invalid-usage: "&c使用法：/gedit reset <gkit> <player>"
+      success: "&6%gkit%&6キットがプレイヤー&e%player%&6にリセットされました。"
+    list: "&eGKit: &6%gkits%"
+    setdelay:
+      invalid-usage: "&c使用法：/gedit setdelay <gkit> <delay（秒）>"
+      invalid-delay: "&c%delay%は有効な整数ではありません！"
+      success: "&6%gkit%&eキットの遅延が&6%delay%&eに変更されました。"
+  main:
+    unknown-command: "&c無効なコマンドの使用法です！正しい使用法については「/ae」を入力してください。"
+    setsouls:
+      invalid-usage: "&c無効な使用法：/ae setsouls <amount>"
+      invalid-item: "&c無効なアイテムです。"
+      success: "&cアイテムのソウル数が設定されました：%amount%"
+    unenchant:
+      invalid-usage: "&c無効な使用法：/ae unenchant <enchant>"
+      invalid-enchant: "&c%enchant%は有効なエンチャントではありません！"
+      not-holding-item: "&cアイテムを持っている必要があります！"
+      does-not-have-enchant: "&cこのアイテムは%enchant%エンチャントを持っていません！"
+      success: "&a%enchant%エンチャントが削除されました！"
+    zip:
+      zip-exists: "&c再試行してください。"
+      success: "&e%path%にすべてのプラグインデータを含むzipファイルが作成されました。"
+      error: "&cファイルの圧縮中にエラーが発生しました！詳細についてはコンソールを確認してください。"
+    greset:
+      reset: "&a%player%の%gkit%キットがリセットされました！"
+      reset-all: "&a%player%のすべてのGKitがリセットされました！"
+    claim:
+      invalid-usage: "&cエンチャントトークンを指定してください。"
+    givegkit:
+      success: "&c%gkit%キットがプレイヤー%player%に与えられました。"
+    giverandombook:
+      success: "&2%player%プレイヤーに&2%amount%x%group%&a本
+
+が与えられました！"
+    givebook:
+      success: "&2%player%プレイヤーに&2%amount%x%enchant% %level%&a本が与えられました！"
+    enchant:
+      added: "&a%player%プレイヤーに&2%amount%x%enchant% %level%&a本が与えられました！"
+      upgraded: "&2%enchant%が%previous-level%レベルから%level%レベルにアップグレードされました。"
+      downgraded: "&2%enchant%が%previous-level%レベルから%level%レベルにダウングレードされました。"
+      removed: "&cアイテムから%enchant%エンチャントが削除されました。"
+    giveitem:
+      success: "&b%player%プレイヤーに%amount%x %item%&aが追加されました。"
+    givercbook:
+      success: "&2%player%プレイヤーに&a%amount%x%group%&a右クリックブックが与えられました！"
+    give:
+      success: "&a%player%プレイヤーに%enchant% %level%本が正常に与えられました！"
+    tinkereritem:
+      success: "&c%player%プレイヤーにx%amount%修理アイテムが与えられました。"
+    admin:
+      invalid-page: "&c無効なページ"
+    info:
+      - "&6%enchant%&eエンチャントに関する情報："
+      - "&6説明&7：&e%description%"
+      - "&6適用可能&7：&e%applies%"
+      - "&6最大レベル&7：&e%max-level%"
+
+    pastetypes: "&aエンチャントタイプのリスト：%url%"
+    pasteenchants: "&aエンチャントリスト：%url%"
+    open: "&a%player%プレイヤーの%menu%が開かれました！"
+
+token:
+  success: "&2&lx&aトークン&l%token%&aエンチャントが正常にダウンロードされ、再読み込み中です..."
+
+interact:
+  main-hand-only: "&cこれはメインハンドでのみ実行できます！"
+
+enchanter:
+  re-buy: "&cアイテムをエンチャンターから再購入してください。"
+  disabled-in-world: "&cエンチャンターはこのワールドで無効にされています。"
+  full-inventory: "&cインベントリがいっぱいです！"
+  examine-book: "%group-color%%group-name%&7の本を調べ、%enchant-color%%level%を見つけました"
+  unknown-payment-method: "&c%paymentType%支払い方法が確認できませんでした。管理者に連絡してください。"
+  successful-purchase: "&a購入が成功しました！"
+  cannot-afford:
+    - "&cこれを購入するのに十分なEXPがありません。"
+    - "&7あなたのXP：%exp%"
+
+tinkerer:
+  trade-accepted: "&aトレードが承諾されました！"
+  non-tradeable-item:
+    - "&cサーバータンカーはこのアイテムを受け取りません！"
+    - "&7特別なエンチャント装備のみ受け入れます"
+
+alchemist:
+  doesnt-accept: "&c錬金術師はこのアイテムを受け取りません！"
+  trade-cancelled: "&cトレードがキャンセルされました。"
+  cannot-afford: "&cこの取引を行う余裕がありません！"
+  exceeds-max-level: "&c合算レベルが最大エンチャントレベルを超えています！"
+
+gkits:
+  no-permission: "&e%gkit%&6キットを使用する権限がありません。"
+  cooldown: "&eこのキットはまだ使用できません。&6%gkit%&eキットはクールダウン中です（%cooldown%）"
+  used-kit: "&6%gkit%&eキットを使用しました。"
+  missing-permission: "&c%gkit%Gkitの権限が無効または存在しません"
+  unknown-gkit: "&c%gkit%GKitが見つかりません！"
+  unknown-enchant: "&7%enchant%エンチャントが見つかりませんでした！"
+
+heroic:
+  cannot-apply: "&cこのアイテムにはクリスタルアップグレードを適用できません。"
+  upgrade-failed: "&cクリスタルアップグレードが&n失敗しました&r&c！"
+
+orbs:
+  cannot-apply: "&cこのアイテムにはオーブを適用できません！"
+  failed: "&cオーブが失敗しました！"
+  incompatible: "&cスロットより低いスロットのオーブは適用できません！"
+
+sets:
+  commands:
+    unknown-command: "&cコマンドが見つかりません！すべての有効なコマンドのリストについては、「/asets」を入力してください。"
+    invalid-usage: "&c無効な使用法！正しい使用法については/asetsを参照してください。"
+    invalid-set: "&c無効なセットです。"
+    invalid-set-piece: "&c無効なセットピース、次のいずれかを使用できます：\n%set pieces%"
+    invalid-weapon: "&c武器が無効です。"
+    offline-player: "&cプレイヤーはオフラインです。"
+    invalid-chances: "&c無効なチャンスです。"
+    list:
+      header: "&eすべての利用可能なセットのリスト&7[%size%]"
+      set: " &8
+
+>> &f%set%"
+    listweapons:
+      header: "&eすべての利用可能な武器のリスト&7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&f%set%&eセットが&f%player%&eプレイヤーに与えられました。"
+    givepiece:
+      success: "&f%set%&eセットの&f%piece%&eが&f%player%&eプレイヤーに与えられました。"
+    weapon:
+      success: "&f%weapon%&e武器が&f%player%&eプレイヤーに与えられました。"
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cこれにはランダマイゼーションを適用できません！"
+    single-items-only: "&cこれは単一のアイテムのみで使用できます！"
+  black-scroll:
+    full-inventory: "&cインベントリがいっぱいです！"
+    no-enchants: "&cこのアイテムにはエンチャントがありません！"
+    invalid-enchant: "&cエンチャントが無効なため、削除できません！"
+    cannot-remove: "&c%enchant%エンチャントは削除できません！"
+  soul-tracker:
+    disabled: "&c魂トラッカーはこのサーバーで無効にされています！"
+    apply-successful: "&f&lソウルトラッカーを&7アイテムに正常に適用しました！"
+  magic-dust:
+    full-inventory: "&cインベントリがいっぱいです！"
+    single-items-only: "&cこれは単一のアイテムのみで使用できます！"
+  white-scroll:
+    full-inventory: "&cインベントリがいっぱいです！"
+    apply-successful: "&aアイテムに白いホワイトスクロールが適用されました！"
+    item-saved: "&aホワイトスクロールがアイテムを保存しました！"
+
+combining:
+  already-max-level: "このエンチャントはすでに最大レベルです！"
+  success: "&a成功しました！&7%enchant%は現在%level%レベルです！"
+  failure: "&c結合に失敗しました！"
+  something-went-wrong: "&c結合に関連する問題が発生しました。"
+
+enchant-limitations:
+  cannot-be-modified: "&cこのアイテムは変更できません！"
+
+applying:
+  not-applicable-with: "&4%enchant1%&cエンチャントは&4%enchant2%&7エンチャントと同時に適用できません！"
+  requires-enchant: "&4%enchant1%&cエンチャントは&4%enchant2%&7エンチャントの適用を必要とします！"
+  already-applied: "&cこのアイテムは既にこのエンチャントを持っています。"
+  applied: "&aエンチャントがアイテムに適用されました。"
+  max-level: "&cこのエンチャントはすでに最大レベルです！"
+  wrong-material: "&cこのエンチャントはこのアイテムに適用できません！"
+
+slots:
+  limit-reached: "&cこのエンチャントを適用できません！空きスロットがありません！"
+
+chances:
+  book-failed: "&cブックが失敗しましたが、アイテムは破壊されませんでした！"
+
+destroy:
+  book-failed: "&c魔法が失敗しました！"
