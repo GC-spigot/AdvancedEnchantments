@@ -78,6 +78,188 @@
 #      - "frozen"
 #    removeable: false # Makes enchantment non-removeable with blackscrolls
 #    disable-in-enchanter: true # Players can no longer obtain enchantment from Enchanter
+
+harvest:
+  display: '%group-color%Harvest'
+  description: Chance to harvest in 3x3 area.
+  applies-to: Hoes
+  type: MINING
+  group: ULTIMATE
+  applies:
+    - ALL_HOE
+  levels:
+    '1':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 13
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '2':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 26
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '3':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 36
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '4':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 49
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '5':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 59
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '6':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 72
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '7':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 85
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '8':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 90
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+    '9':
+      settings:
+        whitelist:
+          - CROPS
+          - WHEAT
+          - CARROT
+          - CARROTS
+          - POTATO
+          - POTATOES
+          - BEETROOT
+          - BEETROOTS
+          - COCOA
+          - NETHER_WART
+          - NETHER_WARTS
+          - TORCHFLOWER
+          - PITCHER_CROP
+      chance: 100
+      effects:
+        - BREAK_BLOCK @Trench{r=3,it=true}
+
 autoreel:
   display: '%group-color%Auto Reel'
   description: "Automatically reels in the fishing rod when it gets a bite."
