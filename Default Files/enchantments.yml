@@ -78,8 +78,6 @@
 #      - "frozen"
 #    removeable: false # Makes enchantment non-removeable with blackscrolls
 #    disable-in-enchanter: true # Players can no longer obtain enchantment from Enchanter
-#    disabled-worlds: # List worlds in which enchantment will not work (cAsE sEnSiTiVe)
-#      - "My_World"
 autoreel:
   display: '%group-color%Auto Reel'
   description: "Automatically reels in the fishing rod when it gets a bite."
@@ -128,9 +126,9 @@ gemify:
         - 'SET_BLOCK:COAL_BLOCK @Block <condition>%block type% contains COAL_ORE : %allow%</condition>'
         - 'SET_BLOCK:EMERALD_BLOCK @Block <condition>%block type% contains EMERALD_ORE : %allow%</condition>'
         - 'SET_BLOCK:COPPER_BLOCK @Block <condition>%block type% contains copper_ore : %allow%</condition>'
-        - 'SET_BLOCK:REDSTONE_BLOCK @Block <condition>%block type% contains redstone_ore: %allow%</condition>'
+        - 'SET_BLOCK:REDSTONE_BLOCK @Block <condition>%block type% contains redstone_ore : %allow%</condition>'
         - 'SET_BLOCK:LAPIS_BLOCK @Block <condition>%block type% contains lapis_ore : %allow%</condition>'
-        - 'SET_BLOCK:DIAMOND_BLOCK @Block <condition>%block type% contains diamond_ore: %allow%</condition>'
+        - 'SET_BLOCK:DIAMOND_BLOCK @Block <condition>%block type% contains diamond_ore : %allow%</condition>'
 planter:
   display: '%group-color%Planter'
   description: |-
@@ -1231,40 +1229,35 @@ enderslayer:
       chance: 16
       cooldown: 2
       conditions:
-        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON
-        : %allow%'
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '2':
       chance: 21
       cooldown: 2
       conditions:
-        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON
-        : %allow%'
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '3':
       chance: 29
       cooldown: 2
       conditions:
-        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON
-        : %allow%'
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '4':
       chance: 34
       cooldown: 2
       conditions:
-        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON
-        : %allow%'
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '5':
       chance: 41
       cooldown: 2
       conditions:
-        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON
-        : %allow%'
+        - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
 deathpunch:
@@ -1742,40 +1735,35 @@ netherslayer:
       chance: 16
       cooldown: 2
       conditions:
-        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE
-        or %mob type% = GHAST : %allow%'
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '2':
       chance: 21
       cooldown: 2
       conditions:
-        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE
-        or %mob type% = GHAST : %allow%'
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIEor %mob type% = GHAST : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '3':
       chance: 29
       cooldown: 2
       conditions:
-        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE
-        or %mob type% = GHAST : %allow%'
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '4':
       chance: 34
       cooldown: 2
       conditions:
-        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE
-        or %mob type% = GHAST : %allow%'
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
     '5':
       chance: 41
       cooldown: 2
       conditions:
-        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE
-        or %mob type% = GHAST : %allow%'
+        - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
       effects:
         - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
 blind:
@@ -5894,7 +5882,7 @@ multiplication:
           - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
-        - '%souls on item% > 4: %allow%'
+        - '%souls on item% > 4 : %allow%'
       effects:
         - MORE_DROPS:1
         - 'REMOVE_SOULS:5'
@@ -5924,7 +5912,7 @@ multiplication:
           - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
-        - '%souls on item% > 4: %allow%'
+        - '%souls on item% > 4 : %allow%'
       effects:
         - MORE_DROPS:1
         - 'REMOVE_SOULS:5'
@@ -5954,7 +5942,7 @@ multiplication:
           - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
-        - '%souls on item% > 4: %allow%'
+        - '%souls on item% > 4 : %allow%'
       effects:
         - MORE_DROPS:1
         - 'REMOVE_SOULS:5'
@@ -5984,7 +5972,7 @@ multiplication:
           - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
-        - '%souls on item% > 4: %allow%'
+        - '%souls on item% > 4 : %allow%'
       effects:
         - MORE_DROPS:1
         - 'REMOVE_SOULS:5'
@@ -6014,7 +6002,7 @@ multiplication:
           - "DEEPSLATE_EMERALD_ORE"
       conditions:
         - '%block type% contains ORE : %allow%'
-        - '%souls on item% > 4: %allow%'
+        - '%souls on item% > 4 : %allow%'
       effects:
         - MORE_DROPS:1
         - 'REMOVE_SOULS:5'
