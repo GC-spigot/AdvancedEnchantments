@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: "Feature Request [DISABLED]"
-    about: "We are temporarily not taking any new feature requests."
+  - name: "✨ Feature Requests"
+    about: "We now accept feature requests only through Discord! Click the URL to view or submit feature requests."
+    url: "https://discord.com/channels/376425582139015168/1292004436952219690/1293177616576024687"
+  - name: "🛠️ Get Support"
+    about: "Need help using AE? Join our Discord Server for assistance!"
     url: "https://discord.gg/GzdQdMw"
-  - name: "Get Support"
-    url: "https://discord.gg/GzdQdMw"
-    about: "Need help using AE? Join our Discord Server for help!"
