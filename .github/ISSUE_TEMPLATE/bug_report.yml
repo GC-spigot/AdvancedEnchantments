@@ -58,6 +58,7 @@ body:
       description: |
         Please type **I confirm** to acknowledge the following:
         - You have not posted any direct Discord links or hastebin.com links, as they expire within hours of being posted.
+        - You are using latest version of the plugin.
         - You have filled out the bug report correctly. If not, the issue will be closed without questions.
       placeholder: 'Type "I confirm" here'
     validations:
