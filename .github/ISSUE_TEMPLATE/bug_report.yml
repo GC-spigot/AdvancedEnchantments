@@ -39,7 +39,7 @@ body:
     id: pl-info
     attributes:
       label: '"/ae plinfo" link'
-      description: 'This shows us information about your server that is crutial in fixing the issue. (You can do "/ae plinfo skipPlugins" to skip adding plugins to the report)'
+      description: 'This shows us information about your server that is crucial in fixing the issue. (You can do "/ae plinfo skipPlugins" to skip adding plugins to the report)'
       placeholder: ex. https://paste.md-5.net/abcdefghij
     validations:
       required: true
@@ -47,7 +47,18 @@ body:
     id: server-log
     attributes:
       label: Server Log
-      description: 'You servers "logs/latest.log" file uploaded to https://mcpaste.io/'
+      description: 'Your server''s "logs/latest.log" file uploaded to https://mcpaste.io/'
       placeholder: ex. https://mcpaste.io/00000a0aa0a000aa
     validations:
       required: false
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: 'I confirm that I have not posted any direct Discord links or hastebin.com links, as they expire within hours of being posted.'
+          required: true
+        - label: 'I confirm that I have filled out the bug report correctly, and I understand that if it is not filled out correctly, the issue will be closed without questions.'
+          required: true
+    validations:
+      required: true
