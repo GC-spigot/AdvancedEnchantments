@@ -54,7 +54,7 @@ body:
   - type: input
     id: confirmation
     attributes:
-      label: Confirmation
+      label: Filled out form correct and using latest version
       description: |
         Please type **I confirm** to acknowledge the following:
         - You have not posted any direct Discord links or hastebin.com links, as they expire within hours of being posted.
