@@ -1,0 +1,43 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: Koth
+
+# Currently supported are only melee weapons
+material: DIAMOND_AXE
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Item Flags
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html
+itemFlags: []
+#  - 'HIDE_POTION_EFFECTS' # An Example Item Flag
+
+# Weapon's name
+name: '&f&l&ki &c&lK&6&l.&e&lO&2&l.&b&lT&5&l.&d&lH &f&l&ki &f&l&nAxe'
+
+# Weapon's lore
+lore:
+- ''
+- '&4&lK&6&l.&e&lO&2&l.&b&lT&5&l.&d&lH &f&lWEAPON BONUS'
+- '&f&l* &fDeal +50% Durability Damage.'
+- '&7(Requires all 4 koth armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+- demoniclifesteal:%1-5%
+- silence:%1-4%
+- sharpness:5
+- unbreaking:3
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 100
+    effects:
+    - ADD_DURABILITY_ARMOR:<random number>-3--1</random number>
+    cooldown: 0

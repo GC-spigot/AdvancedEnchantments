@@ -1,0 +1,146 @@
+# Configuration for Armor Sets GUI
+# This guy will let players preview armor sets on the server
+
+# Command list that will open the GUI
+commands:
+  - "/armorsets"
+  - "/previewsets"
+
+gui:
+  name: "&7Armor Sets"
+  size: 27
+  items:
+    0-27:
+      material: STAINED_GLASS_PANE
+      damage: 15
+      name: " "
+      lore: [ ]
+    10:
+      material: CHEST
+      damage: 0
+      armorSet: DimensionalTraveller
+      name: "%armor set name%"
+      lore:
+        - "&7Made out of &f%armor set material%"
+        - "&7Click to &npreview&7 this armor set"
+        - " "
+        - "&5&lTRAVELLER SET BONUS"
+        - "&D* You deal 30% more damage."
+        - "&D* Dimensional Shift Passive Ability"
+        - "&7&o(Requires all four traveller items)"
+    11:
+      material: CHEST
+      damage: 0
+      armorSet: Koth
+      name: "%armor set name%"
+      lore:
+        - "&7Made out of &f%armor set material%"
+        - "&7Click to &npreview&7 this armor set"
+        - " "
+        - "&d&lKOTH SET BONUS"
+        - "&d&l* &d+20% PvP Damage"
+        - "&d&l* &d+50% PvE Damage"
+        - "&d&l* &dAuto Bless"
+        - "&d&l* &dNo Fall Damage"
+        - "&7&o(Requires all 4 koth items.)"
+    12:
+      material: CHEST
+      damage: 0
+      armorSet: Phantom
+      name: "%armor set name%"
+      lore:
+        - "&7Made out of &f%armor set material%"
+        - "&7Click to &npreview&7 this armor set"
+        - " "
+        - "&c&lPHANTOM SET BONUS"
+        - "&cDeal +25% damage to all enemies."
+        - "&7&o(Requires all 4 phantom items.)"
+    13:
+      material: CHEST
+      damage: 0
+      armorSet: Ranger
+      name: "%armor set name%"
+      lore:
+        - "&7Made out of &f%armor set material%"
+        - "&7Click to &npreview&7 this armor set"
+        - " "
+        - "&a&lRANGER SET BONUS"
+        - "&a&l* &aEnemies bows deal 25% less damage to you."
+        - "&a&l* &aRanger Bow grants 30% increased bow damage."
+        - "&a&l* &aImmune to Teleblock"
+        - "&a&l* &aGears IV"
+        - "&7&o(Requires all four ranger items)"
+    14:
+      material: CHEST
+      damage: 0
+      armorSet: Supreme
+      name: "%armor set name%"
+      lore:
+        - "&7Made out of &f%armor set material%"
+        - "&7Click to &npreview&7 this armor set"
+        - " "
+        - "&4&lSUPREME SET BONUS"
+        - "&4&l* &4Gears IV"
+        - "&4&l* &4No Fall Damage / Food Loss"
+        - "&4&l* &4Deal +15% damage to all enemies"
+        - "&4&l* &4Enemy arrows deal 10% more damage to you."
+        - "&4&l* &4+200% Clout"
+        - "&7&o(Requires all 4 supreme items.)"
+    15:
+      material: CHEST
+      damage: 0
+      armorSet: Yeti
+      name: "%armor set name%"
+      lore:
+        - "&7Made out of &f%armor set material%"
+        - "&7Click to &npreview&7 this armor set"
+        - " "
+        - "&b&lYETI SET BONUS"
+        - "&b* Deal +10% damage to all enemies."
+        - "&b* Enemies deal 10% less damage to you."
+        - "&7&o(Requires all 4 yeti items.)"
+    16:
+      material: CHEST
+      damage: 0
+      armorSet: Yijki
+      name: "%armor set name%"
+      lore:
+        - "&7Made out of &f%armor set material%"
+        - "&7Click to &npreview&7 this armor set"
+        - " "
+        - "&f&lYIJKI SET BONUS"
+        - "&F* Enemies deal 30% less damage to you."
+        - "&f* Revenge of Yijki Passive Ability"
+        - "&7&o(Requires all four yijki items)"
+
+previewArmorSet:
+  name: "&7Previewing Armor Set"
+  size: 27
+  items:
+    0-27:
+      material: STAINED_GLASS_PANE
+      damage: 15
+      name: " "
+      lore: [ ]
+    11:
+      itemType: SET_HELMET
+    12:
+      itemType: SET_CHESTPLATE
+    13:
+      itemType: SET_LEGGINGS
+    14:
+      itemType: SET_BOOTS
+    15:
+      itemType: SET_WEAPON
+      # Fallback material, if no weapon is present this will be shown instead
+      material: BARRIER
+      damage: 0
+      name: "&cNo Weapon"
+      lore:
+        - "&cThis set has no weapons!"
+    26:
+      itemType: GO_BACK
+      material: PAPER
+      damage: 0
+      name: "&cReturn"
+      lore: [ ]

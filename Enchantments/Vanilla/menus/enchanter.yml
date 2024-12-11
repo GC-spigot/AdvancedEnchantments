@@ -1,0 +1,182 @@
+# Configuration for Enchanter
+#  Change commands how to access it in top of config.yml
+
+# set to "none" to disable
+open-sound: "ENDERDRAGON_WINGS"
+# In what worlds enchanter is disabled
+disabled-in-worlds:
+  - "bad_world"
+messages:
+  sound: ENTITY_PLAYER_LEVELUP
+right-click-to-view-enchants: true
+go-back-item:
+  enabled: true
+  item:
+    type: NETHER_STAR
+    id: 0
+    custom-model-data: 0
+  name: "&c&lGo Back"
+  lore: [ ]
+# Should enchanter stay open after item is bought?
+keep-open: true
+# Enchanter inventory size
+# 9-18-27-36-45-54
+#
+# Placeholders:
+#  %group-enchant-count% - number of enchants in the group
+#  %price% - price
+#  %left% - remaining needed exp until player can purchase item
+# Economy:
+# exp, money, level, souls (works with items that are held when opening inventory), diamonds, gold (gold ingots), emeralds
+inventory:
+  size: 18
+  name: "&7Server Enchanter"
+  settings:
+    # Which level books should enchanter give?
+    # "ALL" - gives all levels
+    # <number> - Gives specific level of enchant
+    enchanterBookLevel: "ALL"
+  items:
+    0-18:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 7
+        custom-model-data: 0
+        force-glow: false
+      name: " "
+      lore: [ ]
+    2:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 0
+        custom-model-data: 0
+        force-glow: false
+      enchant-group: SIMPLE
+      price: exp:400
+      sound: BLOCK_ANVIL_LAND
+      name: "&f&lSimple Enchantment &7(Right Click)"
+      lore:
+        - "&7Examine to receive a random"
+        - "&fsimple &7enchantment book."
+        - ""
+        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
+    3:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 5
+        custom-model-data: 0
+        force-glow: false
+      enchant-group: UNIQUE
+      sound: BLOCK_ANVIL_LAND
+      price: exp:800
+      name: "&a&lUnique Enchantment &7(Right Click)"
+      lore:
+        - "&7Examine to receive a random"
+        - "&aunique &7enchantment book."
+        - ""
+        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
+    4:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 3
+        custom-model-data: 0
+        force-glow: false
+      enchant-group: ELITE
+      price: exp:2500
+      sound: BLOCK_ANVIL_LAND
+      name: "&b&lElite Enchantment &7(Right Click)"
+      lore:
+        - "&7Examine to receive a random"
+        - "&belite &7enchantment book."
+        - ""
+        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
+    5:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 4
+        custom-model-data: 0
+        force-glow: false
+      enchant-group: ULTIMATE
+      price: exp:5000
+      sound: BLOCK_ANVIL_LAND
+      name: "&e&lUltimate Enchantment &7(Right Click)"
+      lore:
+        - "&7Examine to receive a random"
+        - "&eultimate &7enchantment book."
+        - ""
+        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
+    6:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 1
+        custom-model-data: 0
+        force-glow: false
+      enchant-group: LEGENDARY
+      price: exp:25000
+      sound: BLOCK_ANVIL_LAND
+      name: "&6&lLegendary Enchantment &7(Right Click)"
+      lore:
+        - "&7Examine to receive a random"
+        - "&6legendary &7enchantment book."
+        - ""
+        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
+    13:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 6
+        custom-model-data: 0
+        force-glow: false
+      enchant-group: FABLED
+      price: exp:40000
+      sound: BLOCK_ANVIL_LAND
+      name: "&d&lFabled Enchantment &7(Right Click)"
+      lore:
+        - "&7Examine to receive a random"
+        - "&dfabled &7enchantment book."
+        - ""
+        - "&b&lCOST &f%price% EXP &7(You need %left% more EXP)"
+    9:
+      item:
+        type: ANVIL
+        id: 0
+        custom-model-data: 0
+        force-glow: false
+      sound: BLOCK_ANVIL_USE
+      player-command:
+        - "tinkerer"
+      name: "&fOpen &b&lTinkerer &7(Right Click)"
+      lore:
+        - "&7Tinker books for Magic Dusts and EXP."
+        - ""
+        - "&b&lRight Click to visit"
+    17:
+      item:
+        type: ENDER_PORTAL_FRAME
+        id: 0
+        custom-model-data: 0
+        force-glow: false
+      sound: ENTITY_ARROW_HIT
+      player-command:
+        - "alchemist"
+      name: "&fOpen &b&lAlchemist &7(Right Click)"
+      lore:
+        - "&7Combine Books and Magic Dusts."
+        - ""
+        - "&b&lRight Click to visit"
+
+# Confirmation inventory for enchanter payments
+# Confirm or deny the transaction, acts like 2-step confirmation
+confirmation-inventory:
+  enabled: true
+  name: "&aConfirmation Inventory"
+  accept:
+    material: STAINED_GLASS_PANE
+    damage: 5
+    name: "&aAccept Transaction"
+    lore:
+      - "&7Click this to pay %price% with %paymentType%"
+  cancel:
+    material: STAINED_GLASS_PANE
+    damage: 14
+    name: "&cClick to cancel"
+    lore: [ ]

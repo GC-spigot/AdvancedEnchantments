@@ -1,0 +1,63 @@
+# Whether AE should take control of anvils.
+# If this is disabled, no custom enchantments will work in anvils.
+enabled: true
+
+# If true, AE will handle repair costs the same as vanilla.
+# You can read more about it here https://minecraft.fandom.com/wiki/Anvil_mechanics.
+use-repair-cost: true
+
+# If true, enchantments that normally can't be put on items together (eg. Smite & Sharpness)
+# will be allowed to be combined.
+allow-illegal-vanilla-enchant-combinations: false
+allow-illegal-custom-enchant-combinations: false
+
+
+# The maximum levels vanilla enchants can be combined up to.
+levels:
+  # Armor Enchantments
+  Protection: 4
+  Fire-Protection: 4
+  Feather-Falling: 4
+  Blast-Protection: 4
+  Projectile-Protection: 4
+  Respiration: 3
+  Aqua-Affinity: 1
+  Thorns: 3
+  Depth-Strider: 3
+  Frost-Walker: 2
+  Curse-of-Binding: 1
+  Soul-Speed: 3
+  # Sword Enchantments
+  Sharpness: 5
+  Smite: 5
+  Bane-of-Arthropods: 5
+  Knockback: 2
+  Fire-Aspect: 2
+  Looting: 3
+  Sweeping-Edge: 3
+  # Bow Enchantments
+  Power: 5
+  Punch: 2
+  Flame: 1
+  Infinity: 1
+  # Crossbow Enchantments
+  Multishot: 1
+  Piercing: 4
+  Quick-Charge: 3
+  # Tool Enchantments
+  Efficiency: 5
+  Silk-Touch: 1
+  Fortune: 3
+  # Fishing Rod Enchantments
+  Luck-of-the-Sea: 3
+  Lure: 3
+  # Anything Enchantments
+  Unbreaking: 3
+  Mending: 1
+  Curse-of-Vanishing: 1
+  # Trident Enchantments
+  Channeling: 1
+  Impaling: 5
+  Loyalty: 3
+  Riptide: 3
+allow-backwards-enchant-books: false

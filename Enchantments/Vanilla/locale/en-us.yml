@@ -1,0 +1,221 @@
+# Use %p% to insert the plugins prefix.
+# All messages support HEX color codes on 1.16+. Format: {#FFFFFF}
+# Almost all messages support PlaceholderAPI.
+prefix: "&7[&9AdvancedEnchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7stole &6%amount% &7from &6%victim%&7!"
+  used: "&fUsed &r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cYou don't have permission to do that!"
+  offline-player: "&cThat player is not online!"
+  enchantment-not-found: "&cEnchantment &c&n%enchant%&c could not be found."
+  invalid-amount: "&cInvalid amount. Must be between 1-64."
+  invalid-enchant: "&c%enchant% is not a valid enchant!"
+  invalid-level: "&cInvalid enchant level! Try using: %levels%"
+  invalid-usage: "&cUsage: %usage%"
+  not-a-number: "&c%number% is not a number!"
+  not-holding-item: "&cYou must be holding an item!"
+  enchantment-info:
+    invalid-usage: "&cInvalid usage! Proper usage: %command% <enchantment>"
+    open-menu-message: "&7Information about &e%enchant% &7enchantment."
+  enchants:
+    open-menu-message: "&7Showing list of all enchantments..."
+  apply:
+    cooldown: "&cYou will be able to use this command in %seconds% seconds."
+    no-args: "&cPlease specify which player should be affected."
+    reapplied: "&aYour armor has been re-applied."
+    reapplied-other: "&aArmor has been reapplied for %player%."
+    reapplied-for-all: "&aArmor has been reapplied for everyone!"
+  withdrawsouls:
+    invalid-usage: "&cUsage: /withdrawsouls <count>"
+    less-than-one: "&cCount must be positive."
+    invalid-item: "&cInvalid item."
+  aegive:
+    invalid-material: "&cInvalid material. Please reference the 'materials.yml' file for all valid materials."
+    invalid-item-flag: "&cInvalid ItemFlag! You can choose from the following: %itemflags%"
+    invalid-enchantment: "&cInvalid Enchantment!"
+    success: "&aGave &2%amount%x %material% &ato %player%&a!"
+  gedit:
+    unknown-gkit: "&c%gkit% is not a valid gkit!"
+    edit:
+      invalid-usage: "&cUsage: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cUsage: /gedit setpermission <gkit> <perm>"
+      success: "&eChanged &6%gkit%'s&e kit permission to &6%permission%"
+    reset:
+      invalid-usage: "&cUsage: /gedit reset <gkit> <player>"
+      success: "&6%gkit% &6gkit has been reset for player &e%player%"
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cUsage: /gedit setdelay <gkit> <delay (in seconds)>"
+      invalid-delay: "&c%delay% is not a valid integer!"
+      success: "&eChanged &6%gkit%&e kit delay to &6%delay%"
+  main:
+    unknown-command: "&cIncorrect command usage! Type \"/ae\" for the correct usage."
+    setsouls:
+      invalid-usage: "&cInvalid usage: /ae setsouls <amount>"
+      invalid-item: "&cInvalid item."
+      success: "&cSet item's soul count to: %amount%"
+    unenchant:
+      invalid-usage: "&cInvalid usage: /ae unenchant <enchant>"
+      invalid-enchant: "&c%enchant% is not a valid enchant!"
+      not-holding-item: "&cYou must be holding an item!"
+      does-not-have-enchant: "&cThat item doesn't have &4%enchant%&c!"
+      success: "&aRemoved enchant %enchant%!"
+    zip:
+      zip-exists: "&cPlease try again."
+      success: "&eA zip file containing all plugin data has been created at %path%."
+      error: "&cAn error occurred while zipping files! Check console for more information."
+    greset:
+      reset: "&aReset the %gkit% kit for %player%!"
+      reset-all: "&aReset all GKits for %player%!"
+    claim:
+      invalid-usage: "&cPlease enter enchant token."
+    givegkit:
+      success: "&cKit %gkit% was given to player %player%"
+    giverandombook:
+      success: "&aGave &2%player% %amount%x %group% &abooks!"
+    givebook:
+      success: "&aGave &2%player% %amount%x %enchant% %level% &abooks!"
+    enchant:
+      added: "&aAdded the %enchant% enchant!"
+      upgraded: "&2Upgraded %enchant% from level %previous-level% to %level%."
+      downgraded: "&2Downgraded %enchant% from level %previous-level% to %level%."
+      removed: "&cRemoved the %enchant% enchant from the item."
+    giveitem:
+      success: "&7Added %amount%x %item%&7 for player &b%player%"
+    givercbook:
+      success: "&aGave &2%player% %amount%x %group% &aright click books!"
+    give:
+      success: "&aSuccessfully gave %player% one %enchant% %level% book!"
+    tinkereritem:
+      success: "&cGave x%amount% tinkerer item's to %player%"
+    admin:
+      invalid-page: "&cInvalid page"
+    info:
+      - "&eInformation about &6%enchant% &eenchantment&7:"
+      - "&6Description&7: &e%description%"
+      - "&6Applies to&7: &e%applies%"
+      - "&6Max level&7: &e%max-level%"
+
+    pastetypes: "&aEnchantment type list: %url%"
+    pasteenchants: "&aEnchantments list: %url%"
+    open: "&aOpened %menu% for %player%!"
+
+token:
+  success: "&2&lx &aSuccessfully downloaded token &l%token%&a enchantment, reloading..."
+
+interact:
+  main-hand-only: "&cYou can only do that with your main hand!"
+
+enchanter:
+  re-buy: "&cPlease re-buy the item from the enchanter."
+  disabled-in-world: "&cThe Enchanter is disabled in this world."
+  full-inventory: "&cYour inventory is full!"
+  examine-book: "&7You examined %group-color%%group-name%&7 book and found %enchant-color% %level%"
+  unknown-payment-method: "&cFailed to validate %paymentType% payment method, please contact an administrator."
+  successful-purchase: "&aPurchase successful!"
+  cannot-afford:
+    - "&cYou do not have enough EXP to purchase that."
+    - "&7Your XP: %exp%"
+
+tinkerer:
+  trade-accepted: "&aTrade accepted!"
+  non-tradeable-item:
+    - "&cThe Server Tinkerer doesn't want that item!"
+    - "&7It will only accept custom enchanted equipment"
+
+alchemist:
+  doesnt-accept: "&cThe Alchemist doesn't accept this item!"
+  trade-cancelled: "&cTrade cancelled."
+  cannot-afford: "&cYou cannot afford this transaction!"
+  exceeds-max-level: "&cYour combined level exceeds maximum enchantment level!"
+  take-currency: "&c- %price%"
+
+gkits:
+  no-permission: "&eYou don't have permissions to use &e%gkit%&6 kit."
+  cooldown: "&eYou cannot use this kit yet, kit &6%gkit%&e is on cooldown &7(%cooldown%)"
+  used-kit: "&eYou have used kit &6%gkit%."
+  missing-permission: "&cGkit %gkit%'s permission is invalid or non-existent"
+  unknown-gkit: "&cGKit %gkit% does not exist!"
+  unknown-enchant: "&7Enchant %enchant% cannot be resolved."
+
+heroic:
+  cannot-apply: "&cYou can't apply a crystal upgrade to this item."
+  upgrade-failed: "&cThe crystal upgrade &nfailed&c!"
+
+orbs:
+  cannot-apply: "&cCannot apply orb to this item!"
+  failed: "&cOrb failed!"
+  incompatible: "&cCannot apply lower slots orb than available slots!"
+
+sets:
+  commands:
+    unknown-command: "&cCommand not found! Type \"/asets\" for a list of all valid commands."
+    invalid-usage: "&cInvalid usage! Please reference /asets for the proper usage."
+    invalid-set: "&cSet is invalid."
+    invalid-set-piece: "&cInvalid set piece, you may use one of these: \n%set pieces%"
+    invalid-weapon: "&cWeapon is invalid."
+    offline-player: "&cPlayer is offline."
+    invalid-chances: "&cInvalid chances."
+    list:
+      header: "&eList of all available Sets &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eList of all available Weapons &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&eGave &f %set% &eSet to &f %player%"
+    givepiece:
+      success: "&eGave &f%piece% &efrom &f%set% &eto &f %player%"
+    weapon:
+      success: "&eGave &f %weapon% &eSet to &f %player%"
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cYou cannot apply a randomizer to this!"
+    single-items-only: "&cYou can only use this on single items!"
+  black-scroll:
+    full-inventory: "&cYour inventory is full!"
+    no-enchants: "&cThis item doesn't have any enchants!"
+    invalid-enchant: "&cCannot remove enchant as it's invalid!"
+    cannot-remove: "&cEnchantment %enchant% cannot be removed!"
+  soul-tracker:
+    disabled: "&cSouls are not enabled on this server!"
+    non-stacked-only: "&cYou can only use this on non-stacked items!"
+    apply-successful: "&7You successfully applied &f&lSoul Tracker &7to your item!"
+  magic-dust:
+    full-inventory: "&cYour inventory is full!"
+    single-items-only: "&cYou can only use this on single items!"
+  white-scroll:
+    full-inventory: "&cYour inventory is full!"
+    apply-successful: "&aWhite scroll has been applied to your item!"
+    item-saved: "&aWhite scroll saved the item!"
+
+combining:
+  already-max-level: "This enchantment is already max level!"
+  success: "&aSuccess! &7%enchant% is now level %level%!"
+  failure: "&cCombining failed!"
+  something-went-wrong: "&cSomething went wrong with combining."
+
+enchant-limitations:
+  cannot-be-modified: "&cThis item cannot be modified!"
+
+applying:
+  not-applicable-with: "&cThe &4%enchant1% &cenchantment cannot be applied together with the &4%enchant2%&7 &cenchant!"
+  requires-enchant: "&cThe &4%enchant1% &cenchantment requires the &4%enchant2%&7 &cenchant to be applied!"
+  already-applied: "&cThe item already has this enchantment."
+  applied: "&aEnchantment was applied to your item."
+  max-level: "&cThis enchantment is already at max level!"
+  wrong-material: "&cThis enchantment cannot be applied on this item."
+
+slots:
+  limit-reached: "&cYou cannot apply that enchantment! There are no free slots left!"
+
+chances:
+  book-failed: "&cYour book failed but item wasn't destroyed!"
+
+destroy:
+  book-failed: "&cEnchantment was unsuccessful!"

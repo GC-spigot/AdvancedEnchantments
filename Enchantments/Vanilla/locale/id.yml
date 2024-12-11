@@ -1,0 +1,219 @@
+# Use %p% to insert the plugins prefix.
+# All messages support HEX color codes on 1.16+. Format: {#FFFFFF}
+# Almost all messages support PlaceholderAPI.
+prefix: "&7[&9AdvancedEnchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7mencuri &6%amount% &7dari &6%victim%&7!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cAnda tidak memiliki izin untuk melakukan itu!"
+  offline-player: "&cPemain sedang offline!"
+  enchantment-not-found: "&cSihir &c&n%enchant%&c tidak ditemukan."
+  invalid-amount: "&cJumlah invalid. Harus diantara 1-64."
+  invalid-enchant: "&c%enchant% bukan sihir yang valid!"
+  invalid-level: "&cLevel sihir invalid! Coba gunakan level: %levels%"
+  invalid-usage: "&cPenggunaan: %usage%"
+  not-a-number: "&c%number% bukanlah angka!"
+  not-holding-item: "&cKamu harus memegang senjata!"
+  enchantment-info:
+    invalid-usage: "&cPenggunaan invalid! Penggunaan yang benar: %command% <enchantment>"
+    open-menu-message: "&7Informasi tentang sihir &e%enchant%."
+  enchants:
+    open-menu-message: "&7Menunjukkan semua jenis sihir..."
+  apply:
+    cooldown: "&cKamu dapat gunakan perintah ini dalam %seconds% detik."
+    no-args: "&cMohon tuliskan pemain mana yang akan terpengaruh."
+    reapplied: "&aArmor kamu sudah diterapkan kembali."
+    reapplied-other: "&aArmor sudah diterapkan ke pemain %player%."
+    reapplied-for-all: "&aArmor sudah diterapkan ke semua pemain!"
+  withdrawsouls:
+    invalid-usage: "&cPenggunaan: /withdrawsouls <count>"
+    less-than-one: "&cHitungan harus positive."
+    invalid-item: "&cItem invalid."
+  aegive:
+    invalid-material: "&cMaterial invalid. Dimohon baca 'materials.yml'  untuk semua material valid."
+    invalid-item-flag: "&cItemFlag invalid! Kamu bisa memilih dari ini: %itemflags%"
+    invalid-enchantment: "&cSihir invalid!"
+    success: "&aMemberikan &2%amount%x %material% &ake pemain %player%&a!"
+  gedit:
+    unknown-gkit: "&c%gkit% bukan gkit yang valid!"
+    edit:
+      invalid-usage: "&cPenggunaan: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cPenggunaan: /gedit setpermission <gkit> <perm>"
+      success: "&eMerubah izin &6%gkit%'s&e kit ke izin baru &6%permission%"
+    reset:
+      invalid-usage: "&cPenggunaan: /gedit reset <gkit> <player>"
+      success: "&6%gkit% &6gkit telah direset untuk pemain  &e%player%"
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cPenggunaan: /gedit setdelay <gkit> <delay (detik)>"
+      invalid-delay: "&c%delay% is not a valid integer!"
+      success: "&eMerubah &6%gkit%&e kit delay ke &6%delay%"
+  main:
+    unknown-command: "&cPenggunaan perintah invalid! ketik \"/ae\" untuk penggunaan yang benar."
+    setsouls:
+      invalid-usage: "&cPenggunaan invalid: /ae setsouls <amount>"
+      invalid-item: "&cItem Invalid."
+      success: "&cMenetel hituang jiwa item ke: %amount%"
+    unenchant:
+      invalid-usage: "&cPenggunaan invalid: /ae unenchant <enchant>"
+      invalid-enchant: "&c%enchant% bukan sihir yang valid!"
+      not-holding-item: "&cKamu harus memegang item!"
+      does-not-have-enchant: "&cItem tersebut tidak memiliki sihir &4%enchant%&c!"
+      success: "&aMenghapus sihir %enchant%!"
+    zip:
+      zip-exists: "&cCoba lagi nanti."
+      success: "&eFile zip yang berisi semua data telah dibuat di %path%."
+      error: "&cError terjadi saat membuat zip! Cek console untuk melihat informasi."
+    greset:
+      reset: "&aReset %gkit% kit untuk pemain %player%!"
+      reset-all: "&aReset semua GKits untuk pemain %player%!"
+    claim:
+      invalid-usage: "&cMasukkan token sihir."
+    givegkit:
+      success: "&cKit %gkit% telah diberikan ke pemain %player%"
+    giverandombook:
+      success: "&aMemberikan &2%player% %amount%x %group% &abooks!"
+    givebook:
+      success: "&aMemberikan &2%player% %amount%x %enchant% %level% &abooks!"
+    enchant:
+      added: "&aMenambahkan sihir %enchant%!"
+      upgraded: "&2Meningkatkan sihir %enchant% dari level %previous-level% ke level %level%."
+      downgraded: "&2Menurunkan sihir %enchant% dari level %previous-level% ke level %level%."
+      removed: "&cMenghapus sihir %enchant% dari item."
+    giveitem:
+      success: "&7Menambahkan %amount%x %item%&7 untuk pemain %player%"
+    givercbook:
+      success: "&aMemberikan &2%player% %amount%x %group% &aClick kanan books!"
+    give:
+      success: "&aSukes memberikan %player% satu buku sihir %enchant% %level%!"
+    tinkereritem:
+      success: "&cMemberikan x%amount% item tinkerer ke pemain %player%"
+    admin:
+      invalid-page: "&cHalamat invalid"
+    info:
+      - "&eInformasi tentang sihir &6%enchant% &7:"
+      - "&6Deskripsi&7: &e%description%"
+      - "&6Diterapkan ke&7: &e%applies%"
+      - "&6Level Tertinggi&7: &e%max-level%"
+
+    pastetypes: "&aDaftar tipe sihir: %url%"
+    pasteenchants: "&aDaftar sihir: %url%"
+    open: "&aMembuka %menu% untuk pemain %player%!"
+
+token:
+  success: "&2&lx &aSukses mendownlaod token &l%token%&a sihir, memuat ulang..."
+
+interact:
+  main-hand-only: "&cKamu hanya bisa melakukannya di tangan utama!"
+
+enchanter:
+  re-buy: "&cDimohon untuk membeli ulang item di penyihir."
+  disabled-in-world: "&cPenyihir dilaran di dunia ini."
+  full-inventory: "&cInventory kamu penuh!"
+  examine-book: "&7Kamu memeriksa %group-color%%group-name%&7  buku dan menemukan sihir %enchant-color% %level%"
+  unknown-payment-method: "&cGagal untuk memvalidasi metode pembayaran %paymentType%, hubungi Admin."
+  successful-purchase: "&aSukses membeli!"
+  cannot-afford:
+    - "&cKamu tidak memiliki cukup EXP."
+    - "&7EXP kamu: %exp%"
+
+tinkerer:
+  trade-accepted: "&aPertukaran diterima!"
+  non-tradeable-item:
+    - "&cTinkerer tidak menginginkan item ini!"
+    - "&7dia hanya menerima item sihir kustom"
+
+alchemist:
+  doesnt-accept: "&cSang alkimia tidak menginginkan item ini!"
+  trade-cancelled: "&cPertukaran dibatalkan."
+  cannot-afford: "&cKamu tidak sanggup membayar!"
+  exceeds-max-level: "&cKamu tidak dapat menggabungkan sihir level maximal!"
+
+gkits:
+  no-permission: "&eKamu tidak memiliki izin untuk menggunakan kit &e%gkit%&6."
+  cooldown: "&eTidak dapat menggunakan kit ini, kit &6%gkit%&e sedang cooldown &7(%cooldown%)"
+  used-kit: "&eKamu menggunankan kit &6%gkit%."
+  missing-permission: "&cIzin Gkit %gkit%'s tidak valid atau tidak adad"
+  unknown-gkit: "&cGKit %gkit% tidak ada!"
+  unknown-enchant: "&7Sihir %enchant% tidak bisa ditemukan."
+
+heroic:
+  cannot-apply: "&cKamu tidak bisa memasang kristal peningkatan di item ini."
+  upgrade-failed: "&cKristal peningkatan &ngagal&c!"
+
+orbs:
+  cannot-apply: "&ctidak bisa memasang bola ke item ini!"
+  failed: "&cBola gagal!"
+  incompatible: "&Tidak dapat menerapkan slot yang lebih rendah dari slot yang tersedia!"
+
+sets:
+  commands:
+    unknown-command: "&cPerintah tidak ditemukan! Ketik \"/asets\" untuk daftar perintah."
+    invalid-usage: "&cPenggunaan invalid! Dimohon melihat /asets untuk penggunaan yang benar."
+    invalid-set: "&cSet invalid."
+    invalid-set-piece: "&cKepingang set invalid, kamu mungkin dapat menggunakan: \n%set pieces%"
+    invalid-weapon: "&cSenjata tidak valid."
+    offline-player: "&cPemain sedang offline."
+    invalid-chances: "&cKesempatan invalid."
+    list:
+      header: "&eDaftar set yang tersedia &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eDaftar senjata yang tersedia &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&eMemberikan &f %set% &eSet ke pemain &f %player%"
+    givepiece:
+      success: "&eMemberikan &f%piece% &edari &f%set% &eke pemain &f %player%"
+    weapon:
+      success: "&eMemberikan &f %weapon% &eSet ke pemain &f %player%"
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cKamu tidak dapat memasang pengacak ke item ini!"
+    single-items-only: "&cKamu tidak bisa menggunakannya ke item yang lebih dari satu!"
+  black-scroll:
+    full-inventory: "&cInventory kamu penuh!"
+    no-enchants: "&cItem ini tidak memiliki sihir!"
+    invalid-enchant: "&cTidak dapat menghapus sihir karena invalid!"
+    cannot-remove: "&cSihir %enchant% tidak dapat dihapus!"
+  soul-tracker:
+    disabled: "&cJiwa tidak diperbolehkan di server ini!"
+    apply-successful: "&7Sukses memasang  &f&lPenghitung jiwa &7ke item ini!"
+  magic-dust:
+    full-inventory: "&cInventory kamu penuh!"
+    single-items-only: "&cKamu tidak bisa menggunakannya ke item yang lebih dari satu!"
+  white-scroll:
+    full-inventory: "&cInventory kamu penuh!"
+    apply-successful: "&aGulungan putih berhasil dipasangkan ke item!"
+    item-saved: "&aGulugan putih menyelamatkan item!"
+
+combining:
+  already-max-level: "Sihir ini sudah dilevel tertinggi!"
+  success: "&aBerhasil! &7%enchant% sekarang level %level%!"
+  failure: "&cPenggabungan gagal!"
+  something-went-wrong: "&cTerjadi kesalah saat penggabungan."
+
+enchant-limitations:
+  cannot-be-modified: "&cSihir ini tidak dapat dimodifikasi!"
+
+applying:
+  not-applicable-with: "&cSihir &4%enchant1% &ctidak dapat dipasangkan dengan sihir &4%enchant2%&7&c!"
+  requires-enchant: "&cSihir &4%enchant1% &cmembutukan sihir &4%enchant2%&7 &cuntuk dipasangkan!"
+  already-applied: "&cItem telah memiliki sihir ini."
+  applied: "&aSihir berhasil diterapkan ke item."
+  max-level: "&cSihir ini telah dilevel tertinggi!"
+  wrong-material: "&cSihir ini tidak dapat diterapkan ke item ini."
+
+slots:
+  limit-reached: "&cKamu tidak dapat memasang sihir! Tidak ada slot lagi yang tersedia!"
+
+chances:
+  book-failed: "&cBuku sihirmu gagal tapi item kau tidak rusak!"
+
+destroy:
+  book-failed: "&cSihir gagal!"

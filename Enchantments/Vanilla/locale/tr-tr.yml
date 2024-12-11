@@ -1,0 +1,219 @@
+# Use %p% to insert the plugins prefix.
+# All messages support HEX color codes on 1.16+. Format: {#FFFFFF}
+# Almost all messages support PlaceholderAPI.
+prefix: "&7[&9AdvancedEnchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &6%victim% &7adlı oyuncudan &6%amount%&7 çaldı!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cBunu yapmak için iznin yok!"
+  offline-player: "&cBu oyuncu çevrimiçi değil!"
+  enchantment-not-found: "&c&n%enchant%&c büyüsü bulunamadı."
+  invalid-amount: "&cGeçersiz miktar.1-64 arasında olmalıdır."
+  invalid-enchant: "&c%enchant% geçerli bir büyü değil!"
+  invalid-level: "&cGeçersiz büyü seviyesi! Şunları dene: %levels%"
+  invalid-usage: "&cKullanım: %usage%"
+  not-a-number: "&c%number% bir sayı değil!"
+  not-holding-item: "&cBir eşya tutuyor olmalısın!"
+  enchantment-info:
+    invalid-usage: "&cGeçersiz kullanım! Uygun kullanım: %command% <büyüler>"
+    open-menu-message: "&e%enchant% &7büyüsü hakkında bilgiler."
+  enchants:
+    open-menu-message: "&7Tüm büyülerin listesi gösteriliyor..."
+  apply:
+    cooldown: "&cBu komutu %seconds% saniye içinde kullanabileceksiniz."
+    no-args: "&cLütfen hangi oyuncunun etkilenmesi gerektiğini belirtin."
+    reapplied: "&aZırhınız yeniden uygulandı."
+    reapplied-other: "&a%player% için zırh yeniden uygulandı."
+    reapplied-for-all: "&aZırh herkes için yeniden uygulandı!"
+  withdrawsouls:
+    invalid-usage: "&cKullanım: /withdrawsouls <sayı>"
+    less-than-one: "&cSayı pozitif olmalıdır."
+    invalid-item: "&cGeçersiz eşya."
+  aegive:
+    invalid-material: "&cGeçersiz malzeme. Lütfen tüm geçerli malzemeler için 'materials.yml' dosyasına bakın."
+    invalid-item-flag: "&cGeçersiz ItemFlagı! Aşağıdakilerden seçim yapabilirsiniz: %itemflags%"
+    invalid-enchantment: "&cGeçersiz Büyü!"
+    success: "&2%player% &aadlı oyuncuya &2%amount%x%material% &averildi!"
+  gedit:
+    unknown-gkit: "&c%gkit% geçerli bir gkit değil!"
+    edit:
+      invalid-usage: "&cKullanım: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cKullanım: /gedit setpermission <gkit> <yetki>"
+      success: "&6%gkit%&e kitinin izni &6%permission% &eolarak değiştirildi"
+    reset:
+      invalid-usage: "&cKullanım: /gedit reset <gkit> <oyuncu>"
+      success: "&6%gkit% &6gkiti oyuncu &e%player% &6için sıfırlandı"
+    list: "&eGKitler: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cKullanım: /gedit setdelay <gkit> <delay (saniye olarak)>"
+      invalid-delay: "&c%delay% geçerli bir tamsayı değil!"
+      success: "&6%gkit%&e kitinin gecikmesi &6%delay% &eolarak değiştirildi"
+  main:
+    unknown-command: "&cYanlış komut kullanımı! Doğru kullanım için \"/ae\" yazın."
+    setsouls:
+      invalid-usage: "&cGeçersiz kullanım: /ae setsouls <miktar>"
+      invalid-item: "&cGeçersiz eşya."
+      success: "&cEşyanın ruh sayısı ayarlandı: %amount%"
+    unenchant:
+      invalid-usage: "&cGeçersiz kullanım: /ae unenchant <büyü>"
+      invalid-enchant: "&c%enchant% geçerli bir büyü değil!"
+      not-holding-item: "&cBir eşya tutuyor olmalısın!"
+      does-not-have-enchant: "&cBu eşya &4%enchant%&c büyüsüne sahip değil!"
+      success: "&a%enchant% büyüsü kaldırıldı!"
+    zip:
+      zip-exists: "&cLütfen tekrar deneyin."
+      success: "&e%path% konumunda tüm eklenti verilerini içeren bir zip dosyası oluşturuldu."
+      error: "&cDosyalar sıkıştırılırken bir hata oluştu! Daha fazla bilgi için konsolu kontrol edin."
+    greset:
+      reset: "&a%player% için %gkit% kitini sıfırlayın!"
+      reset-all: "&a%player% için tüm GKitleri sıfırla!"
+    claim:
+      invalid-usage: "&cLütfen büyü jetonunu girin."
+    givegkit:
+      success: "&c%gkit% kit, %player% adlı oyuncusuna verildi"
+    giverandombook:
+      success: "&2%player% &aadlı oyuncuya &2%amount%x%group% &akitap verildi!"
+    givebook:
+      success: "&2%player% &aadlı oyuncuya &2%amount%x%enchant% %level% &a kitap verildi!"
+    enchant:
+      added: "&a&2%player% &aadlı oyuncuya &2%amount%x%enchant% %level% &a kitap verildi!"
+      upgraded: "&2%enchant%, %previous-level% seviyesinden %level% seviyesine yükseltildi."
+      downgraded: "&2%enchant%, %previous-level% seviyesinden %level% seviyesine düşürüldü."
+      removed: "&cEşyadan %enchant% büyüsü kaldırıldı."
+    giveitem:
+      success: "&b%player% &7oyuncusu için %amount%x %item%&7 eklendi"
+    givercbook:
+      success: "&2%player% adlı &aoyuncuya &2%amount%x%grup% &asağ tıklama kitabı verildi!"
+    give:
+      success: "&a%player% adlı oyuncuya %enchant% %level% kitabı başarıyla verildi!"
+    tinkereritem:
+      success: "&c%player% adlı oyuncuya x%amount% tamirci eşyası verildi"
+    admin:
+      invalid-page: "&cGeçersiz sayfa"
+    info:
+      - "&6%enchant% &ebüyüsü hakkında bilgiler&7:"
+      - "&6Açıklama&7: &e%description%"
+      - "&6Bunlara uygulanabilir&7: &e%applies%"
+      - "&6Max seviye&7: &e%max-level%"
+
+    pastetypes: "&aBüyü türü listesi: %url%"
+    pasteenchants: "&aBüyü listesi: %url%"
+    open: "&a%player% için %menü% açıldı!"
+
+token:
+  success: "&2&lx &aJeton &l%token%&a büyüsü başarıyla indirildi, yeniden yükleniyor..."
+
+interact:
+  main-hand-only: "&cBunu sadece ana elinizle yapabilirsiniz!"
+
+enchanter:
+  re-buy: "&cLütfen eşyayı büyücüden yeniden satın alın."
+  disabled-in-world: "&cBüyücü bu dünyada devre dışı bırakıldı."
+  full-inventory: "&cEnvanterin dolu!"
+  examine-book: "%group-color%%group-name%&7 kitabını incelediniz ve %enchant-color% %level%'i &7buldunuz"
+  unknown-payment-method: "&c%paymentType% ödeme yöntemi doğrulanamadı, lütfen bir yönetici ile iletişime geçin."
+  successful-purchase: "&aSatın alma başarılı!"
+  cannot-afford:
+    - "&cBunu satın almak için yeterli EXP'niz yok."
+    - "&7XP'niz: %exp%"
+
+tinkerer:
+  trade-accepted: "&aTakas kabul edildi!"
+  non-tradeable-item:
+    - "&cSunucu Tamircisi bu eşyayı istemiyor!"
+    - "&7Yalnızca özel büyülü ekipmanı kabul edecek"
+
+alchemist:
+  doesnt-accept: "&cSimyacı bu öğeyi kabul etmiyor!"
+  trade-cancelled: "&cTakas iptal edildi."
+  cannot-afford: "&cBu işlemi karşılayamazsınız!"
+  exceeds-max-level: "&cBirleşik seviyeniz maksimum büyü seviyesini aşıyor!"
+
+gkits:
+  no-permission: "&e%gkit%&6 kitini kullanma izniniz yok."
+  cooldown: "&eHenüz bu kiti kullanamazsınız, &6%gkit%&e kiti bekleme süresinde &7(%cooldown%)"
+  used-kit: "&6%gkit% &ekitini kullandınız."
+  missing-permission: "&c%gkit% Gkitinin izni geçersiz veya mevcut değil"
+  unknown-gkit: "&c%gkit% GKiti mevcut değil!"
+  unknown-enchant: "&7%enchant% büyüsü bulunamadı!"
+
+heroic:
+  cannot-apply: "&cBu eşyaya bir kristal yükseltmesi uygulayamazsınız."
+  upgrade-failed: "&cKristal yükseltmesi &nbaşarısız %r&coldu!"
+
+orbs:
+  cannot-apply: "&cKüre bu eşyaya uygulanamaz!"
+  failed: "&cKüre başarısız oldu!"
+  incompatible: "&cMevcut slotlardan daha düşük slot küresi uygulanamaz!"
+
+sets:
+  commands:
+    unknown-command: "&cKomut bulunamadı! Tüm geçerli komutların listesi için \"/asets\" yazın."
+    invalid-usage: "&cGeçersiz kullanım! Doğru kullanım için lütfen /asets'e başvurun."
+    invalid-set: "&cGeçersiz set."
+    invalid-set-piece: "&cGeçersiz set parçası, bunlardan birini kullanabilirsiniz: \n%set pieces%"
+    invalid-weapon: "&cSilah geçersiz."
+    offline-player: "&cOyuncu çevrimdışı."
+    invalid-chances: "&cGeçersiz şans."
+    list:
+      header: "&eMevcut tüm Setlerin listesi &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eMevcut tüm Silahların listesi &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&f%set% &eSeti&f %player% &eadlı oyuncuya verildi."
+    givepiece:
+      success: "&f%set% &eSetinden %player% &eadlı oyuncuya &f%piece% &everildi."
+    weapon:
+      success: "&f%weapon% &eSeti&f %player% &eadlı oyuncuya verildi."
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cBuna bir randomizer uygulayamazsınız!"
+    single-items-only: "&cBunu yalnızca tek eşyalarda kullanabilirsiniz!"
+  black-scroll:
+    full-inventory: "&cEnvanterin dolu!"
+    no-enchants: "&cBu eşyanın herhangi bir büyüsü yok!"
+    invalid-enchant: "&cBüyü geçersiz olduğu için kaldırılamıyor!"
+    cannot-remove: "&c%enchant% büyüsü kaldırılamaz!"
+  soul-tracker:
+    disabled: "&cRuhlar bu sunucuda etkin değil!"
+    apply-successful: "&f&lSoul Tracker'ı &7başarıyla eşyanıza uyguladınız!"
+  magic-dust:
+    full-inventory: "&cEnvanterin dolu!"
+    single-items-only: "&cBunu yalnızca tek eşyalarda kullanabilirsiniz!"
+  white-scroll:
+    full-inventory: "&cEnvanterin dolu!"
+    apply-successful: "&aEşyanıza beyaz white scroll uygulandı!"
+    item-saved: "&aWhite scroll öğeyi kaydetti!"
+
+combining:
+  already-max-level: "Bu büyü zaten maksimum seviyede!"
+  success: "&aBaşarılı! &7%enchant% artık %level% seviyesinde!"
+  failure: "&cBirleştirme başarısız oldu!"
+  something-went-wrong: "&cBirleştirmeyle ilgili bir sorun oluştu."
+
+enchant-limitations:
+  cannot-be-modified: "&cBu eşya değiştirilemez!"
+
+applying:
+  not-applicable-with: "&4%enchant1% &cbüyüsü, &4%enchant2%&7 &cbüyüsü ile birlikte uygulanamaz!"
+  requires-enchant: "&4%enchant1% &cbüyüsü, &4%enchant2%&7 &cbüyüsünün uygulanmasını gerektirir!"
+  already-applied: "&cEşya zaten bu büyüye sahip."
+  applied: "&aEşyanıza büyü uygulandı."
+  max-level: "&cBu büyü zaten maksimum seviyede!"
+  wrong-material: "&cBu büyü bu eşyaya uygulanamaz."
+
+slots:
+  limit-reached: "&cBu büyüyü uygulayamazsınız! Boş slot kalmadı!"
+
+chances:
+  book-failed: "&cKitabınız başarısız oldu ancak eşya yok edilmedi!"
+
+destroy:
+  book-failed: "&cBüyü başarısız oldu!"

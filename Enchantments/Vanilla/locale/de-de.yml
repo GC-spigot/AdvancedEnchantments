@@ -1,0 +1,219 @@
+# Use %p% to insert the plugins prefix.
+# All messages support HEX color codes on 1.16+. Format: {#FFFFFF}
+# Almost all messages support PlaceholderAPI.
+prefix: "&7[&9Advanced Enchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7stahl &6%amount% &7von &6%victim%&7!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cDu hast keine Berechtigungen um dies zu tun!"
+  offline-player: "&cDieser Spieler ist nicht online!"
+  enchantment-not-found: "&cVerzauberung &c&n%enchant%&c wurde nicht gefunden."
+  invalid-amount: "&cUngültige Anzahl. Erlaubte Werte liegen zwischen 1-64."
+  invalid-enchant: "&c%enchant% ist keine gültige Verzauberung!"
+  invalid-level: "&cUngültiges Verzauberungs Level! Verfügbare Level: %levels%"
+  invalid-usage: "&cBenutzung: %usage%"
+  not-a-number: "&c%number% ist keine Nummer!"
+  not-holding-item: "&cDu musst einen Gegenstand halten!"
+  enchantment-info:
+    invalid-usage: "&cUngültige Benutzung! Richtige Benutzung: %command% <Verzauberung>"
+    open-menu-message: "&7Informationen über die Verzauberung &e%enchant%."
+  enchants:
+    open-menu-message: "&7Zeige eine Liste mit allen Verzauberungen..."
+  apply:
+    cooldown: "&cDu kannst diesen Befehl in %seconds% Sekunden wieder verwenden."
+    no-args: "&cBitte gib den betroffenen Spieler an."
+    reapplied: "&aDeine Rüstung wurde neu angewendet."
+    reapplied-other: "&aDie Rüstung von %player% wurde neu angewendet."
+    reapplied-for-all: "&aDie Rüstung von jedem Spieler wurde neu angewendet!"
+  withdrawsouls:
+    invalid-usage: "&cBenutzung: /withdrawsouls <Anzahl>"
+    less-than-one: "&cDie Anzahl muss ein positiver Wert sein."
+    invalid-item: "&cUngültiger Gegenstand."
+  aegive:
+    invalid-material: "&cUngültiges Material. Alle gültigen Materialien sind in der 'materials.yml' Datei zu finden."
+    invalid-item-flag: "&cUngültige Gegenstands Flagge! Du kannst folgende anwenden: %itemflags%"
+    invalid-enchantment: "&cUngültige Verzauberung!"
+    success: "&a%player% erhielt &2%amount%x %material%&a!"
+  gedit:
+    unknown-gkit: "&c%gkit% ist kein gültiges gkit!"
+    edit:
+      invalid-usage: "&cBenutzung: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cBenutzung: /gedit setpermission <gkit> <Berechtigung>"
+      success: "&eÄndere &6%gkit%'s&e kit Berechtigung zu &6%permission%"
+    reset:
+      invalid-usage: "&cUsage: /gedit reset <gkit> <player>"
+      success: "&6%gkit% &6gkit für Spieler &e%player% &6wurde zurückgesetzt"
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cBenutzung: /gedit setdelay <gkit> <Verzögerung (in Sekunden)>"
+      invalid-delay: "&c%delay% ist keine gültige ganze Zahl!"
+      success: "&eÄndere &6%gkit%&e kit Verzögerung zu &6%delay%"
+  main:
+    unknown-command: "&cUngültige Befehlsnutzung! Schreibe \"/ae\" für die richtige Benutzung."
+    setsouls:
+      invalid-usage: "&cUngültige Benutzung: /ae setsouls <Anzahl>"
+      invalid-item: "&cUngültiger Gegenstand."
+      success: "&cSetze den Seelenzähler des Gegenstands zu: %amount%"
+    unenchant:
+      invalid-usage: "&cUngültige Benutzung: /ae unenchant <Verzauberung>"
+      invalid-enchant: "&c%enchant% ist keine gültige Verzauberung!"
+      not-holding-item: "&cDu musst einen Gegenstand halten!"
+      does-not-have-enchant: "&cDieser Gegenstand hat nicht die Verzauberung &4%enchant%&c!"
+      success: "&aEntferne Verzauberung %enchant%!"
+    zip:
+      zip-exists: "&cBitte versuche es erneut."
+      success: "&eEine ZIP Datei mit allen Daten wurde erstellt im Verzeichnis: %path%."
+      error: "&cEin Fehler ist beim Erstellen aufgetreten. Sieh in die Konsole für mehr Informationen."
+    greset:
+      reset: "&aSetze das %gkit% kit für %player% zurück!"
+      reset-all: "&aSetze alle kits für %player% zurück!"
+    claim:
+      invalid-usage: "&cBitte gib den Verzauberungs Token an."
+    givegkit:
+      success: "&cKit %gkit% wurde zu %player% gegeben"
+    giverandombook:
+      success: "&2%player% &aerhielt &2%amount%x %group% &aBücher!"
+    givebook:
+      success: "&2%player% &aerhielt &2%amount%x %enchant% %level% &aBücher!"
+    enchant:
+      added: "&aFüge die Verzauberung %enchant% hinzu!"
+      upgraded: "&2Verbessere die Verzauberung %enchant% von Level %previous-level% zu Level %level%."
+      downgraded: "&2Verschlechtere die Verzauberung %enchant% von Level %previous-level% zu Level %level%."
+      removed: "&cEntferne die Verzauberung %enchant% vom Gegenstand."
+    giveitem:
+      success: "&7Gab %player% %amount%x %item%s"
+    givercbook:
+      success: "&aGab &2%player% %amount%x %group% &aRechts-Klick-Bücher!"
+    give:
+      success: "&aGab %player% erfolgreich ein %enchant% %level% Buch!"
+    tinkereritem:
+      success: "&cGab %player% x%amount% einen Bastler Gegenstand"
+    admin:
+      invalid-page: "&cUngültige Seite"
+    info:
+      - "&eInformationen über die Verzauberung &6%enchant%&7:"
+      - "&6Beschreibung&7: &e%description%"
+      - "&6Anwendbar auf&7: &e%applies%"
+      - "&6Max Level&7: &e%max-level%"
+
+    pastetypes: "&aVerzauberungs Typ Liste: %url%"
+    pasteenchants: "&aVerzauberungs Liste: %url%"
+    open: "&aÖffne %player% das Menü %menu%!"
+
+token:
+  success: "&2&lx &aErfolgreiches herunterladen der &l%token%&a Verzauberung. Lade neu..."
+
+interact:
+  main-hand-only: "&cDas kannst du nur mit deiner Haupthand machen!"
+
+enchanter:
+  re-buy: "&cBitte kaufe den Gegenstand beim Verzauberer erneut."
+  disabled-in-world: "&cIn dieser Welt ist der Verzauberer ausgeschaltet."
+  full-inventory: "&cDein Inventar ist voll!"
+  examine-book: "&7Du hast ein %group-color%%group-name%&7 Buch untersucht und ein Level %enchant-color% %level% Buch gefunden"
+  unknown-payment-method: "&cKonnte die Zahlungsmethode %paymentType% nicht überprüfen. Bitte kontaktiere einen Administrator"
+  successful-purchase: "&aKauf erfolgreich!"
+  cannot-afford:
+    - "&cDu hast nicht genug Erfahrung um dies zu kaufen."
+    - "&7Deine Erfahrung: %exp%"
+
+tinkerer:
+  trade-accepted: "&aHandel angenommen!"
+  non-tradeable-item:
+    - "&cDer Verzauberer möchte diesen Gegenstand nicht!"
+    - "&7Er akzeptiert nur Gegenstände mit benutzerdefinierten Verzauberungen!"
+
+alchemist:
+  doesnt-accept: "&cDer Alchimist akzeptiert diesen Gegenstand nicht!"
+  trade-cancelled: "&cHandel abgebrochen."
+  cannot-afford: "&cDu kannst dir diese Transaktion nicht leisten!"
+  exceeds-max-level: "&cDeine zusammengeführten Level sind über dem Maximum!"
+
+gkits:
+  no-permission: "&eDu hast keine Berechtigung das Kit &e%gkit%&6 zu verwenden."
+  cooldown: "&eDu kannst dieses Kit zur Zeit nicht benutzen. Kit &6%gkit%&e ist gerade in der Abkühlzeit. &7(%cooldown%)"
+  used-kit: "&eDu hast Kit &6%gkit% &ebenutzt."
+  missing-permission: "&cGkit %gkit%'s Berechtigung ist ungültig oder nicht vorhanden."
+  unknown-gkit: "&cGKit %gkit% existiert nicht!"
+  unknown-enchant: "&7Verzauberung %enchant% wurde nicht gefunden."
+
+heroic:
+  cannot-apply: "&cDu kannst diesem Gegenstand keine Kristall Verbesserung geben."
+  upgrade-failed: "&cDie Kristall Verbesserung ist &nfehlgeschlagen&c!"
+
+orbs:
+  cannot-apply: "&cDieses Orb funktioniert nicht bei diesem Gegenstand"
+  failed: "&cOrb fehlgeschlagen!"
+  incompatible: "&cDu kannst kein Orb mit weniger Plätzen als bereits vorhanden anwenden!"
+
+sets:
+  commands:
+    unknown-command: "&cBefehl nicht gefunden! Benutze \"/asets\" für eine Liste aller Sets."
+    invalid-usage: "&cUngültige Benutzung! Die Benutzung steht bei /asets."
+    invalid-set: "&cSet ist ungültig."
+    invalid-set-piece: "&cUngültiges Set Teil! Du kannst eines dieser benutzen: \n%set pieces%"
+    invalid-weapon: "&cUngültige Waffe."
+    offline-player: "&cDer Spieler ist offline."
+    invalid-chances: "&cUngültige Chance."
+    list:
+      header: "&eListe aller verfügbaren Sets &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eListe aller verfügbaren Waffen &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&eGab &f %player% &edas Set&f %set%&e."
+    givepiece:
+      success: "&eGab &f %player% das Set Teil &f%piece% &evom Set &f%set%&e."
+    weapon:
+      success: "&eGab &f %player% &edas Set &f %weapon%&e."
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cDu kannst auf diesem Gegenstand keine Zufalls Schriftrolle anwenden!"
+    single-items-only: "&cDu kannst das nur auf einem einzigen Gegenstand gleichzeitig machen!"
+  black-scroll:
+    full-inventory: "&cDein Inventar ist voll!"
+    no-enchants: "&cDieser Gegenstand hat keine Verzauberungen!"
+    invalid-enchant: "&cKonnte die Verzauberung nicht entfernen, da sie ungültig ist!"
+    cannot-remove: "&cDie Verzauberung %enchant% kann nicht entfernt werden!"
+  soul-tracker:
+    disabled: "&cSeelen sind hier nicht eingeschaltet!"
+    apply-successful: "&7Du hast erfolgreich den &f&lSeelen Tracker &7auf den Gegenstand angewendet!"
+  magic-dust:
+    full-inventory: "&cDein Inventar ist voll!"
+    single-items-only: "&cDu kannst das nur auf einem einzigen Gegenstand gleichzeitig machen!"
+  white-scroll:
+    full-inventory: "&cDein Inventar ist voll!"
+    apply-successful: "&aDie weiße Schriftrolle wurde auf deinen Gegenstand angewendet!"
+    item-saved: "&aDie weiße Schriftrolle hat den Gegenstand gerettet!"
+
+combining:
+  already-max-level: "Diese Verzauberung ist bereits auf dem maximalen Level!"
+  success: "&aErfolg! &7%enchant% ist jetzt Level %level%!"
+  failure: "&cZusammenführen fehlgeschlagen!"
+  something-went-wrong: "&cBeim Zusammenführen ist etwas schiefgelaufen."
+
+enchant-limitations:
+  cannot-be-modified: "&cDieser Gegenstand kann nicht modifiziert werden!"
+
+applying:
+  not-applicable-with: "&cDie Verzauberung &4%enchant1% &ckann nicht zusammen mit der Verzauberung &4%enchant2%&7 &cangewendet werden!"
+  requires-enchant: "&cDie Verzauberung &4%enchant1% &cbenötigt die Verzauberung &4%enchant2%&7 &cum angewendet werden zu können!"
+  already-applied: "&cDer Gegenstand hat bereits diese Verzauberung."
+  applied: "&aDie Verzauberung wurde dem Gegenstand hinzugefügt."
+  max-level: "&cDie Verzauberung ist bereits auf dem maximalen Level!"
+  wrong-material: "&cDie Verzauberung ist auf diesem Gegenstand nicht anwendbar."
+
+slots:
+  limit-reached: "&cDu kannst diese Verzauberung nicht anwenden, da alle Plätze belegt sind!"
+
+chances:
+  book-failed: "&cDas Buch ist fehlgeschlagen, jedoch wurde der Gegenstand nicht zerstört!"
+
+destroy:
+  book-failed: "&cDie Verzauberung ist fehlgeschlagen!"

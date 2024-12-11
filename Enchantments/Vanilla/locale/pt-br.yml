@@ -1,0 +1,219 @@
+# Use %p% para usar os prefixos do plugin
+# Todas as mensagens tem suporte para cores HEX apenas para  1.16+. Formato: {#FFFFFF}
+# Quase todas as mensagens suportam PlaceholderAPI.
+prefix: "&7[&9Advanced Enchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7roubou &6%amount% &7de &6%victim%&7!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cVocê não tem permissão para azer isso."
+  offline-player: "&cEste jogador não está online."
+  enchantment-not-found: "&cO encantamento &c&n%enchant%&c não foi encontrado."
+  invalid-amount: "&cQuantidade Invalida. Tente números entre 1-64."
+  invalid-enchant: "&c%enchant% não é um encantamento válido!"
+  invalid-level: "&cNível de encantamento inválido. Tente usar: %levels%"
+  invalid-usage: "&cUse: %usage%"
+  not-a-number: "&c%number% não é um numero!"
+  not-holding-item: "&cVocê não está segurando o item!"
+  enchantment-info:
+    invalid-usage: "&cUso incorreto! Uso correto: %command% <enchantment>"
+    open-menu-message: "&7Informação sobre o encantamento &e%enchant%."
+  enchants:
+    open-menu-message: "&7Mostando lista com todos os encantamentos..."
+  apply:
+    cooldown: "&cVocê poderá usar este comando em %seconds% segundos."
+    no-args: "&cPor favor, especifique qual jogador deve ser afetado"
+    reapplied: "&aSua armadura foi reaplicada."
+    reapplied-other: "&aA armadura de %player% foi reaplicada."
+    reapplied-for-all: "&aA armadura de todos os jogadores foi reaplicada."
+  withdrawsouls:
+    invalid-usage: "&cUse: /withdrawsouls <quantidade>"
+    less-than-one: "&cA quantidade deve ser positiva."
+    invalid-item: "&cItem inválido."
+  aegive:
+    invalid-material: "&cMaterial inválido. Consulte o arquivo 'materials.yml' para todos os materiais válidos"
+    invalid-item-flag: "&cItemFlag Inválido. Você pode escolher entre o seguinte: %itemflags%"
+    invalid-enchantment: "&cEncantamento Inválido!"
+    success: "&aDeu &2%amount%x %material% &apara %player%&a!"
+  gedit:
+    unknown-gkit: "&c%gkit% não é um gkit!"
+    edit:
+      invalid-usage: "&cUse: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cUso correto: /gedit setpermission <gkit> <perm>"
+      success: "&aPermissão &6%gkit%'s&e foi trocada para &6%permission%"
+    reset:
+      invalid-usage: "&cUso correto: /gedit reset <gkit> <player>"
+      success: "&6%gkit% &6gkit foi resetado para o jogador &e%player%"
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cUso correto: /gedit setdelay <gkit> <delay (em segundos)>"
+      invalid-delay: "&c%delay% não é um número inteiro válido!"
+      success: "&eDelay do kit &6%gkit%&e trocado para &6%delay%"
+  main:
+    unknown-command: "&cUso de comando incorreto! Digite \"/ae\" para uso correto."
+    setsouls:
+      invalid-usage: "&cUso inválido: /ae setsouls <quantidade>"
+      invalid-item: "&cItem inválido."
+      success: "&cDefina a contagem de alma do item para %amount%."
+    unenchant:
+      invalid-usage: "&cUso Inválido: /ae unenchant <encantamento>"
+      invalid-enchant: "&c%enchant% não é um encantamento válido!"
+      not-holding-item: "&cVocê precisa está com item na mão!"
+      does-not-have-enchant: "&cEste item não tem o encantamento &4%enchant%&c!"
+      success: "&aEncantamento %enchant% removido!"
+    zip:
+      zip-exists: "&cPor favor tente novamente."
+      success: "&eUm arquivo zip contendo todos os dados do plugin foi criado em %path%."
+      error: "&cOcorreu um erro ao compactar os arquivos! Verifique o console para obter mais informações."
+    greset:
+      reset: "&a%gkit% resetado para %player%!"
+      reset-all: "&aTodos os GKits foram resetado para %player%!"
+    claim:
+      invalid-usage: "&cPor favor coloque o token do encantamento."
+    givegkit:
+      success: "&cKit %gkit% foi dado para o jogador %player%"
+    giverandombook:
+      success: "&aDeu livro(s) para &2%player% %amount%x %group%!"
+    givebook:
+      success: "&aDeu livros para &2%player% %amount%x %enchant% %level%!"
+    enchant:
+      added: "&aEncantamento %enchant% adicionado!"
+      upgraded: "&2%enchant% evoluído do nível %previous-level% para o %level%."
+      downgraded: "&2%enchant% regrediu do nível %previous-level% para o %level%."
+      removed: "&cO encantamento %enchant% foi removido deste item."
+    giveitem:
+      success: "&7Adicionado %amount%x %item% para o jogador %player%"
+    givercbook:
+      success: "&aDeu livros para &2%player% %amount%x %group%."
+    give:
+      success: "&aDeu com sucesso um livro %enchant% %level%!"
+    tinkereritem:
+      success: "&cDeu x%amount% itens do tinkerer para o jogador %player%."
+    admin:
+      invalid-page: "&cPágina inválida."
+    info:
+      - "&eInformação sobre o encantamento &6%enchant%:"
+      - "&6Descrição&7: &e%description%"
+      - "&6aplica-se a&7: &e%applies%"
+      - "&6Nível máximo&7: &e%max-level%"
+
+    pastetypes: "&aLista de tipos de encantamentos: %url%"
+    pasteenchants: "&aLista de encantamentos: %url%"
+    open: "&aMenu %menu% aberto para %player%!"
+
+token:
+  success: "&2&lx &aToken &l%token%&a baixado com sucesso, recarregando..."
+
+interact:
+  main-hand-only: "&cVocê só pode fazer isso com sua mão principal!"
+
+enchanter:
+  re-buy: "&cPor favor, compre novamente o item do feiticeiro."
+  disabled-in-world: "&cO Encantador está desativado neste mundo."
+  full-inventory: "&cSeu inventário. está cheio!"
+  examine-book: "&7Voce examinou %group-color%%group-name%&7 e recebeu o %enchant-color% %level%"
+  unknown-payment-method: "&cFalha em validar %paymentType% o método de pagamento, por favor entre em contato com adiministrador."
+  successful-purchase: "&aComprado com sucesso!"
+  cannot-afford:
+    - "&cVocê não tem EXP suficiente para fazer está compra."
+    - "&7Seu XP: %exp%"
+
+tinkerer:
+  trade-accepted: "&aTroca aceita!"
+  non-tradeable-item:
+    - "&cO Server Tinkerer não quer esse item!"
+    - "&7Só aceitará equipamentos com encantados personalizados"
+
+alchemist:
+  doesnt-accept: "&cO Alquimista não aceita este item!"
+  trade-cancelled: "&cTroca cancelada."
+  cannot-afford: "&cVocê não pode pagar esta transação!"
+  exceeds-max-level: "&cSeu nível combinado excede o nível máximo de encantamento!"
+
+gkits:
+  no-permission: "&eVocê não tem permissão para usar os kits do &e%gkit%&6."
+  cooldown: "&eVocê não pode usar este kit ainda, kit &6%gkit%&e está em carregamento &7(%cooldown%)"
+  used-kit: "&eVocê usou o kit &6%gkit%."
+  missing-permission: "&cGkit %gkit% não uma permissão válida para ele."
+  unknown-gkit: "&cGKit %gkit% não existe!"
+  unknown-enchant: "&7O encantamento %enchant% não foi encontrado."
+
+heroic:
+  cannot-apply: "&cVocê não pode aplicar um upgrade de cristal a este item."
+  upgrade-failed: "&cO cristal de evolução &nfalhou&c!"
+
+orbs:
+  cannot-apply: "&cNão é possível aplicar orbe a este item!"
+  failed: "&cOrbe falhou!"
+  incompatible: "&cNão é possivel aplicar orbes com nivel mais baixo que as dos slots!"
+
+sets:
+  commands:
+    unknown-command: "&cComando não encontrado! Digite \"/asets\" para ver a lista com todos comandos válidos."
+    invalid-usage: "&cUso incorreto! Use como referência o comando /asets."
+    invalid-set: "&cO set é inválido."
+    invalid-set-piece: "&cPeça do set, você pode usar um destes: \n%set pieces%"
+    invalid-weapon: "&cEspada inválida."
+    offline-player: "&cJogador está offline."
+    invalid-chances: "&cChances inválidas."
+    list:
+      header: "&eLista de todos Sets disponíveis &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eLista de todas armas disponíveis &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&eDeu &f %set% &eSet para &f %player%"
+    givepiece:
+      success: "&eDeu &f%piece% &edo &f%set% &epara &f %player%"
+    weapon:
+      success: "&eDeu &f %weapon% &eSet para &f %player%"
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cVocê não pode aplicar um randomizador a este!"
+    single-items-only: "&cVocê só pode usar isso em itens individuais!"
+  black-scroll:
+    full-inventory: "&cSeu inventário está cheio!"
+    no-enchants: "&cEste item não possui encantos!"
+    invalid-enchant: "&cNão é possível remover encanto porque é inválido!"
+    cannot-remove: "&cO encantamento %enchant% não pode ser removido!"
+  soul-tracker:
+    disabled: "&cSouls não estão habilitados neste servidor!"
+    apply-successful: "&7Você ativou com sucesso &f&lSoul Tracker &7em seu item!"
+  magic-dust:
+    full-inventory: "&cSeu inventário está cheio!"
+    single-items-only: "&cYou can only use this on single items!"
+  white-scroll:
+    full-inventory: "&cSeu inventário está cheio!"
+    apply-successful: "&aO pergaminho branco foi aplicado ao seu item!"
+    item-saved: "&aO pergaminho branco salvou o item!"
+
+combining:
+  already-max-level: "Este encantamento já está no nível máximo!"
+  success: "&aSuccesso! &7%enchant% agora é nível %level%!"
+  failure: "&cCombinação falhou!"
+  something-went-wrong: "&cAlgo deu errado com a combinação."
+
+enchant-limitations:
+  cannot-be-modified: "&cEste item não pode ser modificado!"
+
+applying:
+  not-applicable-with: "&cO encantamento &4%enchant1% &cnão pode ser aplicado junto com o encantamento &4%enchant2%&7 &c!"
+  requires-enchant: "&cO encantamento &4%enchant1% &cprecisa do encanto &4%enchant2%&7 &cpara ser aplicado!"
+  already-applied: "&cO item já tem esse encantamento."
+  applied: "&aEncantamento foi aplicado ao seu item."
+  max-level: "&cEste encantamento já está no nível máximo!"
+  wrong-material: "&cEste encantamento não pode ser aplicado neste item."
+
+slots:
+  limit-reached: "&cVocê não pode aplicar esse encantamento! Não há slots livres restantes!"
+
+chances:
+  book-failed: "&cSeu livro falhou, mas o item não foi destruído!"
+
+destroy:
+  book-failed: "&cEncantamento sem sucesso!"

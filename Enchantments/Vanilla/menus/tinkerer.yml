@@ -1,0 +1,118 @@
+# Configuration file for Tinkerer inventory.
+# Please be careful when editing this file.
+# Is recommended to use a YAML validator and a text editor that supports YAML.
+# https://yamlchecker.com/
+
+# Support & Documentation:
+# https://discord.com/invite/GzdQdMw
+# https://ae.advancedplugins.net/
+
+general:
+  settings:
+    # If true the confirmation items for the user and tinkerer will be displayed.
+    enabled-confirm-items: true
+    # The slots of separation item between the user and tinkerer.
+    # WARNING: If you don't know what this is, don't change it.
+    # Default: 4, 13, 22, 31, 40, 49
+    splitter-slots: "4, 13, 22, 31, 40, 49"
+    # The slots of the user side of the inventory.
+    # WARNING: If you don't know what this is, don't change it.
+    # Default: 1, 2, 3, 9, 10, 11, 12, 18, 19, 20, 21, 27, 28, 29, 30, 36, 37, 38, 39, 45, 46, 47, 48
+    player-slots: "1, 2, 3, 9, 10, 11, 12, 18, 19, 20, 21, 27, 28, 29, 30, 36, 37, 38, 39, 45, 46, 47, 48"
+    # The slots of the tinkerer side of the inventory.
+    # WARNING: If you don't know what this is, don't change it.
+    # Default: 5, 6, 7, 14, 15, 16, 17, 23, 24, 25, 26,32, 33, 34, 35, 41, 42, 43, 44, 50, 51, 52, 53
+    tinkerer-slots: "5, 6, 7, 14, 15, 16, 17, 23, 24, 25, 26, 32, 33, 34, 35, 41, 42, 43, 44, 50, 51, 52, 53"
+  # The prices of the items offered by the tinkerer.
+  prices:
+    # This decides if the tinkerer use experience or money (exp/money) as currency.
+    # Also determine the item offer by the tinkerer. (see below)
+    type: exp
+    # Define how much of currency should be paid for items
+    # per enchantment number (3 enchantments = x3 the amount, and so on)
+    amount: 26
+    # More advanced formula for tinkerer calculation,
+    # set to `%amount%' if you want to give a set amount (from "amount')
+    # - Variables:
+    #   %amount% = amount from previous setting
+    #   %enchants% = number of enchants on item
+    #   %durability% = percent of durability left, so if item had half of its durability remaining, it would be 0.5
+    formula: "(%amount%*%enchants%)*%durability%"
+  # The items offer by the tinkerer.
+  # If the price type is money, the money item will be used.
+  # If the price type is exp, the exp item will be used.
+  tinkerer-items:
+    money:
+      type: PAPER
+      id: 0
+      custom-model-data: 0
+      name: "&cMoney Voucher &7(%amount%)"
+      lore:
+        - "&cReceived from &fEnchanter"
+        - "&cReceived by &f%name%"
+    exp:
+      type: EXP_BOTTLE
+      id: 0
+      custom-model-data: 0
+      name: "&a&lExperience Bottle &7(throw)"
+      lore:
+        - "&dValue &f%amount% XP"
+        - "&dEnchanter &fServer Enchanter"
+
+  # Don't offer mystery dusts, but rather only items from tinkerer-items
+  give-item-instead-of-dust:
+    enabled: false
+    # Continue listing all groups here
+    # If group is not present a default 100 value will be used
+    amountPerGroup:
+      SIMPLE: 100
+      UNIQUE: 200
+inventory:
+  # Sound on open tinkerer inventory.
+  # Set to "none' to disable
+  open-sound: "BLOCK_CHEST_OPEN"
+  name: "You                   Tinkerer"
+  items:
+    # The item to accept the trade.
+    accept-trade-item:
+      type: STAINED_GLASS_PANE
+      id: 14
+      custom-model-data: 0
+      slot: 0
+      name: "&eClick to ACCEPT trade"
+      lore: [ ]
+    # The item showed after accepting the trade.
+    # If you want to disable this item, set
+    # enabled-confirm-items to false. (see top of file)
+    player-confirm-trade-item:
+      type: STAINED_GLASS_PANE
+      id: 5
+      custom-model-data: 0
+      slot: 0
+      name: "&aClick to confirm the transaction"
+      lore: [ ]
+      sound: BLOCK_LEVER_CLICK
+    # The item showed after accepting the trade.
+    # For default, the item is the same as player-confirm-trade-item
+    # and is located to the other side.
+    tinkerer-confirm-trade-item:
+      # If you want to disable this item
+      # set to false.
+      enabled: true
+      type: STAINED_GLASS_PANE
+      id: 5
+      custom-model-data: 0
+      slot: 8
+      name: "&aClick to confirm the transaction"
+      lore: [ ]
+    # The items that separate the player side and tinkerer side.
+    splitter-item:
+      enabled: true
+      type: THIN_GLASS
+      id: 0
+      custom-model-data: 0
+      name: " "
+      lore: [ ]
+
+# WARNING: Don't touch this
+version: 1.0.0
