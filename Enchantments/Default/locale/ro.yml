@@ -1,0 +1,237 @@
+#+------------------------------------------------------------------------------------------------------------------------------+
+#|      ___       __                                __   ______           __                __                       __         |
+#|     /   | ____/ /   ______ _____  ________  ____/ /  / ____/___  _____/ /_  ____ _____  / /_____ ___  ___  ____  / /______   |
+#|    / /| |/ __  / | / / __ `/ __ \/ ___/ _ \/ __  /  / __/ / __ \/ ___/ __ \/ __ `/ __ \/ __/ __ `__ \/ _ \/ __ \/ __/ ___/   |
+#|   / ___ / /_/ /| |/ / /_/ / / / / /__/  __/ /_/ /  / /___/ / / / /__/ / / / /_/ / / / / /_/ / / / / /  __/ / / / /_(__  )    |
+#|  /_/  |_\__,_/ |___/\__,_/_/ /_/\___/\___/\__,_/  /_____/_/ /_/\___/_/ /_/\__,_/_/ /_/\__/_/ /_/ /_/\___/_/ /_/\__/____/     |
+#+------------------------------------------------------------------------------------------------------------------------------+
+#|   _                       _       _           _               _                       ___  ___      _                        |
+#|  | |                     | |     | |         | |             | |                      |  \/  |     (_)                       |
+#|  | |_ _ __ __ _ _ __  ___| | __ _| |_ ___  __| |             | |__  _   _             | .  . |_   _ _ _   _ _ __ ___   ___   |
+#|  | __| '__/ _` | '_ \/ __| |/ _` | __/ _ \/ _` |             | '_ \| | | |            | |\/| | | | | | | | | '_ ` _ \ / _ \  |
+#|  | |_| | | (_| | | | \__ \ | (_| | ||  __/ (_| |             | |_) | |_| |            | |  | | |_| | | |_| | | | | | |  __/  |
+#|   \__|_|  \__,_|_| |_|___/_|\__,_|\__\___|\__,_|             |_.__/ \__, |            \_|  |_/\__, |_|\__,_|_| |_| |_|\___|  |
+#|                                                                      __/ |                     __/ |                         |
+#|                                                                     |___/                     |___/                          |
+#+------------------------------------------------------------------------------------------------------------------------------+
+#
+# Utilizați %p% pentru a introduce prefixul pluginurilor.
+# Toate mesajele sunt compatibile cu codurile de culoare HEX în versiunea 1.16+.. Format: {#FFFFFF}
+# Aproape toate mesajele suportă PlaceholderAPI.
+prefix: "&7[&9Advanced Enchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7a furat &6%amount% &7de la &6%victim%&7!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+
+  no-permission: "&cNu ai permisiunea de a face asta!"
+  offline-player: "&cAcel jucător nu este online!"
+  enchantment-not-found: "&cEnchantul &c&n%enchant%&c nu a putut fi găsit."
+  invalid-amount: "&cValoarea nu este validă. Trebuie să fie între 1-64."
+  invalid-enchant: "&c%enchant% nu este un enchant valid!"
+  invalid-level: "&cNivel enchant invalid! Încearcă să folosești: %levels%"
+  invalid-usage: "&cUtilizare: %usage%"
+  not-a-number: "&c%number% nu este un număr!"
+  not-holding-item: "&cTrebuie să ții în mână un item!"
+  enchantment-info:
+    invalid-usage: "&cUtilizare incorectă! Utilizare corectă: %command% <enchantment>"
+    open-menu-message: "&7Informații despre enchantul &e%enchant%."
+  enchants:
+    open-menu-message: "&7Afișarea listei tuturor enchanturilor..."
+  apply:
+    cooldown: "&cVei putea folosi comanda din nou în %seconds% secunde."
+    no-args: "&cTe rog specifică ce jucător să fie afectat."
+    reapplied: "&aArmura ta a fost reaplicată"
+    reapplied-other: "&aArmura a fost reaplicată pentru %player%."
+    reapplied-for-all: "&aArmura a fost reaplicată pentru toată lumea!"
+  withdrawsouls:
+    invalid-usage: "&cUtilizare: /withdrawsouls <count>"
+    less-than-one: "&cNumărul trebuie să fie pozitiv."
+    invalid-item: "&cItem invalid."
+  aegive:
+    invalid-material: "&cMaterial invalid. Vă rugăm să consultați fișierul "materials.yml" pentru toate materialele valide."
+    invalid-item-flag: "&cItemFlag invalid! Puteți alege dintre următoarele opțiuni: %itemflags%"
+    invalid-enchantment: "&cEnchant invalid!"
+    success: "&aAm dat &2%amount%x %material% &alui %player%&a!"
+  gedit:
+    unknown-gkit: "&c%gkit% nu este un gkit valid!"
+    edit:
+      invalid-usage: "&cUtilizare: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cUtilizare: /gedit setpermission <gkit> <perm>"
+      success: "&eAm schimbat permisiunea kitului &6%gkit% &ela &6%permission%"
+    reset:
+      invalid-usage: "&cUtilizare: /gedit reset <gkit> <player>"
+      success: "&6GKitul %gkit% a fost resetat pentru jucătorul &e%player%"
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cUtilizare: /gedit setdelay <gkit> <delay (in seconds)>"
+      invalid-delay: "&c%delay% nu este un număr valid!"
+      success: "&eAm schimbat întarzierea kitului &6%gkit%&e la &6%delay%"
+  main:
+    unknown-command: "&cUtilizare comandă incorectă! Tastează \"/ae\" pentru instrucțiunile corecte de utilizare."
+    setsouls:
+      invalid-usage: "&cUtilizare incorectă: /ae setsouls <amount>"
+      invalid-item: "&cItem invalid."
+      success: "&cSetează numărul sufletelor itemului la: %amount%"
+    unenchant:
+      invalid-usage: "&cUtilizare incorectă: /ae unenchant <enchant>"
+      invalid-enchant: "&c%enchant% nu este un enchant valid!"
+      not-holding-item: "&cTrebuie să ții în mână un item!"
+      does-not-have-enchant: "&cAcel item nu are enchantul &4%enchant%&c!"
+      success: "&aAm scos enchantul %enchant%!"
+    zip:
+      zip-exists: "&cTe rugăm încearcă mai târziu."
+      success: "&eO arhivă zip conținând toate datele pluginului a fost creată la %path%."
+      error: "&cA aparut o eroare în timpul arhivării fișierelor! Verificați consola pentru mai multe informații."
+    greset:
+      reset: "&aResetează kitul %gkit% pentru %player%!"
+      reset-all: "&aResetează toate GKiturile pentru %player%!"
+    claim:
+      invalid-usage: "&cVă rugăm să introduceți tokenul enchantului."
+    givegkit:
+      success: "&cKitul %gkit% a fost dat jucătorului %player%"
+    giverandombook:
+      success: "&aAm dat lui &2%player% %amount%x &acărți %group% &a!"
+    givebook:
+      success: "&aAm dat lui &2%player% %amount%x &acărți %enchant% %level% &a!"
+    enchant:
+      added: "&aAm adăugat enchantul %enchant% !"
+      upgraded: "&2Am upgradat %enchant% de la nivelul %previous-level% la nivelul %level%."
+      downgraded: "&2Am downgradat %enchant% de la nivelul %previous-level% la nivelul %level%."
+      removed: "&cRemoved the %enchant% enchant from the item."
+    giveitem:
+      success: "&7Am dat %amount%x %item% jucătorului %player%"
+    givercbook:
+      success: "&aAm dat jucătorului &2%player% %amount%x cărți de deschis %group% &a!"
+    give:
+      success: "&aAm dat cu succes jucătorului %player% o carte %enchant% %level%!"
+    tinkereritem:
+      success: "&cAm dat x%amount% sticle de XP jucătorului %player%"
+    admin:
+      invalid-page: "&cPagină invalidă"
+    info:
+      - "&eInformații despre enchantul &6%enchant% 7:"
+      - "&6Descriere&7: &e%description%"
+      - "&6Aplicabil pe&7: &e%applies%"
+      - "&6Nivel maxim&7: &e%max-level%"
+
+    pastetypes: "&aListă tipuri enchanturi: %url%"
+    pasteenchants: "&aListă enchanturi: %url%"
+    open: "&aAm deschis meniul %menu% pentru %player%!"
+
+token:
+  success: "&2&lx &aAm downloadat cu succes tokenul enchantului &l%token%, reîncărcare..."
+
+interact:
+  main-hand-only: "&cPoți face asta doar cu mâna dominantă!"
+
+enchanter:
+  re-buy: "&cVă rog cumpărați itemul din nou de la enchanter."
+  disabled-in-world: "&cEnchanterul este dezactivat în această lume."
+  full-inventory: "&cInventarul tău este plin!"
+  examine-book: "&7Ai examinat cartea %group-color%%group-name%&7 și ai găsit enchantul %enchant-color% %level%"
+  unknown-payment-method: "&cEroare la validarea metodei de plată %paymentType%, vă rog contactați un administrator."
+  successful-purchase: "&aAchiziție reușită!"
+  cannot-afford:
+    - "&cNu aveți suficient XP pentru a cumpăra asta."
+    - "&7XP-ul tău: %exp%"
+
+tinkerer:
+  trade-accepted: "&aTranzacție reușită!"
+  non-tradeable-item:
+    - "&cTinkerer-ul serverului nu vrea acest item!"
+    - "&7Acceptă doar echipament cu enchanturi custom"
+
+alchemist:
+  doesnt-accept: "&cAlchimistul nu acceptă acest item!"
+  trade-cancelled: "&cTranzacție anulată."
+  cannot-afford: "&cNu îți permiți această tranzacție!"
+  exceeds-max-level: "&cNivelul tău combinat depășește nivelul maxim al enchantului!"
+
+gkits:
+  no-permission: "&eNu ai permisiunea necesară pentru a folosi kitul &e%gkit%&6."
+  cooldown: "&eNu poți folosi acest kit înca, kitul &6%gkit%&e este încă în cooldown &7(%cooldown%)"
+  used-kit: "&eAi folosit kitul &6%gkit%."
+  missing-permission: "&cPermisiunea kitului %gkit%este invalidă sau non-existentă"
+  unknown-gkit: "&cGKit-ul %gkit% nu există!"
+  unknown-enchant: "&7Enchantul %enchant% nu poate fi găsit."
+
+heroic:
+  cannot-apply: "&cNu puteți aplica un upgrade de cristal la acest item."
+  upgrade-failed: "&cUpgradeul de cristal a &neșuat&c!"
+
+orbs:
+  cannot-apply: "&cNu puteți aplica orb la acest item!"
+  failed: "&cOrb eșuat!"
+  incompatible: "&cNu puteți aplica orburi de sloturi mai mici decât sloturile disponibile!"
+
+sets:
+  commands:
+    unknown-command: "&cComanda nu a fost găsită! Tastați \"/asets\" pentru o listă cu toate comenzile valide."
+    invalid-usage: "&cInvalid usage! Please reference /asets for the proper usage."
+    invalid-set: "&cSetul este invalid."
+    invalid-set-piece: "&cPiesă de set invalidă, puteți folosi una dintre variantele următoare: \n%set pieces%"
+    invalid-weapon: "&cArma este invalidă."
+    offline-player: "&cJucătorul este offline."
+    invalid-chances: "&cȘansă invalidă."
+    list:
+      header: "&eLista tuturor Seturilor disponibile &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eLista tuturor Armelor disponibile &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&eAm dat Setul &f %set% &elui &f %player%"
+    givepiece:
+      success: "&eAm dat piesa &f%piece% &edin setul &f%set% &elui &f %player%"
+    weapon:
+      success: "&eAm dat arma &f %weapon% &elui &f %player%"
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cNu poți aplica un randomizator pe acest item!"
+    single-items-only: "&cPuteți folosi aceasta doar pe iteme individuale!"
+  black-scroll:
+    full-inventory: "&cInventarul tău este plin!"
+    no-enchants: "&cAcest item nu are niciun enchant!"
+    invalid-enchant: "&cNu puteți scoate acest enchant deoarece este invalid!"
+    cannot-remove: "&cEnchantmentul %enchant% nu poate fi scos!"
+  soul-tracker:
+    disabled: "&cSufletele nu sunt activate pe acest server!"
+    apply-successful: "&7Ai aplicat cu succes &f&lPiatra Sufletelor &7pe itemul tău!"
+  magic-dust:
+    full-inventory: "&cInventarul tău este plin!"
+    single-items-only: "&cPuteți folosi aceasta doar pe iteme individuale!"
+  white-scroll:
+    full-inventory: "&cInventarul tău este plin!"
+    apply-successful: "&aPergamentul alb a fost aplicat pe itemul tău!"
+    item-saved: "&aPergamentul alb a salvat itemul!"
+
+combining:
+  already-max-level: "Acest enchant este deja la nivelul maxim!"
+  success: "&aSucces! Enchantul &7%enchant% este acum la nivelul %level%!"
+  failure: "&cCombinarea a eșuat!"
+  something-went-wrong: "&cCeva a mers prost cu combinarea."
+
+enchant-limitations:
+  cannot-be-modified: "&cAcest item nu poate fi modificat!"
+
+applying:
+  not-applicable-with: "&cEnchantul &4%enchant1% &cnu poate fi aplicat împreună cu enchantul &4%enchant2% &c!"
+  requires-enchant: "&cEnchantul &4%enchant1% &care nevoie de enchantul &4%enchant2%&7 &cpentru a fi aplicat!"
+  already-applied: "&cItemul are deja acest enchant."
+  applied: "&aEnchantul a fost aplicat pe itemul tău."
+  max-level: "&cAcest enchant este deja la nivelul maxim!"
+  wrong-material: "&cAcest enchant nu poate fi aplicat pe acest item."
+
+slots:
+  limit-reached: "&cNu puteți aplica acest enchant! Nu sunt sloturi libere!"
+
+chances:
+  book-failed: "&cCartea ta a eșuat dar itemul nu a fost distrus!"
+
+destroy:
+  book-failed: "&cEnchantul a fost nereușit!"

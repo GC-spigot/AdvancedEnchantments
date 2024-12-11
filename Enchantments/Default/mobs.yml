@@ -1,0 +1,12 @@
+# You can give custom AE items when mobs are killed
+# Item names must be same as from '/ae giveitem' command (for future references).
+
+# Current items: whitescroll, renametag, blocktrak, fishtrak, stattrak, soultracker, mobtrak, transmog, randomenchantmentbook, secret:<amount>:<group>
+
+# Format: "<item name>:<count>"
+
+mobs:
+#  ZOMBIE:
+#    chance: 75
+#    items:
+#      - "randomenchantmentbook:1"

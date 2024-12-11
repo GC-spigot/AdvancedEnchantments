@@ -1,0 +1,219 @@
+# Use %p% to insert the plugins prefix.
+# All messages support HEX color codes on 1.16+. Format: {#FFFFFF}
+# Almost all messages support PlaceholderAPI.
+prefix: "&7[&9Advanced Enchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7ukradł &6%amount% &7od &6%victim%&7!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cNie masz pozwolenia, aby to zrobić!"
+  offline-player: "&cTen gracz nie jest online!"
+  enchantment-not-found: "&cZaklęcie &c&n%enchant%&c nie zostało znalezione."
+  invalid-amount: "&cNiepoprawna ilość. Musi być między 1-64."
+  invalid-enchant: "&c%enchant% jest nie poprawnym zaklęciem!"
+  invalid-level: "&cNiepoprawny poziom zaklęcia! Spróbuj użyć: %levels%"
+  invalid-usage: "&cUżycie: %usage%"
+  not-a-number: "&c%number% nie jest numerem!"
+  not-holding-item: "&cMusisz trzymać przedmiot!"
+  enchantment-info:
+    invalid-usage: "&cNiepoprawne użycie! Prawidłowe użycie: %command% <zaklęcie>"
+    open-menu-message: "&7Informacje o &e%enchant% &7zaklęciu."
+  enchants:
+    open-menu-message: "&7Pokazuje listę wszystkich zaklęć..."
+  apply:
+    cooldown: "&cBędziesz mógł użyć tej komendy za %seconds% sekund."
+    no-args: "&cProszę sprecyzować, który gracz ma być dotknięty."
+    reapplied: "&aTwoja zbroja została ponownie nałożona."
+    reapplied-other: "&aZbroja została ponownie nałożona dla %player%."
+    reapplied-for-all: "&aZbroja została ponownie nałożona dla wszystkich!"
+  withdrawsouls:
+    invalid-usage: "&cUżywanie: /withdrawsouls <ilość>"
+    less-than-one: "&cIlość musi być dodatnia."
+    invalid-item: "&cNiepoprawny przedmiot."
+  aegive:
+    invalid-material: "&cNiepoprawny materiał. Proszę odnieść się do 'materials.yml' pliku dla wszystkich odpowiednich materiałów."
+    invalid-item-flag: "&cNiepoprawny ItemFlag! Możesz wybrać z podanych: %itemflags%"
+    invalid-enchantment: "&cNiepoprawne zaklęcie!"
+    success: "&aDano &2%amount%x %material% &adla %player%&a!"
+  gedit:
+    unknown-gkit: "&c%gkit% nie jest odpowiednim gkit-em!"
+    edit:
+      invalid-usage: "&cUżycie: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cUżycie: /gedit setpermission <gkit> <permisje>"
+      success: "&eZmieniono &6%gkit%'s&e permisje kit-u na &6%permission%"
+    reset:
+      invalid-usage: "&cUżycie: /gedit reset <gkit> <player>"
+      success: "&6%gkit% &6gkit został zresetowany dla gracza &e%player%"
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cUżycie: /gedit setdelay <gkit> <opóźnienie (w sekundach)>"
+      invalid-delay: "&c%delay% nie jest odpowiednią liczbą!"
+      success: "&eZmieniono &6%gkit%&e opóźnienie kit-u do &6%delay%"
+  main:
+    unknown-command: "&cNiepoprawne użycie komendy! Wpisz \"/ae\" dla poprawnego użycia."
+    setsouls:
+      invalid-usage: "&cNiepoprawne użycie: /ae setsouls <ilość>"
+      invalid-item: "&cNiepoprawny przedmiot."
+      success: "&cUstaw ilość dusz przedmiotu na: %amount%"
+    unenchant:
+      invalid-usage: "&cNiepoprawne użycie: /ae unenchant <zaklęcie>"
+      invalid-enchant: "&c%enchant% nie jest poprawnym zaklęciem!"
+      not-holding-item: "&cMusisz trzymać przedmiot!"
+      does-not-have-enchant: "&cTen przedmiot nie ma &4%enchant%&c!"
+      success: "&aUsunięto zaklęcie %enchant%!"
+    zip:
+      zip-exists: "&cProszę spróbować ponownie."
+      success: "&ePlik zip zawierający wszystkie dane pluginu został utworzony w %path%."
+      error: "&cNastąpił błąd podczas kompresowania plików! Sprawdź konsole, aby uzyskać więcej informacji."
+    greset:
+      reset: "&aZresetuj %gkit% kit dla %player%!"
+      reset-all: "&aZresetuj wszystkie GKits dla %player%!"
+    claim:
+      invalid-usage: "&cProsze wprowadź token zaklęcia."
+    givegkit:
+      success: "&cKit %gkit% został przydzielony graczowi %player%"
+    giverandombook:
+      success: "&aDano &2%player% %amount%x %group% &abooks!"
+    givebook:
+      success: "&aDano &2%player% %amount%x %enchant% %level% &aksiążek!"
+    enchant:
+      added: "&aDodano zaklęcie %enchant% !"
+      upgraded: "&2Ulepszono %enchant% z poziomu %previous-level% do %level%."
+      downgraded: "&2Obniżono %enchant% z poziomu %previous-level% do %level%."
+      removed: "&cUsunięto zaklęcie %enchant% z przedmiotu."
+    giveitem:
+      success: "&7Dodano %amount%x %item%&7 dla gracza &b%player%"
+    givercbook:
+      success: "&aDano &2%player% %amount%x %group% &aKliknij prawym przyciskiem myszki!"
+    give:
+      success: "&aPomyślnie dano %player% jedną książkę z %enchant% %level%!"
+    tinkereritem:
+      success: "&cDano x%amount% przedmiot majsterkowicza dla %player%"
+    admin:
+      invalid-page: "&cNiepoprawna strona"
+    info:
+      - "&eInformacja o &6%enchant% &eenchantment&7:"
+      - "&6Opis&7: &e%description%"
+      - "&6Dotyczy&7: &e%applies%"
+      - "&6Maksymalny poziom&7: &e%max-level%"
+
+    pastetypes: "&aLista rodzajów zaklęć: %url%"
+    pasteenchants: "&aLista zaklęć: %url%"
+    open: "&aOtwarto %menu% dla %player%!"
+
+token:
+  success: "&2&lx &aPomyślnie pobrano token &l%token%&a zaklęcia, przeładowywanie..."
+
+interact:
+  main-hand-only: "&cMożesz to zrobić używając tylko twojej głównej ręki!"
+
+enchanter:
+  re-buy: "&cProszę ponownie kupić przedmiot od zaklinacza."
+  disabled-in-world: "&cZaklinacz jest wyłączony w tym świecie."
+  full-inventory: "&cTwój ekwipunek jest pełen!"
+  examine-book: "&7Zbadałeś %group-color%%group-name%&7 książkę i znalazłeś %enchant-color% %level%"
+  unknown-payment-method: "&cNie udało się zweryfikować %paymentType% metody płatności, proszę skontaktować się z administratorem."
+  successful-purchase: "&aZakup pomyślny!"
+  cannot-afford:
+    - "&cNie masz wystarczającej ilości EXP-a aby to kupić."
+    - "&7Twoja ilość XP: %exp%"
+
+tinkerer:
+  trade-accepted: "&aWymiana zaakceptowana!"
+  non-tradeable-item:
+    - "&cMajsterkowicz nie chce tego przedmiotu!"
+    - "&7Przyjmie tylko specjalne zaklęcia"
+
+alchemist:
+  doesnt-accept: "&cAlchemik nie przyjmuje tego przedmiotu!"
+  trade-cancelled: "&cWymiana odmówiona."
+  cannot-afford: "&cNie możesz pozwolić sobie na tę transakcję!"
+  exceeds-max-level: "&cTwoje połączone poziomy przekraczają maksymalny poziom zaklęcia!"
+
+gkits:
+  no-permission: "&eNie masz pozwolenia, aby użyć tego kit-u: &e%gkit%&6."
+  cooldown: "&eNie możesz jeszcze użyć tego kit-u , kit &6%gkit%&e oczekuje na możliwość użycia &7(%cooldown%)"
+  used-kit: "&eUżyłeś kit-u &6%gkit%."
+  missing-permission: "&cGkit %gkit% pozwolenie jest niepoprawne lub nie istnieje"
+  unknown-gkit: "&cGKit %gkit% nie istnieje!"
+  unknown-enchant: "&7Zaklęcie %enchant% nie jest znane."
+
+heroic:
+  cannot-apply: "&cNie możesz użyć kryształowego ulepszenia do tego przedmiotu."
+  upgrade-failed: "&cKryształowe ulepszenie &nnie powiodło się&c!"
+
+orbs:
+  cannot-apply: "&cNie można użyć orb-a na tym przedmiocie!"
+  failed: "&cOrb nie powiódł się!"
+  incompatible: "&cNie można użyć niższych slotów orb-ów niż dostępne sloty!"
+
+sets:
+  commands:
+    unknown-command: "&cKomenda nie znaleziona! Wpisz: \"/asets\" aby otrzymać listę wszystkich obowiązujących komend."
+    invalid-usage: "&cNiepoprawne użycie! Proszę odnieść się do /asets po poprawne użycie."
+    invalid-set: "&cSet jest niepoprawny."
+    invalid-set-piece: "&cNiepoprawna część set-u , możesz użyć jednego z tych: \n%set pieces%"
+    invalid-weapon: "&cBroń jest niewłaściwa."
+    offline-player: "&cGracz jest offline."
+    invalid-chances: "&cNieprawidłowe szanse."
+    list:
+      header: "&eLista wszystkich dostępnych Set-ów &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eLista wszystkich dostępnych broni &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&eDano &f %set% &eSet dla &f %player%"
+    givepiece:
+      success: "&eDano &f%piece% &eod &f%set% &edo &f %player%"
+    weapon:
+      success: "&eDano &f %weapon% &eSet dla &f %player%"
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cNie możesz na to nałożyć randomizer-a!"
+    single-items-only: "&cMożesz użyć tylko na pojedynczych przedmiotach!"
+  black-scroll:
+    full-inventory: "&cTwój ekwipunek jest pełny!"
+    no-enchants: "&cTen przedmiot nie ma żadnych zaklęć!"
+    invalid-enchant: "&cNie można usunąć zaklęcia, ponieważ jest niepoprawne!"
+    cannot-remove: "&cZaklęcie %enchant% nie może być usunięte!"
+  soul-tracker:
+    disabled: "&cDusze nie są włączone na tym serwerze!"
+    apply-successful: "&7Pomyślnie użyłeś &f&lTracker Dusz &7na twój przedmiot!"
+  magic-dust:
+    full-inventory: "&cTwój ekwipunek jest pełen!"
+    single-items-only: "&cMożesz tego użyć tylko na pojedynczych przedmiotach!"
+  white-scroll:
+    full-inventory: "&cTwój ekwipunek jest pełen!"
+    apply-successful: "&aWhite scroll został użyty na twoim przedmiocie!"
+    item-saved: "&aWhite scroll ochronił przedmiot!"
+
+combining:
+  already-max-level: "To zaklęcie jest już na maksymalnym poziomie!"
+  success: "&aSukces! &7%enchant% jest teraz na poziomie %level%!"
+  failure: "&cŁączenie się nie powiodło!"
+  something-went-wrong: "&cCoś nie powiodło się z łączeniem."
+
+enchant-limitations:
+  cannot-be-modified: "&cTen przedmiot nie może być modyfikowany!"
+
+applying:
+  not-applicable-with: "&cZaklęcie &4%enchant1% nie może być użyte razem z &czaklęciem &4%enchant2%&7!"
+  requires-enchant: "&cZaklęcie &4%enchant1% wymaga &czaklęcia &4%enchant2%&7 aby zostało nałożone!"
+  already-applied: "&cTen przedmiot ma już to zaklęcie."
+  applied: "&aZaklęcie zostało nałożone na twój przemiot."
+  max-level: "&cTo zaklęcie jest już na maksymalnym poziomie!"
+  wrong-material: "&cTo zaklęcie nie może zostać nałożone na ten przedmiot."
+
+slots:
+  limit-reached: "&cNie możesz nałożyć tego zaklęcia! Nie ma już żadnych wolnych miejsc!"
+
+chances:
+  book-failed: "&cTwoja książka zawiodła, ale przedmiot nie został zniszczony!"
+
+destroy:
+  book-failed: "&cZaklęcie nie powiodło się!"

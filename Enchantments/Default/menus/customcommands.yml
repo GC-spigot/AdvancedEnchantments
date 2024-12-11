@@ -1,0 +1,204 @@
+# Create customized commands.
+enchantment-info:
+  # Is this command enabled?
+  enabled: true
+  # Change the start of the command
+  # Use it in game: /<command> <enchantment>
+  command: /enchant
+  aliases:
+    - /enchantment
+  # Permission for command
+  # Set to "" to disable
+  permission: ""
+  inventory:
+    # Inventory size (9-18-27-36-45-54)
+    size: 9
+    # Inventory name
+    name: "&e%enchant%&7 information"
+    items:
+      # Slots start from 0
+      # This number defines the inventory slot.
+      2:
+        type: STAINED_GLASS_PANE
+        id: 15
+        custom-model-data: 0
+        force-glow: false
+        name: " "
+        lore: [ ]
+      3:
+        type: ENCHANTED_BOOK
+        id: 0
+        custom-model-data: 0
+        force-glow: false
+        name: "&7Information about &e%enchant% &7enchantment"
+        lore:
+          - " &f* &eEnchantment &7>> &r%ench-colors%"
+          - " &f* &eApplies to &7>> &r%applies-to%"
+          - " &f* &eMax Level &7>> &r%max-lvl%"
+          - " &f* &eDescription &7>> &r%desc%"
+        # you can as well use %group-color% to get enchantment color
+        prefix-addon: " &f* &7"
+      4:
+        type: STAINED_GLASS_PANE
+        id: 15
+        custom-model-data: 0
+        force-glow: false
+        name: " "
+        lore: [ ]
+      5:
+        type: CHEST
+        id: 0
+        custom-model-data: 0
+        force-glow: false
+        name: "&eApplies to &7>>"
+        lore:
+          - "&7%applies-to%"
+      6:
+        type: STAINED_GLASS_PANE
+        id: 15
+        custom-model-data: 0
+        force-glow: false
+        name: " "
+        lore: [ ]
+enchantments:
+  # Is this command enabled?
+  enabled: true
+  # Change the command
+  # Use it in game: /<command>
+  command: /enchants
+  aliases:
+    - /enchantments
+  # Permission for command
+  # Set to "" to disable
+  permission: ""
+  mode:
+    # Modes: GROUPS, ALL
+    # If set to GROUPS, first group selection inventory will show up
+    # If set to ALL, first inventory will show all available enchants
+    currentMode: GROUPS
+  inventory:
+    # Inventory size (18-27-36-45-54)
+    size: 36
+    # Display page number with next/previous page item amounts?
+    display-page-number: true
+    # Inventory name
+    name: "&7Server Enchantments"
+    items:
+      # Slots start from 0
+      # This number defines the inventory slot.
+      11:
+        type: STAINED_GLASS_PANE
+        id: 0
+        custom-model-data: 0
+        force-glow: false
+        # What enchantment group list should it open?
+        group: "SIMPLE"
+        name: "&7All &f&lSimple Enchantments"
+        lore:
+          - " &7Click here to &fopen a preview&7 of all"
+          - " &7available &fSimple &7group enchantments!"
+      12:
+        type: STAINED_GLASS_PANE
+        id: 5
+        custom-model-data: 0
+        force-glow: false
+        group: "UNIQUE"
+        name: "&7All &a&lUnique Enchantments"
+        lore:
+          - " &7Click here to &fopen a preview&7 of all"
+          - " &7available &aUnique &7group enchantments!"
+      13:
+        type: STAINED_GLASS_PANE
+        id: 3
+        custom-model-data: 0
+        force-glow: false
+        group: "ELITE"
+        name: "&7All &b&lElite Enchantments &7(Click to open)"
+        lore:
+          - " &7Click here to &fopen a preview&7 of all"
+          - " &7available &bElite &7group enchantments!"
+      14:
+        type: STAINED_GLASS_PANE
+        id: 4
+        custom-model-data: 0
+        force-glow: false
+        group: "ULTIMATE"
+        name: "&7All &e&lUltimate Enchantments &7(Click to open)"
+        lore:
+          - " &7Click here to &fopen a preview&7 of all"
+          - " &7available &eUltimate &7group enchantments!"
+      15:
+        type: STAINED_GLASS_PANE
+        id: 1
+        custom-model-data: 0
+        force-glow: false
+        group: "LEGENDARY"
+        name: "&7All &6&lLegendary Enchantments &7(Click to open)"
+        lore:
+          - " &7Click here to &fopen a preview&7 of all"
+          - " &7available &6Legendary &7group enchantments!"
+      22:
+        type: STAINED_GLASS_PANE
+        id: 6
+        custom-model-data: 0
+        force-glow: false
+        group: "FABLED"
+        name: "&7All &d&lFabled Enchantments &7(Click to open)"
+        lore:
+          - " &7Click here to &fopen a preview&7 of all"
+          - " &7available &dFabled &7group enchantments!"
+      fill:
+        type: STAINED_GLASS_PANE
+        id: 15
+        custom-model-data: 0
+        force-glow: false
+        name: " "
+        lore: [ ]
+  group-enchantment-inventory:
+    name: "%color%%group%&7 Enchantments"
+    # Fills empty slots with this item
+    fill-item:
+      material: STAINED_GLASS_PANE
+      id: 15
+      custom-model-data: 0
+      name: " "
+      lore: [ ]
+    go-back-item:
+      # Show "Go Back" item?
+      enabled: true
+      slot: "%invSize% - 7"
+      item:
+        type: NETHER_STAR
+        id: 0
+        custom-model-data: 0
+      name: "&c&lGo Back"
+      lore: [ ]
+    previous-page:
+      material: STAINED_GLASS_PANE
+      id: 14
+      custom-model-data: 0
+      name: "&cPrevious Page."
+      lore: [ ]
+      slot: "%invSize% - 3"
+    next-page:
+      material: STAINED_GLASS_PANE
+      id: 5
+      custom-model-data: 0
+      name: "&aNext Page."
+      lore: [ ]
+      slot: "%invSize% - 2"
+    item:
+      type: ENCHANTED_BOOK
+      id: 0
+      custom-model-data: 0
+      force-glow: false
+      # What command should be run when player clicks on one of the enchantments?
+      # %max-lvl% - Displays max. level in numbers, %max-lvl-roman% - displays max. level in roman numerals
+      command: "/enchant %enchantment%"
+      name: "&e%enchant% &7enchantment"
+      lore:
+        - " &f* &eEnchantment &7>> &r%ench-colors%"
+        - " &f* &eApplies to &7>> &r%applies-to%"
+        - " &f* &eMax Level &7>> &r%max-lvl-roman%"
+        - " &f* &eDescription &7>> &r%desc%"
+      prefix-addon: " &f* &7"

@@ -1,0 +1,51 @@
+# Enchantment Table Support
+enabled: true
+
+# Chance of getting custom enchantments when
+# enchanting with enchantment table.
+chance: 45 # Value: 1 to 100 %
+
+# Chances for each group to become available in enchant table (only if 'chance' value activates)
+# Only listed groups here will be available in enchant table
+groupChances:
+  SIMPLE: 50
+  UNIQUE: 40
+  ELITE: 30
+  ULTIMATE: 20
+  LEGENDARY: 10
+
+
+# Set how many custom enchantments is possible
+# to get from enchanting at once.
+enchantCount:
+  lowestLevel: 1 # Value: 1 - 10
+  middleLevel: 1-2 # Value: 1 - 10
+  highestLevel: 2-3 # Value: 1 - 10
+
+prices:
+  enabled: false
+  # Configure enchantment table pricing
+  # By default these are random between 2 values, but can be
+  # set to a specific price, or even higher than vanilla prices
+  lowestLevel: 3-9 # Value: 1 - 1000
+  middleLevel: 10-24 # Value: 1 - 1000
+  highestLevel: 30 # Value: 1 - 1000
+
+
+# Custom enchants from enchantment table
+enchantmentBooks:
+  enabled: true
+  # Chance of getting custom enchantments when enchanting with enchantment table.
+  # This will give custom enchantment book instead of vanilla books, and can be
+  #  applied either with anvil or drag & drop onto item.
+  chance: 3 # Value: 1 to 100 %
+  groups:
+    lowest:
+      - SIMPLE
+      - UNIQUE
+    middle:
+      - ELITE
+      - ULTIMATE
+    highest:
+      - LEGENDARY
+      - FABLED

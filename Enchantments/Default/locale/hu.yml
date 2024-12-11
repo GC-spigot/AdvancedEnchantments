@@ -1,0 +1,219 @@
+# Használd a %p% helyőrzőt, hogy beilleszd a plugin prefixjét.
+# Minden szöveg támogatja a HEX színkódokat 1.16+ verziókon. Formátum: {#FFFFFF}
+# Majdnem minden üzenet támogatja a PlaceholderAPI bővítményt.
+prefix: "&7[&9Advanced Enchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7ellopott &6%amount% érmét &6%victim%&7 játékostól!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cNincs jogod ezt megtenni!"
+  offline-player: "&cEz a játékos nem elérhető!"
+  enchantment-not-found: "&c&n%enchant%&c varázslat nem található."
+  invalid-amount: "&cÉrvénytelen mennyiség. Az értéknek 1-64 között kell lennie."
+  invalid-enchant: "&c%enchant% nem érvényes varázslat!"
+  invalid-level: "&cHelytelen varázslat szint! Próbáld meg használni ezt: %levels%"
+  invalid-usage: "&cHasználat: %usage%"
+  not-a-number: "&c%number% nem egy szám!"
+  not-holding-item: "&cEgy tételt tartanod kell a kezedben!"
+  enchantment-info:
+    invalid-usage: "&cHelytelen használat! Ez a helyes: %command% <enchantment>"
+    open-menu-message: "&7Információ a(z) &e%enchant% &7varázslatról."
+  enchants:
+    open-menu-message: "&7Kilistázza az összes varázslatot..."
+  apply:
+    cooldown: "&cEzt a parancsot %seconds% másodperc múlva használhatod."
+    no-args: "&cKérlek, határozz meg egy érintett játékost."
+    reapplied: "&aA páncélod újra alkalmazva lett."
+    reapplied-other: "&aA páncél újra alkalmazva lett %player% játékos számára."
+    reapplied-for-all: "&aA páncél újra alkalmazva lett mindneki számára!"
+  withdrawsouls:
+    invalid-usage: "&cHasználat: /withdrawsouls <count>"
+    less-than-one: "&cA számnak pozitív számnak kell lennie."
+    invalid-item: "&cHelytelen tétel."
+  aegive:
+    invalid-material: "&cÉrvénytelen anyag. Kérlek, tekintsd át a 'materials.yml' fájlt az összes elérhető anyagért."
+    invalid-item-flag: "&cHelytelen ItemFlag! Az alábbiakat választhatod ki: %itemflags%"
+    invalid-enchantment: "&cHelytelen varázslat!"
+    success: "&aAdtál %player% játékosnak &2%amount%x %material%&a nyersanyagot!"
+  gedit:
+    unknown-gkit: "&c%gkit% nem érvényes gkit!"
+    edit:
+      invalid-usage: "&cHasználat: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cHasználat: /gedit setpermission <gkit> <jog>"
+      success: "&eA(z) &6%gkit%&e engedélye meg lett változtatva &6%permission%&e engedélyre."
+    reset:
+      invalid-usage: "&cHasználat: /gedit reset <gkit> <játékos>"
+      success: "&6A(z) &e%gkit% &6gkit vissza lett állítva &e%player% &6játékos számára."
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cHasználat: /gedit setdelay <gkit> <késelteltetés (másodpercben)>"
+      invalid-delay: "&c%delay% nem egy egész szám!"
+      success: "&eA(z) &6%gkit%&e készlet késelteltetése meg lett változtatva &6%delay% &eértékre."
+  main:
+    unknown-command: "&cHelytelen parancs használat! Írd be az \"/ae\" parancsot a helyes használatért."
+    setsouls:
+      invalid-usage: "&cHelytelen használat: /ae setsouls <mennyiség>"
+      invalid-item: "&chelytelen tétel."
+      success: "&cA tétel lélekszáma be lett állítva az alábbira: %amount%"
+    unenchant:
+      invalid-usage: "&cHelytelen használat: /ae unenchant <varázslat>"
+      invalid-enchant: "&c%enchant% nem egy érvényes varázslat!"
+      not-holding-item: "&cEgy tételt kell tartanod a kezedben ehhez!"
+      does-not-have-enchant: "&cEz a tétel nem rendelkezik a(z) &4%enchant%&c varázslattal!"
+      success: "&a%enchant% varázslat el lett távolítva!"
+    zip:
+      zip-exists: "&cKérlek, próbáld meg újra."
+      success: "&eA .zip fájl tartalmaz minden plugin-adatot, ami létre lett hozva itt: %path%."
+      error: "&cEgy hiba történt a könyvtárazás során! Nézd meg a konzolt, hogy több infót megtudj róla."
+    greset:
+      reset: "&aHelyreállítottad a(z) %gkit% készletet %player% játékos számára!"
+      reset-all: "&aMinden Gkits készlet helyre lett állítva %player% játékos számára!"
+    claim:
+      invalid-usage: "&cKérlek, írd be a varázslat tokent."
+    givegkit:
+      success: "&cA(z) %gkit% készlet meg lett adva %player% játékosnak."
+    giverandombook:
+      success: "&2%player% &ajátékosnak adtál %amount%x %group% &akönyvet!"
+    givebook:
+      success: "&2%player% &ajátékosnak adtál %amount%x %enchant% %level% &aszintű könyvet!"
+    enchant:
+      added: "&aA(z) %enchant% varázslat hozzá lett adva!"
+      upgraded: "&2A(z) %enchant% %previous-level% szintű varázslat fejlesztve lett %level% szintre."
+      downgraded: "&2A(z) %enchant% %previous-level% szintű varázslatvissza lett fejlesztve %level% szintre."
+      removed: "&cA(z) %enchant% varázslat el lett távolítva erről a tételről."
+    giveitem:
+      success: "&7Hozzáadva %amount%x %item% tétel %player% játékos számára."
+    givercbook:
+      success: "&aAdtál &2%amount%x %group%&a könyvet &2%player%&a játékosnak. &aJobb-klikk a könyvre!"
+    give:
+      success: "&aSikeresen adtál %player% játékosnak egy %enchant% %level% szontű könyvet!"
+    tinkereritem:
+      success: "&cAdtál x%amount% javító tételt %player% játékosnak."
+    admin:
+      invalid-page: "&cÉrvénytelen oldal."
+    info:
+      - "&eInformáció a(z) &6%enchant% &evarázslatról&7:"
+      - "&6Leírás&7: &e%description%"
+      - "&6Alkalmazható ezen&7: &e%applies%"
+      - "&6Max szint&7: &e%max-level%"
+
+    pastetypes: "&aVarázslat típusok listája: %url%"
+    pasteenchants: "&aVarázslatok listája: %url%"
+    open: "&aMegnyitottad a(z) %menu% menüt %player% játékosnak!"
+
+token:
+  success: "&2&lx &aSikeresen letöltötted a(z) &l%token%&a varázslatot, újratöltés..."
+
+interact:
+  main-hand-only: "&cEzt csak a fő-kézzel lehet megtenni!"
+
+enchanter:
+  re-buy: "&cKérlek, vásárold meg újra ezt a varázslatot a varázslótól."
+  disabled-in-world: "&cEz a varázsló le van tiltva ebben a világban."
+  full-inventory: "&cAz eszköztárad megtelt!"
+  examine-book: "&7Megvizsgáltad a(z) %group-color%%group-name%&7 könyvet, és találtál egy %enchant-color% %level% szintű varázslatot."
+  unknown-payment-method: "&cNem sikerült érvényesíteni a(z) %paymentType% kifizetési módszert. Kérlek, vedd fel a kapcsolatot a szerver adminisztrátorával."
+  successful-purchase: "&aVásárlás sikeres!"
+  cannot-afford:
+    - "&cNincs elég XP-d, hogy megvásárold ezt."
+    - "&7XP-d: %exp%"
+
+tinkerer:
+  trade-accepted: "&aKereskedelem elfogadva!"
+  non-tradeable-item:
+    - "&cA szerver javítója nem akarja ezt az eszközt!"
+    - "&7Ez csak akkor lesz elfogadva, ha van rajta egyedi varázslat."
+
+alchemist:
+  doesnt-accept: "&cAz alkimista nem fogadja el ezt a tételt!"
+  trade-cancelled: "&cKereskedés megszakítva."
+  cannot-afford: "&cNem tudod megfizetni ezt az árat!"
+  exceeds-max-level: "&cAz összevont szinted meghaladja a megengedett legmagasabb szintet!"
+
+gkits:
+  no-permission: "&eNincs engedélyed, hogy használd a(z) &e%gkit%&6 készletet."
+  cooldown: "&eEzt még nem tudod használni. A(z) &6%gkit%&e készleten várakozási idő van. &7(%cooldown%)"
+  used-kit: "&eHasználtad a(z) &6%gkit% &ekészletet."
+  missing-permission: "&cA(z) %gkit% Gkit engedélye helytelen, vagy nem létezik."
+  unknown-gkit: "&cA(z) %gkit% gkit készlet nem létezik!"
+  unknown-enchant: "&7A(z) %enchant% varázslatot nem lehet felismerni."
+
+heroic:
+  cannot-apply: "&cNem tudod használni a kristályos fejlesztést ezen az eszközön."
+  upgrade-failed: "&cA kristályos fejlesztés &nsikertelen&c!"
+
+orbs:
+  cannot-apply: "&cNem tudod alkalmazni a gömböt az eszközödön!"
+  failed: "&cGömb sikertelen!"
+  incompatible: "&cNem tudsz alacsonyabb helyű gömböt alkalmazni, mint az elérhető helyek!"
+
+sets:
+  commands:
+    unknown-command: "&cParancs nem található! Írd be \"/asets\" parancsot, hogy kilistázd az elérhető parancsokat."
+    invalid-usage: "&cHelytelen használat! Kérlek, futtasd át a(z) /asets parancsot a megfelelő használatért."
+    invalid-set: "&cEz a szett helytelen."
+    invalid-set-piece: "&cÉrvénytelen szett darab. Csak ezeket használhatod: \n%set pieces%"
+    invalid-weapon: "&cA fegyver érvénytelen."
+    offline-player: "&cA játékos nem elérhető."
+    invalid-chances: "&cÉrvénytelen esély."
+    list:
+      header: "&eLista az elérhető szettekről &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eLista az elérhető fegyverekről &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&eAdtál &f%set% &eszettet &f%player% &ejátékosnak"
+    givepiece:
+      success: "&eAdtál &f%piece% &edarabot a(z) &f%set% &efelszerelésből &f%player% játékosnak"
+    weapon:
+      success: "&eAdtál egy &f%weapon% &efegyvert &f%player% &ejátékosnak."
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cEzen az eszközön nem alkalmazhatsz randomizálót!"
+    single-items-only: "&cCsak egy eszközön használhatod ezt!"
+  black-scroll:
+    full-inventory: "&cAz eszköztárad megtelt!"
+    no-enchants: "&cEnnek a tételnek nincsenek varázslatai!"
+    invalid-enchant: "&cNem távolíthatod el ezt a varázslatot, mert ez érvénytelen!"
+    cannot-remove: "&cA(z) %enchant% varázslatot nem lehet eltávolítani!"
+  soul-tracker:
+    disabled: "&cA Lelkek nem engedélyezettek ezen a szerveren!"
+    apply-successful: "&7Sikeresen alkalmaztad a &f&lLélek Nyomkövetőt &7az eszközödön!"
+  magic-dust:
+    full-inventory: "&cAz eszköztárad megtelt!"
+    single-items-only: "&cEzt csak egy tételen tudod használni!"
+  white-scroll:
+    full-inventory: "&cAz eszköztárad megtelt!"
+    apply-successful: "&aA Fehér Tekercs alkalmazva lett a tételeden!"
+    item-saved: "&aA Fehér Tekercs megmentette a tételt!"
+
+combining:
+  already-max-level: "Ez a varázslat már a legmagasabb szinten van!"
+  success: "&aSikeres! &7%enchant% varázslat most %level% új szinttel büszkélkedik!"
+  failure: "&cAz összevonás sikertelen!"
+  something-went-wrong: "&cValami hiba történt ezzel az összeállítással."
+
+enchant-limitations:
+  cannot-be-modified: "&cEz a tétel nem módosítható!"
+
+applying:
+  not-applicable-with: "&cA(z) &4%enchant1% &cvarázslatot nem lehet együtt alkalmazni a(z) &4%enchant2%&7 &cvarázslattal!"
+  requires-enchant: "&cA(z) &4%enchant1% &cvarázslathoz szükséges a(z) &4%enchant2%&7 &cvarázslat, hogy alkalmazhasd!"
+  already-applied: "&cEz a tétel már tartalmazza ezt a varázslatot."
+  applied: "&aA varázslat sikeresen alkalmazva lett a tételeden."
+  max-level: "&cEz a varázslat már a legmagasabb szinten van!"
+  wrong-material: "&cEz a varázslat nem alkalmazható ezen a tételen."
+
+slots:
+  limit-reached: "&cNem helyezheted rá ezt a varázslatot. Nem maradt szabad helyed!"
+
+chances:
+  book-failed: "&cA könyved ugyan nem sikerült, de legalább nem semmisült meg!"
+
+destroy:
+  book-failed: "&cA varázslat sikertelen volt!"

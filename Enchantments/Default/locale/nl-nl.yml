@@ -1,0 +1,219 @@
+# Gebruik %p% voor de plugin's prefix
+# Alle berichten ondersteunen HEX kleur codes zolang je 1.16+ gebruikt. Voorbeeld: {#FFFFFF}
+# Vrijwel alle berichten ondersteunen PlaceholderAPI.
+prefix: "&7[&9AdvancedEnchantments&7]&r "
+
+effects:
+  steal-money: "&6%attacker% &7heeft &6%amount% &7van &6%victim%&7 gestolen!"
+  used: "&r%enchant-color% %level%"
+
+commands:
+  no-permission: "&cJe hebt geen toestemming voor deze actie!"
+  offline-player: "&cDe opgegeven speler is niet online!"
+  enchantment-not-found: "&cEnchantment &c&n%enchant%&c kon niet worden gevonden."
+  invalid-amount: "&cOngeldige hoeveelheid. Geldige waardes: 1-64."
+  invalid-enchant: "&c%enchant% is geen geldige enchantment!"
+  invalid-level: "&cOngeldig enchantment level! Probeer: %levels%"
+  invalid-usage: "&cGebruik: %usage%"
+  not-a-number: "&c%number% is geen nummer!"
+  not-holding-item: "&cJe dient een item vast te hebben!"
+  enchantment-info:
+    invalid-usage: "&cOngeldig gebruik! Gebruik: %command% <enchantment>"
+    open-menu-message: "&7Informatie over &e%enchant% &7enchantment."
+  enchants:
+    open-menu-message: "&7Toont lijst van alle enchantments..."
+  apply:
+    cooldown: "&cJe kan dit commando over %seconds% seconde gebruiken."
+    no-args: "&cGeef aub de te beïnvloede speler op."
+    reapplied: "&aJe hebt je armor opnieuw aangetrokken."
+    reapplied-other: "&aDe armor voor %player% is opnieuw aangetrokken."
+    reapplied-for-all: "&aIedereen heeft zijn armor opnieuw aangetrokken!"
+  withdrawsouls:
+    invalid-usage: "&cGebruik: /withdrawsouls <aantal>"
+    less-than-one: "&cAantal dient een positief nummer te zijn."
+    invalid-item: "&cOngeldige item."
+  aegive:
+    invalid-material: "&cOngeldig materiaal. Raadpleeg 'materials.yml' voor alle geldige materialen."
+    invalid-item-flag: "&cOngeldige ItemFlag! U kunt de volgende ItemFlags kiezen: %itemflags%"
+    invalid-enchantment: "&cOngeldige Enchantment!"
+    success: "&2%amount%x %material% &aaan %player%&a gegeven!"
+  gedit:
+    unknown-gkit: "&c%gkit% is geen geldige gkit!"
+    edit:
+      invalid-usage: "&cGebruik: /gedit edit <gkit>"
+    set-permission:
+      invalid-usage: "&cGebruik: /gedit setpermission <gkit> <perm>"
+      success: "&6%gkit%'s&e toestemming veranderd naar &6%permission%"
+    reset:
+      invalid-usage: "&cGebruik: /gedit reset <gkit> <player>"
+      success: "&6%gkit% &6gkit is gereset voor speler &e%player%"
+    list: "&eGKits: &6%gkits%"
+    setdelay:
+      invalid-usage: "&cGebruik: /gedit setdelay <gkit> <vertraging (in secondes)>"
+      invalid-delay: "&c%delay% is geen geldig nummer!"
+      success: "&6%gkit%'s&e vertraging verandert naar &6%delay%"
+  main:
+    unknown-command: "&cOnjuist gebruik van dit commando! Typ \"/ae\" voor het correcte gebruik van dit commando."
+    setsouls:
+      invalid-usage: "&cOngeldig gebruik: /ae setsouls <aantal>"
+      invalid-item: "&cOngeldig item."
+      success: "&cZet item's Souls aantal naar: %amount%"
+    unenchant:
+      invalid-usage: "&cOngeldig gebruik: /ae unenchant <enchant>"
+      invalid-enchant: "&c%enchant% is geen geldige enchantment!"
+      not-holding-item: "&cJe dient een item vast te hebben!"
+      does-not-have-enchant: "&cDat item heeft geen &4%enchant%&c enchantment!"
+      success: "&aEnchant %enchant% verwijdert!"
+    zip:
+      zip-exists: "&cProbeer aub opnieuw."
+      success: "&eEen zip bestand met alle plugin informatie is gemaakt op %path%."
+      error: "&cEr is een fout opgetreden tijdens maken van het zip bestand! Controleer de console voor meer informatie."
+    greset:
+      reset: "&aDe kit %gkit% voor %player% gereset!"
+      reset-all: "&aAlle GKits voor %player% gereset!"
+    claim:
+      invalid-usage: "&cVoor aub het enchantment token in."
+    givegkit:
+      success: "&cKit %gkit% was aan speler %player% gegeven"
+    giverandombook:
+      success: "&2%player% %amount%x %group% &abooks gegeven!"
+    givebook:
+      success: "&2%player% %amount%x %enchant% %level% &abooks gegeven!"
+    enchant:
+      added: "&aEnchant %enchant% toegevoegd!"
+      upgraded: "&2%enchant% opgewaardeerd van level %previous-level% naar %level%."
+      downgraded: "&2%enchant% gedegradeerd van level %previous-level% naar %level%."
+      removed: "&c%enchant% enchant verwijdert van de item."
+    giveitem:
+      success: "&7%amount%x %item%&7's gegeven aan speler %player%"
+    givercbook:
+      success: "&2%player% %amount%x %group% &aright klik boeken gegeven!"
+    give:
+      success: "&aSucces! %player% heeft één %enchant% %level% boek gekregen!"
+    tinkereritem:
+      success: "&cx%amount% tinkerer item's aan %player% gegeven"
+    admin:
+      invalid-page: "&cOngeldige pagina"
+    info:
+      - "&eInformatie over &6%enchant% &eenchantment&7:"
+      - "&6Beschrijving&7: &e%description%"
+      - "&6Van toepassing op&7: &e%applies%"
+      - "&6Max level&7: &e%max-level%"
+
+    pastetypes: "&aEnchantment type lijst: %url%"
+    pasteenchants: "&aEnchantments lijst: %url%"
+    open: "&a%menu% voor %player% geopend!"
+
+token:
+  success: "&2&lx &aToken &l%token%&a enchantment succesvol gedownload, herladen..."
+
+interact:
+  main-hand-only: "&cJe kan dit alleen met je main hand doen!"
+
+enchanter:
+  re-buy: "&cKoop aub de item opnieuw van de enchanter."
+  disabled-in-world: "&cDe Enchanter is uitgeschakeld in deze wereld."
+  full-inventory: "&cJe inventaris is vol!"
+  examine-book: "&7Je hebt het boek %group-color%%group-name%&7 onderzocht en vond %enchant-color% %level%"
+  unknown-payment-method: "&cKon de betaalmethode %paymentType% niet valideren, neem aub contact op met een administrator."
+  successful-purchase: "&aAankoop succesvol!"
+  cannot-afford:
+    - "&cJe hebt niet voldoende EXP om dat te kopen."
+    - "&7Jouw XP: %exp%"
+
+tinkerer:
+  trade-accepted: "&aRuil geaccepteerd!"
+  non-tradeable-item:
+    - "&cDe Server Tinkerer wil dat item niet hebben!"
+    - "&7Het accepteerd alleen items met custom enchantments"
+
+alchemist:
+  doesnt-accept: "&cDe Alchemist accepteerd dat item niet!"
+  trade-cancelled: "&cRuil geannuleerd."
+  cannot-afford: "&cJe kan je deze transactie niet veroorloven!"
+  exceeds-max-level: "&cJe samengevoegde level overschrijdt het maximale enchantment level!"
+
+gkits:
+  no-permission: "&eJe hebt geen toestemming om de kit &e%gkit%&6 te gebruiken."
+  cooldown: "&eJe kan deze kit nog niet gebruiken, kit &6%gkit%&e zit in cooldown &7(%cooldown%)"
+  used-kit: "&eJe hebt de kit &6%gkit% gebruikt."
+  missing-permission: "&cGkit %gkit%'s toestemming is ongeldig of bestaan niet"
+  unknown-gkit: "&cGKit %gkit% bestaat niet!"
+  unknown-enchant: "&7Enchant %enchant% kan niet worden gevonden."
+
+heroic:
+  cannot-apply: "&cJe kan geen crystal opwaardering op dit item toepassen."
+  upgrade-failed: "&cDe crystal opwaardering is &ngefaald&c!"
+
+orbs:
+  cannot-apply: "&cKan geen orb op dit item toepassen!"
+  failed: "&cOrb gefaald!"
+  incompatible: "&cKan geen lagere slots orb toepassen dan het aantal beschikbare slots!"
+
+sets:
+  commands:
+    unknown-command: "&cCommando niet gevonden! Typ \"/asets\" voor een lijst met geldige commando's."
+    invalid-usage: "&cOngeldig gebruik! Raadpleeg /asets voor correct gebruik."
+    invalid-set: "&cOngeldige set."
+    invalid-set-piece: "&cOngeldige set item, je kan een van de volgende kiezen: \n%set pieces%"
+    invalid-weapon: "&cWapen is ongeldig."
+    offline-player: "&cSpeler is offline."
+    invalid-chances: "&cOngeldige kansen."
+    list:
+      header: "&eLijst van alle beschikbare Sets &7[%size%]"
+      set: " &8>> &f%set%"
+    listweapons:
+      header: "&eLijst van alle beschikbare Wapens &7[%size%]"
+      weapon: " &8>> &f%weapon%"
+    give:
+      success: "&f %set% &eSet aan &f %player% &egegeven"
+    givepiece:
+      success: "&eOnderdeel &f%piece% &evan &f%set% &eaan &f %player% &egegeven"
+    weapon:
+      success: "&f %weapon% &eSet aan &f %player% &egegeven"
+
+items:
+  randomization-scroll:
+    cannot-apply: "&cJe kan hier geen randomizer op toepassen!"
+    single-items-only: "&cJe kan dit alleen op losse items gebruiken!"
+  black-scroll:
+    full-inventory: "&cJe inventaris is vol!"
+    no-enchants: "&cDit item heeft geen enchantments!"
+    invalid-enchant: "&cKan enchantment niet verwijderen omdat het ongeldig is!"
+    cannot-remove: "&cEnchantment %enchant% kan niet worden verwijdert!"
+  soul-tracker:
+    disabled: "&cSouls zijn niet ingeschakeld op deze server!"
+    apply-successful: "&7Je hebt &f&lSoul Tracker &7succesvol op je item toegepast!"
+  magic-dust:
+    full-inventory: "&cJe inventaris is vol!"
+    single-items-only: "&cJe kan dit alleen op losse items gebruiken!"
+  white-scroll:
+    full-inventory: "&cJe inventaris is vol!"
+    apply-successful: "&aWhite scroll is toegepast op je item!"
+    item-saved: "&aWhite scroll heeft het item gered!"
+
+combining:
+  already-max-level: "Deze enchantment is al op het maximale level!"
+  success: "&aSucces! &7%enchant% is nu level %level%!"
+  failure: "&cSamenvoegen gefaald!"
+  something-went-wrong: "&cIets ging er mis tijdens het samenvoegen."
+
+enchant-limitations:
+  cannot-be-modified: "&cDit item kan niet gemodificeerd worden!"
+
+applying:
+  not-applicable-with: "&cDe &4%enchant1% &cenchantment kan niet worden toegepast samen met de &4%enchant2%&7 &cenchantment!"
+  requires-enchant: "&cDe &4%enchant1% &cenchantment heeft de &4%enchant2%&7 &cenchant nodig om toegepast te kunnen worden!"
+  already-applied: "&cDit item heeft deze enchantment al."
+  applied: "&aEnchantment is toegepast op je item."
+  max-level: "&cDeze enchantment is al op het maximale level!"
+  wrong-material: "&cDeze enchantment kan niet op dit item worden toegepast."
+
+slots:
+  limit-reached: "&cJe kan deze enchantment niet toepassen! Er zijn geen vrije slots over!"
+
+chances:
+  book-failed: "&cJe boek heeft gefaald, maar het item was niet vernietigd!"
+
+destroy:
+  book-failed: "&cEnchantment was onsuccesvol!"

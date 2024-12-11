@@ -1,0 +1,164 @@
+# Configuration for Enchanter
+#  Change commands how to access it in top of config.yml
+
+open-sound: ENDERDRAGON_WINGS
+disabled-in-worlds:
+- bad_world
+messages:
+  cannot-afford:
+  - '&cYou do not have enough EXP to purchase that.'
+  - '&7Your XP: %exp%'
+  successfull-purchase:
+  - '&a&l(!) &aSuccessful purchase!'
+  inventory-is-full:
+  - '&c&l(!) &cYour inventory is full!'
+  sound: LEVEL_UP
+right-click-to-view-enchants: true
+go-back-item:
+  enabled: true
+  item:
+    type: NETHER_STAR
+    id: 0
+  name: '&c&lGo Back'
+  lore: []
+keep-open: true
+inventory:
+  size: 18
+  name: '&7Server Enchanter'
+  settings:
+    # Which level books should enchanter give?
+    # 'ALL' - gives all levels
+    # <number> - Gives specific level of enchant
+    enchanterBookLevel: ALL
+  items:
+    0-18:
+      item:
+        type: STAINED_GLASS_PANE
+        id: 7
+        force-glow: false
+      name: ' '
+      lore: []
+    '2':
+      item:
+        type: STAINED_GLASS_PANE
+        id: 0
+        force-glow: false
+      enchant-group: SIMPLE
+      price: exp:400
+      sound: ANVIL_LAND
+      name: '&f&lSimple Enchantment &7(Right Click)'
+      lore:
+      - '&7Examine to recieve a random'
+      - '&fsimple &7enchantment book.'
+      - ''
+      - '&b&lCOST &f%price% EXP &7(You need %left% more EXP)'
+    '3':
+      item:
+        type: STAINED_GLASS_PANE
+        id: 5
+        force-glow: false
+      enchant-group: UNIQUE
+      sound: ANVIL_LAND
+      price: exp:800
+      name: '&a&lUnique Enchantment &7(Right Click)'
+      lore:
+      - '&7Examine to recieve a random'
+      - '&aunique &7enchantment book.'
+      - ''
+      - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+    '4':
+      item:
+        type: STAINED_GLASS_PANE
+        id: 3
+        force-glow: false
+      enchant-group: ELITE
+      price: exp:2500
+      sound: ANVIL_LAND
+      name: '&b&lElite Enchantment &7(Right Click)'
+      lore:
+      - '&7Examine to recieve a random'
+      - '&belite &7enchantment book.'
+      - ''
+      - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+    '5':
+      item:
+        type: STAINED_GLASS_PANE
+        id: 4
+        force-glow: false
+      enchant-group: ULTIMATE
+      price: exp:5000
+      sound: ANVIL_LAND
+      name: '&e&lUltimate Enchantment &7(Right Click)'
+      lore:
+      - '&7Examine to recieve a random'
+      - '&eultimate &7enchantment book.'
+      - ''
+      - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+    '6':
+      item:
+        type: STAINED_GLASS_PANE
+        id: 1
+        force-glow: false
+      enchant-group: LEGENDARY
+      price: exp:25000
+      sound: ANVIL_LAND
+      name: '&6&lLegendary Enchantment &7(Right Click)'
+      lore:
+      - '&7Examine to recieve a random'
+      - '&6legendary &7enchantment book.'
+      - ''
+      - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+    '13':
+      item:
+        type: STAINED_GLASS_PANE
+        id: 14
+        force-glow: false
+      enchant-group: HEROIC
+      price: exp:50000
+      sound: ANVIL_LAND
+      name: '&4&lHeroic Enchantment &7(Right Click)'
+      lore:
+      - '&7Examine to recieve a random'
+      - '&4heroic &7enchantment book.'
+      - ''
+      - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+    '9':
+      item:
+        type: ANVIL
+        id: 0
+        force-glow: false
+      sound: ANVIL_USE
+      player-command:
+      - tinkerer
+      name: '&fOpen &b&lTinkerer &7(Right Click)'
+      lore:
+      - '&7Tinker books for Magic Dusts and EXP.'
+      - ''
+      - '&b&lRight Click to visit'
+    '17':
+      item:
+        type: ENDER_PORTAL_FRAME
+        id: 0
+        force-glow: false
+      sound: ARROW_HIT
+      player-command:
+      - alchemist
+      name: '&fOpen &b&lAlchemist &7(Right Click)'
+      lore:
+      - '&7Combine Books and Magic Dusts.'
+      - ''
+      - '&b&lRight Click to visit'
+confirmation-inventory:
+  enabled: true
+  name: '&aConfirmation Inventory'
+  accept:
+    material: STAINED_GLASS_PANE
+    damage: 5
+    name: '&aAccept Transaction'
+    lore:
+    - '&7Click this to pay %price% with %paymentType%'
+  cancel:
+    material: STAINED_GLASS_PANE
+    damage: 14
+    name: '&cClick to cancel'
+    lore: []

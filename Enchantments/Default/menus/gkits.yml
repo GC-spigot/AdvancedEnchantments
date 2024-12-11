@@ -1,0 +1,3448 @@
+# GKits Configuration File
+# Permission to ignore cooldown: "ae.nocooldown"
+
+# Should GKits/this configuration/GKits command be enabled? [true/false]
+gkits-enabled: true
+
+inventory:
+  # Size of inventory
+  # * Determine size of GKits inventory (1 row = 9 slots, max 6 rows)
+  size: 4
+  # Name of inventory
+  # * Change the name of GKits inventory
+  name: "&7Global Kits"
+  # Custom inventory command
+  # * Create a handy command to open GKits inventory
+  custom-command:
+    - "/gkit"
+    - "/gkits"
+  sounds:
+    # Inventory opening sound
+    # * Sound is played on inventory open via command
+    inventory-open: "UI_BUTTON_CLICK"
+    # Usage of kit sound
+    # * Sound played upon the use of the available kits
+    kit-use: "ENTITY_PLAYER_LEVELUP"
+# Let players preview GKits by right-clicking on any GKit (permission: gkit.preview)
+preview:
+  enabled: true
+  inventory:
+    inv-name: "&7Previewing %gkit%"
+    # Biggest the inventory can be, set to "AUTO" if you want inventory size to be set depending on GKit content amount.
+    # (1 row = 9 slots, max 6 rows)
+    max-size: 6
+    # If there is any free slots in preview inventory, should they be filled with selected block?
+    fill-blanks: true
+    material: STAINED_GLASS_PANE
+    data: 15
+    go-back-item:
+      material: STAINED_GLASS_PANE
+      data: 14
+      custom-model-data: 0
+      name: "&cGo back to GKits menu"
+      lore: [ ]
+# ((this adds custom enchantments support, you may give random level of custom enchantments, eg: "&fSpeed %1-3%" adding in lore))
+messages:
+# Customization for GKits inventory
+# Set commands using `command: "broadcast %player% clicked on an item'` example.
+# Set SkullOwner using `owner: "<player name>'` example.
+# Set "customModelData' to set custom model data for items
+customization:
+  27:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  28:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  29:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  30:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  31:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  32:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  33:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  34:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+  35:
+    amount: 1
+    custom-model-data: 0
+    damage: 15
+    lore: []
+    material: STAINED_GLASS_PANE
+    name: ' '
+kits:
+  Admiral:
+    content:
+      1:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - inquisitive:%1-4%
+          - paralyze:%1-4%
+          - featherweight:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oAn electrifyingly twist on an'
+          - '&6&ootherwise legendary holy blade.'
+        material: DIAMOND_SWORD
+        name: '&6&lExcalibur'
+      2:
+        advanced-enchantments:
+          - hardened:%1-3%
+          - frozen:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oPerfectly stitched with bring embroideries.'
+        material: DIAMOND_HELMET
+        name: '&6Heroic Admiral Military Hat'
+      3:
+        advanced-enchantments:
+          - overload:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oThe very existence of the medals pinned'
+          - '&6&oon your jacket ensure your victory.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6Heroic Admiral Military Jacket'
+      4:
+        advanced-enchantments:
+          - armored:%1-4%
+          - guardians:%1-10%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oWar has taken its toll on you'
+          - '&6&obut you are not one to surrender.'
+        material: DIAMOND_LEGGINGS
+        name: '&6&lHeroic Cosmonaut Biotic Legs'
+      5:
+        advanced-enchantments:
+          - gears:%1-3%
+          - springs:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA spoil of war but something'
+          - '&6&ois strange about these boots.'
+        material: DIAMOND_BOOTS
+        name: '&6&lHeroic Boots of the Void Galaxy'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lExcalibur'
+          - '&f&l* &6&lHeroic Cosmonaut Biotic Legs'
+          - '&f&l* &6&lHeroic Boots of the Void Galaxy'
+          - '&f&l* &eHeroic Admiral Military Jacket'
+          - '&f&l* &eHeroic Admiral Military Hat'
+          - ''
+          - '&7The most feared military in the universe.'
+          - '&6* Galaxy Update'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: NETHER_STAR
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Admiral Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lExcalibur'
+          - '&f&l* &6&lHeroic Cosmonaut Biotic Legs'
+          - '&f&l* &6&lHeroic Boots of the Void Galaxy'
+          - '&f&l* &eHeroic Admiral Military Jacket'
+          - '&f&l* &eHeroic Admiral Military Hat'
+          - ''
+          - '&7The most feared military in the universe.'
+          - '&6* Galaxy Update'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Admiral Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lExcalibur'
+          - '&f&l* &6&lHeroic Cosmonaut Biotic Legs'
+          - '&f&l* &6&lHeroic Boots of the Void Galaxy'
+          - '&f&l* &eHeroic Admiral Military Jacket'
+          - '&f&l* &eHeroic Admiral Military Hat'
+          - ''
+          - '&7The most feared military in the universe.'
+          - '&6* Galaxy Update'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: NETHER_STAR
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Admiral Kit'
+    hide: false
+    permission: gkit.admiral
+    slot: 12
+  Arcane:
+    content:
+      1:
+        advanced-enchantments:
+          - glowing:1
+          - overload:%1-3%
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA pointy, star speckled wizard hat..'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Arcanist Hat'
+      2:
+        advanced-enchantments:
+          - shockwave:%1-5%
+          - angelic:%1-3%
+          - spirits:%1-10%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA bright, colorful silk robe..'
+        material: DIAMOND_CHESTPLATE
+        name: '&eArcanist Robeset'
+      3:
+        advanced-enchantments:
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oBrightly colored, puffy pantaloons.'
+        material: DIAMOND_LEGGINGS
+        name: '&eArcanist Pantaloons'
+      4:
+        advanced-enchantments:
+          - angelic:%1-5%
+          - gears:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oPointy, jolly, and absolutely magical.'
+        material: DIAMOND_BOOTS
+        name: '&6&lHeroic Arcanist Elf Shoes'
+      5:
+        advanced-enchantments:
+          - sniper:%1-5%
+          - piercing:%1-5%
+          - longbow:%1-4%
+          - blind:%1-3%
+          - snare:%1-4%
+          - virus:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - flame:1
+          - unbreaking:3
+          - infinity:1
+        lore:
+          - '&6&oA translucent, abyssal longbow.'
+        material: BOW
+        name: '&6&lApollo''''s Longbow of the Abyss'
+      6:
+        amount: 1
+        data: 0
+        material: ARROW
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lApollo''''s Longbow of the Abyss'
+          - '&f&l* &6&lHeroic Arcanist Hat'
+          - '&f&l* &6&lHeroic Arcanist Elf Shoes'
+          - '&f&l* &eArchanist Robeset'
+          - '&f&l* &eArchanist Pantaloons'
+          - ''
+          - '&7Embrace the power of magic!'
+          - '&6* Magic Planet Release'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: ENCHANTMENT_TABLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Arcane Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lApollo''''s Longbow of the Abyss'
+          - '&f&l* &6&lHeroic Arcanist Hat'
+          - '&f&l* &6&lHeroic Arcanist Elf Shoes'
+          - '&f&l* &eArchanist Robeset'
+          - '&f&l* &eArchanist Pantaloons'
+          - ''
+          - '&7Embrace the power of magic!'
+          - '&6* Magic Planet Release'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Arcane Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lApollo''''s Longbow of the Abyss'
+          - '&f&l* &6&lHeroic Arcanist Hat'
+          - '&f&l* &6&lHeroic Arcanist Elf Shoes'
+          - '&f&l* &eArchanist Robeset'
+          - '&f&l* &eArchanist Pantaloons'
+          - ''
+          - '&7Embrace the power of magic!'
+          - '&6* Magic Planet Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: ENCHANTMENT_TABLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Arcane Kit'
+    hide: false
+    permission: gkits.arcane
+    slot: 6
+  ArenaChampion:
+    content:
+      1:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - paralyze:%1-4%
+          - vampire:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oA blade with such a dark lineage'
+          - '&6&oits very existence has been condemned'
+          - '&6&oby the Counsil of Elrond.'
+        material: DIAMOND_SWORD
+        name: '&6Bloodstone Rapier of Kronos'
+      2:
+        advanced-enchantments:
+          - armored:%1-4%
+          - overload:%1-3%
+          - tank:%1-4%
+          - implants:%1-3%
+          - guardians:%1-10%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA golden crown embedded with bloodstones'
+          - '&6&obeware the monstrosity whom dawns this sigil.'
+        material: DIAMOND_HELMET
+        name: '&6&lCrown of the Colosseum Champion'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lCrown of the Colosseum King'
+          - '&f&l* &6&lShadowstone Rapier of Kronos'
+          - ''
+          - '&7Prove that no mortal can defeat you.'
+          - '&6* Dueling'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Arena Champion Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lCrown of the Colosseum King'
+          - '&f&l* &6&lShadowstone Rapier of Kronos'
+          - ''
+          - '&7Prove that no mortal can defeat you.'
+          - '&6* Dueling'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Arena Champion Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lCrown of the Colosseum King'
+          - '&f&l* &6&lShadowstone Rapier of Kronos'
+          - ''
+          - '&7Prove that no mortal can defeat you.'
+          - '&6* Dueling'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Arena Champion Kit'
+    hide: false
+    permission: gkit.arenachampion
+    slot: 19
+  Butcher:
+    content:
+      1:
+        advanced-enchantments:
+          - devour:%1-4%
+          - blacksmith:%1-5
+          - bleed:%1-6%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - unbreaking:3
+        lore:
+          - '&c&oThe cleaver of The Butcher, a demonic'
+          - '&c&oabomination from the deepest, darkest'
+          - '&c&odepths of the known Nether.'
+        material: DIAMOND_AXE
+        name: '&c&lThe Butcher''''s Cleaver'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - dodge:%1-5%
+          - tank:%1-4%
+          - angelic:%1-5%
+          - hardened:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+        lore:
+          - '&6&oA heavy leather apron, soaked with the'
+          - '&6&oblood of all who have dared stand before you.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lBlood-soaked Apron of the Butcher'
+      3:
+        amount: 64
+        data: 0
+        lore:
+          - '&7A yummy piece of space candy, only'
+          - '&7obtainable during &nHalloween Events!'
+        material: MAGMA_CREAM
+        name: '&eHalloween Candy'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lThe Butcher''''s Cleaver'
+          - '&f&l* &6&lBlood-soaked Apron of the Butcher'
+          - '&f&l* &e64x Halloween Candy'
+          - ''
+          - '&7A monster from the depths of the Nether.'
+          - '&6* Halloween 2016'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: RAW_BEEF
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Butcher Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lThe Butcher''''s Cleaver'
+          - '&f&l* &6&lBlood-soaked Apron of the Butcher'
+          - '&f&l* &e64x Halloween Candy'
+          - ''
+          - '&7A monster from the depths of the Nether.'
+          - '&6* Halloween 2016'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Butcher Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lThe Butcher''''s Cleaver'
+          - '&f&l* &6&lBlood-soaked Apron of the Butcher'
+          - '&f&l* &e64x Halloween Candy'
+          - ''
+          - '&7A monster from the depths of the Nether.'
+          - '&6* Halloween 2016'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: RAW_BEEF
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Butcher Kit'
+    hide: false
+    permission: gkit.butcher
+    slot: 20
+  Cannoner:
+    content:
+      1:
+        advanced-enchantments:
+          - obsidianshield:1
+          - molten:%1-4%
+          - aquatic:1
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+          - projectileprotection:4
+        lore:
+          - '&6&oAn enhanced version of the famous,'
+          - '&6&omining helmet, your vision penetrates all.'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Mining Helmet'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - ragdoll:%1-4%
+          - shockwave:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+          - projectileprotection:4
+        lore:
+          - '&6&oA well kept, leather black cloak.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6Heroic Onyx Cloack of the Grandmaster'
+      3:
+        advanced-enchantments: []
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+          - projectileprotection:4
+        lore:
+          - '&6&oAbsolute mobility, complete security'
+        material: DIAMOND_LEGGINGS
+        name: '&6Heroic Leather Combat Leggings'
+      4:
+        advanced-enchantments:
+          - gears:%1-3%
+          - springs:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+          - projectileprotection:4
+        lore:
+          - '&6&oA pair of sandals from the depths of the'
+          - '&6&ovoid, wear these and become undetecable.'
+        material: DIAMOND_BOOTS
+        name: '&6&lHeroic Ghost Sandals'
+      5:
+        advanced-enchantments:
+          - sniper:%1-5%
+          - piercing:%1-5%
+          - snare:%1-4%
+          - explosive:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - punch:2
+          - unbreaking:3
+          - infinity:1
+        lore:
+          - '&6&oWhen you get your target within'
+          - '&6&oyour sights, their journey ends.'
+        material: BOW
+        name: '&6&lHeroic Crystal Bow of Athena'
+      6:
+        amount: 1
+        data: 0
+        material: ARROW
+      7:
+        amount: 64
+        data: 0
+        material: TNT
+      8:
+        amount: 64
+        data: 0
+        material: TNT
+      9:
+        amount: 64
+        data: 0
+        material: TNT
+      10:
+        amount: 3
+        data: 50
+        material: MONSTER_EGG
+      11:
+        amount: 5
+        material: SPONGE
+      12:
+        amount: 16
+        material: DISPENSER
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Crystal Bow of Athena'
+          - '&f&l* &6&lTNT'
+          - '&f&l* &6&lCREEPERS'
+          - '&f&l* &eSponges'
+          - '&f&l* &eDispensers'
+          - ''
+          - '&7No amount of defenses can stop you.'
+          - '&6* Castle Planet Reset'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: TNT
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Cannoner Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Crystal Bow of Athena'
+          - '&f&l* &6&lTNT'
+          - '&f&l* &6&lCREEPERS'
+          - '&f&l* &6&lRanger Bow'
+          - '&f&l* &eSponges'
+          - '&f&l* &eDispensers'
+          - ''
+          - '&7No amount of defenses can stop you.'
+          - '&6* Castle Planet Reset'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Cannoner Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Crystal Bow of Athena'
+          - '&f&l* &6&lTNT'
+          - '&f&l* &6&lCREEPERS'
+          - '&f&l* &6&lRanger Bow'
+          - '&f&l* &eSponges'
+          - '&f&l* &eDispensers'
+          - ''
+          - '&7No amount of defenses can stop you.'
+          - '&6* Castle Planet Reset'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: TNT
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Cannoner Kit'
+    hide: false
+    permission: gkit.cannoner
+    slot: 21
+  Cosmonaut:
+    content:
+      1:
+        advanced-enchantments:
+          - guardians:%1-10%
+          - immortal:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+        lore:
+          - '&6&oForged of the finest materials in all'
+          - '&6&othe galaxy. A timeless, unique piece.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lCosmonaut Spacesuit'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - obsidianshield:1
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+        lore:
+          - '&6&oCreated out of the richest materials'
+          - '&6&oin all the galaxy. So fabulous.'
+        material: DIAMOND_LEGGINGS
+        name: '&6&lCosmonaut Pantaloons'
+      3:
+        amount: 1
+        command: ae giverandombook %player% HEROIC
+        data: 0
+        lore: []
+        material: BOOK
+        name: '&d&lHeroic Enchantment Book'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Armor Pieces'
+          - '&f&l* &6&lHeroic Enchantments'
+          - ''
+          - '&7Reinventing the definition of a "godset".'
+          - '&6* Immortal Enchant Release'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND_CHESTPLATE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&b&l Cosmonaut &d&lKit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Armor Pieces'
+          - '&f&l* &6&lHeroic Enchantments'
+          - ''
+          - '&7Reinventing the definition of a "godset".'
+          - '&6* Immortal Enchant Release'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&b&l Cosmonaut &d&lKit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Armor Pieces'
+          - '&f&l* &6&lHeroic Enchantments'
+          - ''
+          - '&7Reinventing the definition of a "godset".'
+          - '&6* Immortal Enchant Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND_CHESTPLATE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&b&l Cosmonaut &d&lKit'
+    hide: false
+    permission: gkit.cosmonaut
+    slot: 22
+  Destroyer:
+    content:
+      1:
+        advanced-enchantments:
+          - piercing:%1-5%
+          - hellfire:%1-5%
+          - blind:%1-3%
+          - sniper:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - punch:2
+          - flame:2
+          - unbreaking:3
+        lore:
+          - '&6&oBecome one with you inner darkness,'
+          - '&6&oand usher in the end of the galaxy.'
+        material: BOW
+        name: '&6&lHeroic Destructive Bow of Oblivion'
+      2:
+        advanced-enchantments:
+          - frozen:%1-3%
+          - obsidianshield:1
+          - trickster:%1-8%
+          - implants:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA spiked, firey helmet of destruction.'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Demon Stalker Greathelm'
+      3:
+        advanced-enchantments:
+          - frozen:%1-3%
+          - spirits:%1-10%
+          - curse:%1-5%
+          - overload:%1-3%
+          - shockwave:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA chillingly cold, dark chestplate.'
+        material: DIAMOND_CHESTPLATE
+        name: '&eHeroic Demon Stalker Harness'
+      4:
+        advanced-enchantments:
+          - frozen:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oAn extremely heavy pair of onyx leggings.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Demon Stalker Greaves'
+      5:
+        advanced-enchantments:
+          - frozen:%1-3%
+          - springs:%1-3%
+          - gears:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oEncrusted with onyx and black diamond.'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Boots of the Destroyer'
+      6:
+        amount: 1
+        data: 0
+        material: ARROW
+      7:
+        command: ae givebook %player% blind 3 1 50 50
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Destructive Bow of Oblivion'
+          - '&f&l* &6&lHeroic Demon Stalker Greathelm'
+          - '&f&l* &eHeroic Demon Stalker Harness'
+          - '&f&l* &eHeroic Demon Stalker Greaves'
+          - '&f&l* &eHeroic Boots of the Destroyer'
+          - ''
+          - '&7Wreak havoc and destruction on the galaxy.'
+          - '&6* Heart of Darkness'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: BLAZE_POWDER
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Destroyer Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Destructive Bow of Oblivion'
+          - '&f&l* &6&lHeroic Demon Stalker Greathelm'
+          - '&f&l* &eHeroic Demon Stalker Harness'
+          - '&f&l* &eHeroic Demon Stalker Greaves'
+          - '&f&l* &eHeroic Boots of the Destroyer'
+          - ''
+          - '&7Wreak havoc and destruction on the galaxy.'
+          - '&6* Heart of Darkness'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Destroyer Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Destructive Bow of Oblivion'
+          - '&f&l* &6&lHeroic Demon Stalker Greathelm'
+          - '&f&l* &eHeroic Demon Stalker Harness'
+          - '&f&l* &eHeroic Demon Stalker Greaves'
+          - '&f&l* &eHeroic Boots of the Destroyer'
+          - ''
+          - '&7Wreak havoc and destruction on the galaxy.'
+          - '&6* Heart of Darkness'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: BLAZE_POWDER
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Destroyer Kit'
+    hide: false
+    permission: gkit.destroyer
+    slot: 2
+  Diablo:
+    content:
+      1:
+        advanced-enchantments:
+          - piercing:%1-5%
+          - infernal:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - unbreaking:3
+          - infinity:1
+        lore:
+          - '&6&oA darkbow forged in the void.'
+        material: BOW
+        name: '&6&lHeroic Curse of Raven'
+      2:
+        advanced-enchantments:
+          - obsidianshield:1
+          - hardened:%1-3%
+          - poisoned:%1-4%
+          - voodoo:%1-6%
+          - wither:%1-5%
+          - tank:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA blood-soaked silk coif.'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Executioner''''s Hood'
+      3:
+        advanced-enchantments:
+          - obsidianshield:1
+          - hardened:%1-3%
+          - curse:%1-5%
+          - overload:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA cloak darker than onyx.'
+        material: DIAMOND_CHESTPLATE
+        name: '&eHeroic Death Cloak'
+      4:
+        advanced-enchantments:
+          - obsidianshield:1
+          - hardened:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oAn ominously dark pair of greaves.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Death Greaves'
+      5:
+        advanced-enchantments:
+          - obsidianshield:1
+          - hardened:%1-3%
+          - armored:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA pair of boots as black as darkness.'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Death Grave Stompers'
+      6:
+        amount: 1
+        data: 0
+        material: ARROW
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Executioner''''s Hood'
+          - '&f&l* &6&lHeroic Curse of Raven'
+          - '&f&l* &eHeroic Death Cloak'
+          - '&f&l* &eHeroic Death Greaves'
+          - '&f&l* &eHeroic Death Grave Stompers'
+          - ''
+          - '&7Summon fourth the power of the void.'
+          - '&6* Void Planet Release'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: ENDER_PORTAL_FRAME
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Diablo Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Executioner''''s Hood'
+          - '&f&l* &6&lHeroic Curse of Raven'
+          - '&f&l* &eHeroic Death Cloak'
+          - '&f&l* &eHeroic Death Greaves'
+          - '&f&l* &eHeroic Death Grave Stompers'
+          - ''
+          - '&7Summon fourth the power of the void.'
+          - '&6* Void Planet Release'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Diablo Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Executioner''''s Hood'
+          - '&f&l* &6&lHeroic Curse of Raven'
+          - '&f&l* &eHeroic Death Cloak'
+          - '&f&l* &eHeroic Death Greaves'
+          - '&f&l* &eHeroic Death Grave Stompers'
+          - ''
+          - '&7Summon fourth the power of the void.'
+          - '&6* Void Planet Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: ENDER_PORTAL_FRAME
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Diablo Kit'
+    hide: false
+    permission: gkits.diablo
+    slot: 4
+  Enchantment:
+    content:
+      1:
+        command: ae giverandombook %player% UNIQUE
+      2:
+        command: ae giverandombook %player% ELITE
+      3:
+        command: ae giverandombook %player% ULTIMATE
+      4:
+        command: ae giverandombook %player% LEGENDARY
+      5:
+        chance: 10
+        command: ae giverandombook %player% SOUL
+      6:
+        chance: 10
+        command: ae giverandombook %player% HEROIC
+      7:
+        chance: 100
+        command: ae giveitem %player% blackscroll 1 0
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&7Build your own godly custom sets!'
+          - '&6* Dream Planet Release'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: BOOK
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Enchantment Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&7Build your own godly custom sets!'
+          - '&6* Dream Planet Release'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Enchantment Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&7Build your own godly custom sets!'
+          - '&6* Dream Planet Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: BOOK
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Enchantment Kit'
+    hide: false
+    permission: gkit.enchantment
+    slot: 14
+  Gladiator:
+    content:
+      1:
+        advanced-enchantments:
+          - tank:%1-4%
+          - armored:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA leatherclad mask that strikes fear into all.'
+        material: DIAMOND_HELMET
+        name: '&eArena Champion Mask'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - tank:%1-4%
+          - guardians:%1-10%
+          - armored:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oSpiked shoulders, a huge hunk of metal.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lHeavy Gladiator Platemail'
+      3:
+        advanced-enchantments:
+          - tank:%1-4%
+          - armored:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA pair of battle-worn leather shorts.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Gladiator Platelegs'
+      4:
+        advanced-enchantments:
+          - gears:%1-3%
+          - tank:%1-4%
+          - armored:%1-4%
+          - springs:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oSturdy, agile, powerful, What more do you want?'
+        material: DIAMOND_BOOTS
+        name: '&6&lHeroic Gladiator Warboots'
+      5:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - greatsword:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fireaspect:1
+          - unbreaking:2
+        lore:
+          - '&6&oA weapon unrivaled in conquest.'
+        material: DIAMOND_SWORD
+        name: '&6&lHeroic Ares Greatsword of Conquering'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lAres Greatsword of Conquering'
+          - '&f&l* &6&lArena Champion Mask'
+          - '&f&l* &6&lHeroic Gladiator Platemail'
+          - '&f&l* &eHeroic Gladiator Platelegs'
+          - '&f&l* &eHeroic Gladiator Warboots'
+          - ''
+          - '&7Become a ruthless warlord!'
+          - '&6* Arena Update'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: DIAMOND_SWORD
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Gladiator Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lAres Greatsword of Conquering'
+          - '&f&l* &6&lArena Champion Mask'
+          - '&f&l* &6&lHeroic Gladiator Platemail'
+          - '&f&l* &eHeroic Gladiator Platelegs'
+          - '&f&l* &eHeroic Gladiator Warboots'
+          - ''
+          - '&7Become a ruthless warlord!'
+          - '&6* Arena Update'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Gladiator Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lAres Greatsword of Conquering'
+          - '&f&l* &6&lArena Champion Mask'
+          - '&f&l* &6&lHeroic Gladiator Platemail'
+          - '&f&l* &eHeroic Gladiator Platelegs'
+          - '&f&l* &eHeroic Gladiator Warboots'
+          - ''
+          - '&7Become a ruthless warlord!'
+          - '&6* Arena Update'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: DIAMOND_SWORD
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Gladiator Kit'
+    hide: false
+    permission: gkits.gladiator
+    slot: 7
+  Grandmaster:
+    content:
+      1:
+        advanced-enchantments:
+          - disarmor:%1-8%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oAn onyx blade with dark legacy,'
+          - '&6&orumor has it this bald only'
+          - '&6&oexists for a few fleeting moments'
+          - '&6&obefore and after each assassination.'
+        material: DIAMOND_SWORD
+        name: '&6&lHeroic Nightmare Killer'
+      2:
+        advanced-enchantments:
+          - armored:%1-4%
+          - tank:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oStrike fear into your enemies,'
+          - '&6&oand heroism into your allies.'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Shroud of Judgement'
+      3:
+        advanced-enchantments:
+          - armored:%1-4%
+          - overload:%1-3%
+          - tank:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA well kept, heroic black cloack.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6Heroic Cloak of the Grandmaster'
+      4:
+        advanced-enchantments:
+          - armored:%1-4%
+          - tank:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oAbsolute mobility, complete security'
+        material: DIAMOND_LEGGINGS
+        name: '&6Heroic Leather Combat Leggings'
+      5:
+        advanced-enchantments:
+          - armored:%1-4%
+          - gears:%1-3%
+          - tank:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oInvisible to the ears of your enemies.'
+        material: DIAMOND_BOOTS
+        name: '&6&lHeroic Sandals of Silence'
+      6:
+        command: ae giveitem %player% blackscroll 1 0
+      7:
+        command: xp 10000 %player%
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Nightmare Killer'
+          - '&f&l* &6&lHeroic Shroud of Judgement'
+          - '&f&l* &6&lHeroic Sandals of Silence'
+          - '&f&l* &eHeroic Cloack of the Grandmaster'
+          - '&f&l* &eHeroic Leather Combat Leggings'
+          - '&f&l* &e10k XP'
+          - '&f&l* &eBlack Scroll'
+          - ''
+          - '&7Become a master of the dark arts.'
+          - '&6* Castaway Planet Release'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: EXP_BOTTLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Grandmaster Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Nightmare Killer'
+          - '&f&l* &6&lHeroic Shroud of Judgement'
+          - '&f&l* &6&lHeroic Sandals of Silence'
+          - '&f&l* &eHeroic Cloack of the Grandmaster'
+          - '&f&l* &eHeroic Leather Combat Leggings'
+          - '&f&l* &e10k XP'
+          - '&f&l* &eBlack Scroll'
+          - ''
+          - '&7Become a master of the dark arts.'
+          - '&6* Castaway Planet Release'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Grandmaster Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Nightmare Killer'
+          - '&f&l* &6&lHeroic Shroud of Judgement'
+          - '&f&l* &6&lHeroic Sandals of Silence'
+          - '&f&l* &eHeroic Cloack of the Grandmaster'
+          - '&f&l* &eHeroic Leather Combat Leggings'
+          - '&f&l* &e10k XP'
+          - '&f&l* &eBlack Scroll'
+          - ''
+          - '&7Become a master of the dark arts.'
+          - '&6* Castaway Planet Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: EXP_BOTTLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Grandmaster Kit'
+    hide: false
+    permission: gkit.grandmaster
+    slot: 15
+  GrimReaper:
+    content:
+      1:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - blind:%1-3%
+          - paralyze:%1-4%
+          - reforged:%1-10%
+          - featherweight:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - unbreaking:4
+        lore:
+          - '&c&oThe fabled death-forged scythe of'
+          - '&c&othe almighty Grim Reaper itself.'
+        material: DIAMOND_SWORD
+        name: '&c&lGrim Reaper Scythe'
+      2:
+        advanced-enchantments:
+          - implants:%1-3%
+          - aquatic:1
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:4
+          - fireprotection:2
+        lore:
+          - '&6&oWoven out of nether and ender cloth,'
+          - '&6&oechoes of the dead can be heard from within.'
+        material: DIAMOND_HELMET
+        name: '&6&lHood of the Grim Reaper'
+      3:
+        advanced-enchantments:
+          - overload:%1-3%
+          - diminish:%1-8%
+          - obsidianshield:1
+          - trickster:%1-8%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:4
+          - fireprotection:2
+        lore:
+          - '&6&oDistressed and disturbed, these black'
+          - '&6&orobes devour all light before them.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lTattered Robes of the Reaper'
+      4:
+        amount: 32
+        data: 0
+        lore:
+          - '&7A yummy piece of space candy, only'
+          - '&7obtainable during &nHalloween Events!'
+        material: MAGMA_CREAM
+        name: '&eHalloween Candy'
+      5:
+        command: ae giveitem %player% soulgem 1 250
+      6:
+        chance: 10
+        command: ae giveitem %player% holywhitescroll 1
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lGrim Reaper Scythe'
+          - '&f&l* &6&lHood of the Grim Reaper'
+          - '&f&l* &6&lTattered Robes of the Reaper'
+          - '&f&l* &e250 Souls'
+          - '&f&l* &e32 Halloween Candy'
+          - '&f&l* &e&lA chance of...'
+          - '&f&l     - &eHoly White Scroll'
+          - '&7Become the master of life and death.'
+          - '&6* Lost Kingdoms Release 2018'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: SKULL_ITEM
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Grim Reaper Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lGrim Reaper Scythe'
+          - '&f&l* &6&lHood of the Grim Reaper'
+          - '&f&l* &6&lTattered Robes of the Reaper'
+          - '&f&l* &e250 Souls'
+          - '&f&l* &e32 Halloween Candy'
+          - '&f&l* &e&lA chance of...'
+          - '&f&l     - &eHoly White Scroll'
+          - '&7Become the master of life and death.'
+          - '&6* Lost Kingdoms Release 2018'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Grim Reaper Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lGrim Reaper Scythe'
+          - '&f&l* &6&lHood of the Grim Reaper'
+          - '&f&l* &6&lTattered Robes of the Reaper'
+          - '&f&l* &e250 Souls'
+          - '&f&l* &e32 Halloween Candy'
+          - '&f&l* &e&lA chance of...'
+          - '&f&l     - &eHoly White Scroll'
+          - '&7Become the master of life and death.'
+          - '&6* Lost Kingdoms Release 2018'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: SKULL_ITEM
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Grim Reaper Kit'
+    hide: false
+    permission: gkit.grimreaper
+    slot: 26
+  Guardian:
+    content:
+      1:
+        advanced-enchantments:
+          - sniper:%1-5%
+          - piercing:%1-5%
+          - snare:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - punch:2
+          - unbreaking:3
+          - infinity:1
+        lore:
+          - '&6&oProtect and heal the galaxy,'
+          - '&6&oand maintain law and order.'
+        material: BOW
+        name: '&6&lHeroic Divine Bow of Valhalla'
+      2:
+        advanced-enchantments:
+          - glowing:%1-1%
+          - implants:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA glowing, warm, light halo.'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Halo of the Guardian'
+      3:
+        advanced-enchantments:
+          - guardians:%1-10%
+          - curse:%1-5%
+          - shockwave:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA glimmering, bright chestplate.'
+        material: DIAMOND_CHESTPLATE
+        name: '&eHeroic Divine Guardian Chestplate'
+      4:
+        advanced-enchantments: []
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA glowing pair of heavingly leggings.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Divine Guardian Leggings'
+      5:
+        advanced-enchantments:
+          - gears:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oForged out of pure light essence.'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Sandals of the Divine'
+      6:
+        amount: 1
+        data: 0
+        material: ARROW
+      7:
+        command: ae givebook %player% clarity 3 1 50 50
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Divine Bow of Valhalla'
+          - '&f&l* &6&lHeroic Halo of the Guardian'
+          - '&f&l* &eHeroic Sandals of the Divine'
+          - '&f&l* &eHeroic Divine Guardian Chestplate'
+          - '&f&l* &eHeroic Guardian Leggings'
+          - ''
+          - '&7Protect and serve the galaxy you love.'
+          - '&6* Heart of Darkness'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: EYE_OF_ENDER
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Guardian Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Divine Bow of Valhalla'
+          - '&f&l* &6&lHeroic Halo of the Guardian'
+          - '&f&l* &eHeroic Sandals of the Divine'
+          - '&f&l* &eHeroic Divine Guardian Chestplate'
+          - '&f&l* &eHeroic Guardian Leggings'
+          - ''
+          - '&7Protect and serve the galaxy you love.'
+          - '&6* Heart of Darkness'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Guardian Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Divine Bow of Valhalla'
+          - '&f&l* &6&lHeroic Halo of the Guardian'
+          - '&f&l* &eHeroic Sandals of the Divine'
+          - '&f&l* &eHeroic Divine Guardian Chestplate'
+          - '&f&l* &eHeroic Guardian Leggings'
+          - ''
+          - '&7Protect and serve the galaxy you love.'
+          - '&6* Heart of Darkness'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: EYE_OF_ENDER
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Guardian Kit'
+    hide: false
+    permission: gkits.guardian
+    slot: 3
+  Hyperdrive:
+    content:
+      1:
+        advanced-enchantments:
+          - poison:%1-3%
+          - paralyze:%1-4%
+          - lifesteal:%1-5%
+          - inquisitive:%1-4%
+          - featherweight:%1-3%
+          - disarmor:%1-8%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fireaspect:2
+          - unbreaking:2
+        lore:
+          - '&6&oA weapon unrivaled in destructive speed.'
+        material: DIAMOND_SWORD
+        name: '&6&lHeroic Hermes Blade of Swiftness'
+      2:
+        advanced-enchantments:
+          - trickster:%1-8%
+          - angelic:%1-5%
+          - overload:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA legendary agile helmet.'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Hyper Helmet of Hermes'
+      3:
+        advanced-enchantments:
+          - shockwave:%1-5%
+          - guardians:%1-10%
+          - tank:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oAn extremely light chestplate.'
+        material: DIAMOND_CHESTPLATE
+        name: '&eHeroic Hyper Chestplate of Mercury'
+      4:
+        advanced-enchantments:
+          - obsidianshield:1
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oSo light, you forget you are wearing them!'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Hyper Leggings of Nike'
+      5:
+        advanced-enchantments:
+          - springs:%1-3%
+          - gears:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oThe legendary boots of hermes.'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Hyper Boots of Hermes'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Hermes Blade of Swiftness'
+          - '&f&l* &6&lHeroic Hyper Helmet of Hermes'
+          - '&f&l* &eHeroic Hyper Chestplate of Mercury'
+          - '&f&l* &eHeroic Hyper Leggings of Nike'
+          - '&f&l* &eHeroic Hyper Boots of Hermes'
+          - ''
+          - '&7The most agile equipment in the galaxy.'
+          - '&6* Thanksgiving 2015'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: FEATHER
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Hyperdrive Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Hermes Blade of Swiftness'
+          - '&f&l* &6&lHeroic Hyper Helmet of Hermes'
+          - '&f&l* &eHeroic Hyper Chestplate of Mercury'
+          - '&f&l* &eHeroic Hyper Leggings of Nike'
+          - '&f&l* &eHeroic Hyper Boots of Hermes'
+          - ''
+          - '&7The most agile equipment in the galaxy.'
+          - '&6* Thanksgiving 2015'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Hyperdrive Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Hermes Blade of Swiftness'
+          - '&f&l* &6&lHeroic Hyper Helmet of Hermes'
+          - '&f&l* &eHeroic Hyper Chestplate of Mercury'
+          - '&f&l* &eHeroic Hyper Leggings of Nike'
+          - '&f&l* &eHeroic Hyper Boots of Hermes'
+          - ''
+          - '&7The most agile equipment in the galaxy.'
+          - '&6* Thanksgiving 2015'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: FEATHER
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Hyperdrive Kit'
+    hide: false
+    permission: gkit.hyperdrive
+    slot: 1
+  Independence:
+    content:
+      1:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - inquisitive:%1-4%
+          - block:%1-3%
+          - featherweight:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oA mythical runeblade imbued with'
+          - '&6&othe spirit of Liber god of freedom.'
+        material: DIAMOND_SWORD
+        name: '&6&lRuneblade of Liber'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - guardians:%1-10%
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oInstead of trying to make your life'
+          - '&6&operfect give yourself the freedom to'
+          - '&6&omake it an adventure and go ever upward.'
+        material: DIAMOND_HELMET
+        name: '&6&lGuy Fawkes Mask'
+      3:
+        advanced-enchantments:
+          - armored:%1-4%
+          - dodge:%1-5%
+          - hardened:%1-3%
+          - molten:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oYou cannot know peace without'
+          - '&6&ofirst acknowledging chaos.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lChestplate of Chaos'
+      4:
+        advanced-enchantments:
+          - gears:%1-3%
+          - spirits:%1-10%
+          - hardened:%1-3
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oYou suddenly have an urge to'
+          - '&6&oresist the status quo.'
+        material: DIAMOND_BOOTS
+        name: '&6&lAnarchy Boots'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lRuneblade of Liber'
+          - '&f&l* &6&lGuy Fawkes Mask'
+          - '&f&l* &eAnarchy Boots'
+          - '&f&l* &eChestplate of Chaos'
+          - ''
+          - '&7Break free from your chains.. heroically!.'
+          - '&6* July 4th 2015/2017'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: FIREWORK
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Independence Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lRuneblade of Liber'
+          - '&f&l* &6&lGuy Fawkes Mask'
+          - '&f&l* &eAnarchy Boots'
+          - '&f&l* &eChestplate of Chaos'
+          - ''
+          - '&7Break free from your chains.. heroically!.'
+          - '&6* July 4th 2015/2017'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Independence Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lRuneblade of Liber'
+          - '&f&l* &6&lGuy Fawkes Mask'
+          - '&f&l* &eAnarchy Boots'
+          - '&f&l* &eChestplate of Chaos'
+          - ''
+          - '&7Break free from your chains.. heroically!.'
+          - '&6* July 4th 2015/2017'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: FIREWORK
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Independence Kit'
+    hide: false
+    permission: gkit.independence
+    slot: 18
+  Loki:
+    content:
+      1:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - unbreaking:4
+        lore:
+          - '&5&oA metaphysical shadow axe, considered'
+          - '&5&oby many to be a myth. It exists briefly'
+          - '&5&oonly in the moments it kills.'
+        material: DIAMOND_AXE
+        name: '&d&lYixary'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:4
+          - fireprotection:4
+        lore:
+          - '&6&oA dark crown embrordered with absolute'
+          - '&6&oblack onyx. Icy cold to the touch.'
+        material: DIAMOND_HELMET
+        name: '&6&lCrown of Shadows'
+      3:
+        amount: 32
+        data: 0
+        lore:
+          - '&7&oWhat? Have you not seen an'
+          - '&7&o&nEXPLODING&7&o cake before?!'
+        material: CAKE
+        name: '&f&lExplosive Cake'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&7The Norse god of trickery and deceit.'
+          - '&6* Soul Trap Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: GOLD_AXE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Loki Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&7The Norse god of trickery and deceit.'
+          - '&6* Soul Trap Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Loki Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&7The Norse god of trickery and deceit.'
+          - '&6* Soul Trap Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: GOLD_AXE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Loki Kit'
+    hide: false
+    permission: gkit.loki
+    slot: 25
+  MasterBuilder:
+    content:
+      1:
+        advanced-enchantments:
+          - haste:%1-3%
+          - experience:%1-5%
+          - smelting:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - efficiency:5
+          - unbreaking:3
+          - fortune:3
+        lore:
+          - '&6&oA legendary tool forged by'
+          - '&6&othe god of builders.'
+        material: DIAMOND_PICKAXE
+        name: '&6&lHeroic Pickaxe of Hephaestus'
+      2:
+        advanced-enchantments:
+          - haste:%1-3%
+          - telepathy:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - efficiency:5
+          - unbreaking:3
+          - fortune:3
+        lore:
+          - '&6&oAn ancient spade used by'
+          - '&6&othe realm god of excavation.'
+        material: DIAMOND_SPADE
+        name: '&6&lHeroic Shiva''''s Excavator'
+    delay: 259000
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Pickaxe of Hephaestus'
+          - '&f&l* &6&lHeroic Shiva''''s Excavator'
+          - ''
+          - '&7Construct citadels worthy of gods.'
+          - '&6* Tool Enchant Update'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND_PICKAXE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Master Builder Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Pickaxe of Hephaestus'
+          - '&f&l* &6&lHeroic Shiva''''s Excavator'
+          - ''
+          - '&7Construct citadels worthy of gods.'
+          - '&6* Tool Enchant Update'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Master Builder Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Pickaxe of Hephaestus'
+          - '&f&l* &6&lHeroic Shiva''''s Excavator'
+          - ''
+          - '&7Construct citadels worthy of gods.'
+          - '&6* Tool Enchant Update'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND_PICKAXE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Master Builder Kit'
+    hide: false
+    permission: gkit.masterbuilder
+    slot: 17
+  Paladin:
+    content:
+      1:
+        advanced-enchantments:
+          - armored:%1-4%
+          - tank:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+        lore:
+          - '&6&oA shiny elegant silk shroud'
+          - '&6&olinked together with chainmail.'
+        material: DIAMOND_HELMET
+        name: '&6Heroic Shroud of the Holy Order'
+      2:
+        advanced-enchantments:
+          - armored:%1-4%
+          - overload:%1-4%
+          - tank:%1-4%
+          - spirits:%1-10%
+          - guardians:%1-10%
+          - shockwave:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+        lore:
+          - '&6&oA blessed pair of indestructible platemail.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6Heroic Divine Paladin Chestplate'
+      3:
+        advanced-enchantments:
+          - armored:%1-4%
+          - tank:%1-4%
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+        lore:
+          - '&6&oForged in the depths of Hephasteus'
+          - '&6&oimmuned to the weapons of mere mortals.'
+        material: DIAMOND_LEGGINGS
+        name: '&6&lHeroic Platelegs of Athena'
+      4:
+        advanced-enchantments:
+          - armored:%1-4%
+          - gears:%1-3%
+          - tank:%1-4%
+          - angelic:%1-5%
+          - springs:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:5
+          - unbreaking:3
+        lore:
+          - '&6&oSmelted out of pure holy essence.'
+        material: DIAMOND_BOOTS
+        name: '&6Heroic Boots of the Holy Order'
+      5:
+        command: ae giveitem %player% randomizationscroll 1 ULTIMATE
+      6:
+        command: ae giveitem %player% randomizationscroll 1 LEGENDARY
+      7:
+        command: ae giveitem %player% slotincreaser 1 ULTIMATE
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Divine Paladin Chestplate'
+          - '&f&l* &6&lHeroic Platelegs of Athena'
+          - '&f&l* &eHeroic Shroud of the Holy Order'
+          - '&f&l* &eHeroic Boots of the Holy Order'
+          - '&f&l* &e2 Randomization Scrolls'
+          - '&f&l* &e1 Enchantment Orb'
+          - ''
+          - '&7The best offense is a perfect defense.'
+          - '&6* Ice Planet Reset'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: GOLD_HELMET
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Paladin Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Divine Paladin Chestplate'
+          - '&f&l* &6&lHeroic Platelegs of Athena'
+          - '&f&l* &eHeroic Shroud of the Holy Order'
+          - '&f&l* &eHeroic Boots of the Holy Order'
+          - '&f&l* &e2 Randomization Scrolls'
+          - '&f&l* &e1 Enchantment Orb'
+          - ''
+          - '&7The best offense is a perfect defense.'
+          - '&6* Ice Planet Reset'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Paladin Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Divine Paladin Chestplate'
+          - '&f&l* &6&lHeroic Platelegs of Athena'
+          - '&f&l* &eHeroic Shroud of the Holy Order'
+          - '&f&l* &eHeroic Boots of the Holy Order'
+          - '&f&l* &e2 Randomization Scrolls'
+          - '&f&l* &e1 Enchantment Orb'
+          - ''
+          - '&7The best offense is a perfect defense.'
+          - '&6* Ice Planet Reset'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: GOLD_HELMET
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Paladin Kit'
+    hide: false
+    permission: gkit.paladin
+    slot: 23
+  PartyAnimal:
+    content:
+      1:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - disarmor:%1-8%
+          - paralyze:%1-4%
+          - featherweight:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oThe legendary marble forged drinking'
+          - '&6&oJug of Dionysus the god of partying.'
+        material: DIAMOND_SWORD
+        name: '&6&lThe Jug of Dionysus'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - dodge:%1-5%
+          - implants:%1-3%
+          - aquatic:1
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oAn extremely rare party hat only'
+          - '&6&oobtainable on the #2 anniversary weekend.'
+          - '&6&oNow party like it is 1999... again!'
+        material: DIAMOND_HELMET
+        name: '&6&lYear #2 Party Hat'
+      3:
+        amount: 64
+        data: 0
+        lore:
+          - '&7&oSmuggled in from a mysterious galaxy,'
+          - '&7&oit is the partying drink of choice!'
+        material: POTION
+        name: '&bSpace Drink'
+      4:
+        amount: 16
+        data: 0
+        lore:
+          - '&7&oWhat? Have you not seen an'
+          - '&7&o&nEXPLODING&7&o cake before?!'
+        material: CAKE
+        name: '&f&lExplosive Cake'
+      5:
+        amount: 8
+        data: 0
+        lore:
+          - '&7&oA firework specially designed to'
+          - '&7&odetonate in intergalactic space.'
+        material: FIREBALL
+        name: '&e&lSpace Firework'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lThe Jug of Dionysus'
+          - '&f&l* &6&lYear #2 Party Hat'
+          - ''
+          - '&7Fight hard, party even harder.'
+          - '&6* #1 Year Anniversary'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: CAKE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Party Animal Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lThe Jug of Dionysus'
+          - '&f&l* &6&lYear #2 Party Hat'
+          - ''
+          - '&7Fight hard, party even harder.'
+          - '&6* #1 Year Anniversary'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Party Animal Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lThe Jug of Dionysus'
+          - '&f&l* &6&lYear #2 Party Hat'
+          - ''
+          - '&7Fight hard, party even harder.'
+          - '&6* #1 Year Anniversary'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: CAKE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Party Animal Kit'
+    hide: false
+    permission: gkit.partyanimal
+    slot: 13
+  Spooky:
+    content:
+      1:
+        advanced-enchantments:
+          - paralyze:%1-4%
+          - lifesteal:%1-5%
+          - vampire:%1-3%
+          - blind:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oAn ancient blade imbued with the nightmares'
+          - '&6&oof all who have fallen before it.'
+        material: DIAMOND_SWORD
+        name: '&6&lHeroic Headless Blade of Horror'
+      2:
+        advanced-enchantments:
+          - molten:%1-4%
+          - spirits:%1-10%
+          - voodoo:%1-6%
+          - curse:%1-5%
+          - overload:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oAn onyx shroud, eminating death.'
+        material: DIAMOND_HELMET
+        name: '&6&lHeroic Grim Reaper Shroud'
+      3:
+        advanced-enchantments:
+          - tank:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA chestplate with a VERY spooky aura.'
+        material: DIAMOND_CHESTPLATE
+        name: '&eHeroic Headless Chestplate of Nightmares'
+      4:
+        advanced-enchantments:
+          - wither:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA pair of leggings with a VERY spooky aura.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Headless Leggings of Nightmares'
+      5:
+        advanced-enchantments:
+          - armored:%1-4%
+          - gears:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA pair of boots with a VERY spooky aura.'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Headless Boots of Nightmares'
+    delay: 259200
+    display:
+      available:
+        custom-model-data: 0
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Headless Blade of Horror'
+          - '&f&l* &6&lHeroic Grim Reaper Shroud'
+          - '&f&l* &eHeroic Headless Chestplate of Nightmares'
+          - '&f&l* &eHeroic Headless Leggings of Nightmares'
+          - '&f&l* &eHeroic Headless Boots of Nightmares'
+          - ''
+          - '&7Petrify your enemies in fear.'
+          - '&6* Halloween 2015'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: PUMPKIN
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Spooky Kit'
+      cooldown:
+        custom-model-data: 0
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Headless Blade of Horror'
+          - '&f&l* &6&lHeroic Grim Reaper Shroud'
+          - '&f&l* &eHeroic Headless Chestplate of Nightmares'
+          - '&f&l* &eHeroic Headless Leggings of Nightmares'
+          - '&f&l* &eHeroic Headless Boots of Nightmares'
+          - ''
+          - '&7Petrify your enemies in fear.'
+          - '&6* Halloween 2015'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Spooky Kit'
+      no-permission:
+        custom-model-data: 0
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Headless Blade of Horror'
+          - '&f&l* &6&lHeroic Grim Reaper Shroud'
+          - '&f&l* &eHeroic Headless Chestplate of Nightmares'
+          - '&f&l* &eHeroic Headless Leggings of Nightmares'
+          - '&f&l* &eHeroic Headless Boots of Nightmares'
+          - ''
+          - '&7Petrify your enemies in fear.'
+          - '&6* Halloween 2015'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: PUMPKIN
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Spooky Kit'
+    hide: false
+    permission: gkit.spooky
+    slot: 0
+  Templar:
+    content:
+      1:
+        advanced-enchantments:
+          - angelic:%1-5%
+          - glowing:%1-1%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oAn illuminating light halo.'
+        material: DIAMOND_HELMET
+        name: '&eHeroic Halo of Light'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - hardened:%1-3%
+          - armored:%1-4%
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oProtect your allies until your last breath.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lHeroic Platemail of Aegis the Protector'
+      3:
+        advanced-enchantments:
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA whitemail pair of leggings.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Leggings of Replenishment'
+      4:
+        advanced-enchantments:
+          - gears:%1-3%
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oCrafted out of blessed light essence.'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Sandals of the Angelic'
+      5:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - disarmor:%1-8%
+          - vampire:%1-3%
+          - block:%1-4%
+          - paralyze:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - smite:5
+          - unbreaking:3
+          - fireaspect:2
+        lore:
+          - '&6&oA blade blessed by the templars with'
+          - '&6&oprotective, paladin-like properties.'
+        material: DIAMOND_SWORD
+        name: '&6&lHeroic Blade of Knights Order'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Platemail of aegis the Protector'
+          - '&f&l* &6&lHeroic Blade of the Knights Order'
+          - '&f&l* &eHeroic Halo of Light'
+          - '&f&l* &eHeroic Leggings of Replenishment'
+          - '&f&l* &eHeroic Sandals of the Angelic'
+          - ''
+          - '&7Protect your allies to your last breath.'
+          - '&6* Easter 2015'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: GOLDEN_APPLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Templar Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Platemail of aegis the Protector'
+          - '&f&l* &6&lHeroic Blade of the Knights Order'
+          - '&f&l* &eHeroic Halo of Light'
+          - '&f&l* &eHeroic Leggings of Replenishment'
+          - '&f&l* &eHeroic Sandals of the Angelic'
+          - ''
+          - '&7Protect your allies to your last breath.'
+          - '&6* Easter 2015'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Templar Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Platemail of aegis the Protector'
+          - '&f&l* &6&lHeroic Blade of the Knights Order'
+          - '&f&l* &eHeroic Halo of Light'
+          - '&f&l* &eHeroic Leggings of Replenishment'
+          - '&f&l* &eHeroic Sandals of the Angelic'
+          - ''
+          - '&7Protect your allies to your last breath.'
+          - '&6* Easter 2015'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: GOLDEN_APPLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Templar Kit'
+    hide: false
+    permission: gkits.templar
+    slot: 9
+  Tinkermaster:
+    content:
+      1:
+        advanced-enchantments:
+          - sniper:%1-6%
+          - snare:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - flame:1
+          - infinity:1
+          - unbreaking:3
+        lore:
+          - '&6&oGlycon the snake god of puppets...'
+          - '&6&oWhy destroy your enemies when'
+          - '&6&oyou can control them?'
+        material: BOW
+        name: '&6&lGlycon''''s Bow'
+      2:
+        advanced-enchantments:
+          - glowing:1
+          - implants:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oThe latest and greatest in gnome technology!'
+        material: DIAMOND_HELMET
+        name: '&eHeroic Gnomish Tinker Hat'
+      3:
+        advanced-enchantments:
+          - overload:%1-3%
+          - heavy:%1-5%
+          - guardians:%1-10%
+          - shockwave:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oA true technological masterpiece'
+          - '&6&oturn the strength of your enemies against them.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lHeroic Clockwork Armor'
+      4:
+        advanced-enchantments:
+          - heavy:%1-5%
+          - frozen:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oSaturating pants made of steel. Gnomes man.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Pants of Steel'
+      5:
+        advanced-enchantments:
+          - gears:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oGet out of the stickiest of situations!'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Gnome Escapist Shoes'
+      6:
+        amount: 1
+        data: 0
+        material: ARROW
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lGlycon''''s Bow'
+          - '&f&l* &6&lHeroic Clockwork Armor'
+          - '&f&l* &eHeroic Gnomish Tinkerer Hat'
+          - '&f&l* &eHeroic Pants of Steel'
+          - '&f&l* &eHeroic Gnome Escapist Shoes'
+          - ''
+          - '&7Cunning, mischievous, legendary puppet master.'
+          - '&6* Bounty Hunter Update'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: BREWING_STAND_ITEM
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Tinkermaster Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lGlycon''''s Bow'
+          - '&f&l* &6&lHeroic Clockwork Armor'
+          - '&f&l* &eHeroic Gnomish Tinkerer Hat'
+          - '&f&l* &eHeroic Pants of Steel'
+          - '&f&l* &eHeroic Gnome Escapist Shoes'
+          - ''
+          - '&7Cunning, mischievous, legendary puppet master.'
+          - '&6* Bounty Hunter Update'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Tinkermaster Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lGlycon''''s Bow'
+          - '&f&l* &6&lHeroic Clockwork Armor'
+          - '&f&l* &eHeroic Gnomish Tinkerer Hat'
+          - '&f&l* &eHeroic Pants of Steel'
+          - '&f&l* &eHeroic Gnome Escapist Shoes'
+          - ''
+          - '&7Cunning, mischievous, legendary puppet master.'
+          - '&6* Bounty Hunter Update'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: BREWING_STAND_ITEM
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Tinkermaster Kit'
+    hide: false
+    permission: gkit.tinkermaster
+    slot: 11
+  Trickster:
+    content:
+      1:
+        advanced-enchantments:
+          - disarmor:%1-8%
+          - lifesteal:%1-5%
+          - blind:%1-3%
+          - vampire:%1-3%
+          - paralyze:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fireaspect:2
+          - unbreaking:2
+        lore:
+          - '&6&oHe may be gone, but will never be forgotten.'
+        material: DIAMOND_SWORD
+        name: '&6&lHand of Harambe'
+      2:
+        advanced-enchantments:
+          - sniper:%1-5%
+          - hellfire:%1-5%
+          - snare:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - unbreaking:2
+          - infinity:1
+        lore:
+          - '&6&oAh yes, Nootaikok, the god of... bow spam?'
+        material: BOW
+        name: '&6&lFarcasting Bow of Nootaikok'
+      3:
+        amount: 1
+        data: 0
+        material: ARROW
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHand of Harambe'
+          - '&f&l* &6&lFarcasting Bow of Nootaikok'
+          - ''
+          - '&7Troll the galaxy... with Harambe.'
+          - '&6* April Fools 2015'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: APPLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Trickster Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHand of Harambe'
+          - '&f&l* &6&lFarcasting Bow of Nootaikok'
+          - ''
+          - '&7Troll the galaxy... with Harambe.'
+          - '&6* April Fools 2015'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Trickster Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHand of Harambe'
+          - '&f&l* &6&lFarcasting Bow of Nootaikok'
+          - ''
+          - '&7Troll the galaxy... with Harambe.'
+          - '&6* April Fools 2015'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: APPLE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Trickster Kit'
+    hide: false
+    permission: gkits.trickster
+    slot: 8
+  Valentines:
+    content:
+      1:
+        advanced-enchantments:
+          - hardened:%1-3%
+          - glowing:%1-1%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oImmunization to false love.'
+        material: DIAMOND_HELMET
+        name: '&eHeroic Valentine Day Hat'
+      2:
+        advanced-enchantments:
+          - overload:%1-3%
+          - guardians:%1-10%
+          - hardened:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oBoy, you are SUPER HOT.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lHeroic 6-pack Abs'
+      3:
+        advanced-enchantments:
+          - overload:%1-3%
+          - obsidianshield:1
+          - implants:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oShow off your yoked quads n glutes.'
+        material: DIAMOND_LEGGINGS
+        name: '&6&lHeroic Short shorts'
+      4:
+        advanced-enchantments:
+          - gears:%1-3%
+          - hardened:%1-3%
+          - angelic:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oComforable AND functional!'
+        material: DIAMOND_BOOTS
+        name: '&eHeroic Bunny Slippers'
+      5:
+        advanced-enchantments:
+          - disarmor:%1-8%
+          - lifesteal:%1-5%
+          - paralyze:%1-4%
+          - featherweight:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fireaspect:2
+          - unbreaking:2
+        lore:
+          - '&6&oA blade that pierces even.'
+          - '&6&othe coldest and lonely of hearts.'
+        material: DIAMOND_SWORD
+        name: '&6&lHeroic Knife of Love'
+      6:
+        amount: 8
+        data: 0
+        lore:
+          - '&7Rich chocolate cut with sour apple.'
+        material: GOLDEN_APPLE
+        name: '&fWhite Chocolate Apple'
+      7:
+        amount: 1
+        data: 0
+        lore:
+          - '&7Written in an alien language...'
+          - '&7but someone loves you!'
+        material: PAPER
+        name: '&fEpic Love Letter'
+      8:
+        amount: 1
+        data: 96
+        lore:
+          - '&7Almost as cute as you in that outfit!'
+        material: MONSTER_EGG
+        name: '&fMooshroom Spawner Egg'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Knife of Love'
+          - '&f&l* &6&lHeroic Short shorts'
+          - '&f&l* &6&lHeroic 6-pack Abs'
+          - '&f&l* &eHeroic Valentine Day Hat'
+          - '&f&l* &eHeroic Bunny Slippers'
+          - ''
+          - '&7The ultimate support kit!'
+          - '&6* Valentines 2015'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: RED_ROSE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Valentines Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Knife of Love'
+          - '&f&l* &6&lHeroic Short shorts'
+          - '&f&l* &6&lHeroic 6-pack Abs'
+          - '&f&l* &eHeroic Valentine Day Hat'
+          - '&f&l* &eHeroic Bunny Slippers'
+          - ''
+          - '&7The ultimate support kit!'
+          - '&6* Valentines 2015'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Valentines Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Knife of Love'
+          - '&f&l* &6&lHeroic Short shorts'
+          - '&f&l* &6&lHeroic 6-pack Abs'
+          - '&f&l* &eHeroic Valentine Day Hat'
+          - '&f&l* &eHeroic Bunny Slippers'
+          - ''
+          - '&7The ultimate support kit!'
+          - '&6* Valentines 2015'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit'
+        material: RED_ROSE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Valentines Kit'
+    hide: false
+    permission: gkit.valentines
+    slot: 5
+  Viking:
+    content:
+      1:
+        advanced-enchantments:
+          - barbarian:%1-4%
+          - bleed:%1-6%
+          - reforged:%1-10%
+          - berserk:%1-4%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - smite:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oAn ancient axe forged by dwarven gods.'
+        material: DIAMOND_AXE
+        name: '&6&lAxe of the Dwarvish Gods'
+      2:
+        advanced-enchantments:
+          - implants:%1-3%
+          - frozen:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oIron forged leathally intimidating.'
+        material: DIAMOND_HELMET
+        name: '&6Heroic Spiked Viking Helmet'
+      3:
+        advanced-enchantments:
+          - overload:%1-3%
+          - spirits:%1-10%
+          - shockwave:%1-5%
+          - curse:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oBoast freely the skulls of your'
+          - '&6&opast enemies are part of your armor.'
+        material: DIAMOND_CHESTPLATE
+        name: '&6&lHeroic Viking Skull Chainmail'
+      4:
+        advanced-enchantments:
+          - armored:%1-4%
+          - shockwave:%1-5%
+          - frozen:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oIcy cold and terrifying to the touch.'
+        material: DIAMOND_LEGGINGS
+        name: '&6&lNordic Iron Forged Leggings'
+      5:
+        advanced-enchantments:
+          - gears:%1-3%
+          - springs:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oExtremely agile yet defensible.'
+        material: DIAMOND_BOOTS
+        name: '&6Heroic Steeltoe Leather Boots'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Viking Skull Chainmail'
+          - '&f&l* &6&lAxe of the Dwarvish Gods'
+          - '&f&l* &eHeroic Spiked Viking Helmet'
+          - '&f&l* &eHeroic Nordic Iron Forged Leggings'
+          - '&f&l* &eHeroic Steeltoe Leather Boots'
+          - ''
+          - '&7Bloodthirsty, ruthless, axe-loving vikings.'
+          - '&6* Earth Day 2015'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND_AXE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Viking Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Viking Skull Chainmail'
+          - '&f&l* &6&lAxe of the Dwarvish Gods'
+          - '&f&l* &eHeroic Spiked Viking Helmet'
+          - '&f&l* &eHeroic Nordic Iron Forged Leggings'
+          - '&f&l* &eHeroic Steeltoe Leather Boots'
+          - ''
+          - '&7Bloodthirsty, ruthless, axe-loving vikings.'
+          - '&6* Earth Day 2015'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Viking Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Viking Skull Chainmail'
+          - '&f&l* &6&lAxe of the Dwarvish Gods'
+          - '&f&l* &eHeroic Spiked Viking Helmet'
+          - '&f&l* &eHeroic Nordic Iron Forged Leggings'
+          - '&f&l* &eHeroic Steeltoe Leather Boots'
+          - ''
+          - '&7Bloodthirsty, ruthless, axe-loving vikings.'
+          - '&6* Earth Day 2015'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yourserver.com'
+          - '&7Right-Click to preview kit.'
+        material: DIAMOND_AXE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Viking Kit'
+    hide: false
+    permission: gkit.viking
+    slot: 10
+  Voidwalker:
+    content:
+      1:
+        advanced-enchantments:
+          - lifesteal:%1-5%
+          - disarmor:%1-8%
+          - greatsword:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - sharpness:5
+          - fire_aspect:2
+          - unbreaking:3
+        lore:
+          - '&6&oA daemon forged greatsword'
+          - '&6&owieldable only to those the blade'
+          - '&6&oitself deems worthy and to kill'
+          - '&6&othose it deems unworthy.'
+        material: DIAMOND_SWORD
+        name: '&6&lHeroic Chaos Executioner'
+      2:
+        advanced-enchantments:
+          - armored:%1-4%
+          - gears:%1-3%
+          - tank:%1-4%
+          - voodoo:%1-6%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oYou walk on the thin line between'
+          - '&6&oexistence and extinction do your'
+          - '&6&oenemies dare to follow?'
+        material: DIAMOND_BOOTS
+        name: '&6&lHeroic Erebus'''' Sandals of the Void'
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Chaos Executioner'
+          - '&f&l* &6&lHeroic Erebus'''' Sandals of the Void'
+          - ''
+          - '&7Walk the path of the true void.'
+          - '&6* Demon Planet Release'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: ENDER_PEARL
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Voidwalker Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Chaos Executioner'
+          - '&f&l* &6&lHeroic Erebus'''' Sandals of the Void'
+          - ''
+          - '&7Walk the path of the true void.'
+          - '&6* Demon Planet Release'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Voidwalker Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &6&lHeroic Chaos Executioner'
+          - '&f&l* &6&lHeroic Erebus'''' Sandals of the Void'
+          - ''
+          - '&7Walk the path of the true void.'
+          - '&6* Demon Planet Release'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: ENDER_PEARL
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Voidwalker Kit'
+    hide: false
+    permission: gkit.voidwalker
+    slot: 16
+  Warlock:
+    content:
+      1:
+        advanced-enchantments:
+          - sniper:%1-5%
+          - piercing:%1-5%
+          - blind:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - power:5
+          - infinity:1
+          - flame:1
+          - unbreaking:3
+        lore:
+          - '&c&oA fabled entity cursed with impossibly'
+          - '&c&oancient and descrictive demonic power.'
+        material: BOW
+        name: '&c&lThe Fiend'
+      2:
+        advanced-enchantments:
+          - armored:%1-4%
+          - overload:%1-3%
+          - guardians:%1-10%
+          - trickster:%1-8%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oYou are a master of the demonic world.'
+        material: DIAMOND_HELMET
+        name: '&6&lMaster Warlock Veil'
+      3:
+        advanced-enchantments:
+          - armored:%1-4%
+          - overload:%1-3%
+          - spirits:%1-10%
+          - shockwave:%1-5%
+          - curse:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA chillingly cold dark robeset.'
+        material: DIAMOND_CHESTPLATE
+        name: '&eHeroic Warlock Robe'
+      4:
+        advanced-enchantments:
+          - armored:%1-4%
+          - dodge:%1-5%
+          - wither:%1-5%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&e&oA light set of dark silk robe bottoms.'
+        material: DIAMOND_LEGGINGS
+        name: '&eHeroic Warlock Bottoms'
+      5:
+        advanced-enchantments:
+          - armored:%1-4%
+          - gears:%1-3%
+        amount: 1
+        data: 0
+        enchants:
+          - protection:4
+          - unbreaking:3
+        lore:
+          - '&6&oSilence.. then suddenly death.'
+        material: DIAMOND_BOOTS
+        name: '&6&lGhostly Call of the Banshee'
+      6:
+        amount: 16
+        data: 0
+        material: ENDER_PEARL
+      7:
+        amount: 16
+        data: 0
+        material: ENDER_PEARL
+      8:
+        command: ae giveitem %player% secret 5 ULTIMATE
+    delay: 259200
+    display:
+      available:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lThe Fiend'
+          - '&f&l* &6&lMaster Warlock Hat'
+          - '&f&l* &6&lGhostly Call of the Banshee'
+          - '&f&l* &eHeroic Warlock Robe'
+          - '&f&l* &eHeroic Warlock Bottoms'
+          - '&f&l* &e32x Enderpearls'
+          - '&f&l* &e9x Mystery Dust'
+          - ''
+          - '&7Become a master of the dark arts.'
+          - '&6* Enchantment Tracking'
+          - ''
+          - '&a&lUNLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DRAGON_EGG
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Warlock Kit'
+      cooldown:
+        data: 4
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lThe Fiend'
+          - '&f&l* &6&lMaster Warlock Hat'
+          - '&f&l* &6&lGhostly Call of the Banshee'
+          - '&f&l* &eHeroic Warlock Robe'
+          - '&f&l* &eHeroic Warlock Bottoms'
+          - '&f&l* &e32x Enderpearls'
+          - '&f&l* &e9x Mystery Dust'
+          - ''
+          - '&7Become a master of the dark arts.'
+          - '&6* Enchantment Tracking'
+          - ''
+          - '&e&lCOOLDOWN over in .. {cooldown}'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: STAINED_GLASS_PANE
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Warlock Kit'
+      no-permission:
+        data: 0
+        force-glow: true
+        lore:
+          - ''
+          - '&f&l* &c&lThe Fiend'
+          - '&f&l* &6&lMaster Warlock Hat'
+          - '&f&l* &6&lGhostly Call of the Banshee'
+          - '&f&l* &eHeroic Warlock Robe'
+          - '&f&l* &eHeroic Warlock Bottoms'
+          - '&f&l* &e32x Enderpearls'
+          - '&f&l* &e9x Mystery Dust'
+          - ''
+          - '&7Become a master of the dark arts.'
+          - '&6* Enchantment Tracking'
+          - ''
+          - '&c&lLOCKED'
+          - '&7Unlock at &nbuy.yoursever.com'
+          - '&7Right-Click to preview kit.'
+        material: DRAGON_EGG
+        name: '&b&kiii&f&l&nHeroic&d&kiii&f&l Warlock Kit'
+    hide: false
+    permission: gkit.warlock
+    slot: 24

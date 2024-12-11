@@ -1,0 +1,83 @@
+# Configuration file for random loot generated in world and villager trades
+#  Random locations include:
+#   * Any chests generated in wild, e.g. mob spawner rooms, mineshaft etc.
+#  Configure Villager Trades. Villagers can trade custom enchantment books and admin items, e.g. white scrolls, orbs, dusts.
+
+# ------ Random Loot Section ------ #
+randomLoot:
+  # Should random loot be generated in world?
+  randomLootEnabled: false
+
+  # Maximum number of custom items to be generated in a random loot container
+  maxItemsPerContainer: 2
+
+  # Chance of any item(s) being generated
+  chanceOfItems: 5
+
+  # Blacklisted groups, these group books cannot generate in random loot
+  blacklisted-groups:
+    - 'STAFF'
+
+  # Chances format:
+  # ITEM_NAME: Chance (0 to 100)
+  chances:
+    SLOT_INCREASER: 5
+    WHITE_SCROLL: 12
+    MYSTERY_DUST: 0
+    SECRET_DUST: 15
+    MAGIC_DUST: 12
+    BLACK_SCROLL: 7
+    RANDOMIZER: 10
+    RENAME_TAG: 8
+    BLOCKTRAK: 3
+    FISHTRAK: 3
+    STATTRAK: 3
+    MOBTRAK: 3
+    SOUL_TRACKER: 2
+    SOUL_GEM: 15
+    TRANSMOG_SCROLL: 8
+    HOLY_WHITE_SCROLL: 4
+    ARMOR_ORB: 2
+    WEAPON_ORB: 2
+    TOOL_ORB: 2
+    RANDOM_ENCHANT_BOOK: 10
+
+# ------ Villager Trades Section ------ #
+villagerTrades:
+  # Should villagers be able to trade custom books / items?
+  villagerTradesEnabled: false
+
+  # Should villagers trade admin items as well? E.g. Whitescroll, Blackscroll, Magic Dust
+  # If set to false, they will only trade custom enchantment books
+  tradeAllLoot: true
+
+  # Chance of any item(s) being added as a trade
+  chanceOfItems: 3
+
+  # Blacklisted groups, these group books cannot be in villager trades
+  blacklisted-groups:
+    - 'STAFF'
+
+  # Chances format:
+  # ITEM_NAME: Chance (0 to 100)
+  chances:
+    SLOT_INCREASER: 5
+    WHITE_SCROLL: 12
+    MYSTERY_DUST: 0
+    SECRET_DUST: 15
+    MAGIC_DUST: 12
+    BLACK_SCROLL: 7
+    RANDOMIZER: 10
+    RENAME_TAG: 8
+    BLOCKTRAK: 3
+    FISHTRAK: 3
+    STATTRAK: 3
+    MOBTRAK: 3
+    SOUL_TRACKER: 2
+    SOUL_GEM: 15
+    TRANSMOG_SCROLL: 8
+    HOLY_WHITE_SCROLL: 4
+    ARMOR_ORB: 2
+    WEAPON_ORB: 2
+    TOOL_ORB: 2
+    RANDOM_ENCHANT_BOOK: 10

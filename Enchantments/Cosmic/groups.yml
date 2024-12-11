@@ -1,0 +1,145 @@
+# Enchantment groups are used for enchanter, to sell specific type books. You can group them
+# and give each group global color.
+# YOU CAN DELETE THESE GROUPS AND CREATE YOUR OWN
+settings:
+  magic-dust:
+    # Limit applying of Magic dust per group
+    # If false, magic dust can be applied to different groups
+    limit-applying-per-group: true
+  randomization-scrolls:
+    # Limit applying of Randomization scrolls per group
+    # If false, Randomization scrolls can be applied to different groups
+    limit-applying-per-group: true
+  # If set group is invalid, what should be the fall-back group
+  fallback-group: SIMPLE
+groups:
+  SIMPLE:
+    global-color: '&7'
+    group-name: "Simple"
+    # Use this to change the type of item per group
+    right-click-book-material: FIREWORK_CHARGE
+    right-click-book-damage: 0
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 200;200;200
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
+  UNIQUE:
+    global-color: '&a'
+    group-name: "Unique"
+    right-click-book-material: FIREWORK_CHARGE
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 122;255;80
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
+  ELITE:
+    global-color: '&b'
+    group-name: "Elite"
+    right-click-book-material: FIREWORK_CHARGE
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 20;250;255
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
+  ULTIMATE:
+    global-color: '&e'
+    group-name: "Ultimate"
+    right-click-book-material: FIREWORK_CHARGE
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 250;255;0
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
+  LEGENDARY:
+    global-color: '&6'
+    group-name: "Legendary"
+    right-click-book-material: FIREWORK_CHARGE
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 255;182;0
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
+  SOUL:
+    global-color: '&c'
+    group-name: "Soul"
+    right-click-book-material: FIREWORK_CHARGE
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 255;0;0
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
+  HEROIC:
+    global-color: '&d'
+    group-name: "Heroic"
+    right-click-book-material: FIREWORK_CHARGE
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 133;50;168
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
+  MASTERY:
+    global-color: '&4'
+    group-name: "Mastery"
+    right-click-book-material: FIREWORK_CHARGE
+    # Use this to set firework charge's color only! Uses RGB
+    # Find colors here: https://htmlcolorcodes.com/color-picker/
+    firework-color: 255;0;0
+    slot-increaser:
+      # How many slots should slot increaser add when using this type increaser
+      slots: 1
+    magic-dust:
+      # when right-clicked, it gives magic with success chance
+      # How much success should the dust have? (e.g.: 5 would mean always 5, 5-10 would mean random number from 5 to 10)
+      success: 1-15
+      # Chance to give Magic dust instead of Mystery dust
+      chance: 22
