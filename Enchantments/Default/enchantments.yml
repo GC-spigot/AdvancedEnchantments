@@ -4235,7 +4235,7 @@ tank:
 swordsman:
   display: '%group-color%Swordsman'
   description: |-
-    Chance to reduces incoming damage while
+    Chance to reduce incoming damage while
     wielding a sword by up to 22% at max level.
   applies-to: Armor
   type: DEFENSE;DEFENSE_MOB
@@ -4254,28 +4254,28 @@ swordsman:
       chance: 9
       cooldown: 4
       conditions:
-        - '%attacker is holding% contains SWORD : %allow%'
+        - '%victim is holding% contains SWORD : %allow%'
       effects:
         - DECREASE_DAMAGE:<random number>8-12</random number> @Victim
     '3':
       chance: 13
       cooldown: 4
       conditions:
-        - '%attacker is holding% contains SWORD : %allow%'
+        - '%victim is holding% contains SWORD : %allow%'
       effects:
         - DECREASE_DAMAGE:<random number>12-15</random number> @Victim
     '4':
       chance: 16
       cooldown: 4
       conditions:
-        - '%attacker is holding% contains SWORD : %allow%'
+        - '%victim is holding% contains SWORD : %allow%'
       effects:
         - DECREASE_DAMAGE:<random number>15-18</random number> @Victim
     '5':
       chance: 21
       cooldown: 4
       conditions:
-        - '%attacker is holding% contains SWORD : %allow%'
+        - '%victim is holding% contains SWORD : %allow%'
       effects:
         - DECREASE_DAMAGE:<random number>18-22</random number> @Victim
 critical:
