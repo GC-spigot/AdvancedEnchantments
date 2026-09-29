@@ -1,4 +1,3 @@
-
 ![image](https://advancedplugins.net/img/ezgif-3-7059f3428f.gif)
 # AdvancedEnchantments Plugin
 
