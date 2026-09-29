@@ -2061,22 +2061,22 @@ demonforged:
       cooldown: 6
       chance: 8
       effects:
-      - DAMAGE_ARMOR:<random number>1-3</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-3</random number> @Victim
     '2':
       cooldown: 6
       chance: 12
       effects:
-      - DAMAGE_ARMOR:<random number>1-3</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-3</random number> @Victim
     '3':
       cooldown: 6
       chance: 15
       effects:
-      - DAMAGE_ARMOR:<random number>1-3</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-3</random number> @Victim
     '4':
       cooldown: 6
       chance: 17
       effects:
-      - DAMAGE_ARMOR:<random number>1-3</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-3</random number> @Victim
 trap:
   display: '%group-color%Trap'
   description: Chance to give buffed slowness effect.
@@ -3702,22 +3702,22 @@ disintegrate:
       chance: 12
       cooldown: 2
       effects:
-      - DAMAGE_ARMOR:2 @Victim
+      - ADD_DURABILITY_ARMOR:-2 @Victim
     '2':
       chance: 25
       cooldown: 2
       effects:
-      - DAMAGE_ARMOR:2 @Victim
+      - ADD_DURABILITY_ARMOR:-2 @Victim
     '3':
       chance: 39
       cooldown: 2
       effects:
-      - DAMAGE_ARMOR:2 @Victim
+      - ADD_DURABILITY_ARMOR:-2 @Victim
     '4':
       chance: 46
       cooldown: 2
       effects:
-      - DAMAGE_ARMOR:2 @Victim
+      - ADD_DURABILITY_ARMOR:-2 @Victim
 dominate:
   display: '%group-color%Dominate'
   description: |-
@@ -3840,27 +3840,27 @@ eagleeye:
       chance: 15
       cooldown: 4
       effects:
-      - DAMAGE_ARMOR:<random number>1-4</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-4</random number> @Victim
     '2':
       chance: 26
       cooldown: 4
       effects:
-      - DAMAGE_ARMOR:<random number>1-4</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-4</random number> @Victim
     '3':
       chance: 37
       cooldown: 4
       effects:
-      - DAMAGE_ARMOR:<random number>1-4</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-4</random number> @Victim
     '4':
       chance: 44
       cooldown: 4
       effects:
-      - DAMAGE_ARMOR:<random number>1-4</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-4</random number> @Victim
     '5':
       chance: 56
       cooldown: 4
       effects:
-      - DAMAGE_ARMOR:<random number>1-4</random number> @Victim
+      - ADD_DURABILITY_ARMOR:-<random number>1-4</random number> @Victim
 annihilate:
   display: '%group-color%Annihilate'
   description: Demolish your opponent's armour quicker!
@@ -3874,32 +3874,32 @@ annihilate:
       chance: 10
       cooldown: 10
       effects:
-      - DAMAGE_ARMOR:1 @Victim
+      - ADD_DURABILITY_ARMOR:-1 @Victim
     '2':
       chance: 20
       cooldown: 12
       effects:
-      - DAMAGE_ARMOR:1 @Victim
+      - ADD_DURABILITY_ARMOR:-1 @Victim
     '3':
       chance: 30
       cooldown: 15
       effects:
-      - DAMAGE_ARMOR:2 @Victim
+      - ADD_DURABILITY_ARMOR:-2 @Victim
     '4':
       chance: 40
       cooldown: 18
       effects:
-      - DAMAGE_ARMOR:2 @Victim
+      - ADD_DURABILITY_ARMOR:-2 @Victim
     '5':
       chance: 50
       cooldown: 20
       effects:
-      - DAMAGE_ARMOR:3 @Victim
+      - ADD_DURABILITY_ARMOR:-3 @Victim
     '6':
       chance: 55
       cooldown: 28
       effects:
-      - DAMAGE_ARMOR:4 @Victim
+      - ADD_DURABILITY_ARMOR:-4 @Victim
 heavy:
   display: '%group-color%Heavy'
   description: |-
@@ -7898,27 +7898,27 @@ soulsiphone:
       chance: 6.1
       cooldown: 60
       effects:
-      - DAMAGE_ARMOR:10 @Attacker
+      - ADD_DURABILITY_ARMOR:-10 @Attacker
       - REMOVE_SOULS:200 @Attacker
       - MESSAGE:§4§l** SOUL SIPHONE ** §7(%victim name%)
     '2':
       chance: 8.1
       cooldown: 60
       effects:
-      - DAMAGE_ARMOR:15 @Attacker
+      - ADD_DURABILITY_ARMOR:-15 @Attacker
       - REMOVE_SOULS:200 @Attacker
       - MESSAGE:§4§l** SOUL SIPHONE ** §7(%victim name%)
     '3':
       chance: 10.4
       cooldown: 60
       effects:
-      - DAMAGE_ARMOR:20 @Attacker
+      - ADD_DURABILITY_ARMOR:-20 @Attacker
       - REMOVE_SOULS:200 @Attacker
       - MESSAGE:§4§l** SOUL SIPHONE ** §7(%victim name%)
     '4':
       chance: 13.5
       cooldown: 60
       effects:
-      - DAMAGE_ARMOR:30 @Attacker
+      - ADD_DURABILITY_ARMOR:-30 @Attacker
       - REMOVE_SOULS:200 @Attacker
       - MESSAGE:§4§l** SOUL SIPHONE ** §7(%victim name%)
