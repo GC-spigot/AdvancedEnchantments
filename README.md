@@ -1,4 +1,4 @@
-# THIS IS A FORK TO FIX AE EFFECTS! MAKE ISSUES ON THE MAIN REPO
+
 ![image](https://advancedplugins.net/img/ezgif-3-7059f3428f.gif)
 # AdvancedEnchantments Plugin
 
