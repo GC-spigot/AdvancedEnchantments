@@ -5533,28 +5533,28 @@ devour:
       conditions:
       - '%victim is bleeding% = false : %stop%'
       effects:
-      - EXTRA_DAMAGE:<random number>1-4</random number>
+      - INCREASE_DAMAGE:<random number>1-4</random number>
     '2':
       chance: 40
       cooldown: 3
       conditions:
       - '%victim is bleeding% = false : %stop%'
       effects:
-      - EXTRA_DAMAGE:<random number>1-4</random number>
+      - INCREASE_DAMAGE:<random number>1-4</random number>
     '3':
       chance: 55
       cooldown: 3
       conditions:
       - '%victim is bleeding% = false : %stop%'
       effects:
-      - EXTRA_DAMAGE:<random number>1-4</random number>
+      - INCREASE_DAMAGE:<random number>1-4</random number>
     '4':
       chance: 75
       cooldown: 3
       conditions:
       - '%victim is bleeding% = false : %stop%'
       effects:
-      - EXTRA_DAMAGE:<random number>1-4</random number>
+      - INCREASE_DAMAGE:<random number>1-4</random number>
 diminish:
   display: '%group-color%Diminish'
   description: |-
